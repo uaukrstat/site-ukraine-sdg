@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,7 +184,7 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/uk/goals">Цілі</a>
@@ -253,26 +253,29 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/uk/">Головна</a>
-        </li>
-        <li class="breadcrumb-item active">Ціль 9</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/uk/">Головна</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/uk/goals/">Цілі</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Промисловість, інновації та інфраструктура
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-9">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/uk/9.svg" data-default=""
+                <img src="/site-ukraine-sdg/assets/img/goals/uk/9.svg" data-default=""
                      data-hover="" alt="Промисловість, інновації та інфраструктура - Ціль 9" id="goal-9" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
@@ -291,676 +294,1988 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Завдання та індикатори</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Завдання та індикатори</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Чинна
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Попередня
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.1</h3></div>
+                    <div class="col">Розвивати якісну, надійну, сталу та доступну інфраструктуру, яка базується на використанні інноваційних технологій, у тому числі екологічно чистих видів транспорту</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка сільського населення, яке проживає на відстані понад 3 км від дороги з твердим покриттям, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-1"
+                            onclick="loadChart('/uk/9-1-1/', '9-1-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Обсяг перевезених вантажів, млн. тонн</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-2"
+                            onclick="loadChart('/uk/9-1-2/', '9-1-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Кількість перевезених пасажирів, млн. осіб</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-3"
+                            onclick="loadChart('/uk/9-1-3/', '9-1-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.4
+                            </h4>
+                        </div>
+                        <div class="col">Ступінь зносу основних засобів за ВЕД ‘Транспорт, складське господарство, поштова та кур’єрська діяльність’, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-4"
+                            onclick="loadChart('/uk/9-1-4/', '9-1-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.2</h3></div>
+                    <div class="col">Забезпечити розширення використання електротранспорту та відповідної мережі інфраструктури</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка електротранспорту у внутрішньому сполученні, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-2-1"
+                            onclick="loadChart('/uk/9-2-1/', '9-2-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-2-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.3</h3></div>
+                    <div class="col">Забезпечити доступність дорожньо-транспортної інфраструктури, яка базується на використанні інноваційних технологій, зокрема через розширення форм участі держави у різних інфраструктурних проектах</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-3-1"
+                            onclick="loadChart('/uk/9-3-1/', '9-3-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-3-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка об’єктів громадського та цивільного призначення, благоустрою, облаштованих з урахуванням потреб осіб з інвалідністю, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-3-2"
+                            onclick="loadChart('/uk/9-3-2/', '9-3-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-3-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.4</h3></div>
+                    <div class="col">Сприяти прискореному розвитку високо- та середньовисокотехнологічних секторів переробної промисловості, які формуються на основі використання ланцюгів освіта-наука-виробництво та кластерного підходу за напрямами розвиток інноваційної екосистеми, розвиток інформаційно-телекомунікаційних технологій, застосування їх у АПК, енергетиці, транспорті та промисловості, високотехнологічне машинобудування, створення нових матеріалів, розвиток фармацевтичної та біоінженерної галузей</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до високотехнологічного сектору переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній доданій вартості за витратами виробництва, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-1"
+                            onclick="loadChart('/uk/9-4-1/', '9-4-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до середньовисокотехнологічного сектору переробної промисловості (зокрема, виробництва хімічної продукції; електричного устаткування; машин та устаткування; автотранспортних засобів, причепів і напівпричепів; інших транспортних засобів відповідно до КВЕД) у загальній доданій вартості за витратами виробництва, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-2"
+                            onclick="loadChart('/uk/9-4-2/', '9-4-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка працівників, зайнятих на підприємствах, які належать до високо- та середньо- високотехнологічних секторів переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; хімічної продукції; машинобудування; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній кількості зайнятих працівників у промисловості, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-3"
+                            onclick="loadChart('/uk/9-4-3/', '9-4-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.5</h3></div>
+                    <div class="col">Створити фінансову та інституційну системи, інноваційну інфраструктуру, що забезпечуватимуть розвиток наукових досліджень та науково-технічних (експерементальних) розробок</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат на виконання наукових досліджень і розробок у ВВП, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-5-1"
+                            onclick="loadChart('/uk/9-5-1/', '9-5-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-5-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка реалізованої інноваційної продукції в обсязі промислової, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-5-2"
+                            onclick="loadChart('/uk/9-5-2/', '9-5-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-5-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.6</h3></div>
+                    <div class="col">Забезпечити доступність Інтернету, особливо у сільській місцевості</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Рівень охоплення населення інтернет-послугами, абонентів на 100 жителів</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-6-1"
+                            onclick="loadChart('/uk/9-6-1/', '9-6-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-6-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.7</h3></div>
+                    <div class="col">Забезпечити збільшення участі молоді у наукових дослідженнях</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Питома вага дослідників віком до 40 років у загальній кількості дослідників</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-7-1"
+                            onclick="loadChart('/uk/9-7-1/', '9-7-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-7-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.1</h3></div>
+                    <div class="col">
+                        Розвивати якісну, надійну, сталу та доступну інфраструктуру, яка базується на використанні інноваційних технологій, у т. ч. екологічно чистих видів транспорту
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка сільського населення, яке проживає на відстані понад 3 км від дороги з твердим покриттям, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-1-a"
+                            onclick="loadChart('/uk/9-1-1-a/', '9-1-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Обсяг перевезених вантажів, млн. тонн</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-2-a"
+                            onclick="loadChart('/uk/9-1-2-a/', '9-1-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Кількість перевезених пасажирів, млн. осіб</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-3-a"
+                            onclick="loadChart('/uk/9-1-3-a/', '9-1-3-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-3-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.1.4
+                            </h4>
+                        </div>
+                        <div class="col">Ступінь зносу основних засобів за ВЕД ‘Транспорт, складське господарство, поштова та кур’єрська діяльність’, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-1-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-1-4-a"
+                            onclick="loadChart('/uk/9-1-4-a/', '9-1-4-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-1-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-1-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-1-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-1-4-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.2</h3></div>
+                    <div class="col">
+                        Забезпечити розширення використання електротранспорту та відповідної мережі інфраструктури
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка електротранспорту у внутрішньому сполученні, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-2-1-a"
+                            onclick="loadChart('/uk/9-2-1-a/', '9-2-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-2-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.3</h3></div>
+                    <div class="col">
+                        Забезпечити доступність дорожньо-транспортної інфраструктури, яка базується на використанні інноваційних технологій, зокрема через розширення форм участі держави у різних інфраструктурних проектах
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-3-1-a"
+                            onclick="loadChart('/uk/9-3-1-a/', '9-3-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-3-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка об’єктів громадського та цивільного призначення, благоустрою, облаштованих з урахуванням потреб осіб з інвалідністю, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Вивчення джерел даних</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-3-2-a"
+                            onclick="loadChart('/uk/9-3-2-a/', '9-3-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-3-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.4</h3></div>
+                    <div class="col">
+                        Сприяти прискореному розвитку високо- та середньовисокотехнологічних секторів переробної промисловості, які формуються на основі використання ланцюгів 'освіта-наука-виробництво' та кластерному підході за напрямами — розвиток інноваційної екосистеми; розвиток інформаційно-телекомунікаційних технологій (ІКТ); застосування ІКТ в АПК, енергетиці, транспорті та промисловості; високотехнологічне машинобудування; створення нових матеріалів; розвиток фармацевтичної та біоінженерної галузей
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до високотехнологічного сектору переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній доданій вартості за витратами виробництва, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Вивчення джерел даних</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-1-a"
+                            onclick="loadChart('/uk/9-4-1-a/', '9-4-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до середньовисокотехнологічного сектору переробної промисловості (зокрема, виробництва хімічної продукції; електричного устаткування; машин та устаткування; автотранспортних засобів, причепів і напівпричепів; інших транспортних засобів відповідно до КВЕД) у загальній доданій вартості за витратами виробництва, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-2-a"
+                            onclick="loadChart('/uk/9-4-2-a/', '9-4-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка працівників, зайнятих на підприємствах, які належать до високо- та середньо- високотехнологічних секторів переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; хімічної продукції; машинобудування; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній кількості зайнятих працівників у промисловості, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-4-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-4-3-a"
+                            onclick="loadChart('/uk/9-4-3-a/', '9-4-3-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-4-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-4-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-4-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-4-3-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.5</h3></div>
+                    <div class="col">
+                        Створити фінансову та інституційну системи (інноваційну інфраструктуру), що забезпечуватимуть розвиток наукових досліджень, та науково-технічних (експериментальних) розробок
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат на виконання наукових досліджень і розробок у ВВП, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-5-1-a"
+                            onclick="loadChart('/uk/9-5-1-a/', '9-5-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-5-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка реалізованої інноваційної продукції в обсязі промислової, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-5-2-a"
+                            onclick="loadChart('/uk/9-5-2-a/', '9-5-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-5-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.6</h3></div>
+                    <div class="col">
+                        Забезпечити доступність Інтернету, особливо у сільській місцевості
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Рівень охоплення населення інтернет-послугами, абонентів на 100 жителів</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-6-1-a"
+                            onclick="loadChart('/uk/9-6-1-a/', '9-6-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-6-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.7</h3></div>
+                    <div class="col">
+                        Забезпечити збільшення участі молоді у наукових дослідженнях
+                    </div>
+                </div>
+
+                
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                9.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Питома вага дослідників віком до 40 років у загальній кількості дослідників</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Вивчення джерел даних</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-9-7-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-9-7-1-a"
+                            onclick="loadChart('/uk/9-7-1-a/', '9-7-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-9-7-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-9-7-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-9-7-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/9-7-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Розвивати якісну, надійну, сталу та доступну інфраструктуру, яка базується на використанні інноваційних технологій, у тому числі екологічно чистих видів транспорту</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-1-1/">Частка сільського населення, яке проживає на відстані понад 3 км від дороги з твердим покриттям, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.1.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-1-2/">Обсяг перевезених вантажів, млн. тонн</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.1.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-1-3/">Кількість перевезених пасажирів, млн. осіб</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.1.4</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-1-4/">Ступінь зносу основних засобів за ВЕД ‘Транспорт, складське господарство, поштова та кур’єрська діяльність’, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Забезпечити розширення використання електротранспорту та відповідної мережі інфраструктури</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-2-1/">Частка електротранспорту у внутрішньому сполученні, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Забезпечити доступність дорожньо-транспортної інфраструктури, яка базується на використанні інноваційних технологій, зокрема через розширення форм участі держави у різних інфраструктурних проектах</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-3-1/">Частка доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.3.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-3-2/">Частка об’єктів громадського та цивільного призначення, благоустрою, облаштованих з урахуванням потреб осіб з інвалідністю, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.4</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Сприяти прискореному розвитку високо- та середньовисокотехнологічних секторів переробної промисловості, які формуються на основі використання ланцюгів освіта-наука-виробництво та кластерного підходу за напрямами розвиток інноваційної екосистеми, розвиток інформаційно-телекомунікаційних технологій, застосування їх у АПК, енергетиці, транспорті та промисловості, високотехнологічне машинобудування, створення нових матеріалів, розвиток фармацевтичної та біоінженерної галузей</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.4.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-4-1/">Частка доданої вартості за витратами виробництва підприємств, які належать до високотехнологічного сектору переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній доданій вартості за витратами виробництва, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.4.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-4-2/">Частка доданої вартості за витратами виробництва підприємств, які належать до середньовисокотехнологічного сектору переробної промисловості (зокрема, виробництва хімічної продукції; електричного устаткування; машин та устаткування; автотранспортних засобів, причепів і напівпричепів; інших транспортних засобів відповідно до КВЕД) у загальній доданій вартості за витратами виробництва, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.4.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-4-3/">Частка працівників, зайнятих на підприємствах, які належать до високо- та середньо- високотехнологічних секторів переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; хімічної продукції; машинобудування; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній кількості зайнятих працівників у промисловості, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.5</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Створити фінансову та інституційну системи, інноваційну інфраструктуру, що забезпечуватимуть розвиток наукових досліджень та науково-технічних (експерементальних) розробок</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.5.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-5-1/">Частка витрат на виконання наукових досліджень і розробок у ВВП, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.5.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-5-2/">Частка реалізованої інноваційної продукції в обсязі промислової, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.6</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Забезпечити доступність Інтернету, особливо у сільській місцевості</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.6.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-6-1/">Рівень охоплення населення інтернет-послугами, абонентів на 100 жителів</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 9.7</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Забезпечити збільшення участі молоді у наукових дослідженнях</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 9.7.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/9-7-1/">Питома вага дослідників віком до 40 років у загальній кількості дослідників</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">На початок</a>
+    <a href="#top">На початок</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -973,7 +2288,7 @@ layout-goal
                         </li>
                         
                         <li>
-                            <a href="/uk/contact-us">Зв'язатися з нами</a>
+                            <a href="/uk/contact-us">Зв’яжіться з нами</a>
                             
                         </li>
                         <li>
@@ -987,7 +2302,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/uk/about/cookies-and-privacy/">Файли Cookies</a>
+                            <a href="/uk/cookies-and-privacy/">Файли Cookies</a>
                             
                         </li>
                         
@@ -1025,12 +2340,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1038,3 +2353,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

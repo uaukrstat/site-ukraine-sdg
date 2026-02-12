@@ -17,7 +17,7 @@ disaggregation_status_by_field: 'Дезагрегація за %полем'
 not_specified: 'Не вказано'
 reported: 'Повідомили'
 published: 'Опубліковано'
-description: 'Статус звітності містить огляд того, скільки даних %name повідомляє
+description: 'Статус звітності містить огляд того, скільки даних Ukraine повідомляє
   про цілі сталого розвитку (SDG).'
 progress_status: Статус виконання
 progress_not_available: Недоступно

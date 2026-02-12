@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,7 +184,7 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/uk/goals">Цілі</a>
@@ -253,26 +253,29 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/uk/">Головна</a>
-        </li>
-        <li class="breadcrumb-item active">Ціль 3</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/uk/">Головна</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/uk/goals/">Цілі</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Міцне здоров’я і благополуччя
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-3">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/uk/3.svg" data-default=""
+                <img src="/site-ukraine-sdg/assets/img/goals/uk/3.svg" data-default=""
                      data-hover="" alt="Міцне здоров’я і благополуччя - Ціль 3" id="goal-3" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
@@ -291,784 +294,2909 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Завдання та індикатори</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Завдання та індикатори</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Чинна
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Попередня
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.1</h3></div>
+                    <div class="col">Забезпечення доступу громадян до медичних послуг належної якості</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які протягом останніх 12 місяців за потреби не змогли отримати медичну допомогу, придбати ліки та медичні вироби, відсотків (індикатор ЦСР 3.1.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-1"
+                            onclick="loadChart('/uk/3-1-1/', '3-1-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка законтрактованих надавачів медичних послуг у сфері психічного здоров’я на первинному рівні медичної допомоги, відсотків (індикатор ЦСР 3.1.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-2"
+                            onclick="loadChart('/uk/3-1-2/', '3-1-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат на охорону здоров’я у сукупних витратах домогосподарств, відсотків (індикатор ЦСР 3.1.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-3"
+                            onclick="loadChart('/uk/3-1-3/', '3-1-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, відсотків (індикатор ЦСР 3.1.4)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-4"
+                            onclick="loadChart('/uk/3-1-4/', '3-1-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.5
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, та пройшли обстеження з профілактичною метою протягом року, відсотків (індикатор ЦСР 3.1.5)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-5"
+                            onclick="loadChart('/uk/3-1-5/', '3-1-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.2</h3></div>
+                    <div class="col">Зниження рівня материнської смертності</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Коефіцієнт материнської смертності, на 100 000 живонароджених (індикатор ЦСР 3.2.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-2-1"
+                            onclick="loadChart('/uk/3-2-1/', '3-2-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-2-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.3</h3></div>
+                    <div class="col">Мінімізація смертності, якій можна запобігти, серед дітей віком до 5 років</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності дітей у віці до 5 років, на 1000 живонароджених (індикатор ЦСР 3.3.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-1"
+                            onclick="loadChart('/uk/3-3-1/', '3-3-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-3-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт неонатальної смертності, на 1000 живонароджених (індикатор ЦСР 3.3.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-2"
+                            onclick="loadChart('/uk/3-3-2/', '3-3-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-3-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.4</h3></div>
+                    <div class="col">Зупинення епідемії ВІЛ/СНІДу та туберкульозу, зокрема шляхом використання інноваційних практик та засобів лікування</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ/СНІД, на 100 000 населення (індикатор ЦСР 3.4.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-1"
+                            onclick="loadChart('/uk/3-4-1/', '3-4-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Кількість осіб, які отримують антиретровірусну терапію, серед тих, у кого діагностовано ВІЛ/СНІД (індикатор ЦСР 3.4.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-2"
+                            onclick="loadChart('/uk/3-4-2/', '3-4-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення (індикатор ЦСР 3.4.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-3"
+                            onclick="loadChart('/uk/3-4-3/', '3-4-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.4
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.3-4-4-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-4"
+                            onclick="loadChart('/uk/3-4-4/', '3-4-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.5</h3></div>
+                    <div class="col">Зниження рівня передчасної смертності від неінфекційних захворювань</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності чоловіків від цереброваскулярних хвороб у віці 30–59 років, на 100 000 чоловіків відповідного віку (індикатор ЦСР 3.5.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-1"
+                            onclick="loadChart('/uk/3-5-1/', '3-5-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності жінок від цереброваскулярних хвороб у віці 30–59 років, на 100 000 жінок відповідного віку (індикатор ЦСР 3.5.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-2"
+                            onclick="loadChart('/uk/3-5-2/', '3-5-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка діагностованих злоякісних новоутворень (молочної залози, шийки матки, простати, колоректального раку, легень) на ранніх стадіях у загальній кількості діагностованих злоякісних новоутворень, відсотків (індикатор ЦСР 3.5.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-3"
+                            onclick="loadChart('/uk/3-5-3/', '3-5-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.4
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності жінок від злоякісного новоутворення молочної залози у віці 30–59 років, на 100 000 жінок відповідного віку (індикатор ЦСР 3.5.4)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-4"
+                            onclick="loadChart('/uk/3-5-4/', '3-5-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.5
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності жінок від злоякісного новоутворення шийки матки у віці 30–59 років, на 100 000 жінок відповідного віку (індикатор ЦСР 3.5.5)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-5"
+                            onclick="loadChart('/uk/3-5-5/', '3-5-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.6
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності від злоякісного новоутворення трахеї, бронхів та легенів у віці 30–59 років, на 100 000 осіб відповідного віку (індикатор ЦСР 3.5.6)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-6"
+                            onclick="loadChart('/uk/3-5-6/', '3-5-6')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-6/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.7
+                            </h4>
+                        </div>
+                        <div class="col">Коефіцієнт смертності від навмисного самоушкодження, на 100 000 осіб (індикатор ЦСР 3.5.7)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-7"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-7"
+                            onclick="loadChart('/uk/3-5-7/', '3-5-7')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-7">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-7" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-7"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-7/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.6</h3></div>
+                    <div class="col">Забезпечення якісної та доступної реабілітації у сфері охорони здоров’я</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Частка багатопрофільних закладів охорони здоров’я спроможної мережі, які уклали з НСЗУ договір про надання реабілітаційної допомоги, відсотків (індикатор ЦСР 3.6.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-1"
+                            onclick="loadChart('/uk/3-6-1/', '3-6-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-6-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.6.2
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.3-6-2-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-2"
+                            onclick="loadChart('/uk/3-6-2/', '3-6-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-6-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-6-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.7</h3></div>
+                    <div class="col">Зниження рівня смертності внаслідок нещасних випадків на транспорті шляхом використання інноваційних практик організації реанімування, лікування та реабілітації постраждалих внаслідок таких випадків</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Коефіцієнт смертності внаслідок транспортних нещасних випадків, на 100 000 осіб (індикатор ЦСР 3.7.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-7-1"
+                            onclick="loadChart('/uk/3-7-1/', '3-7-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-7-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.8</h3></div>
+                    <div class="col">Забезпечення загальної імунізації населення</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.8.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Рівень імунізації населення згідно з Календарем профілактичних щеплень за віковими групами під час профілактики десяти інфекційних захворювань, відсотків 1 (індикатор ЦСР 3.8.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-1"
+                            onclick="loadChart('/uk/3-8-1/', '3-8-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-8-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-8-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.8.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення з великими витратами домогосподарств на охорону здоров'я як частка від загальних витрат або доходів домогосподарств</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-2"
+                            onclick="loadChart('/uk/3-8-2/', '3-8-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-8-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-8-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.9</h3></div>
+                    <div class="col">Зниження рівня поширеності вживання тютюнових та/або нікотинових виробів серед населення</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.9.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Частка осіб, які вживають тютюнові та/або нікотинові вироби, серед населення у віці 15 років і старше, відсотків (індикатор ЦСР 3.9.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-9-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-9-1"
+                            onclick="loadChart('/uk/3-9-1/', '3-9-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-9-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-9-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-9-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-9-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.10</h3></div>
+                    <div class="col">Зниження рівня поширеності вживання алкогольних напоїв серед населення</div>
+                </div>
+                
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.10.1
+                            </h4>
+                        </div>
+                        <div class="col">Індикатор. Частка осіб, що вживають алкогольні напої, відсотків (індикатор ЦСР 3.10.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-10-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-10-1"
+                            onclick="loadChart('/uk/3-10-1/', '3-10-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-10-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-10-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-10-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-10-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.1</h3></div>
+                    <div class="col">
+                        Знизити рівень материнської смертності
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Кількість випадків материнської смерті, на 100 000 живонароджених</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-1-a"
+                            onclick="loadChart('/uk/3-1-1-a/', '3-1-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-1-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.2</h3></div>
+                    <div class="col">
+                        Мінімізувати смертність, якій можна запобігти, серед дітей віком до 5 років
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Смертність дітей у віці до 5 років, випадків на 1000 живонароджених</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-2-1-a"
+                            onclick="loadChart('/uk/3-2-1-a/', '3-2-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-2-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.3</h3></div>
+                    <div class="col">
+                        Зупинити епідемії ВІЛ/СНІДу та туберкульозу, у тому числі за рахунок використання інноваційних практик та засобів лікування
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ, на 100 000 населення</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-1-a"
+                            onclick="loadChart('/uk/3-3-1-a/', '3-3-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-3-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-2-a"
+                            onclick="loadChart('/uk/3-3-2-a/', '3-3-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-3-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.4</h3></div>
+                    <div class="col">
+                        Знизити передчасну смертність від неінфекційних захворювань
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Кількість смертей чоловіків від цереброваскулярних хвороб у віці 30-59 років, на 100 000 чоловіків відповідного віку</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-1-a"
+                            onclick="loadChart('/uk/3-4-1-a/', '3-4-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Кількість смертей жінок від цереброваскулярних хвороб у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-2-a"
+                            onclick="loadChart('/uk/3-4-2-a/', '3-4-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Кількість смертей жінок від злоякісного новоутворення молочної залози у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-3-a"
+                            onclick="loadChart('/uk/3-4-3-a/', '3-4-3-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-3-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.4.4
+                            </h4>
+                        </div>
+                        <div class="col">Кількість смертей жінок від злоякісного новоутворення шийки матки у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-4-a"
+                            onclick="loadChart('/uk/3-4-4-a/', '3-4-4-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-4-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-4-4-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.5</h3></div>
+                    <div class="col">
+                        Знизити на чверть передчасну смерть населення, у тому числі за рахунок упровадження інноваційних підходів до діагностики захворювань
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Імовірність померти у 20-64 роки, чоловіки</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-1-a"
+                            onclick="loadChart('/uk/3-5-1-a/', '3-5-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Імовірність померти у 20-64 роки, жінки</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-2-a"
+                            onclick="loadChart('/uk/3-5-2-a/', '3-5-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-5-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.6</h3></div>
+                    <div class="col">
+                        Знизити рівень отриманих тяжких травм і смертності внаслідок ДТП, у тому числі за рахунок використання інноваційних практик реанімування, лікування та реабілітації постраждалих унаслідок ДТП
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Кількість смертей унаслідок транспортних нещасних випадків, на 100 000 населення</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-1-a"
+                            onclick="loadChart('/uk/3-6-1-a/', '3-6-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-6-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.6.2
+                            </h4>
+                        </div>
+                        <div class="col">Кількість травмованих осіб унаслідок дорожньо-транспортних пригод, на 100 000 населення</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-2-a"
+                            onclick="loadChart('/uk/3-6-2-a/', '3-6-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-6-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-6-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.7</h3></div>
+                    <div class="col">
+                        Забезпечити загальну якісну імунізацію населення з використанням інноваційних препаратів
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Рівень імунізації населення згідно з Календарем профілактичних щеплень до визначених шести вікових груп при профілактиці десяти інфекційних захворювань, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-7-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-7-1-a"
+                            onclick="loadChart('/uk/3-7-1-a/', '3-7-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-7-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-7-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-7-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-7-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.8</h3></div>
+                    <div class="col">
+                        Знизити поширеність тютюнокуріння серед населення з використанням інноваційних засобів інформування про негативні наслідки тютюнокуріння
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.8.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які курять, серед жінок віком 16-29 років, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-1-a"
+                            onclick="loadChart('/uk/3-8-1-a/', '3-8-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-8-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-8-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.8.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які курять, серед чоловіків віком 16-29 років, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-2-a"
+                            onclick="loadChart('/uk/3-8-2-a/', '3-8-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-8-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-8-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.9</h3></div>
+                    <div class="col">
+                        Здійснити реформу фінансування системи охорони здоров’я
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                3.9.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат населення у загальних видатках на охорону здоров’я, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-9-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-9-1-a"
+                            onclick="loadChart('/uk/3-9-1-a/', '3-9-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-3-9-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-9-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-3-9-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/3-9-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Знизити материнську смертність</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-1-1/">Кількість випадків материнської смерті, на 100 000 живонароджених</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Мінімізувати смертність, якій можна запобігти, серед дітей віком до 5 років</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-2-1/">Смертність дітей у віці до 5 років, випадків на 1000 живонароджених</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Зупинити епідемії ВІЛ/ СНІДу та туберкульозу, у тому числі за рахунок використання інноваційних практик та засобів лікування</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-3-1/">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ, на 100 000 населення</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.3.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-3-2/">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.4</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Знизити передчасну смертність від неінфекційних захворювань</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.4.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-4-1/">Кількість смертей чоловіків від цереброваскулярних хвороб у віці 30-59 років, на 100 000 чоловіків відповідного віку</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.4.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-4-2/">Кількість смертей жінок від цереброваскулярних хвороб у віці 30-59 років, на 100 000 жінок відповідного віку</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.4.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-4-3/">Кількість смертей жінок від злоякісного новоутворення молочної залози у віці 30-59 років, на 100 000 жінок відповідного віку</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.4.4</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-4-4/">Кількість смертей жінок від злоякісного новоутворення шийки матки у віці 30-59 років, на 100 000 жінок відповідного віку</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.5</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Знизити на чверть передчасну смертність населення, у тому числі за рахунок упровадження інноваційних підходів до діагностики захворювань</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.5.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-5-1/">Імовірність померти у 20-64 роки, чоловіки</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.5.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-5-2/">Імовірність померти у 20-64 роки, жінки</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.6</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Знизити рівень отримання тяжких травм і смертності внаслідок ДТП, у тому числі за рахунок використання інноваційних практик реанімування, лікування та реабілітації постраждалих унаслідок ДТП</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.6.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-6-1/">Кількість смертей унаслідок транспортних нещасних випадків, на 100 000 населення</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.6.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-6-2/">Кількість травмованих осіб унаслідок дорожньо-транспортних пригод, на 100 000 населення</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.7</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Забезпечити загальну якісну імунізацію населення з використанням інноваційних препаратів</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.7.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-7-1/">Рівень імунізації населення згідно з Календарем профілактичних щеплень до визначених шести вікових груп при профілактиці десяти інфекційних захворювань, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.8</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Знизити поширеність тютюнокуріння серед населення з використанням інноваційних засобів інформування про негативні наслідки тютюнокуріння</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.8.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-8-1/">Частка осіб, які курять, серед жінок віком 16-29 років, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.8.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-8-2/">Частка осіб, які курять, серед чоловіків віком 16-29 років, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 3.9</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Здійснити реформу фінансування системи охорони здоров’я</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 3.9.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/3-9-1/">Частка витрат населення у загальних видатках на охорону здоров’я, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">На початок</a>
+    <a href="#top">На початок</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -1081,7 +3209,7 @@ layout-goal
                         </li>
                         
                         <li>
-                            <a href="/uk/contact-us">Зв'язатися з нами</a>
+                            <a href="/uk/contact-us">Зв’яжіться з нами</a>
                             
                         </li>
                         <li>
@@ -1095,7 +3223,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/uk/about/cookies-and-privacy/">Файли Cookies</a>
+                            <a href="/uk/cookies-and-privacy/">Файли Cookies</a>
                             
                         </li>
                         
@@ -1133,12 +3261,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1146,3 +3274,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

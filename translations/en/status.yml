@@ -5,7 +5,7 @@ statistics_in_progress: Statistics in progress
 exploring_data_sources: Exploring data sources
 not_applicable: Not applicable
 # Describing a section where the status is reported for each goal
-status_by_goal: Status by goal
+status_by_goal: Status by Goal
 status_by_field: Status by %field
 disaggregation_status: Disaggregation status
 disaggregation_status_overall: Overall disaggregation status
@@ -18,7 +18,7 @@ not_specified: Not specified
 reported: Reported
 published: Published
 description: Reporting status provides an overview of how much Sustainable Development
-  Goal (SDG) data %name reports.
+  Goal (SDG) data Ukraine reports.
 progress_status: Progress status
 progress_not_available: Not available
 progress_challenges_remain: Challenges remain

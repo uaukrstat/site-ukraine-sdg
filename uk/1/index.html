@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,7 +184,7 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/uk/goals">Цілі</a>
@@ -253,26 +253,29 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/uk/">Головна</a>
-        </li>
-        <li class="breadcrumb-item active">Ціль 1</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/uk/">Головна</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/uk/goals/">Цілі</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Подолання бідності
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-1">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/uk/1.svg" data-default=""
+                <img src="/site-ukraine-sdg/assets/img/goals/uk/1.svg" data-default=""
                      data-hover="" alt="Подолання бідності - Ціль 1" id="goal-1" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
@@ -291,265 +294,1017 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Завдання та індикатори</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Завдання та індикатори</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Чинна
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Попередня
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.1</h3></div>
+                    <div class="col">Зменшення частки сімей, які живуть в умовах бідності (мають ризик опинитися за межею бідності)</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за фактичний (розрахунковий) прожитковий мінімум, відсотків (індикатор ЦСР 1.1.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-1-1"
+                            onclick="loadChart('/uk/1-1-1/', '1-1-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-1-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за прожитковий мінімум, встановлений законом про Державний бюджет України на відповідний рік, відсотків (індикатор ЦСР 1.1.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-1-2"
+                            onclick="loadChart('/uk/1-1-2/', '1-1-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-1-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, добове споживання яких є нижчим за 6,85 долара США за паритетом купівельної спроможності, відсотків (індикатор ЦСР 1.1.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-1-3"
+                            onclick="loadChart('/uk/1-1-3/', '1-1-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-1-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.2</h3></div>
+                    <div class="col">Збільшення частки охоплення бідного населення адресними програмами соціальної підтримки</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка бідного населення, яке охоплене державною соціальною підтримкою, в загальній чисельності бідного населення, відсотків (індикатор ЦСР 1.2.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-2-1"
+                            onclick="loadChart('/uk/1-2-1/', '1-2-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-2-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.2.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка дітей з числа пільгових категорій, які забезпечені в закладах загальної середньої освіти безоплатним гарячим харчуванням, відсотків (індикатор ЦСР 1.2.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Вивчення джерел даних</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-2-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-2-2"
+                            onclick="loadChart('/uk/1-2-2/', '1-2-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-2-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-2-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-2-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-2-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.3</h3></div>
+                    <div class="col">Підвищення рівня життєстійкості соціально вразливих верств населення</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Рівень глибокої матеріальної та соціальної депривації, відсотків (індикатор ЦСР 1.3.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-1"
+                            onclick="loadChart('/uk/1-3-1/', '1-3-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, які користуються базовими соціальними послугами, у загальній кількості осіб, які потребують надання соціальних послуг, відсотків (індикатор ЦСР 1.3.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-2"
+                            onclick="loadChart('/uk/1-3-2/', '1-3-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат на харчування в сукупних витратах домогосподарств, відсотків  (індикатор ЦСР 1.3.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-3"
+                            onclick="loadChart('/uk/1-3-3/', '1-3-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб з інвалідністю, охоплених програмами підтримки, у загальній кількості осіб з інвалідністю за даними інформаційних систем Мінсоцполітики, відсотків  (індикатор ЦСР 1.3.4)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-4"
+                            onclick="loadChart('/uk/1-3-4/', '1-3-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.1</h3></div>
+                    <div class="col">
+                        Скоротити в 4 рази рівень бідності, зокрема шляхом ліквідації її крайніх форм
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення, чиї середньодушові еквівалентні сукупні витрати є нижчими за фактичний (розрахунковий) прожитковий мінімум, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-1-1-a"
+                            onclick="loadChart('/uk/1-1-1-a/', '1-1-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-1-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб, добове споживання яких є нижчим за 5,05 долара США за ПКС, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-1-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-1-2-a"
+                            onclick="loadChart('/uk/1-1-2-a/', '1-1-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-1-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-1-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-1-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-1-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.2</h3></div>
+                    <div class="col">
+                        Збільшити охоплення бідного населення адресними програмами соціальної підтримки
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка бідних, які охоплені державною соціальною підтримкою, в загальній чисельності бідного населення, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-2-1-a"
+                            onclick="loadChart('/uk/1-2-1-a/', '1-2-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-2-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.3</h3></div>
+                    <div class="col">
+                        Підвищити життєстійкість соціально вразливих верств населення
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення рівнів бідності домогосподарств із дітьми та домогосподарств без дітей, рази</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-1-a"
+                            onclick="loadChart('/uk/1-3-1-a/', '1-3-1-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-1-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                1.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка витрат на харчування в сукупних витратах домогосподарств, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-1-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-1-3-2-a"
+                            onclick="loadChart('/uk/1-3-2-a/', '1-3-2-a')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-1-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-1-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-1-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/1-3-2-a/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 1.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Скоротити в 4 рази рівень бідності, зокрема шляхом ліквідації її крайніх форм</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 1.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/1-1-1/">Частка населення, чиї середньодушові еквівалентні сукупні витрати є нижчими за фактичний (розрахунковий) прожитковий мінімум, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 1.1.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/1-1-2/">Частка осіб, добове споживання яких є нижчим за 5,05 долара США за ПКС, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 1.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Збільшити охоплення бідного населення адресними програмами соціальної підтримки</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 1.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/1-2-1/">Частка бідних, які охоплені державною соціальною підтримкою, в загальній чисельності бідного населення, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Завдання</span> 1.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Підвищити життєстійкість соціально вразливих верств населення</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 1.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/1-3-1/">Співвідношення рівнів бідності домогосподарств із дітьми та домогосподарств без дітей, рази</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Індикатор</span> 1.3.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/uk/1-3-2/">Частка витрат на харчування в сукупних витратах домогосподарств, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
-        <span class="visually-hidden">Стан індикатора</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">На початок</a>
+    <a href="#top">На початок</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -562,7 +1317,7 @@ layout-goal
                         </li>
                         
                         <li>
-                            <a href="/uk/contact-us">Зв'язатися з нами</a>
+                            <a href="/uk/contact-us">Зв’яжіться з нами</a>
                             
                         </li>
                         <li>
@@ -576,7 +1331,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/uk/about/cookies-and-privacy/">Файли Cookies</a>
+                            <a href="/uk/cookies-and-privacy/">Файли Cookies</a>
                             
                         </li>
                         
@@ -614,12 +1369,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -627,3 +1382,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

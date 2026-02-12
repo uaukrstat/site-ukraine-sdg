@@ -118,7 +118,7 @@ var translations = {
 
         
     
-    <title>Goal 3 - Good health and well-being - Indicators For The Sustainable Development Goals</title>
+    <title>Goal 3 - Healthy lives and well-being - Indicators For The Sustainable Development Goals</title>
     
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,14 +184,14 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/goals">Goals</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/reporting-status">Reporting Status</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/about">About</a>
+    <a class="nav-link" href="/about">About platform</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/faq">FAQ</a>
 </li><li class="nav-item ">
@@ -253,27 +253,30 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Goal 3</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/en/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/en/goals/">Goals</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Healthy lives and well-being
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-3">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/en/3.svg" data-default=""
-                     data-hover="" alt="Good health and well-being - Goal 3" id="goal-3" class="goal-icon-image goal-icon-image-svg" />
+                <img src="/site-ukraine-sdg/assets/img/goals/en/3.svg" data-default=""
+                     data-hover="" alt="Healthy lives and well-being - Goal 3" id="goal-3" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
                 <h1>
@@ -291,784 +294,2909 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Targets and indicators</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Targets and indicators</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of November 29, 2024 No. 1190-p
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Effective
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of August 21, 2019 No. 686-p
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Previous
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.1</h3></div>
+                    <div class="col">Ensuring access of citizens to quality medical services</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of persons unable to obtain medical care, purchase medicines and medical products when needed during the last 12 months, percent (SDG indicator 3.1.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-1"
+                            onclick="loadChart('/3-1-1/', '3-1-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Share of contracted providers of mental health services at the primary health care level, percent (SDG indicator 3.1.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-2"
+                            onclick="loadChart('/3-1-2/', '3-1-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Share of health care expenditures in total household expenditures, percent (SDG indicator 3.1.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-3"
+                            onclick="loadChart('/3-1-3/', '3-1-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.4
+                            </h4>
+                        </div>
+                        <div class="col">Share of persons signed a declaration on the choice of a doctor who provides primary medical care, percent (SDG indicator 3.1.4)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-4"
+                            onclick="loadChart('/3-1-4/', '3-1-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.5
+                            </h4>
+                        </div>
+                        <div class="col">Share of persons signed a declaration on the choice of a doctor providing primary medical care and underwent a preventive examination during the year, percent (SDG indicator 3.1.5)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-5"
+                            onclick="loadChart('/3-1-5/', '3-1-5')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-5/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.2</h3></div>
+                    <div class="col">Reducing maternal mortality rates</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Maternal mortality rate, per 100,000 live-births (SDG indicator 3.2.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-2-1"
+                            onclick="loadChart('/3-2-1/', '3-2-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-2-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.3</h3></div>
+                    <div class="col">Minimizing preventable mortality among children under 5 years of age</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate of children under 5 years of age, per 1,000 live-births (SDG indicator 3.3.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-1"
+                            onclick="loadChart('/3-3-1/', '3-3-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-3-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Neonatal mortality rate, per 1,000 live-births (SDG indicator 3.3.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-2"
+                            onclick="loadChart('/3-3-2/', '3-3-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-3-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.4</h3></div>
+                    <div class="col">Ending the HIV/AIDS and tuberculosis epidemics, including through the use of innovative practices and treatments</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of patients diagnosed with HIV/AIDS for the first time, per 100,000 population (SDG indicator 3.4.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-1"
+                            onclick="loadChart('/3-4-1/', '3-4-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of persons receiving antiretroviral therapy among those diagnosed with HIV/AIDS (SDG indicator 3.4.2)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-2"
+                            onclick="loadChart('/3-4-2/', '3-4-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Number of patients diagnosed with active tuberculosis for the first time, per 100,000 population (SDG indicator 3.4.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-3"
+                            onclick="loadChart('/3-4-3/', '3-4-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.4
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.3-4-4-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-4"
+                            onclick="loadChart('/3-4-4/', '3-4-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.5</h3></div>
+                    <div class="col">Reducing premature mortality from non-communicable diseases</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate for men from cerebrovascular diseases aged 30–59 years, per 100,000 men of the corresponding age (SDG indicator 3.5.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-1"
+                            onclick="loadChart('/3-5-1/', '3-5-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate for women from cerebrovascular diseases aged 30–59 years, per 100,000 women of the corresponding age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-2"
+                            onclick="loadChart('/3-5-2/', '3-5-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.3
+                            </h4>
+                        </div>
+                        <div class="col">Share of diagnosed malignant neoplasms (breast, cervical, prostate, colorectal cancer, lung) at early stages in the total number of diagnosed malignant neoplasms, percent (SDG indicator 3.5.3)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-3"
+                            onclick="loadChart('/3-5-3/', '3-5-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.4
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate for women from malignant breast neoplasms aged 30–59 years, per 100,000 women of the corresponding age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-4"
+                            onclick="loadChart('/3-5-4/', '3-5-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.5
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate for women from malignant cervical neoplasms aged 30–59 years, per 100,000 women of the corresponding age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-5"
+                            onclick="loadChart('/3-5-5/', '3-5-5')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-5/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.6
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate from malignant neoplasms of the trachea, bronchi and lungs aged 30–59 years, per 100,000 persons of the corresponding age (SDG indicator 3.5.6)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-6"
+                            onclick="loadChart('/3-5-6/', '3-5-6')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-6/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.7
+                            </h4>
+                        </div>
+                        <div class="col">Mortality rate from intentional self-harm, per 100,000 persons (SDG indicator 3.5.7)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-7"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-7"
+                            onclick="loadChart('/3-5-7/', '3-5-7')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-7">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-7" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-7"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-7/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.6</h3></div>
+                    <div class="col">Ensuring high-quality and accessible rehabilitation in the health care sector</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Share of multi-profile health care institutions of a capable network that have concluded an agreement with the National Health Service of Ukraine on the provision of rehabilitation care, percent (SDG indicator 3.6.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-1"
+                            onclick="loadChart('/3-6-1/', '3-6-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-6-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.6.2
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.3-6-2-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-2"
+                            onclick="loadChart('/3-6-2/', '3-6-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-6-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-6-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.7</h3></div>
+                    <div class="col">Reducing mortality rate from transport accidents by using innovative practices in organizing resuscitation, treatment and rehabilitation of victims of such accidents</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Mortality rate due to transport accidents, per 100,000 persons (SDG indicator 3.7.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-7-1"
+                            onclick="loadChart('/3-7-1/', '3-7-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-7-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.8</h3></div>
+                    <div class="col">Ensuring universal immunization of the population</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.8.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Level of immunization of the population according to the Calendar of preventive vaccinations by age groups during the prevention of ten infectious diseases, percent 1</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-1"
+                            onclick="loadChart('/3-8-1/', '3-8-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-8-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-8-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.8.2
+                            </h4>
+                        </div>
+                        <div class="col">Proportion of population with large household expenditures on health as a share of total household expenditure or income</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-2"
+                            onclick="loadChart('/3-8-2/', '3-8-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-8-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-8-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.9</h3></div>
+                    <div class="col">Reducing the prevalence of tobacco and/or nicotine product use among the population</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.9.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Share of persons using tobacco and/or nicotine products among the population aged 15 and older, percent (SDG indicator 3.9.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-9-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-9-1"
+                            onclick="loadChart('/3-9-1/', '3-9-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-9-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-9-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-9-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-9-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.10</h3></div>
+                    <div class="col">Reducing the prevalence of alcohol consumption among the populatio</div>
+                </div>
+                
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.10.1
+                            </h4>
+                        </div>
+                        <div class="col">Indicator. Share of persons who drink alcoholic beverages, percent (SDG indicator 3.10.1)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-10-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-10-1"
+                            onclick="loadChart('/3-10-1/', '3-10-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-10-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-10-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-10-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-10-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.1</h3></div>
+                    <div class="col">
+                        Reduce maternal mortality
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of cases of maternal mortality, per 100,000 live births</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-1-1-a"
+                            onclick="loadChart('/3-1-1-a/', '3-1-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-1-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.2</h3></div>
+                    <div class="col">
+                        Minimize preventable mortality among children under 5
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Mortality of children under 5, cases per 1,000 live births</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-2-1-a"
+                            onclick="loadChart('/3-2-1-a/', '3-2-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-2-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.3</h3></div>
+                    <div class="col">
+                        End the epidemics of HIV/AIDS and tuberculosis, including through innovative practices and treatments
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of patients diagnosted with HIV for the first time, per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-1-a"
+                            onclick="loadChart('/3-3-1-a/', '3-3-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-3-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of patients diagnosted with active tuberculosis for the first time, per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-3-2-a"
+                            onclick="loadChart('/3-3-2-a/', '3-3-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-3-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.4</h3></div>
+                    <div class="col">
+                        Reduce premature mortality from noncommunicable diseases
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 men of corresponding age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-1-a"
+                            onclick="loadChart('/3-4-1-a/', '3-4-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 women of corresponding age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-2-a"
+                            onclick="loadChart('/3-4-2-a/', '3-4-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Number of deaths from malignant breast tumours at the age of 30-59, per 100,000 women of appropriate age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-3-a"
+                            onclick="loadChart('/3-4-3-a/', '3-4-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.4.4
+                            </h4>
+                        </div>
+                        <div class="col">Number of deaths from malignant cervical tumours at the age of 30-59, per 100,000 women of appropriate age</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-4-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-4-4-a"
+                            onclick="loadChart('/3-4-4-a/', '3-4-4-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-4-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-4-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-4-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-4-4-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.5</h3></div>
+                    <div class="col">
+                        Reduce by a quarter premature mortality, including through the introduction of innovative approaches to diagnosing diseases
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Probability of dying at the age of 20-64, men</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-1-a"
+                            onclick="loadChart('/3-5-1-a/', '3-5-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Probability of dying at the age of 20-64, women</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-5-2-a"
+                            onclick="loadChart('/3-5-2-a/', '3-5-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-5-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.6</h3></div>
+                    <div class="col">
+                        Reduce serious injuries and deaths from road traffic accidents, including through innovative practices of resuscitation, treatment and rehabilitation after road traffic accidents
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of deaths from road traffic accidents, per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-1-a"
+                            onclick="loadChart('/3-6-1-a/', '3-6-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-6-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.6.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of persons injured in road accidents, per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-6-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-6-2-a"
+                            onclick="loadChart('/3-6-2-a/', '3-6-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-6-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-6-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-6-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-6-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.7</h3></div>
+                    <div class="col">
+                        Ensure universal, quality immunization with innovative vaccines
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Immunization rate of population according to the Preventive Vaccination Calendar by designated six age groups for prevention of ten infectious diseases, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-7-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-7-1-a"
+                            onclick="loadChart('/3-7-1-a/', '3-7-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-7-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-7-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-7-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-7-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.8</h3></div>
+                    <div class="col">
+                        Reduce the prevalence of smoking among the population through innovative media to inform about negative effects of smoking
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.8.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of women who smoke at the age of 16-29, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-1-a"
+                            onclick="loadChart('/3-8-1-a/', '3-8-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-8-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-8-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.8.2
+                            </h4>
+                        </div>
+                        <div class="col">Share of men who smoke at the age of 16-29, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-8-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-8-2-a"
+                            onclick="loadChart('/3-8-2-a/', '3-8-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-8-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-8-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-8-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-8-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.9</h3></div>
+                    <div class="col">
+                        Reform health care financing
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                3.9.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of expenditures of the population in general spending on health, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3-9-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-3-9-1-a"
+                            onclick="loadChart('/3-9-1-a/', '3-9-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-3-9-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-3-9-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-3-9-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/3-9-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce maternal mortality</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-1-1/">Number of cases of maternal mortality, per 100,000 live births</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Minimize preventable mortality among children under 5</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-2-1/">Mortality of children under 5, cases per 1,000 live births</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">End the epidemics of HIV/AIDS and tuberculosis, including through innovative practices and treatments</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-3-1/">Number of patients diagnosted with HIV for the first time, per 100,000 persons</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.3.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-3-2/">Number of patients diagnosted with active tuberculosis for the first time, per 100,000 persons</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.4</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce premature mortality from noncommunicable diseases</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.4.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-4-1/">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 men of corresponding age</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.4.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-4-2/">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 women of corresponding age</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.4.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-4-3/">Number of deaths from malignant breast tumours at the age of 30-59, per 100,000 women of appropriate age</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.4.4</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-4-4/">Number of deaths from malignant cervical tumours at the age of 30-59, per 100,000 women of appropriate age</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.5</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce by a quarter premature mortality, including through the introduction of innovative approaches to diagnosing diseases</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.5.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-5-1/">Probability of dying at the age of 20-64, men</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.5.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-5-2/">Probability of dying at the age of 20-64, women</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.6</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce serious injuries and deaths from road traffic accidents, including through innovative practices of resuscitation, treatment and rehabilitation after road traffic accidents</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.6.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-6-1/">Number of deaths from road traffic accidents, per 100,000 persons</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.6.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-6-2/">Number of persons injured in road accidents, per 100,000 persons</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.7</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure universal, quality immunization with innovative vaccines</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.7.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-7-1/">Immunization rate of population according to the Preventive Vaccination Calendar by designated six age groups for prevention of ten infectious diseases, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.8</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce the prevalence of smoking among the population through innovative media to inform about negative effects of smoking</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.8.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-8-1/">Share of women who smoke at the age of 16-29, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.8.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-8-2/">Share of men who smoke at the age of 16-29, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 3.9</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reform health care financing</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 3.9.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/3-9-1/">Share of expenditures of the population in general spending on health, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">Back to top</a>
+    <a href="#top">Back to top</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -1095,7 +3223,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/about/cookies-and-privacy/">Cookies</a>
+                            <a href="/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -1133,12 +3261,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1146,3 +3274,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

@@ -25,3 +25,13 @@ label_warning: "Warning:"
 # A phrase to use as a site-wide page title.
 site_title: Indicators For The Sustainable Development Goals
 back_to_top: Back to top
+show_chart: Show
+hide_chart: Hide
+tab_title: As amended by the Order of the Cabinet of Ministers of Ukraine of November 29, 2024 No. 1190-p
+archive_tab_title: As amended by the Order of the Cabinet of Ministers of Ukraine of August 21, 2019 No. 686-p
+badge_current_short: 'Effective'
+badge_previous_short: 'Previous'
+badge_current: 'Effective edition'
+badge_previous: 'Previous edition'
+view_indicator_details: 'View indicator details'
+loading_chart: 'Loading chart...'

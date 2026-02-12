@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,14 +184,14 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/goals">Goals</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/reporting-status">Reporting Status</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/about">About</a>
+    <a class="nav-link" href="/about">About platform</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/faq">FAQ</a>
 </li><li class="nav-item ">
@@ -253,26 +253,29 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Goal 4</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/en/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/en/goals/">Goals</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Quality education
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-4">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/en/4.svg" data-default=""
+                <img src="/site-ukraine-sdg/assets/img/goals/en/4.svg" data-default=""
                      data-hover="" alt="Quality education - Goal 4" id="goal-4" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
@@ -291,676 +294,2548 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Targets and indicators</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Targets and indicators</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of November 29, 2024 No. 1190-p
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Effective
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of August 21, 2019 No. 686-p
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Previous
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.1</h3></div>
+                    <div class="col">Ensure access to quality school education for all children and adolescents</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of graduates of general secondary education institutions in the current year who have target level of academic achievement in the Ukrainian language</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-1-1"
+                            onclick="loadChart('/4-1-1/', '4-1-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-1-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Completion rate (primary education, lower secondary education, upper secondary education)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-1-2"
+                            onclick="loadChart('/4-1-2/', '4-1-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-1-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.2</h3></div>
+                    <div class="col">Ensure access to quality pre–primary development for all children</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Coverage of children aged 5 years by pre-school education institutions and structural units of public and private legal entities, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-2-1"
+                            onclick="loadChart('/4-2-1/', '4-2-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-2-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.2.2
+                            </h4>
+                        </div>
+                        <div class="col">Participation rate in organized learning (one year before the official primary entry age), by sex</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-2-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-2-2"
+                            onclick="loadChart('/4-2-2/', '4-2-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-2-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-2-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-2-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-2-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.2.3
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-2-3-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-2-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-2-3"
+                            onclick="loadChart('/4-2-3/', '4-2-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-2-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-2-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-2-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-2-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.3</h3></div>
+                    <div class="col">Ensure access to vocational education</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Ratio of the number of entrants to vocational technical establishments to the total number of places in vocational technical establishments funded from the state and local budgets</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-3-1"
+                            onclick="loadChart('/4-3-1/', '4-3-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-3-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.3.2
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-3-2-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-3-2"
+                            onclick="loadChart('/4-3-2/', '4-3-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-3-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.4</h3></div>
+                    <div class="col">Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of Ukrainian cities — members of the UNESCO Global Network of Learning Cities</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-1"
+                            onclick="loadChart('/4-4-1/', '4-4-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Population by the level of education and sex, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-2"
+                            onclick="loadChart('/4-4-2/', '4-4-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Cost of training a specialist</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-3"
+                            onclick="loadChart('/4-4-3/', '4-4-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.4
+                            </h4>
+                        </div>
+                        <div class="col">Expenditures of higher education institutions on scientific research activities</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-4"
+                            onclick="loadChart('/4-4-4/', '4-4-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.5
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-4-5-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-5"
+                            onclick="loadChart('/4-4-5/', '4-4-5')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-5/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.6
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-4-6-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-6"
+                            onclick="loadChart('/4-4-6/', '4-4-6')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-6/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.7
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-4-7-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-7"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-7"
+                            onclick="loadChart('/4-4-7/', '4-4-7')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-7">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-7" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-7"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-7/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.8
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-4-8-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-8"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-8"
+                            onclick="loadChart('/4-4-8/', '4-4-8')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-8">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-8" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-8"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-8/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.5</h3></div>
+                    <div class="col">Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Level of participation of the population in formal and informal forms of education and vocational training, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-5-1"
+                            onclick="loadChart('/4-5-1/', '4-5-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-5-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.5.2
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-5-2-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-5-2"
+                            onclick="loadChart('/4-5-2/', '4-5-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-5-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.6</h3></div>
+                    <div class="col">Eliminate gender disparities among school teachers</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of men among pedagogical staff, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-6-1"
+                            onclick="loadChart('/4-6-1/', '4-6-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-6-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.6.2
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-6-2-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-6-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-6-2"
+                            onclick="loadChart('/4-6-2/', '4-6-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-6-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-6-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-6-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-6-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.7</h3></div>
+                    <div class="col">Create a modern learning environment in schools, including inclusive education, through innovative approaches</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of rural full-time secondary schools with Internet access, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-1"
+                            onclick="loadChart('/4-7-1/', '4-7-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.2
+                            </h4>
+                        </div>
+                        <div class="col">Share of rural full-time secondary schools, where computers are used in the educational process, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-2"
+                            onclick="loadChart('/4-7-2/', '4-7-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.3
+                            </h4>
+                        </div>
+                        <div class="col">Share of full-time secondary schools with inclusive education, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-3"
+                            onclick="loadChart('/4-7-3/', '4-7-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.8</h3></div>
+                    <div class="col">global_targets.4-8-title</div>
+                </div>
+                
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.8.1
+                            </h4>
+                        </div>
+                        <div class="col">global_indicators.4-8-1-title</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-8-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-8-1"
+                            onclick="loadChart('/4-8-1/', '4-8-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-8-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-8-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-8-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-8-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.1</h3></div>
+                    <div class="col">
+                        Архівне завдання
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of graduates of general secondary education institutions in the current year who have target level of academic achievement in the Ukrainian language</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-1-1-a"
+                            onclick="loadChart('/4-1-1-a/', '4-1-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-1-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of full-time secondary school students per teacher, at the beginning of the school year</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-1-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-1-2-a"
+                            onclick="loadChart('/4-1-2-a/', '4-1-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-1-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-1-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-1-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-1-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.2</h3></div>
+                    <div class="col">
+                        Архівне завдання
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Coverage of children aged 5 years by pre-school education institutions and structural units of public and private legal entities, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-2-1-a"
+                            onclick="loadChart('/4-2-1-a/', '4-2-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-2-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.3</h3></div>
+                    <div class="col">
+                        Архівне завдання
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Ratio of the number of entrants to vocational technical establishments to the total number of places in vocational technical establishments funded from the state and local budgets</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-3-1-a"
+                            onclick="loadChart('/4-3-1-a/', '4-3-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-3-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.4</h3></div>
+                    <div class="col">
+                        Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of Ukrainian cities — members of the UNESCO Global Network of Learning Cities</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-1-a"
+                            onclick="loadChart('/4-4-1-a/', '4-4-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.2
+                            </h4>
+                        </div>
+                        <div class="col">Population by the level of education and sex, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-2-a"
+                            onclick="loadChart('/4-4-2-a/', '4-4-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.3
+                            </h4>
+                        </div>
+                        <div class="col">Cost of training a specialist</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-3-a"
+                            onclick="loadChart('/4-4-3-a/', '4-4-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.4.4
+                            </h4>
+                        </div>
+                        <div class="col">Expenditures of higher education institutions on scientific research activities</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-4-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-4-4-a"
+                            onclick="loadChart('/4-4-4-a/', '4-4-4-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-4-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-4-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-4-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-4-4-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.5</h3></div>
+                    <div class="col">
+                        Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Level of participation of the population in formal and informal forms of education and vocational training, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-5-1-a"
+                            onclick="loadChart('/4-5-1-a/', '4-5-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-5-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Share of the population who reported using the Internet over the past 12 months, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-5-2-a"
+                            onclick="loadChart('/4-5-2-a/', '4-5-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-5-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.6</h3></div>
+                    <div class="col">
+                        Eliminate gender disparities among school teachers
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of men among pedagogical staff, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-6-1-a"
+                            onclick="loadChart('/4-6-1-a/', '4-6-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-6-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.7</h3></div>
+                    <div class="col">
+                        Create a modern learning environment in schools, including inclusive education, through innovative approaches
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of rural full-time secondary schools with Internet access, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-1-a"
+                            onclick="loadChart('/4-7-1-a/', '4-7-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.2
+                            </h4>
+                        </div>
+                        <div class="col">Share of rural full-time secondary schools, where computers are used in the educational process, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-2-a"
+                            onclick="loadChart('/4-7-2-a/', '4-7-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                4.7.3
+                            </h4>
+                        </div>
+                        <div class="col">Share of full-time secondary schools with inclusive education, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4-7-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-4-7-3-a"
+                            onclick="loadChart('/4-7-3-a/', '4-7-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-4-7-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-4-7-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-4-7-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/4-7-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure access to quality school education for all children and adolescents</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-1-1/">Share of graduates of general secondary education institutions in the current year who have target level of academic achievement in the Ukrainian language</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.1.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-1-2/">Number of full-time secondary school students per teacher, at the beginning of the school year</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure access to quality pre–primary development for all children</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-2-1/">Coverage of children aged 5 years by pre-school education institutions and structural units of public and private legal entities, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure access to vocational education</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-3-1/">Ratio of the number of entrants to vocational technical establishments to the total number of places in vocational technical establishments funded from the state and local budgets</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.4</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.4.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-4-1/">Number of Ukrainian cities — members of the UNESCO Global Network of Learning Cities</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.4.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-4-2/">Population by the level of education and sex, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.4.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-4-3/">Cost of training a specialist</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.4.4</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-4-4/">Expenditures of higher education institutions on scientific research activities</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.5</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.5.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-5-1/">Level of participation of the population in formal and informal forms of education and vocational training, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.5.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-5-2/">Share of the population who reported using the Internet over the past 12 months, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.6</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Eliminate gender disparities among school teachers</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.6.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-6-1/">Share of men among pedagogical staff, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 4.7</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Create a modern learning environment in schools, including inclusive education, through innovative approaches</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.7.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-7-1/">Share of rural full-time secondary schools with Internet access, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.7.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-7-2/">Share of rural full-time secondary schools, where computers are used in the educational process, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 4.7.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/4-7-3/">Share of full-time secondary schools with inclusive education, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">Back to top</a>
+    <a href="#top">Back to top</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -987,7 +2862,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/about/cookies-and-privacy/">Cookies</a>
+                            <a href="/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -1025,12 +2900,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1038,3 +2913,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

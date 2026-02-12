@@ -118,7 +118,7 @@ var translations = {
 
         
     
-    <title>Goal 11 - Sustainable cities and communities - Indicators For The Sustainable Development Goals</title>
+    <title>Goal 11 - Sustainable development of cities and communities - Indicators For The Sustainable Development Goals</title>
     
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260129150102">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260212160944">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -184,14 +184,14 @@ layout-goal
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/goals">Goals</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/reporting-status">Reporting Status</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/about">About</a>
+    <a class="nav-link" href="/about">About platform</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/faq">FAQ</a>
 </li><li class="nav-item ">
@@ -253,27 +253,30 @@ layout-goal
 
 
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Goal 11</li>
-        
-    </ol>
-</nav>
-  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/en/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/en/goals/">Goals</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Sustainable development of cities and communities
+            </li>
+        </ol>
+    </nav>
+    
 </div>
 
 <div class="heading goal-banner goal-11">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
                 
 
-                <img src="/assets/img/goals/en/11.svg" data-default=""
-                     data-hover="" alt="Sustainable cities and communities - Goal 11" id="goal-11" class="goal-icon-image goal-icon-image-svg" />
+                <img src="/site-ukraine-sdg/assets/img/goals/en/11.svg" data-default=""
+                     data-hover="" alt="Sustainable development of cities and communities - Goal 11" id="goal-11" class="goal-icon-image goal-icon-image-svg" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
                 <h1>
@@ -291,505 +294,1469 @@ layout-goal
 
 
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container indicators-container" role="main">
 
-  
+    
 
 
 
-  <div class="container g-0 ">
-    <div class="row align-items-end">
-      <div class="col">
-        <h2 class="goal-page-heading">Targets and indicators</h2>
-      </div>
-      
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Targets and indicators</h2>
+            </div>
+            
+        </div>
+        <hr class="goal-page-column-header-rule">
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of November 29, 2024 No. 1190-p
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Effective
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                As amended by the Order of the Cabinet of Ministers of Ukraine of August 21, 2019 No. 686-p
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Previous
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.1</h3></div>
+                    <div class="col">Ensure access to housing</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Solvency ratio of the borrower (ratio of monthly payments of the borrower and his/her family on mortgage debt servicing to total monthly income)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-1-1"
+                            onclick="loadChart('/11-1-1/', '11-1-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-1-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Coverage of territorial units of Ukraine (regions) with affordable housing programs for different categories of citizens, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-1-2"
+                            onclick="loadChart('/11-1-2/', '11-1-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-1-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.2</h3></div>
+                    <div class="col">Ensure development of settlements and territories exclusively based on integrated planning and participatory management</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of regions that have approved and implemented regional development strategies and action plans for their implementation developed with public participation, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-2-1"
+                            onclick="loadChart('/11-2-1/', '11-2-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-2-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.3</h3></div>
+                    <div class="col">Ensure protection and safeguarding of the cultural and natural heritage, with involvement of the private sector</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of cultural and natural heritage sites included in the UNESCO World Heritage List, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-1"
+                            onclick="loadChart('/11-3-1/', '11-3-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of monuments of national importance included in the State Monument List of Ukraine, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-2"
+                            onclick="loadChart('/11-3-2/', '11-3-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.3
+                            </h4>
+                        </div>
+                        <div class="col">Area of the nature reserve fund of national importance, % of the country area</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-3"
+                            onclick="loadChart('/11-3-3/', '11-3-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.4</h3></div>
+                    <div class="col">Ensure timely public alert about emergencies through innovative technologies</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Status of implementation (development, modernization, improvement) of local automated centralized public alert systems, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-4-1"
+                            onclick="loadChart('/11-4-1/', '11-4-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-4-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.5</h3></div>
+                    <div class="col">Reduce the adverse impact of pollutants, including on the urban environment in particular, through innovative technologies</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Emissions of air pollutants from stationary sources, % to 2015 level</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-5-1"
+                            onclick="loadChart('/11-5-1/', '11-5-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-5-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of cities in which the average annual concentrations of major pollutants in the atmospheric air exceed the average daily maximum permissible concentrations, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-5-2"
+                            onclick="loadChart('/11-5-2/', '11-5-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-5-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.6</h3></div>
+                    <div class="col">Ensure the development and implementation of local development strategies aimed at economic growth, job creation, tourism, recreation and development of the local culture, and production of local products</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of workers employed in tourism business entities (CТEA code-2010 – 55.1, 55.2, 55.3, 79.11, 79.12), persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-6-1"
+                            onclick="loadChart('/11-6-1/', '11-6-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-6-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.1</h3></div>
+                    <div class="col">
+                        Ensure access to housing
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.1.1
+                            </h4>
+                        </div>
+                        <div class="col">Solvency ratio of the borrower (ratio of monthly payments of the borrower and his/her family on mortgage debt servicing to total monthly income)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-1-1-a"
+                            onclick="loadChart('/11-1-1-a/', '11-1-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-1-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Coverage of territorial units of Ukraine (regions) with affordable housing programs for different categories of citizens, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-1-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-1-2-a"
+                            onclick="loadChart('/11-1-2-a/', '11-1-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-1-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-1-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-1-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-1-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.2</h3></div>
+                    <div class="col">
+                        Ensure development of settlements and territories exclusively based on integrated planning and participatory management
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.2.1
+                            </h4>
+                        </div>
+                        <div class="col">Share of regions that have approved and implemented regional development strategies and action plans for their implementation developed with public participation, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-2-1-a"
+                            onclick="loadChart('/11-2-1-a/', '11-2-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-2-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.3</h3></div>
+                    <div class="col">
+                        Ensure protection and safeguarding of the cultural and natural heritage, with involvement of the private sector
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of cultural and natural heritage sites included in the UNESCO World Heritage List, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-1-a"
+                            onclick="loadChart('/11-3-1-a/', '11-3-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of monuments of national importance included in the State Monument List of Ukraine, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-2-a"
+                            onclick="loadChart('/11-3-2-a/', '11-3-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.3.3
+                            </h4>
+                        </div>
+                        <div class="col">Area of the nature reserve fund of national importance, % of the country area</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Published</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-3-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-3-3-a"
+                            onclick="loadChart('/11-3-3-a/', '11-3-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-3-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-3-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-3-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-3-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.4</h3></div>
+                    <div class="col">
+                        Ensure timely public alert about emergencies through innovative technologies
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.4.1
+                            </h4>
+                        </div>
+                        <div class="col">Status of implementation (development, modernization, improvement) of local automated centralized public alert systems, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-4-1-a"
+                            onclick="loadChart('/11-4-1-a/', '11-4-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-4-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.5</h3></div>
+                    <div class="col">
+                        Reduce the adverse impact of pollutants, including on the urban environment in particular, through innovative technologies
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.5.1
+                            </h4>
+                        </div>
+                        <div class="col">Emissions of air pollutants from stationary sources, % to 2015 level</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-5-1-a"
+                            onclick="loadChart('/11-5-1-a/', '11-5-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-5-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Number of cities in which the average annual concentrations of major pollutants in the atmospheric air exceed the average daily maximum permissible concentrations, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-5-2-a"
+                            onclick="loadChart('/11-5-2-a/', '11-5-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-5-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>11.6</h3></div>
+                    <div class="col">
+                        Ensure the development and implementation of local development strategies aimed at economic growth, job creation, tourism, recreation and development of the local culture, and production of local products
+                    </div>
+                </div>
+
+                
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                11.6.1
+                            </h4>
+                        </div>
+                        <div class="col">Number of workers employed in tourism business entities (CТEA code-2010 – 55.1, 55.2, 55.3, 79.11, 79.12), persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-11-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-11-6-1-a"
+                            onclick="loadChart('/11-6-1-a/', '11-6-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-11-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-11-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-11-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/11-6-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
     </div>
-    <hr class="goal-page-column-header-rule">
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure access to housing</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.1.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-1-1/">Solvency ratio of the borrower (ratio of monthly payments of the borrower and his/her family on mortgage debt servicing to total monthly income)</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.1.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-1-2/">Coverage of territorial units of Ukraine (regions) with affordable housing programs for different categories of citizens, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure development of settlements and territories exclusively based on integrated planning and participatory management</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.2.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-2-1/">Share of regions that have approved and implemented regional development strategies and action plans for their implementation developed with public participation, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.3</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure protection and safeguarding of the cultural and natural heritage, with involvement of the private sector</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.3.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-3-1/">Number of cultural and natural heritage sites included in the UNESCO World Heritage List, units</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.3.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-3-2/">Number of monuments of national importance included in the State Monument List of Ukraine, units</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.3.3</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-3-3/">Area of the nature reserve fund of national importance, % of the country area</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.4</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure timely public alert about emergencies through innovative technologies</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.4.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-4-1/">Status of implementation (development, modernization, improvement) of local automated centralized public alert systems, %</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.5</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Reduce the adverse impact of pollutants, including on the urban environment in particular, through innovative technologies</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.5.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-5-1/">Emissions of air pollutants from stationary sources, % to 2015 level</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.5.2</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-5-2/">Number of cities in which the average annual concentrations of major pollutants in the atmospheric air exceed the average daily maximum permissible concentrations, units</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 11.6</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">Ensure the development and implementation of local development strategies aimed at economic growth, job creation, tourism, recreation and development of the local culture, and production of local products</span>
-          </div>
-          
-      </div>
-        
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 11.6.1</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/11-6-1/">Number of workers employed in tourism business entities (CТEA code-2010 – 55.1, 55.2, 55.3, 79.11, 79.12), persons</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
-        <span class="visually-hidden">Indicator status</span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">complete</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-  </div>
-  <a href="#top">Back to top</a>
+    <a href="#top">Back to top</a>
 </div>
-
 
 <footer role="contentinfo">
     <div class="container">
@@ -816,7 +1783,7 @@ layout-goal
                             
                         </li>
                         <li>
-                            <a href="/about/cookies-and-privacy/">Cookies</a>
+                            <a href="/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -854,12 +1821,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260129150102'></script>
+<script src='/assets/js/sdg.js?v=20260212160944'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260129150102"></script><script>
+    <script src="/assets/js/custom.js?v=20260212160944"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -867,3 +1834,83 @@ layout-goal
 
 </body>
 </html>
+
+<script>
+  function loadChart(url, slug) {
+    const targetDiv = document.getElementById('chart-target-' + slug);
+    const loader = document.getElementById('loader-' + slug);
+
+    if (targetDiv.innerHTML.trim() !== "") return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "none";
+    iframe.style.visibility = "hidden";
+
+    iframe.onload = function() {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const chart = iframeDoc.getElementById('selectionsChart');
+
+        if (chart) {
+          Array.from(iframeDoc.body.children).forEach(child => {
+            child.style.display = 'none';
+          });
+
+          let current = chart;
+          while (current && current !== iframeDoc.body) {
+            current.style.display = 'block';
+            current = current.parentElement;
+          }
+
+          const style = iframeDoc.createElement('style');
+          style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+          iframeDoc.head.appendChild(style);
+
+          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+          toHideInside.forEach(el => el.style.display = 'none');
+
+          iframeDoc.body.style.overflow = 'hidden';
+          loader.style.display = 'none';
+          iframe.style.visibility = "visible";
+        } else {
+          loader.style.display = 'none';
+          targetDiv.innerHTML = '';
+        }
+
+      } catch (e) {
+        console.warn("CORS error: iframe", e);
+        loader.innerHTML = "Помилка доступу до графіка";
+      }
+    };
+
+    targetDiv.appendChild(iframe);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const collapses = document.querySelectorAll('.collapse');
+
+    collapses.forEach(collapseEl => {
+      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+      if (!button) return;
+
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-hide');
+      });
+
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        button.textContent = button.getAttribute('data-text-show');
+      });
+    });
+  });
+</script>

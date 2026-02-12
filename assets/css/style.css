@@ -33,6 +33,20 @@
  * a similarly named file to override any "default" variables in the "variables"
  * folder.
  */
+.indicator-item .status {
+  padding: 5px 8px 4px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .indicator-item .status.complete {
+    color: #005A30;
+    background: #CCE2D8; }
+    .indicator-item .status.complete .status-inner {
+      color: #005A30;
+      background: #CCE2D8; }
+
 .js #headlineTable {
   display: none; }
 .js .no-js-language-toggle {
@@ -154,6 +168,26 @@ body.contrast-high .btn-download {
   body.contrast-high .btn-primary:focus,
   body.contrast-high .btn-download:focus {
     background: #FFDD00 !important; }
+
+.btn-toggle-collapse {
+  color: #1D70B8;
+  font-size: 19px;
+  font-weight: 400 !important;
+  line-height: 19px !important;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  display: flex;
+  align-items: center; }
+  .btn-toggle-collapse:before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjE5LjUiIGhlaWdodD0iMTkuNSIgcng9IjkuNzUiIHN0cm9rZT0iIzFENzBCOCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPHBhdGggZD0iTTEzLjUzNTUgMTEuNDY0NUwxMCA3LjkyODkyTDYuNDY0NDcgMTEuNDY0NSIgc3Ryb2tlPSIjMUQ3MEI4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4K");
+    margin-right: 5px;
+    height: 20px; }
+  .btn-toggle-collapse.collapsed:before {
+    transform: rotate(180deg); }
 
 .tab-pane:focus,
 .variable-selector button.accessBtn:focus {
@@ -889,9 +923,6 @@ body.contrast-high #dataset-size-warning {
 
 .frontpage-goals-grid {
   margin: 56px 0 64px 0; }
-  @media only screen and (min-width: 992px) {
-    .frontpage-goals-grid .goal-tiles .goal-tile {
-      width: 11%; } }
   .frontpage-goals-grid .frontpage-goals-grid-title {
     margin-top: 20px;
     margin-bottom: 14px; }
@@ -903,17 +934,18 @@ body.contrast-high #dataset-size-warning {
   text-justify: inter-word; }
 @media only screen and (min-width: 700px) {
   .site-intro {
-    padding-right: 300px;
+    padding-right: 350px;
     background: url("../img/banner_logo_uk.svg");
     background-position: right top 50%;
-    background-size: 180px;
+    background-size: 210px;
     background-repeat: no-repeat; } }
 
 @media only screen and (min-width: 700px) {
   body.language-en .site-intro {
+    padding-right: 350px;
     background: url("../img/banner_logo_en.svg");
     background-position: right top 50%;
-    background-size: 180px;
+    background-size: 210px;
     background-repeat: no-repeat; } }
 
 .banner_wrapper {
@@ -940,6 +972,12 @@ body.contrast-high #dataset-size-warning {
 .goal-banner .indicator-details h1 .lead-copy {
   display: block;
   margin-top: 10px; }
+.goal-banner-title {
+  margin-top: 0 !important;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; }
 
 body.contrast-high .goal-banner img {
   background-color: black !important; }
@@ -1219,7 +1257,9 @@ body.contrast-high .breadcrumb {
   font-size: 0.875em;
   margin-right: 8px; }
   #toolbar button[aria-expanded="true"] {
-    margin-bottom: 9px; }
+    margin-bottom: 16px; }
+    #toolbar button[aria-expanded="true"] i {
+      transform: rotate(180deg); }
   #toolbar button i {
     position: absolute;
     top: 11px;
@@ -1243,8 +1283,7 @@ body.contrast-high .breadcrumb {
   -webkit-user-select: none;
   -o-user-select: none;
   padding-bottom: 14px;
-  font-size: 0.75em;
-  margin-top: 10px; }
+  font-size: 0.75em; }
   #fields label {
     background-color: white;
     padding: 7px;
@@ -1266,28 +1305,28 @@ body.contrast-high .breadcrumb {
         border-color: #ccc; }
   #fields h5,
   #fields h6 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 7px;
     position: relative;
     padding-right: 33px;
-    font-size: 14px; }
+    color: #0B0C0C;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px; }
     #fields h5 i,
     #fields h6 i {
-      font-size: 0.875em;
+      font-size: 0.675em;
       position: absolute;
-      top: 0;
-      right: 6px; }
+      top: 4px;
+      right: 6px;
+      border-radius: 100px;
+      border: 0.5px solid #0B0C0C;
+      padding: 4px; }
   #fields .variable-selector {
     position: relative;
     cursor: pointer;
     width: 100%;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 10px; }
-    #fields .variable-selector:hover {
-      border-color: #555; }
+    padding: 8px 0; }
     #fields .variable-selector .no-data-hint,
     #fields .variable-selector .variable-hint {
       display: none;
@@ -1302,24 +1341,79 @@ body.contrast-high .breadcrumb {
       right: -1px;
       left: -1px;
       overflow: auto; }
+      #fields .variable-selector .variable-options .custom-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        user-select: none; }
+      #fields .variable-selector .variable-options .custom-checkbox__input {
+        position: absolute;
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden; }
+      #fields .variable-selector .variable-options .custom-checkbox__box {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #000;
+        border-radius: 2px;
+        background: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 24px; }
+      #fields .variable-selector .variable-options .custom-checkbox__box::after {
+        content: "";
+        width: 10px;
+        height: 6px;
+        border-left: 3px solid #000;
+        border-bottom: 3px solid #000;
+        transform: rotate(-45deg);
+        opacity: 0;
+        transition: opacity .15s; }
+      #fields .variable-selector .variable-options .custom-checkbox__input:checked + .custom-checkbox__box {
+        background: #fff;
+        border-color: #000; }
+      #fields .variable-selector .variable-options .custom-checkbox__input:checked + .custom-checkbox__box::after {
+        opacity: 1; }
+      #fields .variable-selector .variable-options .custom-checkbox:hover .custom-checkbox__box {
+        border-color: #3b3b3b; }
+      #fields .variable-selector .variable-options .custom-checkbox__input:focus-visible + .custom-checkbox__box {
+        outline: 3px solid rgba(11, 102, 255, 0.35);
+        outline-offset: 2px; }
+      #fields .variable-selector .variable-options-fieldset {
+        max-height: 220px;
+        overflow: auto;
+        padding-left: 4px;
+        /* Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.3) transparent; }
+        #fields .variable-selector .variable-options-fieldset::-webkit-scrollbar {
+          width: 8px;
+          height: 8px; }
+        #fields .variable-selector .variable-options-fieldset::-webkit-scrollbar-track {
+          background: transparent; }
+        #fields .variable-selector .variable-options-fieldset::-webkit-scrollbar-thumb {
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 999px; }
+        #fields .variable-selector .variable-options-fieldset::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(0, 0, 0, 0.5); }
       #fields .variable-selector .variable-options > div {
         text-align: left;
         padding: 4px; }
       #fields .variable-selector .variable-options button {
         width: auto;
-        background-color: white;
-        border: 1px solid #555;
-        color: #0b0c0c;
-        float: none;
-        position: static;
+        color: #0B0C0C;
         text-align: center;
-        width: 40%;
-        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25px;
+        text-align: center;
         font-size: 1.2em;
-        padding: inherit;
-        padding-left: 2px;
-        padding-right: 2px;
-        border-radius: 4px; }
+        padding: 8px 12px 7px 12px;
+        background: #F3F2F1;
+        box-shadow: 0 -2px 0 0 #929191 inset; }
         #fields .variable-selector .variable-options button:hover {
           background: #f5f3f3; }
       #fields .variable-selector .variable-options button[data-type="select"] {
@@ -1328,16 +1422,20 @@ body.contrast-high .breadcrumb {
       #fields .variable-selector .variable-options button[data-type="clear"] {
         margin-bottom: 5px; }
       #fields .variable-selector .variable-options label {
-        padding-left: 7px;
-        padding-right: 25px;
+        padding: 7px 25px 7px 0;
         position: relative;
-        font-size: 1.3em; }
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 25px;
+        display: flex;
+        align-items: center; }
         #fields .variable-selector .variable-options label:not(:first-child) {
           border-top: 1px solid #cdcdcd; }
         #fields .variable-selector .variable-options label input {
-          position: absolute;
-          top: 4px;
-          right: 4px; }
+          position: static;
+          margin-right: 10px;
+          height: 24px;
+          width: 24px; }
         #fields .variable-selector .variable-options label:hover {
           background: #EEEEEE; }
         #fields .variable-selector .variable-options label[data-has-data="false"] {
@@ -1389,7 +1487,16 @@ body.contrast-high .breadcrumb {
   width: 100%; }
 
 #series-help > h4 {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 16px;
+  color: #0B0C0C;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px; }
+#series-help p {
+  color: #0B0C0C;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; }
 
 body.contrast-high #main-content #fields .variable-selector .variable-options label {
   background: black;
@@ -1424,6 +1531,9 @@ body.contrast-high div#units,
 body.contrast-high div#serieses {
   color: white; }
 
+#indicator-sidebar button#clear {
+  display: none; }
+
 .progress-status .progress-status-image {
   max-width: 136px; }
   .progress-status .progress-status-image img {
@@ -1443,6 +1553,20 @@ body.contrast-high div#serieses {
   .tags .tag a {
     color: white;
     text-decoration: underline; }
+
+.indicator-item .goal-indicator .status {
+  padding: 5px 8px 4px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .indicator-item .goal-indicator .status.complete {
+    color: #005A30;
+    background: #CCE2D8; }
+    .indicator-item .goal-indicator .status.complete .status-inner {
+      color: #005A30;
+      background: #CCE2D8; }
 
 .proxy-pill {
   padding: 4px;
@@ -1615,6 +1739,8 @@ body.contrast-high .previous-next-links .btn-primary span {
   margin-bottom: 24px;
   padding-left: 32px;
   position: relative; }
+  .useful-links p:last-child::before {
+    content: none; }
   .useful-links p::before {
     content: '';
     position: absolute;
@@ -1633,6 +1759,77 @@ body.contrast-high .previous-next-links .btn-primary span {
     line-height: 24px;
     color: #1d70b8;
     text-decoration: underline; }
+
+h1, h2 {
+  font-weight: 700; }
+
+h1 {
+  line-height: 40px; }
+
+h2 {
+  line-height: 30px; }
+
+h3 {
+  font-weight: 600;
+  line-height: 32px; }
+
+.mb-8 {
+  margin-bottom: 8px; }
+
+.mb-48 {
+  margin-bottom: 48px; }
+  @media (max-width: 768px) {
+    .mb-48 {
+      margin-bottom: 25px; } }
+
+.layout-page #main-content h2 {
+  margin-bottom: 24px;
+  margin-top: 40px !important; }
+
+ol, ul {
+  padding-left: 15px; }
+
+ol > li > p,
+ul > li > p {
+  margin-bottom: 6px; }
+
+#main-content a[href="#top"] {
+  margin-top: 40px; }
+
+#menu {
+  margin-top: 0; }
+
+.navbar-container {
+  margin-top: 31px;
+  margin-bottom: 40px; }
+
+.lead-copy * {
+  font-size: 18px;
+  line-height: 27px; }
+
+.frontpage-goals-grid-description {
+  margin-top: 16px;
+  margin-bottom: 40px; }
+
+.card-title {
+  border-top: none !important;
+  margin-bottom: 24px; }
+
+.btn {
+  font-weight: 600;
+  line-height: 25px;
+  padding: 8px 12px 7px 12px; }
+
+#zip-download-info {
+  font-size: 14px;
+  line-height: 21px; }
+
+@media (max-width: 768px) {
+  .zip-download-container a.btn {
+    margin-left: 0; } }
+#main-content p {
+  font-size: 16px;
+  line-height: 24px; }
 
 .publication {
   clear: both;
@@ -1686,6 +1883,90 @@ body.contrast-high .previous-next-links .btn-primary span {
   border-top: 0; }
   #main-content .tab-content .tab-pane {
     padding-top: 1.5rem; }
+#main-content .edition-tabs {
+  display: flex !important;
+  gap: 24px !important;
+  border: none !important;
+  margin-bottom: 40px !important;
+  padding: 0 !important; }
+  #main-content .edition-tabs-content {
+    color: #0B0C0C;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 27px; }
+    #main-content .edition-tabs-content h3 {
+      color: #0B0C0C;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px; }
+#main-content .edition-tabs > li {
+  flex: 1;
+  margin: 0 !important;
+  list-style: none; }
+#main-content .edition-tabs > li > a {
+  display: block !important;
+  background: #f0f0f0 !important;
+  padding: 25px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  color: #333 !important;
+  text-decoration: none !important;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer; }
+#main-content .edition-tabs > li > a.active {
+  background: #ffffff !important;
+  box-shadow: inset 0 0 0 2px #333 !important; }
+#main-content .tab-content-wrapper {
+  display: flex;
+  align-items: flex-start; }
+#main-content .radio-dot {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 3px;
+  position: relative;
+  flex-shrink: 0; }
+#main-content .edition-tabs > li > a.active .radio-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%; }
+#main-content .text-group {
+  display: flex;
+  flex-direction: column; }
+#main-content .tab-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  text-decoration: underline;
+  margin-bottom: 12px; }
+#main-content .badge-edition {
+  display: inline-block;
+  width: fit-content;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+#main-content .badge-current {
+  background-color: #1D70B8;
+  color: #ffffff; }
+#main-content .badge-archive {
+  background-color: #DBD5E9;
+  color: #3D2375; }
+#main-content .edition-tabs > li > a:hover,
+#main-content .edition-tabs > li > a:focus {
+  background: #e8e8e8 !important;
+  border-color: #00aeef !important; }
 
 body.contrast-high #main-content .nav-tabs {
   border-color: #FFDD00; }
@@ -1842,6 +2123,50 @@ body.contrast-high .indicator.goal-banner .goal-tiles img {
   body.contrast-high .indicator.goal-banner .goal-tiles img:hover {
     background-color: black !important;
     box-shadow: 0px 0px 0px 5px #FFDD00; }
+
+#indicator-main #btnSave, #indicator-main .btn-custom-download {
+  color: #0B0C0C !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  background: #F3F2F1 !important;
+  box-shadow: 0 -2px 0 0 #929191 inset; }
+#indicator-main .nav-tabs .nav-item.active button {
+  color: #0B0C0C;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 19px; }
+
+.indicators-container .view-indicator-details {
+  display: inline-block;
+  padding: 8px 12px 7px 12px;
+  background: #00703C;
+  color: #FFF !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  box-shadow: 0 -2px 0 0 #002D18 inset; }
+.indicators-container .indicator-item .col-auto h4,
+.indicators-container .indicator-item .col {
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  line-height: 27px; }
+.indicators-container .goal-target {
+  color: #0B0C0C;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px; }
+  .indicators-container .goal-target .col-auto h3 {
+    margin: 0; }
+.indicators-container .goal-page-target-rule {
+  margin-left: 0; }
+
+.goal-details h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  max-width: 330px; }
 
 .layout-page #main-content h2 {
   margin-top: 30px; }

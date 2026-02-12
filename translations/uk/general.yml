@@ -25,3 +25,13 @@ label_warning: "Попередження:"
 # A phrase to use as a site-wide page title.
 site_title: 'Індикатори цілей сталого розвитку'
 back_to_top: 'На початок'
+show_chart: 'Показати'
+hide_chart: 'Сховати'
+tab_title: 'Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р'
+archive_tab_title: 'Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р'
+badge_current_short: 'Чинна'
+badge_previous_short: 'Попередня'
+badge_current: 'Чинна редакція'
+badge_previous: 'Попередня редакція'
+view_indicator_details: 'Переглянути деталі індикатора'
+loading_chart: 'Завантаження графіка...'

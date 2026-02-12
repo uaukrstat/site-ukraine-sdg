@@ -4785,7 +4785,7 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
                 'download': fileName,
                 'title': translations.indicator.download_csv_title,
                 'aria-label': translations.indicator.download_csv_title,
-                'class': 'btn btn-primary btn-download',
+                'class': 'btn btn-primary btn-download btn-custom-download',
                 'tabindex': 0,
                 'role': 'button',
             });
@@ -5269,11 +5269,11 @@ $(document).ready(function() {
         var tabs = tabsList.find('li > button');
         var panes = tabsList.parent().find('.tab-pane');
 
-        panes.attr({
-            'role': 'tabpanel',
-            'aria-hidden': 'true',
-            'tabindex': '0',
-        }).hide();
+        // panes.attr({
+        //     'role': 'tabpanel',
+        //     'aria-hidden': 'true',
+        //     'tabindex': '0',
+        // }).hide();
 
         tabsList.attr({
             'role': 'tablist',
@@ -5305,13 +5305,13 @@ $(document).ready(function() {
                     })
                     .removeClass('active');
 
-                panes.filter(':visible').attr({
-                    'aria-hidden': 'true',
-                }).hide();
+                // panes.filter(':visible').attr({
+                //     'aria-hidden': 'true',
+                // }).hide();
 
-                pane.attr({
-                    'aria-hidden': 'false',
-                }).show();
+                // pane.attr({
+                //     'aria-hidden': 'false',
+                // }).show();
 
                 tab.attr({
                     'aria-selected': 'true',
@@ -6654,3 +6654,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+function addAttrsForLinks(container) {
+    const links = container.querySelectorAll('a:not([href="#top"])');
+
+    links.forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'nofollow noopener noreferrer');
+    })
+}
+
+const usefulLinksContainer = document.querySelector('.useful-links');
+const leadCopyContainer = document.querySelector('.lead-copy');
+
+if (usefulLinksContainer) {
+    addAttrsForLinks(usefulLinksContainer);
+}
+
+if (leadCopyContainer) {
+    addAttrsForLinks(leadCopyContainer);
+}
