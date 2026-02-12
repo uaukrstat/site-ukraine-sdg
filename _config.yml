@@ -41,3 +41,6 @@ exclude:
   - LICENSE
 
 hide_empty_metadata: true
+
+data_edit_url: null
+metadata_edit_url: null

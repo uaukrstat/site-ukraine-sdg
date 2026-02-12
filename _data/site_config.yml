@@ -7,13 +7,22 @@ analytics:
   # For production, you likely want to enter a Google Analytics code below.
   ga_prod: ''
 reporting_status:
-  field:
-    name: reporting_status
-    options:
-      complete: Complete
-      inprogress: In progress
-      notstarted: Not started
-      notapplicable: Not applicable
+  title: status.reporting_status
+  description: status.description
+  disaggregation_tabs: false
+  status_types:
+    - value: complete
+      label: status.published
+      hide_on_goal_pages: false
+    - value: inprogress
+      label: status.statistics_in_progress
+      hide_on_goal_pages: false
+    - value: notstarted
+      label: status.exploring_data_sources
+      hide_on_goal_pages: false
+    - value: notapplicable
+      label: status.not_applicable
+      hide_on_goal_pages: false
 favicons: favicon.io
 footer_language_toggle: none
 footer_menu:
@@ -23,7 +32,7 @@ footer_menu:
     translation_key: general.twitter
   - path: 'https://www.facebook.com/Ukrstat/'
     translation_key: general.facebook
-  - path: /about/cookies-and-privacy/
+  - path: /cookies-and-privacy/
     translation_key: menu.cookies
 frontpage_cards:
   - title: frontpage.download_all
@@ -31,11 +40,11 @@ frontpage_cards:
   - title: custom.statistics_Ukraine
     include: components/card.html
     button_label: custom.statistics_button_label
-    button_link: 'http://www.ukrstat.gov.ua/'
+    button_link: custom.statistics_button_link
   - title: custom.sdg_ukrstat
     include: components/card.html
     button_label: custom.sdg_ukrstat_label
-    button_link: 'http://www.ukrstat.gov.ua/csr_prezent/ukr/st_rozv/metadata/metadata.htm'
+    button_link: custom.sdg_ukrstat_link
 create_goals:
   previous_next_links: false
   goals:
@@ -56,7 +65,7 @@ create_goals:
     - goal: 15
     - goal: 16
     - goal: 17
-goal_image_base: /assets/img/goals
+goal_image_base: /site-ukraine-sdg/assets/img/goals
 goal_image_extension: svg
 goals_page:
   title: general.goals
@@ -89,6 +98,10 @@ frontpage_introduction_banner:
 custom_css: []
 custom_js:
   - /assets/js/custom.js
+search_index:
+  enabled: true
+  include_indicators: true
+  include_language_in_url: false
 languages:
   - en
   - uk
