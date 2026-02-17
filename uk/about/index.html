@@ -123,7 +123,15 @@ var translations = {
         
          - Індикатори цілей сталого розвитку
     </title>
+    <meta property="og:title" content="
+        Індикатор  -
+        
+         - Індикатори цілей сталого розвитку"/>
 
+
+<meta property="og:url" content="/"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
 
 
         
@@ -143,7 +151,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260212161648">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260217165749">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -169,9 +177,9 @@ layout-page
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"skip_link":"Перескочити до основного вмісту","alpha":"Прозорість","disclaimer":"Це сайт для розробки. Ми вітаємо ваш відгук <a href=\"mailto:%email_address\"></a>.","tag_line":"17 цілей, щоб змінити наш світ","high_contrast":"Висока контрастність","default_contrast":"Контрастність за промовчанням","enable_high_contrast":"Увімкнути високу контрастність","disable_high_contrast":"Вимкнути високу контрастність","toggle_search":"Перемикач пошуку. Клацніть, щоб розгорнути або згорнути рядок пошуку.","toggle_menu":"Перемикач меню. Клацніть, щоб розгорнути або згорнути меню.","hide_menu":"Приховати навігаційне меню","internet_explorer_message":"Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.","internet_explorer_message_title":"Цей інтернет-браузер більше не підтримується","logo_title":"Перейти на головну сторінку","show_menu":"Показати меню навігації"};</script>
+<script>translations['header'] = {"skip_link":"Перейти до основного вмісту","alpha":"Прозорість","disclaimer":"Це сайт для розробки. Ми вітаємо ваш відгук <a href=\"mailto:%email_address\"></a>.","tag_line":"17 цілей, щоб змінити наш світ","high_contrast":"Висока контрастність","default_contrast":"Контрастність за промовчанням","enable_high_contrast":"Увімкнути високу контрастність","disable_high_contrast":"Вимкнути високу контрастність","toggle_search":"Перемикач пошуку. Клацніть, щоб розгорнути або згорнути рядок пошуку.","toggle_menu":"Перемикач меню. Клацніть, щоб розгорнути або згорнути меню.","hide_menu":"Приховати навігаційне меню","internet_explorer_message":"Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.","internet_explorer_message_title":"Цей інтернет-браузер більше не підтримується","logo_title":"Перейти на головну сторінку","show_menu":"Показати меню навігації"};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перескочити до основного вмісту</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти до основного вмісту</a>
 <div class="body-logo"></div>
 <div class="container internet-explorer-message">
     <h2 class="internet-explorer-message-title">Цей інтернет-браузер більше не підтримується</h2>
@@ -181,9 +189,10 @@ layout-page
 <header role="banner" class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/uk/" id="home" aria-label="Перейти на головну сторінку" title="Перейти на головну сторінку">
+            <a class="navbar-brand" href="/uk/" id="home" title="Перейти на головну сторінку">
     <img src="/assets/img/SDG_logo.png" alt="Цілі сталого розвитку - 17 цілей, щоб змінити наш світ" />
 </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -256,56 +265,37 @@ layout-page
 
 <div class="container">
     <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+    <ol aria-label="Хлібні крихти" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         <li class="breadcrumb-item" >
             <a href="/uk/">Головна</a>
         </li>
-        <li class="breadcrumb-item active">Про нас</li>
+        <li class="breadcrumb-item active">Про платформу</li>
     </ol>
 </nav>
+
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1 class="mb-8">Про нас</h1>
+        <h1 class="mb-16">Про платформу</h1>
         <div class="row mb-48">
             <div class="col-md-8">
                 
 
 
-    <h2 id="зміст">Зміст</h2>
+    <h2 id="що-таке-цілі-сталого-розвитку">Що таке Цілі сталого розвитку</h2>
+
+<p>Цілі сталого розвитку (ЦСР) є універсальним закликом до дій щоб:</p>
 <ul>
-  <li><a href="#про-цей-сайт">Про цей сайт</a></li>
-  <li><a href="#потрібна-додаткова-інформація">Потрібна додаткова інформація?</a></li>
-  <li><a href="#зворотний-зв'язок">Зворотний зв’язок</a></li>
+  <li>покінчити з бідністю</li>
+  <li>захистити планету</li>
+  <li>покращити життя та перспективи кожного й скрізь</li>
 </ul>
 
-<p><a href="http://www.un.org/sustainabledevelopment/sustainable-development-goals/">Цілі сталого розвитку</a> (ЦСР) — це загальний заклик до дій, спрямованих на те, щоб:</p>
-<ul>
-  <li>
-    <p>покласти край бідності</p>
-  </li>
-  <li>
-    <p>захистити планету</p>
-  </li>
-  <li>
-    <p>покращити життя та перспективи кожної людини, незалежно від місця проживання</p>
-  </li>
-</ul>
+<p>17 цілей були прийняті всіма державами-членами ООН у 2015 році як частина Порядку денного зі сталого розвитку до 2030 року.</p>
 
-<p>Ці 17 Цілей були прийняті всіма державами-членами ООН у 2015 році в межах <a href="https://sustainabledevelopment.un.org/post2015/transformingourworld">Порядку денного у сфері сталого розвитку до 2030 року</a>.</p>
+<p>Цей сайт заснований на відкритій платформі Open SDG.</p>
 
-<h2 id="про-цей-сайт">Про цей сайт</h2>
-<p>Цей сайт побудовано на базі платформи з відкритим кодом <a href="https://open-sdg.org/">Open SDG</a>.</p>
-
-<p>Інші країни або організації, які бажають повторно використовувати платформу звітності Open SDG, можуть робити це безкоштовно. <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Посібник зі швидкого старту Open SDG</a> містить технічні інструкції щодо найшвидшого способу встановлення та запуску копії платформи Open SDG.</p>
-
-<p>Якщо у вас є зауваження, відгуки або ви бажаєте долучитися до спільноти Open SDG, будь ласка, напишіть на електронну адресу <a href="mailto:opensdg@outlook.com">opensdg@outlook.com</a> або зверніться через <a href="https://github.com/open-sdg/open-sdg">Open SDG GitHub</a>.</p>
-
-<h2 id="потрібна-додаткова-інформація">Потрібна додаткова інформація?</h2>
-<p>Відповіді на деякі конкретні запитання щодо цього вебсайту містяться на нашій сторінці <a href="/uk/faq/">поширених запитань</a>.</p>
-
-<h2 id="зворотний-звязок">Зворотний зв’язок</h2>
-<p>Щоб надати відгук щодо наших даних про ЦСР, будь ласка, <a href="/uk/contact-us">зв’яжіться з нами</a></p>
+<p>Відкриту платформу ЦСР в Україні розроблено Державною службою статистики України у партнерстві з ПРООН в Україні в рамках програми ООН “Сприяння стратегічному плануванню та фінансуванню стійкого розвитку України як на національному, так і на регіональному рівні”, що фінансується Спільним Фондом ЦСР.</p>
 
 
 
@@ -377,12 +367,12 @@ layout-page
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260212161648'></script>
+<script src='/assets/js/sdg.js?v=20260217165749'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260212161648"></script><script>
+    <script src="/assets/js/custom.js?v=20260217165749"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

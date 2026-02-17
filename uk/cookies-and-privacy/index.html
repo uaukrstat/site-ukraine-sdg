@@ -123,7 +123,15 @@ var translations = {
         
          - Індикатори цілей сталого розвитку
     </title>
+    <meta property="og:title" content="
+        Індикатор  -
+        
+         - Індикатори цілей сталого розвитку"/>
 
+
+<meta property="og:url" content="/"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
 
 
         
@@ -143,7 +151,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260212161648">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260217165749">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -169,9 +177,9 @@ layout-page
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"skip_link":"Перескочити до основного вмісту","alpha":"Прозорість","disclaimer":"Це сайт для розробки. Ми вітаємо ваш відгук <a href=\"mailto:%email_address\"></a>.","tag_line":"17 цілей, щоб змінити наш світ","high_contrast":"Висока контрастність","default_contrast":"Контрастність за промовчанням","enable_high_contrast":"Увімкнути високу контрастність","disable_high_contrast":"Вимкнути високу контрастність","toggle_search":"Перемикач пошуку. Клацніть, щоб розгорнути або згорнути рядок пошуку.","toggle_menu":"Перемикач меню. Клацніть, щоб розгорнути або згорнути меню.","hide_menu":"Приховати навігаційне меню","internet_explorer_message":"Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.","internet_explorer_message_title":"Цей інтернет-браузер більше не підтримується","logo_title":"Перейти на головну сторінку","show_menu":"Показати меню навігації"};</script>
+<script>translations['header'] = {"skip_link":"Перейти до основного вмісту","alpha":"Прозорість","disclaimer":"Це сайт для розробки. Ми вітаємо ваш відгук <a href=\"mailto:%email_address\"></a>.","tag_line":"17 цілей, щоб змінити наш світ","high_contrast":"Висока контрастність","default_contrast":"Контрастність за промовчанням","enable_high_contrast":"Увімкнути високу контрастність","disable_high_contrast":"Вимкнути високу контрастність","toggle_search":"Перемикач пошуку. Клацніть, щоб розгорнути або згорнути рядок пошуку.","toggle_menu":"Перемикач меню. Клацніть, щоб розгорнути або згорнути меню.","hide_menu":"Приховати навігаційне меню","internet_explorer_message":"Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.","internet_explorer_message_title":"Цей інтернет-браузер більше не підтримується","logo_title":"Перейти на головну сторінку","show_menu":"Показати меню навігації"};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перескочити до основного вмісту</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти до основного вмісту</a>
 <div class="body-logo"></div>
 <div class="container internet-explorer-message">
     <h2 class="internet-explorer-message-title">Цей інтернет-браузер більше не підтримується</h2>
@@ -181,9 +189,10 @@ layout-page
 <header role="banner" class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/uk/" id="home" aria-label="Перейти на головну сторінку" title="Перейти на головну сторінку">
+            <a class="navbar-brand" href="/uk/" id="home" title="Перейти на головну сторінку">
     <img src="/assets/img/SDG_logo.png" alt="Цілі сталого розвитку - 17 цілей, щоб змінити наш світ" />
 </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -230,7 +239,7 @@ layout-page
       Українська
     </button>
     <ul class="dropdown-menu"><li>
-            <a class="dropdown-item" href="/about/cookies-and-privacy/">
+            <a class="dropdown-item" href="/cookies-and-privacy/">
               English
             </a>
           </li></ul>
@@ -242,7 +251,7 @@ layout-page
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/about/cookies-and-privacy/">
+            <a class="language-toggle-link" href="/cookies-and-privacy/">
                 English
             </a>
         </li></ul>
@@ -256,68 +265,76 @@ layout-page
 
 <div class="container">
     <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+    <ol aria-label="Хлібні крихти" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         <li class="breadcrumb-item" >
             <a href="/uk/">Головна</a>
         </li>
-        <li class="breadcrumb-item active">Файли cookie та конфіденційність</li>
+        <li class="breadcrumb-item active">Файли Сookies</li>
     </ol>
 </nav>
+
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1 class="mb-8">Файли cookie та конфіденційність</h1>
+        <h1 class="mb-16">Файли Сookies</h1>
         <div class="row mb-48">
             <div class="col-md-8">
                 
 
 
-    <p>Нижче наведено опис того, які дані збираються під час використання цього вебсайту та для чого вони використовуються.</p>
+    <h2 id="інформація-про-користувача">Інформація про користувача</h2>
+<p>Цей вебсайт використовує файли cookie та код відстеження JavaScript для збору анонімної інформації про використання сайту відвідувачами, щоб покращити навігацію сайту, подання його контенту та якість послуг.</p>
 
-<h2 id="інформація-про-користувачів">Інформація про користувачів</h2>
-<p>Цей вебсайт використовує файли cookie та код відстеження JavaScript для збору анонімної інформації про моделі поведінки відвідувачів, щоб покращити навігацію сайтом, представлення його вмісту та якість послуг.
-Зібрана інформація не включає особисті дані, такі як ваше ім’я, вік, номер телефону, поштова адреса або адреса електронної пошти, а також не дозволяє особисто ідентифікувати користувача.</p>
-
+<p>Зібрана інформація не містить особистих даних, таких як ваше ім’я, вік, номер телефону, поштову адресу або електронну адресу, і не дозволяє ідентифікувати користувача особисто.</p>
 <h2 id="файли-cookie">Файли cookie</h2>
-<p>Надаючи послуги, ми прагнемо зробити їх простими, корисними та надійними.
-Коли послуги надаються в інтернеті, це іноді передбачає розміщення невеликої кількості інформації на вашому пристрої (наприклад, комп’ютері чи мобільному телефоні).
-Сюди входять невеликі файли, відомі як файли cookie. Вони не можуть бути використані для вашої особистої ідентифікації.
-Ці фрагменти інформації використовуються для покращення послуг для вас, наприклад:</p>
-<ul>
-  <li>дозволяють сервісу розпізнавати ваш пристрій, щоб вам не доводилося вводити одну й ту саму інформацію кілька разів під час виконання одного завдання</li>
-  <li>розпізнають, що ви вже ввели ім’я користувача та пароль, щоб вам не доводилося робити це для кожної запитуваної вебсторінки</li>
-  <li>вимірюють, скільки людей користуються послугами, щоб зробити їх простішими у використанні та забезпечити достатню потужність для їхньої швидкої роботи</li>
-</ul>
 
-<p>Ви можете самостійно керувати цими невеликими файлами та дізнатися про них більше у статті <a href="https://www.aboutcookies.org/">файли cookie в інтернет-браузері – що це таке та як ними керувати</a>.</p>
+<p>Коли ми надаємо послуги, ми хочемо зробити їх простими, корисними та надійними.</p>
+
+<p>Коли послуги надаються через інтернет, це іноді передбачає розміщення невеликої кількості інформації на вашому пристрої, наприклад, комп’ютері або мобільному телефоні.</p>
+
+<p>Це включає невеликі файли, відомі як файли cookie. Вони не можуть бути використані для особистої ідентифікації вас.</p>
+
+<p>Ці шматочки інформації використовуються для покращення послуг для вас, наприклад:</p>
+
+<p>дозволяючи службі розпізнавати ваш пристрій, щоб вам не доводилося повторно вводити одну й ту ж інформацію кілька разів під час одного завдання</p>
+
+<p>визнання того, що ви вже могли ввести ім’я користувача та пароль, щоб вам не потрібно було робити це для кожної запитуваної веб-сторінки</p>
+
+<p>вимірювання кількості людей, які користуються послугами, щоб їх можна було зробити простішими у використанні та щоб було достатньо потужності для забезпечення швидкості</p>
+
+<p>Ви можете самостійно керувати цими невеликими файлами та дізнатися більше про них через <a href="https://www.aboutcookies.org/">файли cookie веб-браузера – що це таке і як ними керувати</a>.</p>
 
 <h2 id="наше-використання-файлів-cookie">Наше використання файлів cookie</h2>
-<p>Важлива інформація про цей список файлів cookie:
-Цей список не завжди може бути повним. Він регулярно оновлюватиметься в міру отримання додаткової інформації від інших компаній та організацій, з якими ми співпрацюємо.</p>
+<p>Важлива інформація про цей список файлів cookie:</p>
 
-<p>Файли cookie для збереження активного стану служб спеціальних можливостей:</p>
+<p>Цей список може не завжди бути повним. Він буде регулярно оновлюватися, оскільки ми отримуємо додаткову інформацію від інших компаній та організацій, з якими ми співпрацюємо.</p>
+
+<p>Файли cookie для збереження активного стану служб доступності:</p>
+
 <ul>
-  <li>contrast</li>
+  <li>контраст</li>
 </ul>
 
 <p>Файли cookie для вимірювання використання послуг:</p>
+
 <ul>
   <li>_ga</li>
   <li>_gid</li>
   <li>_gat</li>
 </ul>
 
-<p>Розуміючи, як люди використовують наш вебсайт, ми можемо покращувати надану інформацію. Ми збираємо ці дані за допомогою Google Analytics.</p>
+<p>Розуміючи, як люди користуються нашим вебсайтом, ми можемо покращити надану інформацію. Ми збираємо ці дані за допомогою Google Analytics.</p>
 
 <h2 id="зовнішні-посилання">Зовнішні посилання</h2>
-<p>Цей сайт може містити посилання на інші сайти.
-ONS не несе відповідальності за політику конфіденційності або зміст таких вебсайтів.</p>
+<p>Цей сайт може містити посилання на інші сайти.</p>
+
+<p>ONS не несе відповідальності за практики конфіденційності або вміст таких вебсайтів.</p>
 
 <h2 id="безпека">Безпека</h2>
-<p>На цьому вебсайті вжито заходів безпеки для захисту від втрати, неправомірного використання та зміни інформації, яка перебуває під нашим контролем.</p>
+<p>Цей вебсайт має заходи безпеки для захисту від втрати, зловживання та зміни інформації, що знаходиться під нашим контролем.</p>
 
 <h2 id="звязок-із-вебсайтом">Зв’язок із вебсайтом</h2>
-<p>Якщо у вас виникли запитання щодо цього положення про конфіденційність, роботи цього сайту або вашої взаємодії з ним, ви можете <a href="mailto:">зв’язатися з нами</a>.</p>
+<p>Якщо у вас є будь-які питання щодо цієї заяви про конфіденційність, практик цього сайту або вашої взаємодії з цим вебсайтом, ви можете <a href="https://sdg-kitsoft-stg.github.io/site-ukraine-sdg/uk/contact-us/">зв’язатися з нами</a>.</p>
 
 
 
@@ -389,12 +406,12 @@ ONS не несе відповідальності за політику кон�
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260212161648'></script>
+<script src='/assets/js/sdg.js?v=20260217165749'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260212161648"></script><script>
+    <script src="/assets/js/custom.js?v=20260217165749"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

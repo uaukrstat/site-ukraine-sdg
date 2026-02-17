@@ -348,30 +348,32 @@ body.contrast-high [href]:focus {
 .dropdown .dropdown-menu {
   border-radius: 0; }
 
-.navbar .navbar-nav {
-  background-color: #F3F2F1; }
-  .navbar .navbar-nav > .nav-item {
-    padding: 0 16px; }
-    .navbar .navbar-nav > .nav-item > .nav-link {
+.navbar {
+  padding-top: 32px; }
+  .navbar .navbar-nav {
+    background-color: #F3F2F1; }
+    @media (max-width: 768px) {
+      .navbar .navbar-nav {
+        background-color: transparent; } }
+    .navbar .navbar-nav > .nav-item {
+      padding: 0 16px; }
+      .navbar .navbar-nav > .nav-item > .nav-link {
+        color: #0b0c0c;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 10px 0;
+        text-decoration: none; }
+      .navbar .navbar-nav > .nav-item.active > .nav-link {
+        border-bottom: 3px solid #0b0c0c;
+        background: transparent;
+        color: #0b0c0c; }
+        .navbar .navbar-nav > .nav-item.active > .nav-link:hover {
+          background: transparent; }
+    .navbar .navbar-nav .dropdown-item {
       color: #0b0c0c;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 20px;
-      padding: 10px 0;
-      text-decoration: none;
-      border-bottom: 3px solid transparent; }
-      .navbar .navbar-nav > .nav-item > .nav-link:hover {
-        border-bottom: 3px solid #0b0c0c; }
-    .navbar .navbar-nav > .nav-item.active > .nav-link {
-      border-bottom: 3px solid #0b0c0c;
-      background: transparent;
-      color: #0b0c0c; }
-      .navbar .navbar-nav > .nav-item.active > .nav-link:hover {
-        background: transparent; }
-  .navbar .navbar-nav .dropdown-item {
-    color: #0b0c0c;
-    font-size: 19px; }
+      font-size: 19px; }
 
 body.contrast-high .navbar .navbar-nav > .nav-item > .nav-link {
   color: white; }
@@ -464,7 +466,8 @@ p {
   max-width: 350px;
   margin-bottom: 25px; }
   .navbar-brand img {
-    max-width: 100%; }
+    max-width: 100%;
+    max-height: 56px; }
   .navbar-brand:focus {
     background-color: transparent !important;
     outline: 7px solid #ffdd00 !important; }
@@ -523,14 +526,21 @@ body.contrast-high .internet-explorer-message {
     display: block; } }
 footer {
   color: #0b0c0c;
-  background-color: white; }
+  border-top: 1px solid #B1B4B6;
+  background: #F3F2F1;
+  padding: 24px 0; }
+  @media (max-width: 768px) {
+    footer {
+      padding: 24px 0; } }
   footer #footerLinks > ul {
-    padding-left: 0; }
+    padding-left: 0;
+    margin-bottom: 0; }
     footer #footerLinks > ul > li {
       display: inline-block;
       margin: 3px 18px 3px 0; }
   footer a {
-    color: #0b0c0c; }
+    color: #0b0c0c;
+    line-height: 20px; }
     footer a:hover {
       color: #003078; }
 
@@ -596,7 +606,7 @@ body.contrast-high #search button {
 @media only screen and (min-width: 992px) {
   .header-search-bar {
     position: absolute;
-    top: 10px;
+    top: 32px;
     right: 0;
     width: auto; } }
 
@@ -604,8 +614,10 @@ body.contrast-high #search button {
   display: none; }
 
 .language-toggle-container .dropdown-toggle, .language-toggle-container .dropdown-item {
-  color: #0b0c0c;
-  font-size: 19px; }
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #0b0c0c; }
 
 .language-toggle-globe-links {
   margin-top: 6px;
@@ -1720,6 +1732,10 @@ body.contrast-high .previous-next-links .btn-primary span {
     font-weight: 400;
     line-height: 214px;
     margin-bottom: 32px; }
+    @media only screen and (max-width: 680px) {
+      .tech-work-page-status {
+        font-size: clamp(64px, 18vw, 214px);
+        line-height: 1; } }
   .tech-work-title {
     font-size: 24px;
     font-style: normal;
@@ -1739,8 +1755,6 @@ body.contrast-high .previous-next-links .btn-primary span {
   margin-bottom: 24px;
   padding-left: 32px;
   position: relative; }
-  .useful-links p:last-child::before {
-    content: none; }
   .useful-links p::before {
     content: '';
     position: absolute;
@@ -1773,8 +1787,8 @@ h3 {
   font-weight: 600;
   line-height: 32px; }
 
-.mb-8 {
-  margin-bottom: 8px; }
+.mb-16 {
+  margin-bottom: 16px; }
 
 .mb-48 {
   margin-bottom: 48px; }
@@ -1794,14 +1808,18 @@ ul > li > p {
   margin-bottom: 6px; }
 
 #main-content a[href="#top"] {
-  margin-top: 40px; }
+  margin-top: 40px;
+  font-weight: 700; }
 
 #menu {
   margin-top: 0; }
 
 .navbar-container {
   margin-top: 31px;
-  margin-bottom: 40px; }
+  margin-bottom: 23px; }
+  @media (max-width: 768px) {
+    .navbar-container {
+      margin-top: 0; } }
 
 .lead-copy * {
   font-size: 18px;
@@ -1824,12 +1842,19 @@ ul > li > p {
   font-size: 14px;
   line-height: 21px; }
 
-@media (max-width: 768px) {
-  .zip-download-container a.btn {
-    margin-left: 0; } }
+.zip-download-container a.btn,
+.zip-download-container #zip-download-info {
+  margin-left: 0; }
+
 #main-content p {
   font-size: 16px;
   line-height: 24px; }
+
+.contact-us h1 {
+  margin-bottom: 48px; }
+  @media (max-width: 768px) {
+    .contact-us h1 {
+      margin-bottom: 24px; } }
 
 .publication {
   clear: both;
@@ -1948,7 +1973,12 @@ ul > li > p {
   line-height: 1.4;
   text-decoration: underline;
   margin-bottom: 12px; }
-#main-content .badge-edition {
+#main-content .edition-tabs > li > a:hover,
+#main-content .edition-tabs > li > a:focus {
+  background: #e8e8e8 !important;
+  border-color: #00aeef !important; }
+
+.badge-edition {
   display: inline-block;
   width: fit-content;
   padding: 5px 15px;
@@ -1957,16 +1987,14 @@ ul > li > p {
   line-height: 14px;
   letter-spacing: 1px;
   text-transform: uppercase; }
-#main-content .badge-current {
+
+.badge-current {
   background-color: #1D70B8;
   color: #ffffff; }
-#main-content .badge-archive {
+
+.badge-archive {
   background-color: #DBD5E9;
   color: #3D2375; }
-#main-content .edition-tabs > li > a:hover,
-#main-content .edition-tabs > li > a:focus {
-  background: #e8e8e8 !important;
-  border-color: #00aeef !important; }
 
 body.contrast-high #main-content .nav-tabs {
   border-color: #FFDD00; }
@@ -2165,8 +2193,7 @@ body.contrast-high .indicator.goal-banner .goal-tiles img {
 .goal-details h1 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
-  max-width: 330px; }
+  line-height: 40px; }
 
 .layout-page #main-content h2 {
   margin-top: 30px; }

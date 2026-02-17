@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk" class="no-js">
+<html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://uaukrstat.github.io/data-ukraine-sdg/uk',
+  remoteDataBaseUrl: 'https://uaukrstat.github.io/data-ukraine-sdg/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'uk',
+  language: 'en',
 
   mapColors: {
     "default": [
@@ -117,8 +117,13 @@ var translations = {
         ================================================== -->
 
         
-    <title>Goals - Індикатори цілей сталого розвитку</title>
+    <title>Goals - Indicators For The Sustainable Development Goals</title>
+    <meta property="og:title" content="Goals - Indicators For The Sustainable Development Goals"/>
 
+
+<meta property="og:url" content="/"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
 
 
         
@@ -138,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260212161648">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260217165749">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -159,51 +164,52 @@ var translations = {
         
 
     </head>
-<body class="language-uk
+<body class="language-en
 layout-goals
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"skip_link":"Перескочити до основного вмісту","alpha":"Прозорість","disclaimer":"Це сайт для розробки. Ми вітаємо ваш відгук <a href=\"mailto:%email_address\"></a>.","tag_line":"17 цілей, щоб змінити наш світ","high_contrast":"Висока контрастність","default_contrast":"Контрастність за промовчанням","enable_high_contrast":"Увімкнути високу контрастність","disable_high_contrast":"Вимкнути високу контрастність","toggle_search":"Перемикач пошуку. Клацніть, щоб розгорнути або згорнути рядок пошуку.","toggle_menu":"Перемикач меню. Клацніть, щоб розгорнути або згорнути меню.","hide_menu":"Приховати навігаційне меню","internet_explorer_message":"Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.","internet_explorer_message_title":"Цей інтернет-браузер більше не підтримується","logo_title":"Перейти на головну сторінку","show_menu":"Показати меню навігації"};</script>
+<script>translations['header'] = {"skip_link":"Skip to main content","alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","tag_line":"17 Goals to Transform our World","high_contrast":"High contrast","default_contrast":"Default contrast","enable_high_contrast":"Enable high contrast","disable_high_contrast":"Disable high contrast","toggle_search":"Search toggle. Click to expand or collapse the search bar.","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","hide_menu":"Hide navigation menu","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu"};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перескочити до основного вмісту</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div class="body-logo"></div>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Цей інтернет-браузер більше не підтримується</h2>
-    <p class="internet-explorer-message-body">Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.</p>
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
 </div>
 
 <header role="banner" class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/uk/" id="home" aria-label="Перейти на головну сторінку" title="Перейти на головну сторінку">
-    <img src="/assets/img/SDG_logo.png" alt="Цілі сталого розвитку - 17 цілей, щоб змінити наш світ" />
+            <a class="navbar-brand" href="/" id="home" title="Go to homepage">
+    <img src="/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показати меню навігації">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item active">
-    <a class="nav-link" href="/uk/goals">Цілі</a>
+    <a class="nav-link" href="/goals">Goals</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/uk/reporting-status">Статус звітності</a>
+    <a class="nav-link" href="/reporting-status">Reporting Status</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/uk/about">Про платформу</a>
+    <a class="nav-link" href="/about">About platform</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/uk/faq">Запитання й відповіді</a>
+    <a class="nav-link" href="/faq">FAQ</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/uk/useful-links">Корисні посилання</a>
+    <a class="nav-link" href="/useful-links">Useful Links</a>
 </li></ul>
     
                 </div>
                 <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/uk/search/">
+                    <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -222,11 +228,11 @@ layout-goals
   <div class="btn-group language-toggle-dropdown  dropdown">
     <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="fa fa-globe"></i>
-      Українська
+      English
     </button>
     <ul class="dropdown-menu"><li>
-            <a class="dropdown-item" href="/goals/">
-              English
+            <a class="dropdown-item" href="/uk/goals/">
+              Українська
             </a>
           </li></ul>
   </div>
@@ -236,9 +242,9 @@ layout-goals
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/goals/">
-                English
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-uk list-inline-item">
+            <a class="language-toggle-link" href="/uk/goals/">
+                Українська
             </a>
         </li></ul>
 </div></span></div>
@@ -251,25 +257,26 @@ layout-goals
 
 <div class="container">
     <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+    <ol aria-label="Breadcrumbs" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         <li class="breadcrumb-item" >
-            <a href="/uk/">Головна</a>
+            <a href="/">Home</a>
         </li>
         <li class="breadcrumb-item active">Goals</li>
     </ol>
 </nav>
+
 </div>
 <div id="main-content" class="container" role="main">
 
     <h1>
   
-    Цілі
+    Goals
   
 </h1>
 
 
 <div class="goals-page-description">
-  <p>Натисніть на кожну ціль, щоб переглянути статистику по національних індикаторах Цілей сталого розвитку України</p>
+  <p>Click on each goal to see statistics for %name Sustainable Development Goal global indicators.</p>
 
 </div>
 
@@ -281,136 +288,136 @@ layout-goals
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/1/">
-                    <img src="/assets/img/goals/uk/1.svg" data-default="/assets/img/goals/uk/1.svg" data-hover="/assets/img/goals/uk/1_hover.svg" id="goal-1" alt="Подолання бідності - Ціль 1" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/1/">
+                    <img src="/assets/img/goals/en/1.svg" data-default="/assets/img/goals/en/1.svg" data-hover="/assets/img/goals/en/1_hover.svg" id="goal-1" alt="End poverty - Goal 1" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/2/">
-                    <img src="/assets/img/goals/uk/2.svg" data-default="/assets/img/goals/uk/2.svg" data-hover="/assets/img/goals/uk/2_hover.svg" id="goal-2" alt="Подолання голоду - Ціль 2" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/2/">
+                    <img src="/assets/img/goals/en/2.svg" data-default="/assets/img/goals/en/2.svg" data-hover="/assets/img/goals/en/2_hover.svg" id="goal-2" alt="End hunger, promote sustainable agriculture - Goal 2" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/3/">
-                    <img src="/assets/img/goals/uk/3.svg" data-default="/assets/img/goals/uk/3.svg" data-hover="/assets/img/goals/uk/3_hover.svg" id="goal-3" alt="Міцне здоров’я і благополуччя - Ціль 3" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/3/">
+                    <img src="/assets/img/goals/en/3.svg" data-default="/assets/img/goals/en/3.svg" data-hover="/assets/img/goals/en/3_hover.svg" id="goal-3" alt="Healthy lives and well-being - Goal 3" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/4/">
-                    <img src="/assets/img/goals/uk/4.svg" data-default="/assets/img/goals/uk/4.svg" data-hover="/assets/img/goals/uk/4_hover.svg" id="goal-4" alt="Якісна освіта - Ціль 4" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/4/">
+                    <img src="/assets/img/goals/en/4.svg" data-default="/assets/img/goals/en/4.svg" data-hover="/assets/img/goals/en/4_hover.svg" id="goal-4" alt="Quality education - Goal 4" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/5/">
-                    <img src="/assets/img/goals/uk/5.svg" data-default="/assets/img/goals/uk/5.svg" data-hover="/assets/img/goals/uk/5_hover.svg" id="goal-5" alt="Гендерна рівність - Ціль 5" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/5/">
+                    <img src="/assets/img/goals/en/5.svg" data-default="/assets/img/goals/en/5.svg" data-hover="/assets/img/goals/en/5_hover.svg" id="goal-5" alt="Gender equality - Goal 5" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/6/">
-                    <img src="/assets/img/goals/uk/6.svg" data-default="/assets/img/goals/uk/6.svg" data-hover="/assets/img/goals/uk/6_hover.svg" id="goal-6" alt="Чиста вода та належні санітарні умови - Ціль 6" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/6/">
+                    <img src="/assets/img/goals/en/6.svg" data-default="/assets/img/goals/en/6.svg" data-hover="/assets/img/goals/en/6_hover.svg" id="goal-6" alt="Clean water and sanitation - Goal 6" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/7/">
-                    <img src="/assets/img/goals/uk/7.svg" data-default="/assets/img/goals/uk/7.svg" data-hover="/assets/img/goals/uk/7_hover.svg" id="goal-7" alt="Доступна та чиста енергія - Ціль 7" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/7/">
+                    <img src="/assets/img/goals/en/7.svg" data-default="/assets/img/goals/en/7.svg" data-hover="/assets/img/goals/en/7_hover.svg" id="goal-7" alt="Affordable and clean energy - Goal 7" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/8/">
-                    <img src="/assets/img/goals/uk/8.svg" data-default="/assets/img/goals/uk/8.svg" data-hover="/assets/img/goals/uk/8_hover.svg" id="goal-8" alt="Гідна праця та економічне зростання - Ціль 8" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/8/">
+                    <img src="/assets/img/goals/en/8.svg" data-default="/assets/img/goals/en/8.svg" data-hover="/assets/img/goals/en/8_hover.svg" id="goal-8" alt="Decent work and economic growth - Goal 8" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/9/">
-                    <img src="/assets/img/goals/uk/9.svg" data-default="/assets/img/goals/uk/9.svg" data-hover="/assets/img/goals/uk/9_hover.svg" id="goal-9" alt="Промисловість, інновації та інфраструктура - Ціль 9" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/9/">
+                    <img src="/assets/img/goals/en/9.svg" data-default="/assets/img/goals/en/9.svg" data-hover="/assets/img/goals/en/9_hover.svg" id="goal-9" alt="Industry, innovation and infrastructure - Goal 9" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/10/">
-                    <img src="/assets/img/goals/uk/10.svg" data-default="/assets/img/goals/uk/10.svg" data-hover="/assets/img/goals/uk/10_hover.svg" id="goal-10" alt="Скорочення нерівності - Ціль 10" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/10/">
+                    <img src="/assets/img/goals/en/10.svg" data-default="/assets/img/goals/en/10.svg" data-hover="/assets/img/goals/en/10_hover.svg" id="goal-10" alt="Reduce inequality - Goal 10" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/11/">
-                    <img src="/assets/img/goals/uk/11.svg" data-default="/assets/img/goals/uk/11.svg" data-hover="/assets/img/goals/uk/11_hover.svg" id="goal-11" alt="Сталий розвиток міст та спільнот - Ціль 11" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/11/">
+                    <img src="/assets/img/goals/en/11.svg" data-default="/assets/img/goals/en/11.svg" data-hover="/assets/img/goals/en/11_hover.svg" id="goal-11" alt="Sustainable development of cities and communities - Goal 11" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/12/">
-                    <img src="/assets/img/goals/uk/12.svg" data-default="/assets/img/goals/uk/12.svg" data-hover="/assets/img/goals/uk/12_hover.svg" id="goal-12" alt="Відповідальне споживання та виробництво - Ціль 12" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/12/">
+                    <img src="/assets/img/goals/en/12.svg" data-default="/assets/img/goals/en/12.svg" data-hover="/assets/img/goals/en/12_hover.svg" id="goal-12" alt="Responsible consumption and production - Goal 12" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/13/">
-                    <img src="/assets/img/goals/uk/13.svg" data-default="/assets/img/goals/uk/13.svg" data-hover="/assets/img/goals/uk/13_hover.svg" id="goal-13" alt="Пом’якшення наслідків зміни клімату - Ціль 13" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/13/">
+                    <img src="/assets/img/goals/en/13.svg" data-default="/assets/img/goals/en/13.svg" data-hover="/assets/img/goals/en/13_hover.svg" id="goal-13" alt="Mitigate climate change impact - Goal 13" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/14/">
-                    <img src="/assets/img/goals/uk/14.svg" data-default="/assets/img/goals/uk/14.svg" data-hover="/assets/img/goals/uk/14_hover.svg" id="goal-14" alt="Збереження морських ресурсів - Ціль 14" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/14/">
+                    <img src="/assets/img/goals/en/14.svg" data-default="/assets/img/goals/en/14.svg" data-hover="/assets/img/goals/en/14_hover.svg" id="goal-14" alt="Conserve marine resources - Goal 14" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/15/">
-                    <img src="/assets/img/goals/uk/15.svg" data-default="/assets/img/goals/uk/15.svg" data-hover="/assets/img/goals/uk/15_hover.svg" id="goal-15" alt="Захист екосистем суші - Ціль 15" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/15/">
+                    <img src="/assets/img/goals/en/15.svg" data-default="/assets/img/goals/en/15.svg" data-hover="/assets/img/goals/en/15_hover.svg" id="goal-15" alt="Protect and restore terrestrial ecosystems - Goal 15" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/16/">
-                    <img src="/assets/img/goals/uk/16.svg" data-default="/assets/img/goals/uk/16.svg" data-hover="/assets/img/goals/uk/16_hover.svg" id="goal-16" alt="Мир, справедливість та сильні інститути - Ціль 16" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/16/">
+                    <img src="/assets/img/goals/en/16.svg" data-default="/assets/img/goals/en/16.svg" data-hover="/assets/img/goals/en/16_hover.svg" id="goal-16" alt="Peace, justice and strong institutions - Goal 16" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
             <div class="col-4 col-md-2 goal-tile">
                 
 
-                <a href="/uk/17/">
-                    <img src="/assets/img/goals/uk/17.svg" data-default="/assets/img/goals/uk/17.svg" data-hover="/assets/img/goals/uk/17_hover.svg" id="goal-17" alt="Партнерство заради стійкого розвитку - Ціль 17" class="goal-icon-image goal-icon-image-svg" />
+                <a href="/17/">
+                    <img src="/assets/img/goals/en/17.svg" data-default="/assets/img/goals/en/17.svg" data-hover="/assets/img/goals/en/17_hover.svg" id="goal-17" alt="Partnership for sustainable development - Goal 17" class="goal-icon-image goal-icon-image-svg" />
                 </a>
             </div>
             
@@ -418,7 +425,7 @@ layout-goals
             
             <div class="col-4 col-md-2 goal-tile global-goals-extra-icon">
                 <span>
-                    <img src="/assets/img/goals/uk/18.svg" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-svg" />
+                    <img src="/assets/img/goals/en/18.svg" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-svg" />
                 </span>
             </div>
             
@@ -432,11 +439,11 @@ layout-goals
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Побудовано з використанням відкритої платформи SDG</a>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
                         </li>
                         
                         <li>
-                            <a href="/uk/contact-us">Зв’яжіться з нами</a>
+                            <a href="/contact-us">Contact us</a>
                             
                         </li>
                         <li>
@@ -450,7 +457,7 @@ layout-goals
                             
                         </li>
                         <li>
-                            <a href="/uk/cookies-and-privacy/">Файли Cookies</a>
+                            <a href="/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -483,17 +490,17 @@ layout-goals
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'приховати';</script>
+    translations['general']['hide'] = 'hide';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Пошук';</script>
+    translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260212161648'></script>
+<script src='/assets/js/sdg.js?v=20260217165749'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260212161648"></script><script>
+    <script src="/assets/js/custom.js?v=20260217165749"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

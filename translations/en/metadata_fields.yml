@@ -15,7 +15,7 @@ indicator_definition: Global indicator description
 # A label describing information - the name of a particular indicator
 indicator_name: Indicator name
 indicator_sort_order: Indicator display order (within Goal page)
-national_data_update_url: Data last updated
+national_data_update_url: Last updated on
 # A label describing information - the geographical area covered by a dataset
 national_geographical_coverage: Geographical coverage
 national_indicator_available: Indicator available
