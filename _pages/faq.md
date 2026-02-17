@@ -8,64 +8,36 @@ layout: page
 ---
 
 ## Table of contents
-- [How often will new data be added to this site?](#how-often-will-new-data-be-added-to-this-site)
+- [Why are the SDGs important?](#why-are-the-sdgs-important)
 
-- [How do I suggest new or different data sources?](#how-do-i-suggest-new-or-different-data-sources)
+- [According to which the SDG indicators are data on platform given?](#according-to-which-the-sdg-indicators-are-data-on-platform-given)
 
-- [What are you doing to fill data gaps?](#what-are-you-doing-to-fill-data-gaps)
+- [How often will the new data be added to this website?](#how-often-will-the-new-data-be-added-to-this-website)
 
-- [What does the reporting status mean?](#what-does-the-reporting-status-mean)
+- [What disaggregations are available?](#what-disaggregations-are-available)
 
-- [Can other countries copy this website?](#can-other-countries-copy-this-website)
+- [What browsers can I use to check out this website?](#what-browsers-can-i-use-to-check-out-this-website)
 
-- [How accessible is this website?](#how-accessible-is-this-website)
+- [Can other countries copy data from this website?](#can-other-countries-copy-data-from-this-website)
 
-- [What browsers can I use to view this website?](#what-browsers-can-i-use-to-view-this-website)
+## Why are the SDGs important?
+The SDGs are aimed at achieving the common response to the issues faced by the world and which are impossible to resolve only using the efforts of selected groups or countries. Particularly, these are poverty, inequality, climate change crises and violence. The participation and solidarity among all the countries and groups of stakeholders are extremely important.
 
-- [What do each of the three tiers mean?](#what-do-each-of-the-three-tiers-mean)
+## According to which the SDG indicators are data on platform given?
+Indicators of achievement of the Sustainable Development Goals for the period until 2030, approved by the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine". This Order also determines the data managers responsible for their calculation and provision to the State Statistics Service, disaggregation and deadlines for submitting information to the State Statistics Service.
 
-## How often will new data be added to this site?
-We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible.
+Besides, archived data for the SDG indicators, in the context of which data was collected for monitoring the implementation of the Sustainable Development Goals, approved by the Order of the Cabinet of Ministers of Ukraine dated 21.08.2019 No. 686-r "Issues of data collection for monitoring the implementation of the Sustainable Development Goals", which lost force on the basis of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine".
 
-## How do I suggest new or different data sources?
-If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
+## How often will the new data be added to this website?
+We will add data as soon as they are received according to the dates specified by the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine" and verified.
 
-## What are you doing to fill data gaps?
-For some indicators, although we may have data at the national level, our existing data sources don’t always allow us to disaggregate by all main groups.
+## What disaggregations are available?
+The disaggregation of indicators is presented in the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine". In order to find out more about all data breakdowns and methodology, please have a look at metadata on the official website of the State Statistics Service "Sustainable Development Goals": "Information support to the SDGs monitoring, metadata" [https://stat.gov.ua/en/node/7503](https://stat.gov.ua/en/node/7503)
 
-This means we need to look for new data sources, link existing ones, or model data.
+## What browsers can I use to check out this website?
+Our website works with the most commonly used latest browsers versions. There could be some problems when using the website with old browsers versions.
 
-## What does the reporting status mean?
-We have used three different types of reporting status for an indicator, which are also colour coded:
-
-- **Reported (black):** As a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
-
-- **Statistics in progress (grey):** We have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
-
-- **No data available (white):** We are still looking for a suitable data source for this indicator.
-
-- **Not applicable (striped):** This indicator is not applicable in the national context.
-
-
-## Can other countries copy this website?
-Yes. See the [Open SDG Quick Start guide](https://open-sdg.readthedocs.io/en/latest/quick-start/) for technical instructions on the quickest way to get a copy of the Open SDG platform up and running.
-
-## How accessible is this website?
-Open SDG aims to be as accessible and usable as possible for every user and works towards meeting AA level of [Web Content Accessibility Guidelines (WCAG 2.0)](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20).
-
-## What browsers can I use to view this website?
-Our website works with most of the latest versions of the commonly used browsers.
-
-## What do each of the three tiers mean?
-Each of the SDG indicators are assigned to one (or more) of the following tiers:
- - **Tier 1:** Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.
-
- - **Tier 2:** Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.
-
- - **Tier 3:** No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested (As of the 51st session of the UN Statistical Commission, the global indicator framework does not contain any Tier III indicators)
-
-**As of 28 December 2020:** The updated tier classification contains **130 Tier I indicators**, **97 Tier II indicators** and **4 indicators that have multiple tiers** (different components of the indicator are classified into different tiers).
-
-For more information, [see the IAEG-SDGs Tier Classification for Global SDG Indicators](https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/)
+## Can other countries copy data from this website?
+Yes, one can copy data from the website both by every selected indicator and all the data available on the platform.
 
 [Back to top](#top)

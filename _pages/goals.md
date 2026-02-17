@@ -1,6 +1,6 @@
 ---
 layout: goals
-language: uk
+language: en
 permalink: /goals/
 title: Goals
 ---

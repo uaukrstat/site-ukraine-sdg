@@ -4,7 +4,7 @@ title: Cookies and privacy
 language: en
 goal: none
 indicator: none
-permalink: /about/cookies-and-privacy/
+permalink: /cookies-and-privacy/
 ---
 The following is a description of what data is collected when you use this website and what it is used for.
 
@@ -54,4 +54,4 @@ ONS is not responsible for the privacy practices or the content of such websites
 This website has security measures in place to protect the loss, misuse, and alteration of the information under our control.
 
 ## Contacting the website
-If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can [contact us](mailto:{{site.email_contacts.functional}}).
+If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can [contact us](https://sdg-kitsoft-stg.github.io/site-ukraine-sdg/contact-us/).
