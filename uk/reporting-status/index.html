@@ -117,8 +117,10 @@ var translations = {
         ================================================== -->
 
         
-    <title>Статус звітності - Індикатори цілей сталого розвитку</title>
-    <meta property="og:title" content="Статус звітності - Індикатори цілей сталого розвитку"/>
+    
+        <title>Статус звітності - Індикатори цілей сталого розвитку</title>
+        <meta property="og:title" content="Статус звітності - Індикатори цілей сталого розвитку"/>
+    
 
 
 <meta property="og:url" content="/"/>
@@ -141,9 +143,9 @@ var translations = {
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260224095342">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260303171200">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -178,7 +180,7 @@ layout-reportingstatus
     <p class="internet-explorer-message-body">Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.</p>
 </div>
 
-<header role="banner" class="">
+<header class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/uk/" id="home" title="Перейти на головну сторінку">
@@ -240,14 +242,15 @@ layout-reportingstatus
 
 
 
-                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+                    <div class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/reporting-status/">
                 English
             </a>
         </li></ul>
-</div></span></div>
+</div>
+</div></div>
             </div>
         </nav>
     </div>
@@ -283,7 +286,7 @@ layout-reportingstatus
 
 
 <div class="reporting-status-description">
-  <p>Статус звітності містить огляд того, скільки даних Ukraine повідомляє про цілі сталого розвитку (SDG).</p>
+  <p>Статус звітності містить огляд індикаторів, які Україна оприлюднює по Цілях сталого розвитку.</p>
 
 </div>
 
@@ -294,28 +297,23 @@ layout-reportingstatus
 
   
   <div class="goal goal-overall">
-    
-    <div class="frame goal-tiles">
-        <img src="/assets/img/SDG Wheel_Transparent-01.png" alt="Цілі сталого розвитку" width="100" height="100" class="goal-icon-image goal-icon-image-svg"/>
-    </div>
-    
     <div class="details">
         <h2 class="status-goal">
             Загальний стан звітності
         </h2>
-        <span class="total"><span>392</span> показники</span>
+        <span class="total"><span>526</span> індикатори</span>
         
         <div class="summary">
             <div class="statuses">
             
             <div>
-                <span class="status complete"><span class="status-inner">329</span></span><strong>Опубліковано</strong><span class="value">84%</span>
+                <span class="status complete"><span class="status-inner">494</span></span><strong>Опубліковано</strong><span class="value">94%</span>
             </div>
             
             
             
             <div>
-                <span class="status notstarted"><span class="status-inner">63</span></span><strong>Вивчення джерел даних</strong><span class="value">16%</span>
+                <span class="status notstarted"><span class="status-inner">32</span></span><strong>Дослідження джерел даних</strong><span class="value">6%</span>
             </div>
             
             <br style="clear:both;">
@@ -326,31 +324,173 @@ layout-reportingstatus
             
             
             
-            <span class="complete" style="width:83.92857142857143%" title="Опубліковано: 84%"></span>
+            <span class="complete" style="width:93.91634980988594%" title="Опубліковано: 94%"></span>
             
             
             
             
             
             
-            <span class="notstarted" style="width:16.071428571428573%" title="Вивчення джерел даних: 16%"></span>
+            <span class="notstarted" style="width:6.083650190114068%" title="Дослідження джерел даних: 6%"></span>
             
             </div>
         
     </div>
     <br style="clear:both;">
 </div>
+
   <h2>Статус за ціллю</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/1/" title="Переглянути завдання та індикатори цілі 1" aria-label="Переглянути завдання та індикатори цілі 1">
-        <img src="/assets/img/goals/uk/1.svg" alt="Подолання бідності - Ціль 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/1.svg" alt="Подолання бідності - Ціль 1" width="80" height="80" class="goal-icon-1 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/1/">Подолання бідності</a>
         </h3>
-        <span class="total">14 показники</span>
+        <span class="total">5 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">5</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/2.svg" alt="Подолання голоду - Ціль 2" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/2/">Подолання голоду</a>
+        </h3>
+        <span class="total">11 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/3.svg" alt="Міцне здоров’я і благополуччя - Ціль 3" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/3/">Міцне здоров’я і благополуччя</a>
+        </h3>
+        <span class="total">16 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">16</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/4.svg" alt="Якісна освіта - Ціль 4" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/4/">Якісна освіта</a>
+        </h3>
+        <span class="total">14 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
@@ -362,7 +502,7 @@ layout-reportingstatus
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -380,7 +520,7 @@ layout-reportingstatus
                 
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -389,168 +529,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/2/" title="Переглянути завдання та індикатори цілі 2" aria-label="Переглянути завдання та індикатори цілі 2">
-        <img src="/assets/img/goals/uk/2.svg" alt="Подолання голоду - Ціль 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/2/">Подолання голоду</a>
-        </h3>
-        <span class="total">25 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">25</span></span><strong>Опубліковано</strong><span class="value">100%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
+        <div>
+            <img src="/assets/img/goals/uk/5.svg" alt="Гендерна рівність - Ціль 5" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-svg"/>
         </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/3/" title="Переглянути завдання та індикатори цілі 3" aria-label="Переглянути завдання та індикатори цілі 3">
-        <img src="/assets/img/goals/uk/3.svg" alt="Міцне здоров’я і благополуччя - Ціль 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/3/">Міцне здоров’я і благополуччя</a>
-        </h3>
-        <span class="total">42 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">42</span></span><strong>Опубліковано</strong><span class="value">100%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/4/" title="Переглянути завдання та індикатори цілі 4" aria-label="Переглянути завдання та індикатори цілі 4">
-        <img src="/assets/img/goals/uk/4.svg" alt="Якісна освіта - Ціль 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/4/">Якісна освіта</a>
-        </h3>
-        <span class="total">37 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">31</span></span><strong>Опубліковано</strong><span class="value">84%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Вивчення джерел даних</strong><span class="value">16%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:83.78378378378378%" title="Опубліковано: 84%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:16.216216216216218%" title="Вивчення джерел даних: 16%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/5/" title="Переглянути завдання та індикатори цілі 5" aria-label="Переглянути завдання та індикатори цілі 5">
-        <img src="/assets/img/goals/uk/5.svg" alt="Гендерна рівність - Ціль 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-svg"/>
-        </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/5/">Гендерна рівність</a>
         </h3>
-        <span class="total">40 показники</span>
+        <span class="total">20 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">27</span></span><strong>Опубліковано</strong><span class="value">68%</span>
+                    <span class="status complete"><span class="status-inner">20</span></span><strong>Опубліковано</strong><span class="value">100%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">13</span></span><strong>Вивчення джерел даних</strong><span class="value">33%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -561,14 +560,14 @@ layout-reportingstatus
                 
                 
                 
-                <span class="complete" style="width:67.5%" title="Опубліковано: 68%"></span>
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
                 
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:32.5%" title="Вивчення джерел даних: 33%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -577,27 +576,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/6/" title="Переглянути завдання та індикатори цілі 6" aria-label="Переглянути завдання та індикатори цілі 6">
-        <img src="/assets/img/goals/uk/6.svg" alt="Чиста вода та належні санітарні умови - Ціль 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/6.svg" alt="Чиста вода та належні санітарні умови - Ціль 6" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/6/">Чиста вода та належні санітарні умови</a>
         </h3>
-        <span class="total">24 показники</span>
+        <span class="total">12 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">19</span></span><strong>Опубліковано</strong><span class="value">79%</span>
+                    <span class="status complete"><span class="status-inner">12</span></span><strong>Опубліковано</strong><span class="value">100%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">5</span></span><strong>Вивчення джерел даних</strong><span class="value">21%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -608,14 +607,14 @@ layout-reportingstatus
                 
                 
                 
-                <span class="complete" style="width:79.16666666666666%" title="Опубліковано: 79%"></span>
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
                 
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:20.833333333333336%" title="Вивчення джерел даних: 21%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -624,15 +623,579 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/7/" title="Переглянути завдання та індикатори цілі 7" aria-label="Переглянути завдання та індикатори цілі 7">
-        <img src="/assets/img/goals/uk/7.svg" alt="Доступна та чиста енергія - Ціль 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/7.svg" alt="Доступна та чиста енергія - Ціль 7" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/7/">Доступна та чиста енергія</a>
         </h3>
-        <span class="total">14 показники</span>
+        <span class="total">7 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">7</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/8.svg" alt="Гідна праця та економічне зростання - Ціль 8" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/8/">Гідна праця та економічне зростання</a>
+        </h3>
+        <span class="total">14 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">14</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/9.svg" alt="Промисловість, інновації та інфраструктура - Ціль 9" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/9/">Промисловість, інновації та інфраструктура</a>
+        </h3>
+        <span class="total">14 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">14</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/10.svg" alt="Скорочення нерівності - Ціль 10" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/10/">Скорочення нерівності</a>
+        </h3>
+        <span class="total">8 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">8</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/11.svg" alt="Сталий розвиток міст та спільнот - Ціль 11" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/11/">Сталий розвиток міст та спільнот</a>
+        </h3>
+        <span class="total">10 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">10</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/12.svg" alt="Відповідальне споживання та виробництво - Ціль 12" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/12/">Відповідальне споживання та виробництво</a>
+        </h3>
+        <span class="total">6 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/13.svg" alt="Пом’якшення наслідків зміни клімату - Ціль 13" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/13/">Пом’якшення наслідків зміни клімату</a>
+        </h3>
+        <span class="total">1 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">1</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/14.svg" alt="Збереження морських ресурсів - Ціль 14" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/14/">Збереження морських ресурсів</a>
+        </h3>
+        <span class="total">4 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/15.svg" alt="Захист екосистем суші - Ціль 15" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/15/">Захист екосистем суші</a>
+        </h3>
+        <span class="total">13 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/16.svg" alt="Мир, справедливість та сильні інститути - Ціль 16" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/16/">Мир, справедливість та сильні інститути</a>
+        </h3>
+        <span class="total">24 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">24</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/17.svg" alt="Партнерство заради стійкого розвитку - Ціль 17" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/17/">Партнерство заради стійкого розвитку</a>
+        </h3>
+        <span class="total">4 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/1.svg" alt="Подолання бідності - Ціль 1" width="80" height="80" class="goal-icon-1 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/1/">Подолання бідності</a>
+        </h3>
+        <span class="total">9 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/10.svg" alt="Скорочення нерівності - Ціль 10" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/10/">Скорочення нерівності</a>
+        </h3>
+        <span class="total">14 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
@@ -644,7 +1207,7 @@ layout-reportingstatus
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Вивчення джерел даних</strong><span class="value">14%</span>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Дослідження джерел даних</strong><span class="value">14%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -662,7 +1225,7 @@ layout-reportingstatus
                 
                 
                 
-                <span class="notstarted" style="width:14.285714285714285%" title="Вивчення джерел даних: 14%"></span>
+                <span class="notstarted" style="width:14.285714285714285%" title="Дослідження джерел даних: 14%"></span>
                 
                 </div>
         
@@ -671,168 +1234,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/8/" title="Переглянути завдання та індикатори цілі 8" aria-label="Переглянути завдання та індикатори цілі 8">
-        <img src="/assets/img/goals/uk/8.svg" alt="Гідна праця та економічне зростання - Ціль 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/8/">Гідна праця та економічне зростання</a>
-        </h3>
-        <span class="total">28 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">28</span></span><strong>Опубліковано</strong><span class="value">100%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
+        <div>
+            <img src="/assets/img/goals/uk/11.svg" alt="Сталий розвиток міст та спільнот - Ціль 11" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-svg"/>
         </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/9/" title="Переглянути завдання та індикатори цілі 9" aria-label="Переглянути завдання та індикатори цілі 9">
-        <img src="/assets/img/goals/uk/9.svg" alt="Промисловість, інновації та інфраструктура - Ціль 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/9/">Промисловість, інновації та інфраструктура</a>
-        </h3>
-        <span class="total">28 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">25</span></span><strong>Опубліковано</strong><span class="value">89%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Вивчення джерел даних</strong><span class="value">11%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:89.28571428571429%" title="Опубліковано: 89%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:10.714285714285714%" title="Вивчення джерел даних: 11%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/10/" title="Переглянути завдання та індикатори цілі 10" aria-label="Переглянути завдання та індикатори цілі 10">
-        <img src="/assets/img/goals/uk/10.svg" alt="Скорочення нерівності - Ціль 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/10/">Скорочення нерівності</a>
-        </h3>
-        <span class="total">16 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Опубліковано</strong><span class="value">81%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Вивчення джерел даних</strong><span class="value">19%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:81.25%" title="Опубліковано: 81%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:18.75%" title="Вивчення джерел даних: 19%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/11/" title="Переглянути завдання та індикатори цілі 11" aria-label="Переглянути завдання та індикатори цілі 11">
-        <img src="/assets/img/goals/uk/11.svg" alt="Сталий розвиток міст та спільнот - Ціль 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-svg"/>
-        </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/11/">Сталий розвиток міст та спільнот</a>
         </h3>
-        <span class="total">20 показники</span>
+        <span class="total">37 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">14</span></span><strong>Опубліковано</strong><span class="value">70%</span>
+                    <span class="status complete"><span class="status-inner">21</span></span><strong>Опубліковано</strong><span class="value">57%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Вивчення джерел даних</strong><span class="value">30%</span>
+                    <span class="status notstarted"><span class="status-inner">16</span></span><strong>Дослідження джерел даних</strong><span class="value">43%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -843,14 +1265,14 @@ layout-reportingstatus
                 
                 
                 
-                <span class="complete" style="width:70.0%" title="Опубліковано: 70%"></span>
+                <span class="complete" style="width:56.75675675675675%" title="Опубліковано: 57%"></span>
                 
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:30.0%" title="Вивчення джерел даних: 30%"></span>
+                <span class="notstarted" style="width:43.24324324324325%" title="Дослідження джерел даних: 43%"></span>
                 
                 </div>
         
@@ -859,121 +1281,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/12/" title="Переглянути завдання та індикатори цілі 12" aria-label="Переглянути завдання та індикатори цілі 12">
-        <img src="/assets/img/goals/uk/12.svg" alt="Відповідальне споживання та виробництво - Ціль 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/12.svg" alt="Відповідальне споживання та виробництво - Ціль 12" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/12/">Відповідальне споживання та виробництво</a>
         </h3>
-        <span class="total">12 показники</span>
+        <span class="total">10 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">10</span></span><strong>Опубліковано</strong><span class="value">83%</span>
+                    <span class="status complete"><span class="status-inner">10</span></span><strong>Опубліковано</strong><span class="value">100%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Вивчення джерел даних</strong><span class="value">17%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:83.33333333333334%" title="Опубліковано: 83%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:16.666666666666664%" title="Вивчення джерел даних: 17%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/13/" title="Переглянути завдання та індикатори цілі 13" aria-label="Переглянути завдання та індикатори цілі 13">
-        <img src="/assets/img/goals/uk/13.svg" alt="Пом’якшення наслідків зміни клімату - Ціль 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/13/">Пом’якшення наслідків зміни клімату</a>
-        </h3>
-        <span class="total">2 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">1</span></span><strong>Опубліковано</strong><span class="value">50%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Вивчення джерел даних</strong><span class="value">50%</span>
-                </div>
-                
-                <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="complete" style="width:50.0%" title="Опубліковано: 50%"></span>
-                
-                
-                
-                
-                
-                
-                <span class="notstarted" style="width:50.0%" title="Вивчення джерел даних: 50%"></span>
-                
-                </div>
-        
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <a href="/uk/14/" title="Переглянути завдання та індикатори цілі 14" aria-label="Переглянути завдання та індикатори цілі 14">
-        <img src="/assets/img/goals/uk/14.svg" alt="Збереження морських ресурсів - Ціль 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-svg"/>
-        </a>
-    </div>
-    <div class="details">
-        <h3 class="status-goal">
-            <a href="/uk/14/">Збереження морських ресурсів</a>
-        </h3>
-        <span class="total">8 показники</span>
-        
-        <div class="summary">
-            <div class="statuses">
-                
-                <div>
-                    <span class="status complete"><span class="status-inner">8</span></span><strong>Опубліковано</strong><span class="value">100%</span>
-                </div>
-                
-                
-                
-                <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -991,7 +1319,7 @@ layout-reportingstatus
                 
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -1000,15 +1328,297 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/15/" title="Переглянути завдання та індикатори цілі 15" aria-label="Переглянути завдання та індикатори цілі 15">
-        <img src="/assets/img/goals/uk/15.svg" alt="Захист екосистем суші - Ціль 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/13.svg" alt="Пом’якшення наслідків зміни клімату - Ціль 13" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/13/">Пом’якшення наслідків зміни клімату</a>
+        </h3>
+        <span class="total">2 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">2</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/14.svg" alt="Збереження морських ресурсів - Ціль 14" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/14/">Збереження морських ресурсів</a>
+        </h3>
+        <span class="total">7 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Опубліковано</strong><span class="value">86%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Дослідження джерел даних</strong><span class="value">14%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:85.71428571428571%" title="Опубліковано: 86%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:14.285714285714285%" title="Дослідження джерел даних: 14%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/15.svg" alt="Захист екосистем суші - Ціль 15" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/uk/15/">Захист екосистем суші</a>
         </h3>
-        <span class="total">26 показники</span>
+        <span class="total">16 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">15</span></span><strong>Опубліковано</strong><span class="value">94%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Дослідження джерел даних</strong><span class="value">6%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:93.75%" title="Опубліковано: 94%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:6.25%" title="Дослідження джерел даних: 6%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/16.svg" alt="Мир, справедливість та сильні інститути - Ціль 16" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/16/">Мир, справедливість та сильні інститути</a>
+        </h3>
+        <span class="total">36 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">36</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/17.svg" alt="Партнерство заради стійкого розвитку - Ціль 17" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/17/">Партнерство заради стійкого розвитку</a>
+        </h3>
+        <span class="total">6 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/2.svg" alt="Подолання голоду - Ціль 2" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/2/">Подолання голоду</a>
+        </h3>
+        <span class="total">14 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">14</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/3.svg" alt="Міцне здоров’я і благополуччя - Ціль 3" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/3/">Міцне здоров’я і благополуччя</a>
+        </h3>
+        <span class="total">26 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
@@ -1020,7 +1630,7 @@ layout-reportingstatus
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Вивчення джерел даних</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -1038,7 +1648,7 @@ layout-reportingstatus
                 
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Вивчення джерел даних: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -1047,27 +1657,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/16/" title="Переглянути завдання та індикатори цілі 16" aria-label="Переглянути завдання та індикатори цілі 16">
-        <img src="/assets/img/goals/uk/16.svg" alt="Мир, справедливість та сильні інститути - Ціль 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/4.svg" alt="Якісна освіта - Ціль 4" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/uk/16/">Мир, справедливість та сильні інститути</a>
+            <a href="/uk/4/">Якісна освіта</a>
         </h3>
-        <span class="total">48 показники</span>
+        <span class="total">23 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">27</span></span><strong>Опубліковано</strong><span class="value">56%</span>
+                    <span class="status complete"><span class="status-inner">23</span></span><strong>Опубліковано</strong><span class="value">100%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">21</span></span><strong>Вивчення джерел даних</strong><span class="value">44%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -1078,14 +1688,14 @@ layout-reportingstatus
                 
                 
                 
-                <span class="complete" style="width:56.25%" title="Опубліковано: 56%"></span>
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
                 
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:43.75%" title="Вивчення джерел даних: 44%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -1094,27 +1704,27 @@ layout-reportingstatus
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/uk/17/" title="Переглянути завдання та індикатори цілі 17" aria-label="Переглянути завдання та індикатори цілі 17">
-        <img src="/assets/img/goals/uk/17.svg" alt="Партнерство заради стійкого розвитку - Ціль 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-svg"/>
-        </a>
+        <div>
+            <img src="/assets/img/goals/uk/5.svg" alt="Гендерна рівність - Ціль 5" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-svg"/>
+        </div>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/uk/17/">Партнерство заради стійкого розвитку</a>
+            <a href="/uk/5/">Гендерна рівність</a>
         </h3>
-        <span class="total">8 показники</span>
+        <span class="total">43 індикатори</span>
         
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">7</span></span><strong>Опубліковано</strong><span class="value">88%</span>
+                    <span class="status complete"><span class="status-inner">43</span></span><strong>Опубліковано</strong><span class="value">100%</span>
                 </div>
                 
                 
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Вивчення джерел даних</strong><span class="value">13%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
                 </div>
                 
                 <br style="clear:both;">
@@ -1125,14 +1735,249 @@ layout-reportingstatus
                 
                 
                 
-                <span class="complete" style="width:87.5%" title="Опубліковано: 88%"></span>
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
                 
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:12.5%" title="Вивчення джерел даних: 13%"></span>
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/6.svg" alt="Чиста вода та належні санітарні умови - Ціль 6" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/6/">Чиста вода та належні санітарні умови</a>
+        </h3>
+        <span class="total">14 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Опубліковано</strong><span class="value">93%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Дослідження джерел даних</strong><span class="value">7%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:92.85714285714286%" title="Опубліковано: 93%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Дослідження джерел даних: 7%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/7.svg" alt="Доступна та чиста енергія - Ціль 7" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/7/">Доступна та чиста енергія</a>
+        </h3>
+        <span class="total">30 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">27</span></span><strong>Опубліковано</strong><span class="value">90%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Дослідження джерел даних</strong><span class="value">10%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:90.0%" title="Опубліковано: 90%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:10.0%" title="Дослідження джерел даних: 10%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/8.svg" alt="Гідна праця та економічне зростання - Ціль 8" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/8/">Гідна праця та економічне зростання</a>
+        </h3>
+        <span class="total">18 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">18</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="/assets/img/goals/uk/9.svg" alt="Промисловість, інновації та інфраструктура - Ціль 9" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/9/">Промисловість, інновації та інфраструктура</a>
+        </h3>
+        <span class="total">37 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">29</span></span><strong>Опубліковано</strong><span class="value">78%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">8</span></span><strong>Дослідження джерел даних</strong><span class="value">22%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:78.37837837837839%" title="Опубліковано: 78%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:21.621621621621625%" title="Дослідження джерел даних: 22%"></span>
+                
+                </div>
+        
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <div>
+            <img src="" alt=" - Ціль primary_medical_care_declarations_share" width="80" height="80" class="goal-icon-primary_medical_care_declarations_share goal-icon-image goal-icon-image-svg"/>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/uk/primary_medical_care_declarations_share/"></a>
+        </h3>
+        <span class="total">1 індикатори</span>
+        
+        <div class="summary">
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">1</span></span><strong>Опубліковано</strong><span class="value">100%</span>
+                </div>
+                
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Дослідження джерел даних</strong><span class="value">0%</span>
+                </div>
+                
+                <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:100.0%" title="Опубліковано: 100%"></span>
+                
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Дослідження джерел даних: 0%"></span>
                 
                 </div>
         
@@ -1151,7 +1996,7 @@ layout-reportingstatus
   </div>
   <a href="#top">На початок</a>
 </div>
-<footer role="contentinfo">
+<footer>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -1189,6 +2034,9 @@ layout-reportingstatus
     </div>
 </footer>
 
+<div class="site_version" style="display:none;">
+    Site version:
+</div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -1214,12 +2062,12 @@ layout-reportingstatus
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260224095342'></script>
+<script src='/assets/js/sdg.js?v=20260303171200'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260224095342"></script><script>
+    <script src="/assets/js/custom.js?v=20260303171200"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1227,3 +2075,4 @@ layout-reportingstatus
 
 </body>
 </html>
+

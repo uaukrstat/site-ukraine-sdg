@@ -143,9 +143,9 @@ var translations = {
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260224095342">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260303171200">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -180,7 +180,7 @@ layout-goal
     <p class="internet-explorer-message-body">Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.</p>
 </div>
 
-<header role="banner" class="">
+<header class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/uk/" id="home" title="Перейти на головну сторінку">
@@ -242,14 +242,15 @@ layout-goal
 
 
 
-                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+                    <div class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/2/">
                 English
             </a>
         </li></ul>
-</div></span></div>
+</div>
+</div></div>
             </div>
         </nav>
     </div>
@@ -381,7 +382,7 @@ layout-goal
                                 2.1.1
                             </h4>
                         </div>
-                        <div class="col">Енергетична цінність в середньому на добу в розрахунку на одну особу, ккал (індикатор ЦСР 2.1.1)</div>
+                        <div class="col">Енергетична цінність в середньому на добу в розрахунку на одну особу, ккал</div>
                         
 
 
@@ -442,7 +443,7 @@ layout-goal
                                 2.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке недоїдає, відсотків (індикатор ЦСР 2.1.2)</div>
+                        <div class="col">Частка населення, яке недоїдає, відсотків</div>
                         
 
 
@@ -503,7 +504,7 @@ layout-goal
                                 2.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які зазнавали гострої нестачі продуктів харчування, відсотків (індикатор ЦСР 2.1.3)</div>
+                        <div class="col">Частка осіб, які зазнавали гострої нестачі продуктів харчування, відсотків</div>
                         
 
 
@@ -564,7 +565,7 @@ layout-goal
                                 2.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, яким не вдавалося забезпечити достатнє харчування, відсотків (індикатор ЦСР 2.1.4)</div>
+                        <div class="col">Частка домогосподарств, яким не вдавалося забезпечити достатнє харчування, відсотків</div>
                         
 
 
@@ -625,7 +626,7 @@ layout-goal
                                 2.1.5
                             </h4>
                         </div>
-                        <div class="col">Індекс споживчих цін на продукти харчування, відсотків (індикатор ЦСР 2.1.5)</div>
+                        <div class="col">Індекс споживчих цін на продукти харчування, відсотків</div>
                         
 
 
@@ -697,7 +698,7 @@ layout-goal
                                 2.2.1
                             </h4>
                         </div>
-                        <div class="col">Продуктивність праці в сільському господарстві, тис. доларів США на одну зайняту особу (індикатор ЦСР 2.2.1)</div>
+                        <div class="col">Продуктивність праці в сільському господарстві, тис. доларів США на одну зайняту особу</div>
                         
 
 
@@ -758,7 +759,7 @@ layout-goal
                                 2.2.2
                             </h4>
                         </div>
-                        <div class="col">Індекс сільськогосподарської продукції, відсотків (індикатор ЦСР 2.2.2)</div>
+                        <div class="col">Індекс сільськогосподарської продукції, відсотків</div>
                         
 
 
@@ -819,7 +820,7 @@ layout-goal
                                 2.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка капітальних інвестицій у нематеріальні активи у виробництві харчових продуктів, напоїв і тютюнових виробів у загальному обсязі капітальних інвестицій відповідного виду економічної діяльності, відсотків (індикатор ЦСР 2.2.3)</div>
+                        <div class="col">Частка капітальних інвестицій у нематеріальні активи у виробництві харчових продуктів, напоїв і тютюнових виробів у загальному обсязі капітальних інвестицій відповідного виду економічної діяльності, відсотків</div>
                         
 
 
@@ -890,7 +891,7 @@ layout-goal
                                 2.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка земель сільськогосподарського призначення, на яких проведено агрохімічну паспортизацію, у загальній площі земель сільськогосподарського призначення, відсотків (індикатор ЦСР 2.3.1)</div>
+                        <div class="col">Частка земель сільськогосподарського призначення, на яких проведено агрохімічну паспортизацію, у загальній площі земель сільськогосподарського призначення, відсотків</div>
                         
 
 
@@ -951,7 +952,7 @@ layout-goal
                                 2.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка сільськогосподарських угідь під органічним виробництвом у загальній площі сільськогосподарських угідь, відсотків (індикатор ЦСР 2.3.2)</div>
+                        <div class="col">Частка сільськогосподарських угідь під органічним виробництвом у загальній площі сільськогосподарських угідь, відсотків</div>
                         
 
 
@@ -1145,7 +1146,7 @@ layout-goal
                                 2.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка продукції харчової промисловості та переробки сільськогосподарської сировини в загальному обсязі експорту (групи 1–24 згідно з УКТЗЕД), відсотків (індикатор ЦСР 2.4.2)</div>
+                        <div class="col">Частка продукції харчової промисловості та переробки сільськогосподарської сировини в загальному обсязі експорту (групи 1–24 згідно з УКТЗЕД), відсотків</div>
                         
 
 
@@ -1216,7 +1217,7 @@ layout-goal
                                 2.5.1
                             </h4>
                         </div>
-                        <div class="col">Індикатор. Частка повернутих в обробіток земель у загальній площі недоступних станом на червень 2024 року земель, відсотків (індикатор ЦСР 2.5.1)</div>
+                        <div class="col">Частка повернутих в обробіток земель у загальній площі недоступних станом на червень 2024 року земель, відсотків</div>
                         
 
 
@@ -2029,7 +2030,7 @@ layout-goal
     <a href="#top">На початок</a>
 </div>
 
-<footer role="contentinfo">
+<footer>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -2067,6 +2068,9 @@ layout-goal
     </div>
 </footer>
 
+<div class="site_version" style="display:none;">
+    Site version:
+</div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -2092,12 +2096,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260224095342'></script>
+<script src='/assets/js/sdg.js?v=20260303171200'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260224095342"></script><script>
+    <script src="/assets/js/custom.js?v=20260303171200"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -2106,6 +2110,7 @@ layout-goal
 </body>
 </html>
 
+
 <script>
   function loadChart(url, slug) {
     const targetDiv = document.getElementById('chart-target-' + slug);
@@ -2113,12 +2118,14 @@ layout-goal
 
     if (targetDiv.innerHTML.trim() !== "") return;
 
+    const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
     const iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.width = "100%";
     iframe.height = "500px";
     iframe.style.border = "none";
     iframe.style.visibility = "hidden";
+    iframe.title = `${indicatorTitle} ${slug}`;
 
     iframe.onload = function() {
       try {

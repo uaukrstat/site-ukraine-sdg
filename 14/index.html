@@ -143,9 +143,9 @@ var translations = {
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260224095342">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260303171200">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -180,7 +180,7 @@ layout-goal
     <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
 </div>
 
-<header role="banner" class="">
+<header class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/" id="home" title="Go to homepage">
@@ -242,14 +242,15 @@ layout-goal
 
 
 
-                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+                    <div class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-uk list-inline-item">
             <a class="language-toggle-link" href="/uk/14/">
                 Українська
             </a>
         </li></ul>
-</div></span></div>
+</div>
+</div></div>
             </div>
         </nav>
     </div>
@@ -325,10 +326,10 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                As amended by the Order of the Cabinet of Ministers of Ukraine of November 29, 2024 No. 1190-p
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
-                                 Effective
+                                 Current
                             </span>
                         </div>
                     </div>
@@ -340,7 +341,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                As amended by the Order of the Cabinet of Ministers of Ukraine of August 21, 2019 No. 686-p
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 21.08.2019 No. 686-r
                             </span>
                             <span class="badge-edition badge-archive">
                                 Previous
@@ -367,7 +368,7 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.1</h3></div>
-                    <div class="col">Reduce marine pollution</div>
+                    <div class="col">Reducing the level of pollution and contamination of the marine environment</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -381,7 +382,7 @@ layout-goal
                                 14.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of discharges of polluted wastewater in total discharges in the marine environment, %</div>
+                        <div class="col">Concentration of the main pollutants in seawater by substances, milligrams per cubic meter</div>
                         
 
 
@@ -394,7 +395,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -434,12 +435,132 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                14.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Amount of litter in the marine environment and on the coast: beach garbage, units per 100 meters of beach length, floating marine debris, units per square kilometer of sea surface</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-14-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-14-1-2"
+                            onclick="loadChart('/14-1-2/', '14-1-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-14-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-14-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-14-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/14-1-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                14.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Volume of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into the marine environment, million cubic meters</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-14-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-14-1-3"
+                            onclick="loadChart('/14-1-3/', '14-1-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-14-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-14-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-14-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/14-1-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.2</h3></div>
-                    <div class="col">Ensure the sustainable management and protection of marine and coastal ecosystems, and improve their resilience and recovery through innovative technologies</div>
+                    <div class="col">Ensuring the sustainable use and protection of marine and coastal ecosystems, increasing resilience and recovery</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -453,7 +574,7 @@ layout-goal
                                 14.2.1
                             </h4>
                         </div>
-                        <div class="col">Area of territories and objects of the natural reserve fund of coastal regions, % of the territory of coastal areas</div>
+                        <div class="col">Average annual change in hydrogen index in seawater, pH units</div>
                         
 
 
@@ -466,7 +587,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -514,7 +635,7 @@ layout-goal
                                 14.2.2
                             </h4>
                         </div>
-                        <div class="col">Area of territories and objects of the natural reserve fund in the Black and Azov Seas, thousands of hectares</div>
+                        <div class="col">Area of territories and objects of the nature reserve fund of the coastal regions in the total area of the territory of the coastal regions, percent</div>
                         
 
 
@@ -527,7 +648,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -567,12 +688,72 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                14.2.3
+                            </h4>
+                        </div>
+                        <div class="col">Water quality indicator (milligrams per cubic decimeter) by components, percent: phosphate phosphorus; total phosphorus; nitrate nitrogen; nitrite nitrogen; ammonium nitrogen; dissolved mineral nitrogen; total nitrogen; chlorophyll-a; transparency; dissolved oxygen; biological oxygen consumption in five days</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-14-2-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-14-2-3"
+                            onclick="loadChart('/14-2-3/', '14-2-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-14-2-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-14-2-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-14-2-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/14-2-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.3</h3></div>
-                    <div class="col">Implement effective regulation of extraction of marine resources</div>
+                    <div class="col">Introduction of effective regulation of marine biological resources extraction</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -586,7 +767,7 @@ layout-goal
                                 14.3.1
                             </h4>
                         </div>
-                        <div class="col">Volumes of extraction of aquatic bioresources in the exclusive (maritime) economic zone of Ukraine, thousands of tonnes</div>
+                        <div class="col">Share of caught aquatic biological resources in the total volume of established limits, percent</div>
                         
 
 
@@ -599,7 +780,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -688,7 +869,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -721,6 +902,8 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
+                
                 
                 
                 
@@ -766,7 +949,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -828,7 +1011,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -861,6 +1044,7 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -906,7 +1090,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Published</span>
+    <span class="status-inner">Reported</span>
 </span>
 
 
@@ -947,7 +1131,7 @@ layout-goal
     <a href="#top">Back to top</a>
 </div>
 
-<footer role="contentinfo">
+<footer>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -985,6 +1169,9 @@ layout-goal
     </div>
 </footer>
 
+<div class="site_version" style="display:none;">
+    Site version:
+</div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -1010,12 +1197,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260224095342'></script>
+<script src='/assets/js/sdg.js?v=20260303171200'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260224095342"></script><script>
+    <script src="/assets/js/custom.js?v=20260303171200"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1024,6 +1211,7 @@ layout-goal
 </body>
 </html>
 
+
 <script>
   function loadChart(url, slug) {
     const targetDiv = document.getElementById('chart-target-' + slug);
@@ -1031,12 +1219,14 @@ layout-goal
 
     if (targetDiv.innerHTML.trim() !== "") return;
 
+    const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
     const iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.width = "100%";
     iframe.height = "500px";
     iframe.style.border = "none";
     iframe.style.visibility = "hidden";
+    iframe.title = `${indicatorTitle} ${slug}`;
 
     iframe.onload = function() {
       try {

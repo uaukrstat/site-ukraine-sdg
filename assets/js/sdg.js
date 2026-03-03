@@ -3818,11 +3818,19 @@ function generateChartLegend(chart) {
     text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
+        let currentLabel = translations.t(dataset.label);
+        if (!currentLabel || currentLabel === 'undefined' || currentLabel === '') {
+          currentLabel = translations.t('general.country_name');
+
+          if (!currentLabel || currentLabel === 'general.country_name') {
+            currentLabel = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Україна' : 'Ukraine';
+          }
+        }
         text.push('<li>');
         text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');
-        text.push(translations.t(dataset.label));
+        text.push(currentLabel);
         text.push('</li>');
     });
     text.push('</ul>');
@@ -4507,9 +4515,23 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
             return button + arrows;
         };
 
-        table.headings.forEach(function (heading, index) {
-            table_head += '<th' + (!index ? '' : ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
-        });
+      table.headings.forEach(function (heading, index) {
+        let translatedHeading = translations.t(heading);
+
+        if (table.headings.length === 2 && index === 1) {
+          const genericTerms = ['Value', 'Значення', 'Value', 'undefined', heading];
+
+          if (!translatedHeading || genericTerms.includes(translatedHeading) || genericTerms.includes(heading)) {
+            translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Україна' : 'Ukraine';
+          }
+        }
+
+        const title = getHeading(translatedHeading, index);
+
+        if (title) {
+          table_head += '<th' + (!index ? '' : ' class="table-value"') + ' scope="col">' + title + '</th>';
+        }
+      });
 
         table_head += '</tr></thead>';
         currentTable.append(table_head);
@@ -4785,7 +4807,7 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
                 'download': fileName,
                 'title': translations.indicator.download_csv_title,
                 'aria-label': translations.indicator.download_csv_title,
-                'class': 'btn btn-primary btn-download btn-custom-download',
+                'class': 'btn btn-primary btn-download',
                 'tabindex': 0,
                 'role': 'button',
             });
@@ -4971,7 +4993,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
         VIEW._precision = args.precision;
 
         if (MODEL.showData) {
-            $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
+            // $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
             if (!VIEW._chartInstance) {
                 helpers.createPlot(args, helpers);
                 helpers.setPlotEvents(args);
@@ -6687,6 +6709,7 @@ $(function () {
 $(document).ready(function() {
     $('a[href="#top"]').prepend('<svg class="app-c-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path></svg>');
 });
+window.OPEN_SDG_VERSION = "2.4.0";
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.goal-icon-image').forEach(img => {
         const normal = img.dataset.default;
@@ -6704,6 +6727,12 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = normal;
         });
     });
+
+    if (window.OPEN_SDG_VERSION) {
+        const siteVersion = document.querySelector('.site_version');
+
+        siteVersion.textContent = siteVersion.textContent + ' (' + window.OPEN_SDG_VERSION + ')';
+    }
 });
 function addAttrsForLinks(container) {
     const links = container.querySelectorAll('a:not([href="#top"])');

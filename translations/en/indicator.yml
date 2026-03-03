@@ -1,7 +1,7 @@
 select_all: Select all
 clear_all: Clear all
 clear_selections: Clear selections
-variable_hint: Available when '%field' is selected
+variable_hint: Available when selected
 no_data_hint: No options available because of filters above
 download_headline: Download Headline CSV
 download_headline_title: Download headline data as CSV
@@ -40,9 +40,7 @@ view_indicator_list: View this goal's indicator list
 sub_categories: Filters
 # A label of "Show sub-categories" to display before a particular sub-category's name
 sub_categories_show: "Show sub-categories:"
-series_help: Choose categories from the dropdowns below to see different
-  breakdowns of the data. Some will not be available until a higher level is
-  chosen.
+series_help: Choose categories to view data breakdowns. Some parameters will be available after selecting a higher-level category.
 legend_help: Click on the legend to remove individual lines from the chart.
 # A button that displays some data in the form of a chart
 chart: Chart

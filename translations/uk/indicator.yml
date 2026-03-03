@@ -1,7 +1,7 @@
 select_all: 'Обрати всі'
 clear_all: 'Очистити все'
 clear_selections: 'Очистити позначене'
-variable_hint: 'Доступно, якщо вибрано "%поле"'
+variable_hint: 'Доступно, якщо вибрано'
 no_data_hint: 'Немає доступних варіантів через фільтри вище'
 download_headline: 'Завантажити CSV заголовка'
 download_headline_title: 'Завантаження даних заголовка як CSV'

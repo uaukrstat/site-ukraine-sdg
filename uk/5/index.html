@@ -143,9 +143,9 @@ var translations = {
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260224095342">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260303171200">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -180,7 +180,7 @@ layout-goal
     <p class="internet-explorer-message-body">Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.</p>
 </div>
 
-<header role="banner" class="">
+<header class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/uk/" id="home" title="Перейти на головну сторінку">
@@ -242,14 +242,15 @@ layout-goal
 
 
 
-                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+                    <div class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/5/">
                 English
             </a>
         </li></ul>
-</div></span></div>
+</div>
+</div></div>
             </div>
         </nav>
     </div>
@@ -367,7 +368,7 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.1</h3></div>
-                    <div class="col">Створити умови для ліквідації всіх форм дискримінації щодо жінок і дівчат</div>
+                    <div class="col">Забезпечення реалізації ефективної державної політики у всіх сферах життєдіяльності суспільства для зменшення проявів нерівності жінок та чоловіків і недопущення дискримінації</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -381,7 +382,7 @@ layout-goal
                                 5.1.1
                             </h4>
                         </div>
-                        <div class="col">Кількість нормативно-правових актів, переглянутих або прийнятих з метою забезпечення рівних прав та можливостей жінок і чоловіків та недопущення дискримінації щодо жінок і дівчат, одиниць</div>
+                        <div class="col">Частка прийнятих Кабінетом Міністрів України нормативно–правових актів, які відповідають принципу забезпечення рівних прав та можливостей жінок і чоловіків, у загальній кількості нормативно–правових актів, моніторинг яких проведено, відсотків</div>
                         
 
 
@@ -434,12 +435,192 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.1.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка звернень, які було задоволено, у загальній кількості звернень щодо визнаних дискримінаційними за ознакою статі дій, що надійшли до органів державної влади, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-1-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-1-2"
+                            onclick="loadChart('/uk/5-1-2/', '5-1-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-1-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-1-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-1-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-1-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.1.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення, яке стверджує, що обізнане з інформацією про прояви дискримінації за ознакою статі, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-1-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-1-3"
+                            onclick="loadChart('/uk/5-1-3/', '5-1-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-1-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-1-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-1-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-1-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.1.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка населення, яке задоволене діями органів влади щодо усунення проявів дискримінації за ознакою статі до себе чи своїх близьких за останні 12 місяців, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-1-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-1-4"
+                            onclick="loadChart('/uk/5-1-4/', '5-1-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-1-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-1-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-1-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-1-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.2</h3></div>
-                    <div class="col">Знизити рівень гендерно зумовленого та домашнього насильства, забезпечити ефективне запобігання його проявам та своєчасну допомогу постраждалим</div>
+                    <div class="col">Зниження рівня насильства за ознакою статі та домашнього насильства, забезпечення ефективного запобігання його проявам та надання своєчасної допомоги постраждалим</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -453,7 +634,7 @@ layout-goal
                                 5.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка жінок і дівчат віком від 15 років, які будь-коли перебували у партнерстві з чоловіком, що піддавалися фізичному, сексуальному або психологічному насильству з боку теперішнього або попереднього інтимного партнера протягом останніх 12 місяців, за формою насильства та віком</div>
+                        <div class="col">Частка населення, яке обізнане з інформацією  про прояви домашнього насильства та насильства за ознакою статі, інструменти та можливості захисту прав у разі проявів такого насильства і вважає таке насильство неприйнятним (має нульову толерантність до насильства), відсотків</div>
                         
 
 
@@ -514,7 +695,7 @@ layout-goal
                                 5.2.2
                             </h4>
                         </div>
-                        <div class="col">Кількість звернень щодо домашнього насильства, тисяч</div>
+                        <div class="col">Частка жінок і дівчат віком від 15 до 49 років, які протягом останніх 12 місяців зазнали насильства за ознакою статі з боку подружжя, нареченого, особи, з якою спільно проживають, але не перебувають у шлюбі, відсотків</div>
                         
 
 
@@ -575,7 +756,7 @@ layout-goal
                                 5.2.3
                             </h4>
                         </div>
-                        <div class="col">Кількість створених спеціалізованих служб підтримки постраждалих від домашнього насильства осіб</div>
+                        <div class="col">Частка населення, яке готове повідомити правоохоронним органам про випадки насильства за ознакою статі та домашнього насильства, відсотків</div>
                         
 
 
@@ -636,7 +817,7 @@ layout-goal
                                 5.2.4
                             </h4>
                         </div>
-                        <div class="col">Кількість дітей, постраждалих від жорстокого поводження</div>
+                        <div class="col">Частка осіб, які постраждали від сексуального насильства, пов’язаного із збройною агресією Російської Федерації проти України, та яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків</div>
                         
 
 
@@ -697,7 +878,7 @@ layout-goal
                                 5.2.5
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, які пройшли програми для кривдників</div>
+                        <div class="col">Частка осіб, постраждалих від домашнього насильства та насильства за ознакою статі, яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків</div>
                         
 
 
@@ -758,7 +939,7 @@ layout-goal
                                 5.2.6
                             </h4>
                         </div>
-                        <div class="col">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії домашньому насильству</div>
+                        <div class="col">global_indicators.5-2-6-title</div>
                         
 
 
@@ -819,7 +1000,7 @@ layout-goal
                                 5.2.7
                             </h4>
                         </div>
-                        <div class="col">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії дискримінації стосовно жінок</div>
+                        <div class="col">global_indicators.5-2-7-title</div>
                         
 
 
@@ -880,7 +1061,7 @@ layout-goal
                                 5.2.8
                             </h4>
                         </div>
-                        <div class="col">Кількість наданих соціальних послуг відповідно до потреб осіб, які звернулися щодо домашнього насильства</div>
+                        <div class="col">global_indicators.5-2-8-title</div>
                         
 
 
@@ -941,7 +1122,7 @@ layout-goal
                                 5.2.9
                             </h4>
                         </div>
-                        <div class="col">Кількість проведених інформаційних кампаній щодо протидії домашньому насильству</div>
+                        <div class="col">global_indicators.5-2-9-title</div>
                         
 
 
@@ -1002,7 +1183,7 @@ layout-goal
                                 5.2.10
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, які були охоплені інформаційними кампаніями щодо протидії домашньому насильству</div>
+                        <div class="col">global_indicators.5-2-10-title</div>
                         
 
 
@@ -1063,7 +1244,7 @@ layout-goal
                                 5.2.11
                             </h4>
                         </div>
-                        <div class="col">Відсоток зростання нульової толерантності до усіх проявів насильства серед населення України</div>
+                        <div class="col">global_indicators.5-2-11-title</div>
                         
 
 
@@ -1124,7 +1305,7 @@ layout-goal
                                 5.2.12
                             </h4>
                         </div>
-                        <div class="col">Відсоток фінансової забезпеченості регіональних програм щодо протидії домашньому насильству, за рахунок відповідних місцевих бюджетів</div>
+                        <div class="col">global_indicators.5-2-12-title</div>
                         
 
 
@@ -1182,7 +1363,7 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.3</h3></div>
-                    <div class="col">Заохочувати спільну відповідальність за ведення господарства та виховання дитини</div>
+                    <div class="col">Розширення доступу населення до послуг із планування сім’ї та зниження рівня підліткової народжуваності</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -1196,7 +1377,7 @@ layout-goal
                                 5.3.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення тривалості неоплачуваної домашньої роботи (ведення господарства, догляд за дітьми та іншими родичами тощо) жінок та чоловіків, %</div>
+                        <div class="col">Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15–19 років</div>
                         
 
 
@@ -1249,12 +1430,72 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.3.2
+                            </h4>
+                        </div>
+                        <div class="col">Частка жінок у віці 15-49 років, які приймають власні поінформовані рішення щодо сексуальних стосунків, використання контрацептивів та репродуктивного здоров’я, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-3-2"
+                            onclick="loadChart('/uk/5-3-2/', '5-3-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-3-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.4</h3></div>
-                    <div class="col">Забезпечити рівні можливості представництва на вищих рівнях прийняття рішень у політичному та суспільному житті</div>
+                    <div class="col">Забезпечення надання державної підтримки для розвитку інфраструктури дошкільної освіти та здійснення догляду за дітьми та членами сім’ї, які потребують сторонньої допомоги, а також заохочення до рівного розподілу домашньої роботи та такого догляду</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -1268,7 +1509,7 @@ layout-goal
                                 5.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка жінок серед депутатів Верховної Ради України, %</div>
+                        <div class="col">Частка вихованців закладів дошкільної освіти віком до двох років у загальній чисельності дітей відповідного віку, відсотків</div>
                         
 
 
@@ -1329,7 +1570,7 @@ layout-goal
                                 5.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка жінок серед депутатів обласних рад та місцевих рад міст обласного значення, %</div>
+                        <div class="col">Частка чоловіків, які отримують допомогу при народженні дитини, у загальній кількості отримувачів допомоги, відсотків</div>
                         
 
 
@@ -1390,7 +1631,7 @@ layout-goal
                                 5.4.3
                             </h4>
                         </div>
-                        <div class="col">Частка жінок на державній службі у розрізі категорій посад ‘А’, ‘Б’, ‘В’</div>
+                        <div class="col">Частка чоловіків, які користувалися відпусткою при народженні дитини, відсотків</div>
                         
 
 
@@ -1443,12 +1684,192 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.4.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка осіб з дітьми до трьох років, які вийшли на роботу з відпустки по догляду за дитиною до досягнення нею трирічного віку (у віці дитини до 1,5 року), відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-4-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-4-4"
+                            onclick="loadChart('/uk/5-4-4/', '5-4-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-4-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-4-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-4-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-4-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.4.5
+                            </h4>
+                        </div>
+                        <div class="col">Частка працюючих осіб, які щодня доглядають за дітьми/онуками/родичами похилого віку/родичами з інвалідністю, у загальній кількості опитаних осіб старше 18 років, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-4-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-4-5"
+                            onclick="loadChart('/uk/5-4-5/', '5-4-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-4-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-4-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-4-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-4-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.4.6
+                            </h4>
+                        </div>
+                        <div class="col">Частка працюючих осіб, які щодня або кілька разів на тиждень займаються спортом, залучені до культурної діяльності або дозвілля поза домом, займаються волонтерською діяльністю щонайменше один раз на місяць, у загальній кількості опитаних осіб старше 15 років, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-4-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-4-6"
+                            onclick="loadChart('/uk/5-4-6/', '5-4-6')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-4-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-4-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-4-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-4-6/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.5</h3></div>
-                    <div class="col">Розширити доступ населення до послуг з планування сім’ї та знизити рівень підліткової народжуваності</div>
+                    <div class="col">Забезпечення рівних можливостей представництва жінок і чоловіків на вищих рівнях прийняття рішень у політичному та суспільному житті</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -1462,7 +1883,7 @@ layout-goal
                                 5.5.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15-19 років</div>
+                        <div class="col">Співвідношення жінок та чоловіків у складі Верховної Ради України, відсотків</div>
                         
 
 
@@ -1515,12 +1936,432 @@ layout-goal
 
                 
 
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.2
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків, обраних депутатами Верховної Ради Автономної Республіки Крим, обласних, районних, міських, районних у містах, сільських, селищних рад, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-2"
+                            onclick="loadChart('/uk/5-5-2/', '5-5-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.3
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків у складі Кабінету Міністрів України, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-3"
+                            onclick="loadChart('/uk/5-5-3/', '5-5-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.4
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків на посадах державної служби категорії "А", відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-4"
+                            onclick="loadChart('/uk/5-5-4/', '5-5-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.5
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків серед послів України в іноземних державах, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-5"
+                            onclick="loadChart('/uk/5-5-5/', '5-5-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.6
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків серед суддів, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-6"
+                            onclick="loadChart('/uk/5-5-6/', '5-5-6')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-6/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.7
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій неолімпійських видів спорту, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-7"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-7"
+                            onclick="loadChart('/uk/5-5-7/', '5-5-7')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-7">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-7" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-7"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-7/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.5.8
+                            </h4>
+                        </div>
+                        <div class="col">Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій олімпійських видів спорту, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-5-8"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-5-8"
+                            onclick="loadChart('/uk/5-5-8/', '5-5-8')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-5-8">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-5-8" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-5-8"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-5-8/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
                 <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.6</h3></div>
-                    <div class="col">Розширити економічні можливості жінок</div>
+                    <div class="col">Розширення економічних можливостей жінок</div>
                 </div>
                 <hr class="goal-page-target-rule">
                 
@@ -1534,7 +2375,7 @@ layout-goal
                                 5.6.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення середньої заробітної плати жінок і чоловіків, %</div>
+                        <div class="col">Частка осіб, зайнятих у сфері освіти, охорони здоров’я та надання соціальних послуг, у загальній кількості зайнятого населення у віці 15 років і старше, відсотків</div>
                         
 
 
@@ -1595,7 +2436,7 @@ layout-goal
                                 5.6.2
                             </h4>
                         </div>
-                        <div class="col">Рівень зайнятості жінок віком 25-44 роки, які мають дітей віком 3-5 років, %</div>
+                        <div class="col">Частка зареєстрованих юридичних осіб, в яких жінки займають посаду керівника, у загальній кількості зареєстрованих юридичних осіб, відсотків</div>
                         
 
 
@@ -1642,6 +2483,557 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.6.3
+                            </h4>
+                        </div>
+                        <div class="col">Частка зареєстрованих фізичних осіб-підприємців жіночої статі у загальній кількості зареєстрованих фізичних осіб-підприємців, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-6-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-6-3"
+                            onclick="loadChart('/uk/5-6-3/', '5-6-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-6-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-6-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-6-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-6-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.6.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка активних підприємств, в яких жінки займають посаду керівника, у загальній кількості активних підприємств, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-6-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-6-4"
+                            onclick="loadChart('/uk/5-6-4/', '5-6-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-6-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-6-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-6-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-6-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.6.5
+                            </h4>
+                        </div>
+                        <div class="col">Частка дівчат, які навчаються у закладах вищої освіти за напрямом підготовки "Інформатика та обчислювальна техніка", у загальній кількості студентів, які навчаються за цим напрямом, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-6-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-6-5"
+                            onclick="loadChart('/uk/5-6-5/', '5-6-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-6-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-6-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-6-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-6-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.7</h3></div>
+                    <div class="col">Забезпечення наскрізності принципів гендерної рівності в освіті</div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.1
+                            </h4>
+                        </div>
+                        <div class="col">Частка закладів освіти, які затвердили політики/положення щодо дотримання принципів забезпечення рівних прав та можливостей жінок і чоловіків, запобігання та протидії насильству за ознакою статі, дискримінації за ознакою статі та сексуальних домагань, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-1"
+                            onclick="loadChart('/uk/5-7-1/', '5-7-1')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-1/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.2
+                            </h4>
+                        </div>
+                        <div class="col">Кількість закладів освіти, які пройшли гендерно-правову експертизу внутрішніх нормативних документів, одиниць</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-2"
+                            onclick="loadChart('/uk/5-7-2/', '5-7-2')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-2/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.3
+                            </h4>
+                        </div>
+                        <div class="col">Кількість закладів професійної (професійно-технічної), вищої та післядипломної освіти, які запровадили інститут радництва з проблематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, одиниць</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-3"
+                            onclick="loadChart('/uk/5-7-3/', '5-7-3')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-3/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.4
+                            </h4>
+                        </div>
+                        <div class="col">Частка закладів освіти, які запровадили у документообіг принципи гендерно-чутливої, недискримінаційної мови, відсотків</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-4"
+                            onclick="loadChart('/uk/5-7-4/', '5-7-4')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-4/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.5
+                            </h4>
+                        </div>
+                        <div class="col">Кількість сертифікаційних програм підготовки фахівців у сфері забезпечення рівних прав та можливостей жінок і чоловіків, підвищення кваліфікації з проблем забезпечення рівних прав та можливостей жінок і чоловіків, гендерної рівності, поваги до гідності особи, запобігання та протидії насильству і дискримінації, зокрема за ознакою статі, інклюзивності, одиниць</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-5"
+                            onclick="loadChart('/uk/5-7-5/', '5-7-5')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-5/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Індикатор</span>
+                                5.7.6
+                            </h4>
+                        </div>
+                        <div class="col">Кількість педагогічних і науково-педагогічних працівників, які успішно завершили програми підвищення кваліфікації/стажування з тематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, з урахуванням гендерного аспекту, одиниць</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Мітки"><li class="list-inline-item">
+        <span class="visually-hidden">Стан індикатора</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5-7-6"
+                            aria-expanded="false"
+                            aria-controls="collapse-5-7-6"
+                            onclick="loadChart('/uk/5-7-6/', '5-7-6')"
+                            data-text-show="Показати"
+                            data-text-hide="Сховати">
+                        Показати
+                    </button>
+
+                    <div class="collapse" id="collapse-5-7-6">
+                        <div class="card card-body mt-2">
+                            <div id="loader-5-7-6" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Завантаження графіка...</p>
+                            </div>
+                            <div id="chart-target-5-7-6"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/uk/5-7-6/">
+                            Переглянути деталі індикатора
+                        </a>
+                    </div>
+                </div>
                 
                 
             </div>
@@ -1733,6 +3125,9 @@ layout-goal
                 
                 
                 
+                
+                
+                
 
                 
 
@@ -1774,8 +3169,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -1898,8 +3293,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -1960,8 +3355,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2022,8 +3417,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2084,8 +3479,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2146,8 +3541,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2208,8 +3603,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2270,8 +3665,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2332,8 +3727,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2394,8 +3789,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2456,8 +3851,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2534,8 +3929,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2568,6 +3963,7 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -2736,8 +4132,8 @@ layout-goal
 
 
 
-<span class="status notstarted">
-    <span class="status-inner">Вивчення джерел даних</span>
+<span class="status complete">
+    <span class="status-inner">Опубліковано</span>
 </span>
 
 
@@ -2770,6 +4166,9 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
+                
+                
                 
                 
                 
@@ -2848,6 +4247,13 @@ layout-goal
                     </div>
                 </div>
                 <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -2987,6 +4393,15 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
             </div>
@@ -2996,7 +4411,7 @@ layout-goal
     <a href="#top">На початок</a>
 </div>
 
-<footer role="contentinfo">
+<footer>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -3034,6 +4449,9 @@ layout-goal
     </div>
 </footer>
 
+<div class="site_version" style="display:none;">
+    Site version:
+</div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -3059,12 +4477,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260224095342'></script>
+<script src='/assets/js/sdg.js?v=20260303171200'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260224095342"></script><script>
+    <script src="/assets/js/custom.js?v=20260303171200"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -3073,6 +4491,7 @@ layout-goal
 </body>
 </html>
 
+
 <script>
   function loadChart(url, slug) {
     const targetDiv = document.getElementById('chart-target-' + slug);
@@ -3080,12 +4499,14 @@ layout-goal
 
     if (targetDiv.innerHTML.trim() !== "") return;
 
+    const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
     const iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.width = "100%";
     iframe.height = "500px";
     iframe.style.border = "none";
     iframe.style.visibility = "hidden";
+    iframe.title = `${indicatorTitle} ${slug}`;
 
     iframe.onload = function() {
       try {
