@@ -4,103 +4,103 @@ remote_data_prefix: "https://uaukrstat.github.io/data-ukraine-sdg"
 repository_url_data: "https://github.com/uaukrstat/data-ukraine-sdg"
 fetch_remote_data: true
 analytics:
-    # For production, you likely want to enter a Google Analytics code below.
-    ga_prod: ''
+  # For production, you likely want to enter a Google Analytics code below.
+  ga_prod: ''
 reporting_status:
-    title: status.reporting_status
-    description: status.description
-    disaggregation_tabs: false
-    status_types:
-        - value: complete
-          label: status.published
-          hide_on_goal_pages: false
-        - value: inprogress
-          label: status.statistics_in_progress
-          hide_on_goal_pages: false
-        - value: notstarted
-          label: status.exploring_data_sources
-          hide_on_goal_pages: false
-        - value: notapplicable
-          label: status.not_applicable
-          hide_on_goal_pages: false
+  title: status.reporting_status
+  description: status.description
+  disaggregation_tabs: false
+  status_types:
+    - value: complete
+      label: status.published
+      hide_on_goal_pages: false
+    - value: inprogress
+      label: status.statistics_in_progress
+      hide_on_goal_pages: false
+    - value: notstarted
+      label: status.exploring_data_sources
+      hide_on_goal_pages: false
+    - value: notapplicable
+      label: status.not_applicable
+      hide_on_goal_pages: false
 favicons: favicon.io
 footer_language_toggle: none
 footer_menu:
-    - path: /contact-us
-      translation_key: menu.contact_us
-    - path: 'https://x.com/Ukrstat'
-      translation_key: general.twitter
-    - path: 'https://www.facebook.com/Ukrstat/'
-      translation_key: general.facebook
-    - path: /cookies-and-privacy/
-      translation_key: menu.cookies
+  - path: /contact-us
+    translation_key: menu.contact_us
+  - path: 'https://x.com/Ukrstat'
+    translation_key: general.twitter
+  - path: 'https://www.facebook.com/Ukrstat/'
+    translation_key: general.facebook
+  - path: /cookies-and-privacy/
+    translation_key: menu.cookies
 frontpage_cards:
-    - title: frontpage.download_all_title
-      include: components/download-all-data.html
-    - title: custom.statistics_Ukraine
-      button_label: custom.statistics_button_label
-      button_link: custom.statistics_button_link
-    - title: custom.sdg_ukrstat
-      button_label: custom.sdg_ukrstat_label
-      button_link: custom.sdg_ukrstat_link
+  - title: frontpage.download_all_title
+    include: components/download-all-data.html
+  - title: custom.statistics_Ukraine
+    button_label: custom.statistics_button_label
+    button_link: custom.statistics_button_link
+  - title: custom.sdg_ukrstat
+    button_label: custom.sdg_ukrstat_label
+    button_link: custom.sdg_ukrstat_link
 create_goals:
-    previous_next_links: false
-    goals:
-        - goal: 1
-        - goal: 2
-        - goal: 3
-        - goal: 4
-        - goal: 5
-        - goal: 6
-        - goal: 7
-        - goal: 8
-        - goal: 9
-        - goal: 10
-        - goal: 11
-        - goal: 12
-        - goal: 13
-        - goal: 14
-        - goal: 15
-        - goal: 16
-        - goal: 17
+  previous_next_links: false
+  goals:
+    - goal: 1
+    - goal: 2
+    - goal: 3
+    - goal: 4
+    - goal: 5
+    - goal: 6
+    - goal: 7
+    - goal: 8
+    - goal: 9
+    - goal: 10
+    - goal: 11
+    - goal: 12
+    - goal: 13
+    - goal: 14
+    - goal: 15
+    - goal: 16
+    - goal: 17
 goal_image_base: /assets/img/goals
 goal_image_extension: svg
 goals_page:
-    title: general.goals
-    description: goal.description
+  title: general.goals
+  description: goal.description
 create_indicators:
-    layout: indicator
-    previous_next_links: false
+  layout: indicator
+  previous_next_links: false
 frontpage_goals_grid:
-    title: frontpage.goals_title
-    description: frontpage.goals_description
+  title: frontpage.goals_title
+  description: frontpage.goals_description
 menu:
-    - path: /goals
-      translation_key: general.goals
-      dropdown: []
-    - path: /reporting-status
-      translation_key: menu.reporting_status
-      dropdown: []
-    - path: /about
-      translation_key: menu.about
-      dropdown: []
-    - path: /faq
-      translation_key: menu.faq
-      dropdown: []
-    - path: /useful-links
-      translation_key: menu.useful_links
-      dropdown: []
+  - path: /goals
+    translation_key: general.goals
+    dropdown: []
+  - path: /reporting-status
+    translation_key: menu.reporting_status
+    dropdown: []
+  - path: /about
+    translation_key: menu.about
+    dropdown: []
+  - path: /faq
+    translation_key: menu.faq
+    dropdown: []
+  - path: /useful-links
+    translation_key: menu.useful_links
+    dropdown: []
 frontpage_introduction_banner:
-    title: frontpage.intro_title
-    description: frontpage.intro_body
+  title: frontpage.intro_title
+  description: frontpage.intro_body
 custom_css: []
 custom_js:
-    - /assets/js/custom.js
+  - /assets/js/custom.js
 search_index:
-    enabled: true
-    include_indicators: true
-    include_language_in_url: false
+  enabled: true
+  include_indicators: true
+  include_language_in_url: false
 languages:
-    - en
-    - uk
+  - en
+  - uk
 default_language: uk
