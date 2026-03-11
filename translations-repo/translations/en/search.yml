@@ -9,4 +9,7 @@ keywords: Keywords
 no_results: No results
 did_you_mean: did you mean
 results_found: Results found
-adjust_your_search: Change search parameters to find what you're looking for.
+adjust_your_search: Change your search parameters to refine your results.
+previous_page: 'Previous page'
+next_page: 'Next page'
+page_of: 'of'

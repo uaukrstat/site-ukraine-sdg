@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.1</h3></div>
-                    <div class="col">Reducing the level of pollution and contamination of the marine environment</div>
+                    <div class="col-md-8">Reducing the level of pollution and contamination of the marine environment</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.1.1
                             </h4>
                         </div>
-                        <div class="col">Concentration of the main pollutants in seawater by substances, milligrams per cubic meter</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Concentration of the main pollutants in seawater by substances, milligrams per cubic meter
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.1.2
                             </h4>
                         </div>
-                        <div class="col">Amount of litter in the marine environment and on the coast: beach garbage, units per 100 meters of beach length, floating marine debris, units per square kilometer of sea surface</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Amount of litter in the marine environment and on the coast: beach garbage, units per 100 meters of beach length, floating marine debris, units per square kilometer of sea surface
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.1.3
                             </h4>
                         </div>
-                        <div class="col">Volume of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into the marine environment, million cubic meters</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into the marine environment, million cubic meters
+                            </div>
+
+                            
 
 
 
@@ -523,6 +535,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,33 +562,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.2</h3></div>
-                    <div class="col">Ensuring the sustainable use and protection of marine and coastal ecosystems, increasing resilience and recovery</div>
+                    <div class="col-md-8">Ensuring the sustainable use and protection of marine and coastal ecosystems, increasing resilience and recovery</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.2.1
                             </h4>
                         </div>
-                        <div class="col">Average annual change in hydrogen index in seawater, pH units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average annual change in hydrogen index in seawater, pH units
+                            </div>
+
+                            
 
 
 
@@ -594,6 +608,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -620,7 +635,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -629,14 +644,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.2.2
                             </h4>
                         </div>
-                        <div class="col">Area of territories and objects of the nature reserve fund of the coastal regions in the total area of the territory of the coastal regions, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Area of territories and objects of the nature reserve fund of the coastal regions in the total area of the territory of the coastal regions, percent
+                            </div>
+
+                            
 
 
 
@@ -655,6 +674,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -681,7 +701,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -690,14 +710,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.2.3
                             </h4>
                         </div>
-                        <div class="col">Water quality indicator (milligrams per cubic decimeter) by components, percent: phosphate phosphorus; total phosphorus; nitrate nitrogen; nitrite nitrogen; ammonium nitrogen; dissolved mineral nitrogen; total nitrogen; chlorophyll-a; transparency; dissolved oxygen; biological oxygen consumption in five days</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Water quality indicator (milligrams per cubic decimeter) by components, percent: phosphate phosphorus; total phosphorus; nitrate nitrogen; nitrite nitrogen; ammonium nitrogen; dissolved mineral nitrogen; total nitrogen; chlorophyll-a; transparency; dissolved oxygen; biological oxygen consumption in five days
+                            </div>
+
+                            
 
 
 
@@ -716,6 +740,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -742,33 +767,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.3</h3></div>
-                    <div class="col">Introduction of effective regulation of marine biological resources extraction</div>
+                    <div class="col-md-8">Introduction of effective regulation of marine biological resources extraction</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 14.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of caught aquatic biological resources in the total volume of established limits, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of caught aquatic biological resources in the total volume of established limits, percent
+                            </div>
+
+                            
 
 
 
@@ -787,6 +813,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -813,7 +840,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
             </div>
@@ -834,16 +861,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce marine pollution
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -856,7 +879,7 @@ layout-goal
                                 14.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of discharges of polluted wastewater in total discharges in the marine environment, %</div>
+                        <div class="col-md-8">Share of discharges of polluted wastewater in total discharges in the marine environment, %</div>
                         
 
 
@@ -912,18 +935,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure the sustainable management and protection of marine and coastal ecosystems, and improve their resilience and recovery through innovative technologies
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -936,7 +955,7 @@ layout-goal
                                 14.2.1
                             </h4>
                         </div>
-                        <div class="col">Area of territories and objects of the natural reserve fund of coastal regions, % of the territory of coastal areas</div>
+                        <div class="col-md-8">Area of territories and objects of the natural reserve fund of coastal regions, % of the territory of coastal areas</div>
                         
 
 
@@ -998,7 +1017,7 @@ layout-goal
                                 14.2.2
                             </h4>
                         </div>
-                        <div class="col">Area of territories and objects of the natural reserve fund in the Black and Azov Seas, thousands of hectares</div>
+                        <div class="col-md-8">Area of territories and objects of the natural reserve fund in the Black and Azov Seas, thousands of hectares</div>
                         
 
 
@@ -1055,16 +1074,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>14.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Implement effective regulation of extraction of marine resources
                     </div>
                 </div>
-
-                
 
                 
                 
@@ -1077,7 +1092,7 @@ layout-goal
                                 14.3.1
                             </h4>
                         </div>
-                        <div class="col">Volumes of extraction of aquatic bioresources in the exclusive (maritime) economic zone of Ukraine, thousands of tonnes</div>
+                        <div class="col-md-8">Volumes of extraction of aquatic bioresources in the exclusive (maritime) economic zone of Ukraine, thousands of tonnes</div>
                         
 
 
@@ -1197,12 +1212,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

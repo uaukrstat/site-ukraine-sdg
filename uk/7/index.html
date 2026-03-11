@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.1</h3></div>
-                    <div class="col">Забезпечення безпеки постачання енергетичних ресурсів та зменшення залежності від їх імпорту</div>
+                    <div class="col-md-8">Забезпечення безпеки постачання енергетичних ресурсів та зменшення залежності від їх імпорту</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.1.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт покриття споживання електричної енергії власним виробництвом</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт покриття споживання електричної енергії власним виробництвом
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.1.2
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт покриття споживання природного газу власним видобутком</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт покриття споживання природного газу власним видобутком
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.1.3
                             </h4>
                         </div>
-                        <div class="col">Максимальна частка імпорту енергетичних ресурсів з однієї країни в загальному обсязі їх імпорту в кількісному вираженні за типами енергетичних ресурсів, відсотків: вугілля антрацитової групи (код згідно з УКТЗЕД 2701 11 00 00); бензини моторні (коди згідно з УКТЗЕД 2710 12 41 11–2710 12 49 99); палива дизельні (коди згідно з УКТЗЕД 2710 19 43 00–2710 19 48 00); гази вуглеводневі скраплені (LPG) (коди згідно з УКТЗЕД 2711 12–2711 19 00 00); газ природний (код згідно з УКТЗЕД 2711 21 00 00); неопромiненi паливнi елементи (твели) для ядерних реакторів (код згідно з УКТЗЕД 8401 30 00 00)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Максимальна частка імпорту енергетичних ресурсів з однієї країни в загальному обсязі їх імпорту в кількісному вираженні за типами енергетичних ресурсів, відсотків: вугілля антрацитової групи (код згідно з УКТЗЕД 2701 11 00 00); бензини моторні (коди згідно з УКТЗЕД 2710 12 41 11–2710 12 49 99); палива дизельні (коди згідно з УКТЗЕД 2710 19 43 00–2710 19 48 00); гази вуглеводневі скраплені (LPG) (коди згідно з УКТЗЕД 2711 12–2711 19 00 00); газ природний (код згідно з УКТЗЕД 2711 21 00 00); неопромiненi паливнi елементи (твели) для ядерних реакторів (код згідно з УКТЗЕД 8401 30 00 00)
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,34 +563,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.2</h3></div>
-                    <div class="col">Забезпечення створення децентралізованої системи енергозабезпечення</div>
+                    <div class="col-md-8">Забезпечення створення децентралізованої системи енергозабезпечення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка територіальних громад, охоплених системами розподілу microgrid на базі "розумних мереж", у загальній кількості територіальних громад, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка територіальних громад, охоплених системами розподілу microgrid на базі "розумних мереж", у загальній кількості територіальних громад, відсотків
+                            </div>
+
+                            
 
 
 
@@ -589,13 +603,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -622,35 +637,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.3</h3></div>
-                    <div class="col">Покращення якості постачання енергетичних ресурсів</div>
+                    <div class="col-md-8">Покращення якості постачання енергетичних ресурсів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.3.1
                             </h4>
                         </div>
-                        <div class="col">Індекс середньої тривалості довгих перерв в електропостачанні в системі (SAIDI) з вини компаній (планових без попереджень переривань та переривань, пов’язаних з технологічними порушеннями в електропостачанні) за типами місцевості на рівнях напруги 0,4–20 кВ, хвилин: міська; сільська</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс середньої тривалості довгих перерв в електропостачанні в системі (SAIDI) з вини компаній (планових без попереджень переривань та переривань, пов’язаних з технологічними порушеннями в електропостачанні) за типами місцевості на рівнях напруги 0,4–20 кВ, хвилин: міська; сільська
+                            </div>
+
+                            
 
 
 
@@ -662,13 +678,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -695,7 +712,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -704,14 +721,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.3.2
                             </h4>
                         </div>
-                        <div class="col">Показники технологічних витрат в електромережах: частка технологічних витрат електричної енергії в мережах (від обсягу відбору), відсотків; частка технологічних витрат електричної енергії в мережах систем розподілу (від обсягу відбору), відсотків </div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Показники технологічних витрат в електромережах: частка технологічних витрат електричної енергії в мережах (від обсягу відбору), відсотків; частка технологічних витрат електричної енергії в мережах систем розподілу (від обсягу відбору), відсотків 
+                            </div>
+
+                            
 
 
 
@@ -730,6 +751,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -756,7 +778,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -764,14 +786,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.3.3
                             </h4>
                         </div>
-                        <div class="col">Частка втрат під час транспортування теплової енергії, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка втрат під час транспортування теплової енергії, відсотків
+                            </div>
+
+                            
 
 
 
@@ -790,6 +816,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -816,7 +843,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -824,14 +851,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.3.4
                             </h4>
                         </div>
-                        <div class="col">Частка протяжності попередньо ізольованих трубопроводів магістральних та місцевих (розподільних) теплових мереж, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка протяжності попередньо ізольованих трубопроводів магістральних та місцевих (розподільних) теплових мереж, відсотків
+                            </div>
+
+                            
 
 
 
@@ -850,6 +881,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -876,7 +908,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -884,14 +916,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.3.5
                             </h4>
                         </div>
-                        <div class="col">Показники виробничо–технологічних витрат у мережах постачання природного газу: виробничо–технологічні витрати під час транспортування природного газу, млн. куб. метрів; виробничо–технологічні витрати під час розподілу природного газу, млн. куб. метрів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Показники виробничо–технологічних витрат у мережах постачання природного газу: виробничо–технологічні витрати під час транспортування природного газу, млн. куб. метрів; виробничо–технологічні витрати під час розподілу природного газу, млн. куб. метрів
+                            </div>
+
+                            
 
 
 
@@ -903,13 +939,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -936,33 +973,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.4</h3></div>
-                    <div class="col">Сприяння декарбонізації паливно-енергетичного комплексу та розвитку відновлюваної енергетики</div>
+                    <div class="col-md-8">Сприяння декарбонізації паливно-енергетичного комплексу та розвитку відновлюваної енергетики</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка викидів парникових газів на підприємствах, що виробляють електричну та теплову енергію, порівняно з 1990 роком, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка викидів парникових газів на підприємствах, що виробляють електричну та теплову енергію, порівняно з 1990 роком, відсотків
+                            </div>
+
+                            
 
 
 
@@ -974,13 +1012,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1007,7 +1046,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1016,14 +1055,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка енергії, виробленої з відновлюваних джерел, у загальному кінцевому обсязі споживання енергії за секторами, відсотків: електроенергетика, опалення та охолодження, транспорт</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка енергії, виробленої з відновлюваних джерел, у загальному кінцевому обсязі споживання енергії за секторами, відсотків: електроенергетика, опалення та охолодження, транспорт
+                            </div>
+
+                            
 
 
 
@@ -1042,6 +1085,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1068,7 +1112,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1076,14 +1120,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.4.3
                             </h4>
                         </div>
-                        <div class="col">Частка електричної енергії з відновлюваних джерел, що не була відпущена в об’єднану енергетичну систему України внаслідок виконання команд оператора системи передачі, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка електричної енергії з відновлюваних джерел, що не була відпущена в об’єднану енергетичну систему України внаслідок виконання команд оператора системи передачі, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1095,13 +1143,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1128,7 +1177,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1136,14 +1185,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.4.4
                             </h4>
                         </div>
-                        <div class="col">Частка об’єктів відновлюваної електроенергетики у встановленій генеруючій потужності об’єднаної енергетичної системи України, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка об’єктів відновлюваної електроенергетики у встановленій генеруючій потужності об’єднаної енергетичної системи України, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1155,13 +1208,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1188,33 +1242,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.5</h3></div>
-                    <div class="col">Сприяння раціоналізації споживання енергетичних ресурсів, стимулювання до енергоефективності та підвищення рівня обізнаності споживачів щодо функціонування паливно-енергетичного комплексу</div>
+                    <div class="col-md-8">Сприяння раціоналізації споживання енергетичних ресурсів, стимулювання до енергоефективності та підвищення рівня обізнаності споживачів щодо функціонування паливно-енергетичного комплексу</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.1
                             </h4>
                         </div>
-                        <div class="col">Енергоємність валового внутрішнього продукту (витрати первинної енергії на одиницю валового внутрішнього продукту) за паритетом купівельної спроможності базисного року, т н. е./тис. міжнародних доларів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Енергоємність валового внутрішнього продукту (витрати первинної енергії на одиницю валового внутрішнього продукту) за паритетом купівельної спроможності базисного року, т н. е./тис. міжнародних доларів
+                            </div>
+
+                            
 
 
 
@@ -1226,13 +1281,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1259,7 +1315,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1267,14 +1323,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.2
                             </h4>
                         </div>
-                        <div class="col">Показники споживання енергії домогосподарствами: частка споживання енергії побутовим сектором у загальному кінцевому споживанні енергії, відсотків; питоме споживання енергії житловими будівлями, кіловат-годин на кв. метр </div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Показники споживання енергії домогосподарствами: частка споживання енергії побутовим сектором у загальному кінцевому споживанні енергії, відсотків; питоме споживання енергії житловими будівлями, кіловат-годин на кв. метр 
+                            </div>
+
+                            
 
 
 
@@ -1286,13 +1346,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1319,7 +1380,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1327,14 +1388,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.3
                             </h4>
                         </div>
-                        <div class="col">Середньомісячне споживання електричної енергії на побутового споживача, кіловат–годин: без електроопалення; з електроопаленням</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Середньомісячне споживання електричної енергії на побутового споживача, кіловат–годин: без електроопалення; з електроопаленням
+                            </div>
+
+                            
 
 
 
@@ -1346,13 +1411,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1379,7 +1445,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1387,14 +1453,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.4
                             </h4>
                         </div>
-                        <div class="col">Рівень оснащення споживачів інтелектуальними лічильниками електричної енергії (smart meters), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень оснащення споживачів інтелектуальними лічильниками електричної енергії (smart meters), відсотків
+                            </div>
+
+                            
 
 
 
@@ -1406,13 +1476,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1439,7 +1510,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1447,14 +1518,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.5
                             </h4>
                         </div>
-                        <div class="col">Питоме споживання природного газу побутовими споживачами для комплексного використання, включно для опалення, куб. метрів/кв. метр</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Питоме споживання природного газу побутовими споживачами для комплексного використання, включно для опалення, куб. метрів/кв. метр
+                            </div>
+
+                            
 
 
 
@@ -1466,13 +1541,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1499,7 +1575,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1507,14 +1583,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.6
                             </h4>
                         </div>
-                        <div class="col">Середньомісячне споживання природного газу на побутового споживача для комплексного використання, включно для опалення, куб. метрів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Середньомісячне споживання природного газу на побутового споживача для комплексного використання, включно для опалення, куб. метрів
+                            </div>
+
+                            
 
 
 
@@ -1526,13 +1606,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1559,7 +1640,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1567,14 +1648,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.7
                             </h4>
                         </div>
-                        <div class="col">Рівень оснащення споживачів комерційними вузлами обліку природного газу, які облаштовані засобами дистанційної передачі даних, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень оснащення споживачів комерційними вузлами обліку природного газу, які облаштовані засобами дистанційної передачі даних, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1586,13 +1671,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1619,7 +1705,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1627,14 +1713,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.8
                             </h4>
                         </div>
-                        <div class="col">Питома витрата умовного палива на одиницю відпущеної (з колекторів джерел) теплової енергії в системах централізованого теплопостачання, кілограмів умовного палива на гігакалорію</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Питома витрата умовного палива на одиницю відпущеної (з колекторів джерел) теплової енергії в системах централізованого теплопостачання, кілограмів умовного палива на гігакалорію
+                            </div>
+
+                            
 
 
 
@@ -1646,13 +1736,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1679,7 +1770,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1687,14 +1778,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.9
                             </h4>
                         </div>
-                        <div class="col">Рівень оснащення будівель вузлами комерційного обліку за видами, відсотків: теплової енергії (у житлових будівлях; у нежитлових будівлях); гарячої води (у житлових будівлях; у нежитлових будівлях); питної води (у житлових будівлях; у нежитлових будівлях)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень оснащення будівель вузлами комерційного обліку за видами, відсотків: теплової енергії (у житлових будівлях; у нежитлових будівлях); гарячої води (у житлових будівлях; у нежитлових будівлях); питної води (у житлових будівлях; у нежитлових будівлях)
+                            </div>
+
+                            
 
 
 
@@ -1706,13 +1801,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1739,7 +1835,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1747,14 +1843,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.5.10
                             </h4>
                         </div>
-                        <div class="col">Індекс прозорості енергетики, балів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс прозорості енергетики, балів
+                            </div>
+
+                            
 
 
 
@@ -1766,13 +1866,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1799,33 +1900,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.6</h3></div>
-                    <div class="col">Сприяння зниженню рівня енергетичної бідності населення</div>
+                    <div class="col-md-8">Сприяння зниженню рівня енергетичної бідності населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які проживають у домогосподарствах та потерпають від недостатності коштів для своєчасної та в повному обсязі оплати житлово-комунальних послуг і придбання скрапленого газу, твердого та рідкого пічного побутового палива тощо, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які проживають у домогосподарствах та потерпають від недостатності коштів для своєчасної та в повному обсязі оплати житлово-комунальних послуг і придбання скрапленого газу, твердого та рідкого пічного побутового палива тощо, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1837,13 +1939,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1870,7 +1973,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1878,14 +1981,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.6.2
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які проживають у домогосподарствах та потерпають від недостатності коштів для підтримування достатньо теплої температури у своєму житлі (на придбання палива, обігрівача тощо) протягом опалювального сезону, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які проживають у домогосподарствах та потерпають від недостатності коштів для підтримування достатньо теплої температури у своєму житлі (на придбання палива, обігрівача тощо) протягом опалювального сезону, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1897,13 +2004,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1930,7 +2038,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1938,14 +2046,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.6.3
                             </h4>
                         </div>
-                        <div class="col">Середньомісячна частка сукупних витрат середньостатистичного домогосподарства на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами) з урахуванням суми безготівкових пільг та субсидій, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Середньомісячна частка сукупних витрат середньостатистичного домогосподарства на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами) з урахуванням суми безготівкових пільг та субсидій, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1957,13 +2069,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1990,7 +2103,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1998,14 +2111,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.6.4
                             </h4>
                         </div>
-                        <div class="col">Середньомісячна частка сукупних витрат середньостатистичного домогосподарства на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами), яка покривається пільгами та субсидіями, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Середньомісячна частка сукупних витрат середньостатистичного домогосподарства на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами), яка покривається пільгами та субсидіями, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2017,13 +2134,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2050,33 +2168,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.7</h3></div>
-                    <div class="col">Забезпечення захисту вразливих споживачів енергетичних ресурсів</div>
+                    <div class="col-md-8">Забезпечення захисту вразливих споживачів енергетичних ресурсів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.7.1
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, які отримують субсидію на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, які отримують субсидію на оплату житлово-комунальних послуг (послуга з управління багатоквартирним будинком, послуги з постачання та розподілу природного газу, постачання та розподілу електричної енергії, постачання теплової енергії, постачання гарячої води, централізованого водопостачання, централізованого водовідведення, управління побутовими відходами), відсотків
+                            </div>
+
+                            
 
 
 
@@ -2088,13 +2207,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2121,7 +2241,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2129,14 +2249,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 7.7.2
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, які отримують субсидію на придбання скрапленого газу, твердого та рідкого пічного побутового палива, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, які отримують субсидію на придбання скрапленого газу, твердого та рідкого пічного побутового палива, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2148,13 +2272,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2201,16 +2326,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Розширити інфраструктуру та модернізувати мережі для забезпечення надійного та сталого енергопостачання на основі впровадження інноваційних технологій
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2223,7 +2344,7 @@ layout-goal
                                 7.1.1
                             </h4>
                         </div>
-                        <div class="col">Виробництво електроенергії, млрд. кВт∙год</div>
+                        <div class="col-md-8">Виробництво електроенергії, млрд. кВт∙год</div>
                         
 
 
@@ -2236,7 +2357,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2285,7 +2406,7 @@ layout-goal
                                 7.1.2
                             </h4>
                         </div>
-                        <div class="col">Технологічні витрати електричної енергії в розподільчих електромережах, %</div>
+                        <div class="col-md-8">Технологічні витрати електричної енергії в розподільчих електромережах, %</div>
                         
 
 
@@ -2298,7 +2419,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2347,7 +2468,7 @@ layout-goal
                                 7.1.3
                             </h4>
                         </div>
-                        <div class="col">Втрати тепла в тепломережах, %</div>
+                        <div class="col-md-8">Втрати тепла в тепломережах, %</div>
                         
 
 
@@ -2360,7 +2481,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2401,18 +2522,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити диверсифікацію постачання первинних енергетичних ресурсів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2425,7 +2542,7 @@ layout-goal
                                 7.2.1
                             </h4>
                         </div>
-                        <div class="col">Максимальна частка імпорту первинних енергоресурсів (крім ядерного палива) з однієї країни (компанії) в загальному обсязі їхнього постачання (імпорту), %</div>
+                        <div class="col-md-8">Максимальна частка імпорту первинних енергоресурсів (крім ядерного палива) з однієї країни (компанії) в загальному обсязі їхнього постачання (імпорту), %</div>
                         
 
 
@@ -2438,7 +2555,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2486,7 +2603,7 @@ layout-goal
                                 7.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка одного постачальника на ринку ядерного палива, %</div>
+                        <div class="col-md-8">Частка одного постачальника на ринку ядерного палива, %</div>
                         
 
 
@@ -2499,7 +2616,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2540,18 +2657,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Збільшити частку енергії з відновлюваних джерел у національному енергетичному балансі, зокрема за рахунок введення додаткових потужностей об’єктів, що виробляють енергію з відновлюваних джерел
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2564,7 +2677,7 @@ layout-goal
                                 7.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка енергії, виробленої з відновлюваних джерел, у загальному кінцевому споживанні енергії, %</div>
+                        <div class="col-md-8">Частка енергії, виробленої з відновлюваних джерел, у загальному кінцевому споживанні енергії, %</div>
                         
 
 
@@ -2577,7 +2690,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2622,18 +2735,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>7.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищити енергоефективність економіки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2646,7 +2755,7 @@ layout-goal
                                 7.4.1
                             </h4>
                         </div>
-                        <div class="col">Енергоємність ВВП (витрати первинної енергії на одиницю ВВП), кг н. е. на міжнародний долар за ПКС 2011</div>
+                        <div class="col-md-8">Енергоємність ВВП (витрати первинної енергії на одиницю ВВП), кг н. е. на міжнародний долар за ПКС 2011</div>
                         
 
 
@@ -2659,7 +2768,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2716,7 +2825,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -2785,12 +2894,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

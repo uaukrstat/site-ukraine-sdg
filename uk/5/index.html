@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.1</h3></div>
-                    <div class="col">Забезпечення реалізації ефективної державної політики у всіх сферах життєдіяльності суспільства для зменшення проявів нерівності жінок та чоловіків і недопущення дискримінації</div>
+                    <div class="col-md-8">Забезпечення реалізації ефективної державної політики у всіх сферах життєдіяльності суспільства для зменшення проявів нерівності жінок та чоловіків і недопущення дискримінації</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка прийнятих Кабінетом Міністрів України нормативно–правових актів, які відповідають принципу забезпечення рівних прав та можливостей жінок і чоловіків, у загальній кількості нормативно–правових актів, моніторинг яких проведено, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка прийнятих Кабінетом Міністрів України нормативно–правових актів, які відповідають принципу забезпечення рівних прав та можливостей жінок і чоловіків, у загальній кількості нормативно–правових актів, моніторинг яких проведено, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка звернень, які було задоволено, у загальній кількості звернень щодо визнаних дискримінаційними за ознакою статі дій, що надійшли до органів державної влади, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка звернень, які було задоволено, у загальній кількості звернень щодо визнаних дискримінаційними за ознакою статі дій, що надійшли до органів державної влади, відсотків
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке стверджує, що обізнане з інформацією про прояви дискримінації за ознакою статі, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке стверджує, що обізнане з інформацією про прояви дискримінації за ознакою статі, відсотків
+                            </div>
+
+                            
 
 
 
@@ -523,6 +535,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,7 +562,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -557,14 +570,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке задоволене діями органів влади щодо усунення проявів дискримінації за ознакою статі до себе чи своїх близьких за останні 12 місяців, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке задоволене діями органів влади щодо усунення проявів дискримінації за ознакою статі до себе чи своїх близьких за останні 12 місяців, відсотків
+                            </div>
+
+                            
 
 
 
@@ -583,6 +600,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -609,33 +627,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.2</h3></div>
-                    <div class="col">Зниження рівня насильства за ознакою статі та домашнього насильства, забезпечення ефективного запобігання його проявам та надання своєчасної допомоги постраждалим</div>
+                    <div class="col-md-8">Зниження рівня насильства за ознакою статі та домашнього насильства, забезпечення ефективного запобігання його проявам та надання своєчасної допомоги постраждалим</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке обізнане з інформацією  про прояви домашнього насильства та насильства за ознакою статі, інструменти та можливості захисту прав у разі проявів такого насильства і вважає таке насильство неприйнятним (має нульову толерантність до насильства), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке обізнане з інформацією  про прояви домашнього насильства та насильства за ознакою статі, інструменти та можливості захисту прав у разі проявів такого насильства і вважає таке насильство неприйнятним (має нульову толерантність до насильства), відсотків
+                            </div>
+
+                            
 
 
 
@@ -654,6 +673,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -680,7 +700,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -689,14 +709,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка жінок і дівчат віком від 15 до 49 років, які протягом останніх 12 місяців зазнали насильства за ознакою статі з боку подружжя, нареченого, особи, з якою спільно проживають, але не перебувають у шлюбі, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка жінок і дівчат віком від 15 до 49 років, які протягом останніх 12 місяців зазнали насильства за ознакою статі з боку подружжя, нареченого, особи, з якою спільно проживають, але не перебувають у шлюбі, відсотків
+                            </div>
+
+                            
 
 
 
@@ -715,6 +739,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -741,7 +766,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -750,14 +775,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке готове повідомити правоохоронним органам про випадки насильства за ознакою статі та домашнього насильства, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке готове повідомити правоохоронним органам про випадки насильства за ознакою статі та домашнього насильства, відсотків
+                            </div>
+
+                            
 
 
 
@@ -776,6 +805,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -802,7 +832,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -811,14 +841,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.2.4
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які постраждали від сексуального насильства, пов’язаного із збройною агресією Російської Федерації проти України, та яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які постраждали від сексуального насильства, пов’язаного із збройною агресією Російської Федерації проти України, та яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -837,6 +871,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -863,7 +898,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -872,14 +907,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.2.5
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, постраждалих від домашнього насильства та насильства за ознакою статі, яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, постраждалих від домашнього насильства та насильства за ознакою статі, яким надано допомогу загальними та спеціалізованими службами підтримки постраждалих, у загальній кількості осіб, які подавали відповідні звернення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -891,13 +930,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -924,7 +964,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -937,28 +977,29 @@ layout-goal
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.3</h3></div>
-                    <div class="col">Розширення доступу населення до послуг із планування сім’ї та зниження рівня підліткової народжуваності</div>
+                    <div class="col-md-8">Розширення доступу населення до послуг із планування сім’ї та зниження рівня підліткової народжуваності</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.3.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15–19 років</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15–19 років
+                            </div>
+
+                            
 
 
 
@@ -970,13 +1011,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1003,7 +1045,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1012,14 +1054,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка жінок у віці 15-49 років, які приймають власні поінформовані рішення щодо сексуальних стосунків, використання контрацептивів та репродуктивного здоров’я, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка жінок у віці 15-49 років, які приймають власні поінформовані рішення щодо сексуальних стосунків, використання контрацептивів та репродуктивного здоров’я, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1038,6 +1084,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1064,33 +1111,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.4</h3></div>
-                    <div class="col">Забезпечення надання державної підтримки для розвитку інфраструктури дошкільної освіти та здійснення догляду за дітьми та членами сім’ї, які потребують сторонньої допомоги, а також заохочення до рівного розподілу домашньої роботи та такого догляду</div>
+                    <div class="col-md-8">Забезпечення надання державної підтримки для розвитку інфраструктури дошкільної освіти та здійснення догляду за дітьми та членами сім’ї, які потребують сторонньої допомоги, а також заохочення до рівного розподілу домашньої роботи та такого догляду</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка вихованців закладів дошкільної освіти віком до двох років у загальній чисельності дітей відповідного віку, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка вихованців закладів дошкільної освіти віком до двох років у загальній чисельності дітей відповідного віку, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1102,13 +1150,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1135,7 +1184,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1144,14 +1193,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка чоловіків, які отримують допомогу при народженні дитини, у загальній кількості отримувачів допомоги, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка чоловіків, які отримують допомогу при народженні дитини, у загальній кількості отримувачів допомоги, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1163,13 +1216,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1196,7 +1250,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1205,14 +1259,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.3
                             </h4>
                         </div>
-                        <div class="col">Частка чоловіків, які користувалися відпусткою при народженні дитини, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка чоловіків, які користувалися відпусткою при народженні дитини, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1231,6 +1289,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1257,7 +1316,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1266,14 +1325,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.4
                             </h4>
                         </div>
-                        <div class="col">Частка осіб з дітьми до трьох років, які вийшли на роботу з відпустки по догляду за дитиною до досягнення нею трирічного віку (у віці дитини до 1,5 року), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб з дітьми до трьох років, які вийшли на роботу з відпустки по догляду за дитиною до досягнення нею трирічного віку (у віці дитини до 1,5 року), відсотків
+                            </div>
+
+                            
 
 
 
@@ -1292,6 +1355,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1318,7 +1382,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1326,14 +1390,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.5
                             </h4>
                         </div>
-                        <div class="col">Частка працюючих осіб, які щодня доглядають за дітьми/онуками/родичами похилого віку/родичами з інвалідністю, у загальній кількості опитаних осіб старше 18 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка працюючих осіб, які щодня доглядають за дітьми/онуками/родичами похилого віку/родичами з інвалідністю, у загальній кількості опитаних осіб старше 18 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1352,6 +1420,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1378,7 +1447,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1386,14 +1455,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.4.6
                             </h4>
                         </div>
-                        <div class="col">Частка працюючих осіб, які щодня або кілька разів на тиждень займаються спортом, залучені до культурної діяльності або дозвілля поза домом, займаються волонтерською діяльністю щонайменше один раз на місяць, у загальній кількості опитаних осіб старше 15 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка працюючих осіб, які щодня або кілька разів на тиждень займаються спортом, залучені до культурної діяльності або дозвілля поза домом, займаються волонтерською діяльністю щонайменше один раз на місяць, у загальній кількості опитаних осіб старше 15 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1412,6 +1485,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1438,33 +1512,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.5</h3></div>
-                    <div class="col">Забезпечення рівних можливостей представництва жінок і чоловіків на вищих рівнях прийняття рішень у політичному та суспільному житті</div>
+                    <div class="col-md-8">Забезпечення рівних можливостей представництва жінок і чоловіків на вищих рівнях прийняття рішень у політичному та суспільному житті</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків у складі Верховної Ради України, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків у складі Верховної Ради України, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1476,13 +1551,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1509,7 +1585,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1518,14 +1594,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.2
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків, обраних депутатами Верховної Ради Автономної Республіки Крим, обласних, районних, міських, районних у містах, сільських, селищних рад, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків, обраних депутатами Верховної Ради Автономної Республіки Крим, обласних, районних, міських, районних у містах, сільських, селищних рад, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1537,13 +1617,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1570,7 +1651,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1578,14 +1659,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.3
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків у складі Кабінету Міністрів України, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків у складі Кабінету Міністрів України, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1597,13 +1682,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1630,7 +1716,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1638,14 +1724,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.4
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків на посадах державної служби категорії "А", відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків на посадах державної служби категорії "А", відсотків
+                            </div>
+
+                            
 
 
 
@@ -1657,13 +1747,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1690,7 +1781,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1698,14 +1789,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.5
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків серед послів України в іноземних державах, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків серед послів України в іноземних державах, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1717,13 +1812,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1750,7 +1846,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1758,14 +1854,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.6
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків серед суддів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків серед суддів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1777,13 +1877,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1810,7 +1911,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1818,14 +1919,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.7
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій неолімпійських видів спорту, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій неолімпійських видів спорту, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1837,13 +1942,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1870,7 +1976,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1878,14 +1984,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.5.8
                             </h4>
                         </div>
-                        <div class="col">Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій олімпійських видів спорту, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Співвідношення жінок та чоловіків серед членів вищого керівного органу національних організацій олімпійських видів спорту, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1897,13 +2007,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1930,33 +2041,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.6</h3></div>
-                    <div class="col">Розширення економічних можливостей жінок</div>
+                    <div class="col-md-8">Розширення економічних можливостей жінок</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, зайнятих у сфері освіти, охорони здоров’я та надання соціальних послуг, у загальній кількості зайнятого населення у віці 15 років і старше, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, зайнятих у сфері освіти, охорони здоров’я та надання соціальних послуг, у загальній кількості зайнятого населення у віці 15 років і старше, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1968,13 +2080,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2001,7 +2114,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2010,14 +2123,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.6.2
                             </h4>
                         </div>
-                        <div class="col">Частка зареєстрованих юридичних осіб, в яких жінки займають посаду керівника, у загальній кількості зареєстрованих юридичних осіб, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зареєстрованих юридичних осіб, в яких жінки займають посаду керівника, у загальній кількості зареєстрованих юридичних осіб, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2029,13 +2146,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2062,7 +2180,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2071,14 +2189,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.6.3
                             </h4>
                         </div>
-                        <div class="col">Частка зареєстрованих фізичних осіб-підприємців жіночої статі у загальній кількості зареєстрованих фізичних осіб-підприємців, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зареєстрованих фізичних осіб-підприємців жіночої статі у загальній кількості зареєстрованих фізичних осіб-підприємців, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2090,13 +2212,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2123,7 +2246,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2131,14 +2254,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.6.4
                             </h4>
                         </div>
-                        <div class="col">Частка активних підприємств, в яких жінки займають посаду керівника, у загальній кількості активних підприємств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка активних підприємств, в яких жінки займають посаду керівника, у загальній кількості активних підприємств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2150,13 +2277,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2183,7 +2311,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2191,14 +2319,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.6.5
                             </h4>
                         </div>
-                        <div class="col">Частка дівчат, які навчаються у закладах вищої освіти за напрямом підготовки "Інформатика та обчислювальна техніка", у загальній кількості студентів, які навчаються за цим напрямом, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дівчат, які навчаються у закладах вищої освіти за напрямом підготовки "Інформатика та обчислювальна техніка", у загальній кількості студентів, які навчаються за цим напрямом, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2210,13 +2342,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2243,33 +2376,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.7</h3></div>
-                    <div class="col">Забезпечення наскрізності принципів гендерної рівності в освіті</div>
+                    <div class="col-md-8">Забезпечення наскрізності принципів гендерної рівності в освіті</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.1
                             </h4>
                         </div>
-                        <div class="col">Частка закладів освіти, які затвердили політики/положення щодо дотримання принципів забезпечення рівних прав та можливостей жінок і чоловіків, запобігання та протидії насильству за ознакою статі, дискримінації за ознакою статі та сексуальних домагань, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка закладів освіти, які затвердили політики/положення щодо дотримання принципів забезпечення рівних прав та можливостей жінок і чоловіків, запобігання та протидії насильству за ознакою статі, дискримінації за ознакою статі та сексуальних домагань, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2281,13 +2415,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2314,7 +2449,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2322,14 +2457,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.2
                             </h4>
                         </div>
-                        <div class="col">Кількість закладів освіти, які пройшли гендерно-правову експертизу внутрішніх нормативних документів, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість закладів освіти, які пройшли гендерно-правову експертизу внутрішніх нормативних документів, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2341,13 +2480,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2374,7 +2514,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2382,14 +2522,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.3
                             </h4>
                         </div>
-                        <div class="col">Кількість закладів професійної (професійно-технічної), вищої та післядипломної освіти, які запровадили інститут радництва з проблематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість закладів професійної (професійно-технічної), вищої та післядипломної освіти, які запровадили інститут радництва з проблематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2401,13 +2545,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2434,7 +2579,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2442,14 +2587,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.4
                             </h4>
                         </div>
-                        <div class="col">Частка закладів освіти, які запровадили у документообіг принципи гендерно-чутливої, недискримінаційної мови, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка закладів освіти, які запровадили у документообіг принципи гендерно-чутливої, недискримінаційної мови, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2461,13 +2610,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2494,7 +2644,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2502,14 +2652,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.5
                             </h4>
                         </div>
-                        <div class="col">Кількість сертифікаційних програм підготовки фахівців у сфері забезпечення рівних прав та можливостей жінок і чоловіків, підвищення кваліфікації з проблем забезпечення рівних прав та можливостей жінок і чоловіків, гендерної рівності, поваги до гідності особи, запобігання та протидії насильству і дискримінації, зокрема за ознакою статі, інклюзивності, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість сертифікаційних програм підготовки фахівців у сфері забезпечення рівних прав та можливостей жінок і чоловіків, підвищення кваліфікації з проблем забезпечення рівних прав та можливостей жінок і чоловіків, гендерної рівності, поваги до гідності особи, запобігання та протидії насильству і дискримінації, зокрема за ознакою статі, інклюзивності, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2521,13 +2675,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2554,7 +2709,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2562,14 +2717,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 5.7.6
                             </h4>
                         </div>
-                        <div class="col">Кількість педагогічних і науково-педагогічних працівників, які успішно завершили програми підвищення кваліфікації/стажування з тематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, з урахуванням гендерного аспекту, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість педагогічних і науково-педагогічних працівників, які успішно завершили програми підвищення кваліфікації/стажування з тематики забезпечення рівних прав та можливостей жінок і чоловіків, недискримінації та інклюзивності, з урахуванням гендерного аспекту, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2581,13 +2740,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2634,16 +2794,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Створити умови для ліквідації всіх форм дискримінації щодо жінок і дівчат
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2656,7 +2812,7 @@ layout-goal
                                 5.1.1
                             </h4>
                         </div>
-                        <div class="col">Кількість нормативно-правових актів, переглянутих або прийнятих з метою забезпечення рівних прав та можливостей жінок і чоловіків та недопущення дискримінації щодо жінок і дівчат, одиниць</div>
+                        <div class="col-md-8">Кількість нормативно-правових актів, переглянутих або прийнятих з метою забезпечення рівних прав та можливостей жінок і чоловіків та недопущення дискримінації щодо жінок і дівчат, одиниць</div>
                         
 
 
@@ -2669,7 +2825,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2713,18 +2869,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити рівень гендерно зумовленого та домашнього насильства, забезпечити ефективне запобігання його проявам та своєчасну допомогу постраждалим
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2737,7 +2889,7 @@ layout-goal
                                 5.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка жінок і дівчат віком від 15 років, які будь-коли перебували у партнерстві з чоловіком, що піддавалися фізичному, сексуальному або психологічному насильству з боку теперішнього або попереднього інтимного партнера протягом останніх 12 місяців, за формою насильства та віком</div>
+                        <div class="col-md-8">Частка жінок і дівчат віком від 15 років, які будь-коли перебували у партнерстві з чоловіком, що піддавалися фізичному, сексуальному або психологічному насильству з боку теперішнього або попереднього інтимного партнера протягом останніх 12 місяців, за формою насильства та віком</div>
                         
 
 
@@ -2750,7 +2902,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2799,7 +2951,7 @@ layout-goal
                                 5.2.2
                             </h4>
                         </div>
-                        <div class="col">Кількість звернень щодо домашнього насильства, тисяч</div>
+                        <div class="col-md-8">Кількість звернень щодо домашнього насильства, тисяч</div>
                         
 
 
@@ -2812,7 +2964,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2861,7 +3013,7 @@ layout-goal
                                 5.2.3
                             </h4>
                         </div>
-                        <div class="col">Кількість створених спеціалізованих служб підтримки постраждалих від домашнього насильства осіб</div>
+                        <div class="col-md-8">Кількість створених спеціалізованих служб підтримки постраждалих від домашнього насильства осіб</div>
                         
 
 
@@ -2874,7 +3026,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2923,7 +3075,7 @@ layout-goal
                                 5.2.4
                             </h4>
                         </div>
-                        <div class="col">Кількість дітей, постраждалих від жорстокого поводження</div>
+                        <div class="col-md-8">Кількість дітей, постраждалих від жорстокого поводження</div>
                         
 
 
@@ -2936,7 +3088,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2985,7 +3137,7 @@ layout-goal
                                 5.2.5
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, які пройшли програми для кривдників</div>
+                        <div class="col-md-8">Кількість осіб, які пройшли програми для кривдників</div>
                         
 
 
@@ -2998,7 +3150,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3046,7 +3198,7 @@ layout-goal
                                 5.2.6
                             </h4>
                         </div>
-                        <div class="col">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії домашньому насильству</div>
+                        <div class="col-md-8">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії домашньому насильству</div>
                         
 
 
@@ -3059,7 +3211,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3107,7 +3259,7 @@ layout-goal
                                 5.2.7
                             </h4>
                         </div>
-                        <div class="col">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії дискримінації стосовно жінок</div>
+                        <div class="col-md-8">Кількість спеціалістів, які пройшли навчання з питань запобігання та протидії дискримінації стосовно жінок</div>
                         
 
 
@@ -3120,7 +3272,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3168,7 +3320,7 @@ layout-goal
                                 5.2.8
                             </h4>
                         </div>
-                        <div class="col">Кількість наданих соціальних послуг відповідно до потреб осіб, які звернулися щодо домашнього насильства</div>
+                        <div class="col-md-8">Кількість наданих соціальних послуг відповідно до потреб осіб, які звернулися щодо домашнього насильства</div>
                         
 
 
@@ -3181,7 +3333,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3229,7 +3381,7 @@ layout-goal
                                 5.2.9
                             </h4>
                         </div>
-                        <div class="col">Кількість проведених інформаційних кампаній щодо протидії домашньому насильству</div>
+                        <div class="col-md-8">Кількість проведених інформаційних кампаній щодо протидії домашньому насильству</div>
                         
 
 
@@ -3242,7 +3394,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3290,7 +3442,7 @@ layout-goal
                                 5.2.10
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, які були охоплені інформаційними кампаніями щодо протидії домашньому насильству</div>
+                        <div class="col-md-8">Кількість осіб, які були охоплені інформаційними кампаніями щодо протидії домашньому насильству</div>
                         
 
 
@@ -3303,7 +3455,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3351,7 +3503,7 @@ layout-goal
                                 5.2.11
                             </h4>
                         </div>
-                        <div class="col">Відсоток зростання нульової толерантності до усіх проявів насильства серед населення України</div>
+                        <div class="col-md-8">Відсоток зростання нульової толерантності до усіх проявів насильства серед населення України</div>
                         
 
 
@@ -3364,7 +3516,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3412,7 +3564,7 @@ layout-goal
                                 5.2.12
                             </h4>
                         </div>
-                        <div class="col">Відсоток фінансової забезпеченості регіональних програм щодо протидії домашньому насильству, за рахунок відповідних місцевих бюджетів</div>
+                        <div class="col-md-8">Відсоток фінансової забезпеченості регіональних програм щодо протидії домашньому насильству, за рахунок відповідних місцевих бюджетів</div>
                         
 
 
@@ -3425,7 +3577,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3466,18 +3618,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Заохочувати спільну відповідальність за ведення господарства та виховання дитини
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3490,7 +3638,7 @@ layout-goal
                                 5.3.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення тривалості неоплачуваної домашньої роботи (ведення господарства, догляд за дітьми та іншими родичами тощо) жінок та чоловіків, %</div>
+                        <div class="col-md-8">Співвідношення тривалості неоплачуваної домашньої роботи (ведення господарства, догляд за дітьми та іншими родичами тощо) жінок та чоловіків, %</div>
                         
 
 
@@ -3503,7 +3651,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3545,18 +3693,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити рівні можливості представництва на вищих рівнях прийняття рішень у політичному та суспільному житті
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3569,7 +3713,7 @@ layout-goal
                                 5.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка жінок серед депутатів Верховної Ради України, %</div>
+                        <div class="col-md-8">Частка жінок серед депутатів Верховної Ради України, %</div>
                         
 
 
@@ -3582,7 +3726,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3631,7 +3775,7 @@ layout-goal
                                 5.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка жінок серед депутатів обласних рад та місцевих рад міст обласного значення, %</div>
+                        <div class="col-md-8">Частка жінок серед депутатів обласних рад та місцевих рад міст обласного значення, %</div>
                         
 
 
@@ -3644,7 +3788,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3693,7 +3837,7 @@ layout-goal
                                 5.4.3
                             </h4>
                         </div>
-                        <div class="col">Частка жінок на державній службі у розрізі категорій посад ‘А’, ‘Б’, ‘В’</div>
+                        <div class="col-md-8">Частка жінок на державній службі у розрізі категорій посад ‘А’, ‘Б’, ‘В’</div>
                         
 
 
@@ -3706,7 +3850,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3750,18 +3894,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Розширити доступ населення до послуг з планування сім’ї та знизити рівень підліткової народжуваності
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3774,7 +3914,7 @@ layout-goal
                                 5.5.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15-19 років</div>
+                        <div class="col-md-8">Коефіцієнт народжуваності у віці до 20 років, на 1000 жінок віком 15-19 років</div>
                         
 
 
@@ -3787,7 +3927,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3835,18 +3975,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>5.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Розширити економічні можливості жінок
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3859,7 +3995,7 @@ layout-goal
                                 5.6.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення середньої заробітної плати жінок і чоловіків, %</div>
+                        <div class="col-md-8">Співвідношення середньої заробітної плати жінок і чоловіків, %</div>
                         
 
 
@@ -3872,7 +4008,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3921,7 +4057,7 @@ layout-goal
                                 5.6.2
                             </h4>
                         </div>
-                        <div class="col">Рівень зайнятості жінок віком 25-44 роки, які мають дітей віком 3-5 років, %</div>
+                        <div class="col-md-8">Рівень зайнятості жінок віком 25-44 роки, які мають дітей віком 3-5 років, %</div>
                         
 
 
@@ -3934,7 +4070,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3981,7 +4117,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -4050,12 +4186,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.1</h3></div>
-                    <div class="col">Забезпечення доступності збалансованого харчування для всіх верств населення</div>
+                    <div class="col-md-8">Забезпечення доступності збалансованого харчування для всіх верств населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.1.1
                             </h4>
                         </div>
-                        <div class="col">Енергетична цінність в середньому на добу в розрахунку на одну особу, ккал</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Енергетична цінність в середньому на добу в розрахунку на одну особу, ккал
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке недоїдає, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке недоїдає, відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які зазнавали гострої нестачі продуктів харчування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які зазнавали гострої нестачі продуктів харчування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, яким не вдавалося забезпечити достатнє харчування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, яким не вдавалося забезпечити достатнє харчування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -578,13 +595,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,7 +629,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -620,14 +638,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.1.5
                             </h4>
                         </div>
-                        <div class="col">Індекс споживчих цін на продукти харчування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс споживчих цін на продукти харчування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -639,13 +661,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -672,34 +695,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.2</h3></div>
-                    <div class="col">Підвищення рівня продуктивності сільського господарства</div>
+                    <div class="col-md-8">Підвищення рівня продуктивності сільського господарства</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.2.1
                             </h4>
                         </div>
-                        <div class="col">Продуктивність праці в сільському господарстві, тис. доларів США на одну зайняту особу</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Продуктивність праці в сільському господарстві, тис. доларів США на одну зайняту особу
+                            </div>
+
+                            
 
 
 
@@ -711,13 +735,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -744,7 +769,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -753,14 +778,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.2.2
                             </h4>
                         </div>
-                        <div class="col">Індекс сільськогосподарської продукції, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс сільськогосподарської продукції, відсотків
+                            </div>
+
+                            
 
 
 
@@ -772,13 +801,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -805,7 +835,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -814,14 +844,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка капітальних інвестицій у нематеріальні активи у виробництві харчових продуктів, напоїв і тютюнових виробів у загальному обсязі капітальних інвестицій відповідного виду економічної діяльності, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка капітальних інвестицій у нематеріальні активи у виробництві харчових продуктів, напоїв і тютюнових виробів у загальному обсязі капітальних інвестицій відповідного виду економічної діяльності, відсотків
+                            </div>
+
+                            
 
 
 
@@ -833,13 +867,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -866,33 +901,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.3</h3></div>
-                    <div class="col">Забезпечення створення стійких систем виробництва харчових продуктів, що сприяють збереженню екосистем та покращують якість земель та ґрунтів</div>
+                    <div class="col-md-8">Забезпечення створення стійких систем виробництва харчових продуктів, що сприяють збереженню екосистем та покращують якість земель та ґрунтів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка земель сільськогосподарського призначення, на яких проведено агрохімічну паспортизацію, у загальній площі земель сільськогосподарського призначення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка земель сільськогосподарського призначення, на яких проведено агрохімічну паспортизацію, у загальній площі земель сільськогосподарського призначення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -904,13 +940,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -937,7 +974,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -946,14 +983,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка сільськогосподарських угідь під органічним виробництвом у загальній площі сільськогосподарських угідь, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сільськогосподарських угідь під органічним виробництвом у загальній площі сільськогосподарських угідь, відсотків
+                            </div>
+
+                            
 
 
 
@@ -965,13 +1006,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -998,35 +1040,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.4</h3></div>
-                    <div class="col">Сприяння глобальній продовольчій безпеці</div>
+                    <div class="col-md-8">Сприяння глобальній продовольчій безпеці</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка сільськогосподарських площ при продуктивному та сталому сільському господарстві</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сільськогосподарських площ при продуктивному та сталому сільському господарстві
+                            </div>
+
+                            
 
 
 
@@ -1038,13 +1081,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1071,7 +1115,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1080,14 +1124,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка продукції харчової промисловості та переробки сільськогосподарської сировини в загальному обсязі експорту (групи 1–24 згідно з УКТЗЕД), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка продукції харчової промисловості та переробки сільськогосподарської сировини в загальному обсязі експорту (групи 1–24 згідно з УКТЗЕД), відсотків
+                            </div>
+
+                            
 
 
 
@@ -1099,13 +1147,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1132,10 +1181,8 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
-                
-
                 
 
                 
@@ -1143,22 +1190,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.5</h3></div>
-                    <div class="col">Сприяння створенню безпечних умов ведення сільського господарства</div>
+                    <div class="col-md-8">Сприяння створенню безпечних умов ведення сільського господарства</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 2.5.1
                             </h4>
                         </div>
-                        <div class="col">Частка повернутих в обробіток земель у загальній площі недоступних станом на червень 2024 року земель, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка повернутих в обробіток земель у загальній площі недоступних станом на червень 2024 року земель, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1170,13 +1220,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1223,16 +1274,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність продуктів харчування та подолати всі форми недоїдання
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1245,7 +1292,7 @@ layout-goal
                                 2.1.1
                             </h4>
                         </div>
-                        <div class="col">Споживання м’яса в розрахунку на одну особу, кг/рік</div>
+                        <div class="col-md-8">Споживання м’яса в розрахунку на одну особу, кг/рік</div>
                         
 
 
@@ -1258,7 +1305,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1307,7 +1354,7 @@ layout-goal
                                 2.1.2
                             </h4>
                         </div>
-                        <div class="col">Споживання молока та молочних продуктів у розрахунку на одну особу, кг/рік</div>
+                        <div class="col-md-8">Споживання молока та молочних продуктів у розрахунку на одну особу, кг/рік</div>
                         
 
 
@@ -1320,7 +1367,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1369,7 +1416,7 @@ layout-goal
                                 2.1.3
                             </h4>
                         </div>
-                        <div class="col">Споживання риби у розрахунку на одну особу, кг/рік</div>
+                        <div class="col-md-8">Споживання риби у розрахунку на одну особу, кг/рік</div>
                         
 
 
@@ -1382,7 +1429,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1431,7 +1478,7 @@ layout-goal
                                 2.1.4
                             </h4>
                         </div>
-                        <div class="col">Споживання овочів у розрахунку на одну особу, кг/рік</div>
+                        <div class="col-md-8">Споживання овочів у розрахунку на одну особу, кг/рік</div>
                         
 
 
@@ -1444,7 +1491,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1493,7 +1540,7 @@ layout-goal
                                 2.1.5
                             </h4>
                         </div>
-                        <div class="col">Споживання фруктів у розрахунку на одну особу, кг/рік</div>
+                        <div class="col-md-8">Споживання фруктів у розрахунку на одну особу, кг/рік</div>
                         
 
 
@@ -1506,7 +1553,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1547,18 +1594,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Подвоїти продуктивність сільського господарства та доходи дрібних виробників харчових продуктів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1571,7 +1614,7 @@ layout-goal
                                 2.2.1
                             </h4>
                         </div>
-                        <div class="col">Продуктивність праці в сільському господарстві, тис. доларів США на одного зайнятого</div>
+                        <div class="col-md-8">Продуктивність праці в сільському господарстві, тис. доларів США на одного зайнятого</div>
                         
 
 
@@ -1584,7 +1627,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1633,7 +1676,7 @@ layout-goal
                                 2.2.2
                             </h4>
                         </div>
-                        <div class="col">Індекс сільськогосподарської продукції, %</div>
+                        <div class="col-md-8">Індекс сільськогосподарської продукції, %</div>
                         
 
 
@@ -1646,7 +1689,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1688,18 +1731,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити створення стійких систем продовольчого виробництва
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1712,7 +1751,7 @@ layout-goal
                                 2.3.1
                             </h4>
                         </div>
-                        <div class="col">Індекс виробництва харчових продуктів, %</div>
+                        <div class="col-md-8">Індекс виробництва харчових продуктів, %</div>
                         
 
 
@@ -1725,7 +1764,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1774,7 +1813,7 @@ layout-goal
                                 2.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка продукції харчової промисловості та переробки сільськогосподарської сировини в експорті груп 1-24 УКТЗЕД, %</div>
+                        <div class="col-md-8">Частка продукції харчової промисловості та переробки сільськогосподарської сировини в експорті груп 1-24 УКТЗЕД, %</div>
                         
 
 
@@ -1787,7 +1826,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1835,7 +1874,7 @@ layout-goal
                                 2.3.3
                             </h4>
                         </div>
-                        <div class="col">Частка сільськогосподарських угідь під органічним виробництвом, у загальній площі сільськогосподарських угідь, %</div>
+                        <div class="col-md-8">Частка сільськогосподарських угідь під органічним виробництвом, у загальній площі сільськогосподарських угідь, %</div>
                         
 
 
@@ -1848,7 +1887,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1889,18 +1928,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>2.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити волатильність цін на продукти харчування
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1913,7 +1948,7 @@ layout-goal
                                 2.4.1
                             </h4>
                         </div>
-                        <div class="col">Індекс споживчих цін на продукти харчування, %</div>
+                        <div class="col-md-8">Індекс споживчих цін на продукти харчування, %</div>
                         
 
 
@@ -1926,7 +1961,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1966,7 +2001,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -2035,12 +2070,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

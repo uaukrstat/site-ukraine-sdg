@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.1</h3></div>
-                    <div class="col">Promoting sustainable waste management</div>
+                    <div class="col-md-8">Promoting sustainable waste management</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.1.1
                             </h4>
                         </div>
-                        <div class="col">Volume of generated waste per person, kilograms</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of generated waste per person, kilograms
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of recovered waste in the volume of generated waste, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of recovered waste in the volume of generated waste, percent
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of separately collected waste transferred to biological decomposition in the total amount of separately collected waste, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of separately collected waste transferred to biological decomposition in the total amount of separately collected waste, percent
+                            </div>
+
+                            
 
 
 
@@ -523,6 +535,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,33 +562,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.2</h3></div>
-                    <div class="col">Reducing food losses in production and distribution chains</div>
+                    <div class="col-md-8">Reducing food losses in production and distribution chains</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.2.1
                             </h4>
                         </div>
-                        <div class="col">Food loss index, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Food loss index, percent
+                            </div>
+
+                            
 
 
 
@@ -594,6 +608,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -620,35 +635,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.3</h3></div>
-                    <div class="col">Promoting sustainable management and efficient use of natural resources</div>
+                    <div class="col-md-8">Promoting sustainable management and efficient use of natural resources</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.3.1
                             </h4>
                         </div>
-                        <div class="col">Resource intensity of the gross domestic product (ratio of consumed physical volumes of natural resources, generated waste and emissions of pollutants to the volume of the gross domestic product) compared to 2015, percent: energy intensity of the gross domestic product, material intensity of the gross domestic product, carbon intensity of the gross domestic product, water intensity of the gross domestic product, waste intensity of the gross domestic product</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Resource intensity of the gross domestic product (ratio of consumed physical volumes of natural resources, generated waste and emissions of pollutants to the volume of the gross domestic product) compared to 2015, percent: energy intensity of the gross domestic product, material intensity of the gross domestic product, carbon intensity of the gross domestic product, water intensity of the gross domestic product, waste intensity of the gross domestic product
+                            </div>
+
+                            
 
 
 
@@ -667,6 +683,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -693,34 +710,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.4</h3></div>
-                    <div class="col">Promoting the safe and sustainable use of chemicals</div>
+                    <div class="col-md-8">Promoting the safe and sustainable use of chemicals</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of enterprises that have implemented chemical management systems in accordance with international standards in the total number of enterprises using hazardous chemicals, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of enterprises that have implemented chemical management systems in accordance with international standards in the total number of enterprises using hazardous chemicals, percent
+                            </div>
+
+                            
 
 
 
@@ -739,6 +757,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -765,34 +784,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.5</h3></div>
-                    <div class="col">Promoting the level of awareness of the population about responsible consumption and production</div>
+                    <div class="col-md-8">Promoting the level of awareness of the population about responsible consumption and production</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.5.1
                             </h4>
                         </div>
-                        <div class="col">Number of educational programs for general secondary educational institutions, in which the issues of responsible consumption and production are integrated, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of educational programs for general secondary educational institutions, in which the issues of responsible consumption and production are integrated, units
+                            </div>
+
+                            
 
 
 
@@ -811,6 +831,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -837,7 +858,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -845,14 +866,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 12.5.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population informed about the importance of responsible consumption, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population informed about the importance of responsible consumption, percent
+                            </div>
+
+                            
 
 
 
@@ -871,6 +896,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -917,16 +943,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce resource consumption of the economy
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -939,7 +961,7 @@ layout-goal
                                 12.1.1
                             </h4>
                         </div>
-                        <div class="col">Resource intensity of GDP (ratio of consumed volumes of natural resources, waste generated and pollutant emissions to GDP), % to 2015 level</div>
+                        <div class="col-md-8">Resource intensity of GDP (ratio of consumed volumes of natural resources, waste generated and pollutant emissions to GDP), % to 2015 level</div>
                         
 
 
@@ -995,18 +1017,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the loss of food along the production and marketing chains
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1019,7 +1037,7 @@ layout-goal
                                 12.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of post-harvest losses in the total production of cereals, %</div>
+                        <div class="col-md-8">Share of post-harvest losses in the total production of cereals, %</div>
                         
 
 
@@ -1080,7 +1098,7 @@ layout-goal
                                 12.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of post-harvest losses in overall production of vegetables and melons, %</div>
+                        <div class="col-md-8">Share of post-harvest losses in overall production of vegetables and melons, %</div>
                         
 
 
@@ -1134,18 +1152,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure sustainable use of chemicals through innovative technologies and production
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1158,7 +1172,7 @@ layout-goal
                                 12.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of enterprises that implemented chemical management systems in accordance with international standards in the total number of enterprises using hazardous chemicals, %</div>
+                        <div class="col-md-8">Share of enterprises that implemented chemical management systems in accordance with international standards in the total number of enterprises using hazardous chemicals, %</div>
                         
 
 
@@ -1212,18 +1226,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>12.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the amount of waste generation, and increase recycling and reuse through innovative technologies and production
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1236,7 +1246,7 @@ layout-goal
                                 12.4.1
                             </h4>
                         </div>
-                        <div class="col">Volume of waste generated by all economic activities per unit of GDP, kg per USD 1,000 PPP in 2011</div>
+                        <div class="col-md-8">Volume of waste generated by all economic activities per unit of GDP, kg per USD 1,000 PPP in 2011</div>
                         
 
 
@@ -1358,12 +1368,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

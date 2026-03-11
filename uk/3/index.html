@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.1</h3></div>
-                    <div class="col">Забезпечення доступу громадян до медичних послуг належної якості</div>
+                    <div class="col-md-8">Забезпечення доступу громадян до медичних послуг належної якості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які протягом останніх 12 місяців за потреби не змогли отримати медичну допомогу, придбати ліки та медичні вироби, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які протягом останніх 12 місяців за потреби не змогли отримати медичну допомогу, придбати ліки та медичні вироби, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка законтрактованих надавачів медичних послуг у сфері психічного здоров’я на первинному рівні медичної допомоги, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка законтрактованих надавачів медичних послуг у сфері психічного здоров’я на первинному рівні медичної допомоги, відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка витрат на охорону здоров’я у сукупних витратах домогосподарств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка витрат на охорону здоров’я у сукупних витратах домогосподарств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -516,13 +528,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,7 +562,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -557,14 +570,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, відсотків
+                            </div>
+
+                            
 
 
 
@@ -576,13 +593,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -609,7 +627,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -617,14 +635,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.1.5
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, та пройшли обстеження з профілактичною метою протягом року, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які уклали декларацію про вибір лікаря, який надає первинну медичну допомогу, та пройшли обстеження з профілактичною метою протягом року, відсотків
+                            </div>
+
+                            
 
 
 
@@ -636,13 +658,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -669,33 +692,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.2</h3></div>
-                    <div class="col">Зниження рівня материнської смертності</div>
+                    <div class="col-md-8">Зниження рівня материнської смертності</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.2.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт материнської смертності, на 100 000 живонароджених</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт материнської смертності, на 100 000 живонароджених
+                            </div>
+
+                            
 
 
 
@@ -707,13 +731,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -740,34 +765,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.3</h3></div>
-                    <div class="col">Мінімізація смертності, якій можна запобігти, серед дітей віком до 5 років</div>
+                    <div class="col-md-8">Мінімізація смертності, якій можна запобігти, серед дітей віком до 5 років</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.3.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності дітей у віці до 5 років, на 1000 живонароджених</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності дітей у віці до 5 років, на 1000 живонароджених
+                            </div>
+
+                            
 
 
 
@@ -779,13 +805,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -812,7 +839,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -821,14 +848,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.3.2
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт неонатальної смертності, на 1000 живонароджених</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт неонатальної смертності, на 1000 живонароджених
+                            </div>
+
+                            
 
 
 
@@ -840,13 +871,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -873,34 +905,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.4</h3></div>
-                    <div class="col">Зупинення епідемії ВІЛ/СНІДу та туберкульозу, зокрема шляхом використання інноваційних практик та засобів лікування</div>
+                    <div class="col-md-8">Зупинення епідемії ВІЛ/СНІДу та туберкульозу, зокрема шляхом використання інноваційних практик та засобів лікування</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.4.1
                             </h4>
                         </div>
-                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ/СНІД, на 100 000 населення</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість хворих з уперше в житті встановленим діагнозом ВІЛ/СНІД, на 100 000 населення
+                            </div>
+
+                            
 
 
 
@@ -912,13 +945,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -945,7 +979,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -954,14 +988,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.4.2
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, які отримують антиретровірусну терапію, серед тих, у кого діагностовано ВІЛ/СНІД</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість осіб, які отримують антиретровірусну терапію, серед тих, у кого діагностовано ВІЛ/СНІД
+                            </div>
+
+                            
 
 
 
@@ -973,13 +1011,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1006,7 +1045,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1015,14 +1054,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.4.3
                             </h4>
                         </div>
-                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення
+                            </div>
+
+                            
 
 
 
@@ -1034,13 +1077,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1067,35 +1111,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.5</h3></div>
-                    <div class="col">Зниження рівня передчасної смертності від неінфекційних захворювань</div>
+                    <div class="col-md-8">Зниження рівня передчасної смертності від неінфекційних захворювань</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності чоловіків від цереброваскулярних хвороб у віці 30–59 років, на 100 000 чоловіків відповідного віку</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності чоловіків від цереброваскулярних хвороб у віці 30–59 років, на 100 000 чоловіків відповідного віку
+                            </div>
+
+                            
 
 
 
@@ -1107,13 +1152,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1140,7 +1186,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1149,14 +1195,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.2
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності жінок від цереброваскулярних хвороб у віці 30–59 років, на 100 000 жінок відповідного віку</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності жінок від цереброваскулярних хвороб у віці 30–59 років, на 100 000 жінок відповідного віку
+                            </div>
+
+                            
 
 
 
@@ -1168,13 +1218,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1201,7 +1252,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1210,14 +1261,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.3
                             </h4>
                         </div>
-                        <div class="col">Частка діагностованих злоякісних новоутворень (молочної залози, шийки матки, простати, колоректального раку, легень) на ранніх стадіях у загальній кількості діагностованих злоякісних новоутворень, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка діагностованих злоякісних новоутворень (молочної залози, шийки матки, простати, колоректального раку, легень) на ранніх стадіях у загальній кількості діагностованих злоякісних новоутворень, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1229,13 +1284,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1262,7 +1318,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1270,14 +1326,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.4
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності жінок від злоякісного новоутворення молочної залози у віці 30–59 років, на 100 000 жінок відповідного віку</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності жінок від злоякісного новоутворення молочної залози у віці 30–59 років, на 100 000 жінок відповідного віку
+                            </div>
+
+                            
 
 
 
@@ -1289,13 +1349,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1322,7 +1383,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1330,14 +1391,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.5
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності жінок від злоякісного новоутворення шийки матки у віці 30–59 років, на 100 000 жінок відповідного віку</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності жінок від злоякісного новоутворення шийки матки у віці 30–59 років, на 100 000 жінок відповідного віку
+                            </div>
+
+                            
 
 
 
@@ -1349,13 +1414,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1382,7 +1448,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1390,14 +1456,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.6
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності від злоякісного новоутворення трахеї, бронхів та легенів у віці 30–59 років, на 100 000 осіб відповідного віку</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності від злоякісного новоутворення трахеї, бронхів та легенів у віці 30–59 років, на 100 000 осіб відповідного віку
+                            </div>
+
+                            
 
 
 
@@ -1409,13 +1479,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1442,7 +1513,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1450,14 +1521,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.5.7
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності від навмисного самоушкодження, на 100 000 осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності від навмисного самоушкодження, на 100 000 осіб
+                            </div>
+
+                            
 
 
 
@@ -1469,13 +1544,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1502,33 +1578,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.6</h3></div>
-                    <div class="col">Забезпечення якісної та доступної реабілітації у сфері охорони здоров’я</div>
+                    <div class="col-md-8">Забезпечення якісної та доступної реабілітації у сфері охорони здоров’я</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка багатопрофільних закладів охорони здоров’я спроможної мережі, які уклали з НСЗУ договір про надання реабілітаційної допомоги, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка багатопрофільних закладів охорони здоров’я спроможної мережі, які уклали з НСЗУ договір про надання реабілітаційної допомоги, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1540,13 +1617,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1573,35 +1651,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.7</h3></div>
-                    <div class="col">Зниження рівня смертності внаслідок нещасних випадків на транспорті шляхом використання інноваційних практик організації реанімування, лікування та реабілітації постраждалих внаслідок таких випадків</div>
+                    <div class="col-md-8">Зниження рівня смертності внаслідок нещасних випадків на транспорті шляхом використання інноваційних практик організації реанімування, лікування та реабілітації постраждалих внаслідок таких випадків</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.7.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт смертності внаслідок транспортних нещасних випадків, на 100 000 осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Коефіцієнт смертності внаслідок транспортних нещасних випадків, на 100 000 осіб
+                            </div>
+
+                            
 
 
 
@@ -1613,13 +1692,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1646,34 +1726,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.8</h3></div>
-                    <div class="col">Забезпечення загальної імунізації населення</div>
+                    <div class="col-md-8">Забезпечення загальної імунізації населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.8.1
                             </h4>
                         </div>
-                        <div class="col">Рівень імунізації населення згідно з Календарем профілактичних щеплень за віковими групами під час профілактики десяти інфекційних захворювань, відсотків 1</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень імунізації населення згідно з Календарем профілактичних щеплень за віковими групами під час профілактики десяти інфекційних захворювань, відсотків 1
+                            </div>
+
+                            
 
 
 
@@ -1685,13 +1766,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1718,35 +1800,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.9</h3></div>
-                    <div class="col">Зниження рівня поширеності вживання тютюнових та/або нікотинових виробів серед населення</div>
+                    <div class="col-md-8">Зниження рівня поширеності вживання тютюнових та/або нікотинових виробів серед населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.9.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які вживають тютюнові та/або нікотинові вироби, серед населення у віці 15 років і старше, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які вживають тютюнові та/або нікотинові вироби, серед населення у віці 15 років і старше, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1758,13 +1841,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1791,11 +1875,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
-                
-
                 
 
                 
@@ -1803,22 +1885,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.10</h3></div>
-                    <div class="col">Зниження рівня поширеності вживання алкогольних напоїв серед населення</div>
+                    <div class="col-md-8">Зниження рівня поширеності вживання алкогольних напоїв серед населення</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 3.10.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, що вживають алкогольні напої, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, що вживають алкогольні напої, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1830,13 +1915,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1883,16 +1969,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити рівень материнської смертності
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1905,7 +1987,7 @@ layout-goal
                                 3.1.1
                             </h4>
                         </div>
-                        <div class="col">Кількість випадків материнської смерті, на 100 000 живонароджених</div>
+                        <div class="col-md-8">Кількість випадків материнської смерті, на 100 000 живонароджених</div>
                         
 
 
@@ -1918,7 +2000,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1963,18 +2045,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Мінімізувати смертність, якій можна запобігти, серед дітей віком до 5 років
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1987,7 +2065,7 @@ layout-goal
                                 3.2.1
                             </h4>
                         </div>
-                        <div class="col">Смертність дітей у віці до 5 років, випадків на 1000 живонароджених</div>
+                        <div class="col-md-8">Смертність дітей у віці до 5 років, випадків на 1000 живонароджених</div>
                         
 
 
@@ -2000,7 +2078,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2041,18 +2119,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Зупинити епідемії ВІЛ/СНІДу та туберкульозу, у тому числі за рахунок використання інноваційних практик та засобів лікування
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2065,7 +2139,7 @@ layout-goal
                                 3.3.1
                             </h4>
                         </div>
-                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ, на 100 000 населення</div>
+                        <div class="col-md-8">Кількість хворих з уперше в житті встановленим діагнозом ВІЛ, на 100 000 населення</div>
                         
 
 
@@ -2078,7 +2152,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2127,7 +2201,7 @@ layout-goal
                                 3.3.2
                             </h4>
                         </div>
-                        <div class="col">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення</div>
+                        <div class="col-md-8">Кількість хворих з уперше в житті встановленим діагнозом активного туберкульозу, на 100 000 населення</div>
                         
 
 
@@ -2140,7 +2214,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2181,18 +2255,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити передчасну смертність від неінфекційних захворювань
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2205,7 +2275,7 @@ layout-goal
                                 3.4.1
                             </h4>
                         </div>
-                        <div class="col">Кількість смертей чоловіків від цереброваскулярних хвороб у віці 30-59 років, на 100 000 чоловіків відповідного віку</div>
+                        <div class="col-md-8">Кількість смертей чоловіків від цереброваскулярних хвороб у віці 30-59 років, на 100 000 чоловіків відповідного віку</div>
                         
 
 
@@ -2218,7 +2288,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2267,7 +2337,7 @@ layout-goal
                                 3.4.2
                             </h4>
                         </div>
-                        <div class="col">Кількість смертей жінок від цереброваскулярних хвороб у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        <div class="col-md-8">Кількість смертей жінок від цереброваскулярних хвороб у віці 30-59 років, на 100 000 жінок відповідного віку</div>
                         
 
 
@@ -2280,7 +2350,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2329,7 +2399,7 @@ layout-goal
                                 3.4.3
                             </h4>
                         </div>
-                        <div class="col">Кількість смертей жінок від злоякісного новоутворення молочної залози у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        <div class="col-md-8">Кількість смертей жінок від злоякісного новоутворення молочної залози у віці 30-59 років, на 100 000 жінок відповідного віку</div>
                         
 
 
@@ -2342,7 +2412,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2390,7 +2460,7 @@ layout-goal
                                 3.4.4
                             </h4>
                         </div>
-                        <div class="col">Кількість смертей жінок від злоякісного новоутворення шийки матки у віці 30-59 років, на 100 000 жінок відповідного віку</div>
+                        <div class="col-md-8">Кількість смертей жінок від злоякісного новоутворення шийки матки у віці 30-59 років, на 100 000 жінок відповідного віку</div>
                         
 
 
@@ -2403,7 +2473,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2444,18 +2514,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити на чверть передчасну смерть населення, у тому числі за рахунок упровадження інноваційних підходів до діагностики захворювань
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2468,7 +2534,7 @@ layout-goal
                                 3.5.1
                             </h4>
                         </div>
-                        <div class="col">Імовірність померти у 20-64 роки, чоловіки</div>
+                        <div class="col-md-8">Імовірність померти у 20-64 роки, чоловіки</div>
                         
 
 
@@ -2481,7 +2547,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2530,7 +2596,7 @@ layout-goal
                                 3.5.2
                             </h4>
                         </div>
-                        <div class="col">Імовірність померти у 20-64 роки, жінки</div>
+                        <div class="col-md-8">Імовірність померти у 20-64 роки, жінки</div>
                         
 
 
@@ -2543,7 +2609,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2589,18 +2655,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити рівень отриманих тяжких травм і смертності внаслідок ДТП, у тому числі за рахунок використання інноваційних практик реанімування, лікування та реабілітації постраждалих унаслідок ДТП
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2613,7 +2675,7 @@ layout-goal
                                 3.6.1
                             </h4>
                         </div>
-                        <div class="col">Кількість смертей унаслідок транспортних нещасних випадків, на 100 000 населення</div>
+                        <div class="col-md-8">Кількість смертей унаслідок транспортних нещасних випадків, на 100 000 населення</div>
                         
 
 
@@ -2626,7 +2688,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2674,7 +2736,7 @@ layout-goal
                                 3.6.2
                             </h4>
                         </div>
-                        <div class="col">Кількість травмованих осіб унаслідок дорожньо-транспортних пригод, на 100 000 населення</div>
+                        <div class="col-md-8">Кількість травмованих осіб унаслідок дорожньо-транспортних пригод, на 100 000 населення</div>
                         
 
 
@@ -2687,7 +2749,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2728,18 +2790,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити загальну якісну імунізацію населення з використанням інноваційних препаратів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2752,7 +2810,7 @@ layout-goal
                                 3.7.1
                             </h4>
                         </div>
-                        <div class="col">Рівень імунізації населення згідно з Календарем профілактичних щеплень до визначених шести вікових груп при профілактиці десяти інфекційних захворювань, %</div>
+                        <div class="col-md-8">Рівень імунізації населення згідно з Календарем профілактичних щеплень до визначених шести вікових груп при профілактиці десяти інфекційних захворювань, %</div>
                         
 
 
@@ -2765,7 +2823,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2806,18 +2864,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.8</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити поширеність тютюнокуріння серед населення з використанням інноваційних засобів інформування про негативні наслідки тютюнокуріння
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2830,7 +2884,7 @@ layout-goal
                                 3.8.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які курять, серед жінок віком 16-29 років, %</div>
+                        <div class="col-md-8">Частка осіб, які курять, серед жінок віком 16-29 років, %</div>
                         
 
 
@@ -2843,7 +2897,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2891,7 +2945,7 @@ layout-goal
                                 3.8.2
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які курять, серед чоловіків віком 16-29 років, %</div>
+                        <div class="col-md-8">Частка осіб, які курять, серед чоловіків віком 16-29 років, %</div>
                         
 
 
@@ -2904,7 +2958,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2945,18 +2999,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>3.9</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Здійснити реформу фінансування системи охорони здоров’я
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2969,7 +3019,7 @@ layout-goal
                                 3.9.1
                             </h4>
                         </div>
-                        <div class="col">Частка витрат населення у загальних видатках на охорону здоров’я, %</div>
+                        <div class="col-md-8">Частка витрат населення у загальних видатках на охорону здоров’я, %</div>
                         
 
 
@@ -2982,7 +3032,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3021,7 +3071,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -3090,12 +3140,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

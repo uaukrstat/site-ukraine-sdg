@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.1</h3></div>
-                    <div class="col">Ensuring access of the population to centralized drinking water supply services of adequate quality</div>
+                    <div class="col-md-8">Ensuring access of the population to centralized drinking water supply services of adequate quality</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.1.1
                             </h4>
                         </div>
-                        <div class="col">Drinking water that meets state sanitary standards and regulations by types of indicators, percent of non-standard samples: for microbiological indicators: urban water supply, rural water supply, non-centralized water supply; for sanitary-chemical indicators: urban water supply, rural water supply, non-centralized water supply; for radiation indicators: urban water supply, rural water supply, non-centralized water supply</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Drinking water that meets state sanitary standards and regulations by types of indicators, percent of non-standard samples: for microbiological indicators: urban water supply, rural water supply, non-centralized water supply; for sanitary-chemical indicators: urban water supply, rural water supply, non-centralized water supply; for radiation indicators: urban water supply, rural water supply, non-centralized water supply
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population with access to centralized water supply, percent: urban population, rural population</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population with access to centralized water supply, percent: urban population, rural population
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of worn-out water supply grids in the total length of water supply grids, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of worn-out water supply grids in the total length of water supply grids, percent
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.1.4
                             </h4>
                         </div>
-                        <div class="col">Structure of drinking water consumption among the population by supply methods, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Structure of drinking water consumption among the population by supply methods, percent
+                            </div>
+
+                            
 
 
 
@@ -585,6 +602,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,35 +629,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.2</h3></div>
-                    <div class="col">Ensuring access of the population to modern water drainage systems</div>
+                    <div class="col-md-8">Ensuring access of the population to modern water drainage systems</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population with access to centralized water drainage systems, percent: urban population, rural population</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population with access to centralized water drainage systems, percent: urban population, rural population
+                            </div>
+
+                            
 
 
 
@@ -658,6 +677,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -684,7 +704,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -693,14 +713,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of worn-out water drainage networks in the total length of water drainage grids, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of worn-out water drainage networks in the total length of water drainage grids, percent
+                            </div>
+
+                            
 
 
 
@@ -719,6 +743,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -745,34 +770,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.3</h3></div>
-                    <div class="col">Ensuring improvement of water quality of water bodies by reducing the volume of untreated wastewater discharges</div>
+                    <div class="col-md-8">Ensuring improvement of water quality of water bodies by reducing the volume of untreated wastewater discharges</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.3.1
                             </h4>
                         </div>
-                        <div class="col">Volume of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into water bodies, million cubic meters</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into water bodies, million cubic meters
+                            </div>
+
+                            
 
 
 
@@ -791,6 +817,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -817,7 +844,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -826,14 +853,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into water bodies in the total volume of discharges, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of discharges of polluted (polluted without treatment and insufficiently treated) wastewater into water bodies in the total volume of discharges, percent
+                            </div>
+
+                            
 
 
 
@@ -852,6 +883,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -878,7 +910,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -887,14 +919,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.3.3
                             </h4>
                         </div>
-                        <div class="col">Share of surface water bodies classified as having "good" ecological and chemical status, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of surface water bodies classified as having "good" ecological and chemical status, percent
+                            </div>
+
+                            
 
 
 
@@ -913,6 +949,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -939,33 +976,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.4</h3></div>
-                    <div class="col">Ensuring sustainable water use</div>
+                    <div class="col-md-8">Ensuring sustainable water use</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.4.1
                             </h4>
                         </div>
-                        <div class="col">Water capacity of the gross domestic product, cubic metres of water used per UAH 1,000 of the gross domestic product (at current prices)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Water capacity of the gross domestic product, cubic metres of water used per UAH 1,000 of the gross domestic product (at current prices)
+                            </div>
+
+                            
 
 
 
@@ -984,6 +1022,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1010,7 +1049,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1019,14 +1058,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.4.2
                             </h4>
                         </div>
-                        <div class="col">Current water capacity of the gross domestic product compared to 2015, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Current water capacity of the gross domestic product compared to 2015, percent
+                            </div>
+
+                            
 
 
 
@@ -1045,6 +1088,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1071,34 +1115,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.5</h3></div>
-                    <div class="col">Ensuring the implementation of integrated water resources management</div>
+                    <div class="col-md-8">Ensuring the implementation of integrated water resources management</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.5.1
                             </h4>
                         </div>
-                        <div class="col">Number of river basins for which management plans have been approved, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of river basins for which management plans have been approved, units
+                            </div>
+
+                            
 
 
 
@@ -1117,6 +1162,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1143,7 +1189,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1152,14 +1198,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 6.5.2
                             </h4>
                         </div>
-                        <div class="col">Share of transboundary river basins for which agreements on joint water resources management have been concluded, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of transboundary river basins for which agreements on joint water resources management have been concluded, percent
+                            </div>
+
+                            
 
 
 
@@ -1178,6 +1228,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1224,16 +1275,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Provide access to quality services of safe drinking water, and ensure the construction and reconstruction of centralized drinking water supply systems using the latest technologies and equipment
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1246,7 +1293,7 @@ layout-goal
                                 6.1.1
                             </h4>
                         </div>
-                        <div class="col">Safety and quality of drinking water by microbiological parameters (% of non-standard samples)</div>
+                        <div class="col-md-8">Safety and quality of drinking water by microbiological parameters (% of non-standard samples)</div>
                         
 
 
@@ -1308,7 +1355,7 @@ layout-goal
                                 6.1.2
                             </h4>
                         </div>
-                        <div class="col">Safety and quality of drinking water by radiation parameters (% of non-standard samples)</div>
+                        <div class="col-md-8">Safety and quality of drinking water by radiation parameters (% of non-standard samples)</div>
                         
 
 
@@ -1370,7 +1417,7 @@ layout-goal
                                 6.1.3
                             </h4>
                         </div>
-                        <div class="col">Safety and quality of drinking water by organoleptic, physico-chemical and sanitary-toxicological parameters (% of non-standard samples)</div>
+                        <div class="col-md-8">Safety and quality of drinking water by organoleptic, physico-chemical and sanitary-toxicological parameters (% of non-standard samples)</div>
                         
 
 
@@ -1432,7 +1479,7 @@ layout-goal
                                 6.1.4
                             </h4>
                         </div>
-                        <div class="col">Share of the rural population with access to centralized water supply, %</div>
+                        <div class="col-md-8">Share of the rural population with access to centralized water supply, %</div>
                         
 
 
@@ -1493,7 +1540,7 @@ layout-goal
                                 6.1.5
                             </h4>
                         </div>
-                        <div class="col">Share of the urban population with access to centralized water supply, %</div>
+                        <div class="col-md-8">Share of the urban population with access to centralized water supply, %</div>
                         
 
 
@@ -1547,18 +1594,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Provide access to modern sanitation systems, and ensure the construction and reconstruction of water intake and sewage treatment facilities using the latest technologies and equipment
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1571,7 +1614,7 @@ layout-goal
                                 6.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of the rural population with access to a centralized water drain, %</div>
+                        <div class="col-md-8">Share of the rural population with access to a centralized water drain, %</div>
                         
 
 
@@ -1633,7 +1676,7 @@ layout-goal
                                 6.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of the urban population with access to a centralized water drain, %</div>
+                        <div class="col-md-8">Share of the urban population with access to a centralized water drain, %</div>
                         
 
 
@@ -1687,18 +1730,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the discharge of untreated wastewater, primarily through innovative technologies of water purification at the national and individual levels
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1711,7 +1750,7 @@ layout-goal
                                 6.3.1
                             </h4>
                         </div>
-                        <div class="col">Volume of discharge of polluted (polluted without treatment or insufficiently treated) wastewater into water bodies, millions of cubic metres</div>
+                        <div class="col-md-8">Volume of discharge of polluted (polluted without treatment or insufficiently treated) wastewater into water bodies, millions of cubic metres</div>
                         
 
 
@@ -1773,7 +1812,7 @@ layout-goal
                                 6.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of discharge of polluted (polluted without treatment or insufficiently treated) wastewater into water bodies in total discharges, %</div>
+                        <div class="col-md-8">Share of discharge of polluted (polluted without treatment or insufficiently treated) wastewater into water bodies in total discharges, %</div>
                         
 
 
@@ -1828,18 +1867,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the efficiency of water use
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1852,7 +1887,7 @@ layout-goal
                                 6.4.1
                             </h4>
                         </div>
-                        <div class="col">Water content of GDP, cubic metres of water used per UAH 1,000 of GDP (actual prices)</div>
+                        <div class="col-md-8">Water content of GDP, cubic metres of water used per UAH 1,000 of GDP (actual prices)</div>
                         
 
 
@@ -1914,7 +1949,7 @@ layout-goal
                                 6.4.2
                             </h4>
                         </div>
-                        <div class="col">Current water content of GDP to 2015 level, %</div>
+                        <div class="col-md-8">Current water content of GDP to 2015 level, %</div>
                         
 
 
@@ -1968,18 +2003,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>6.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Implement integrated water resources management
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1992,7 +2023,7 @@ layout-goal
                                 6.5.1
                             </h4>
                         </div>
-                        <div class="col">Number of river basins with approved river basin management plans, units</div>
+                        <div class="col-md-8">Number of river basins with approved river basin management plans, units</div>
                         
 
 
@@ -2113,12 +2144,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

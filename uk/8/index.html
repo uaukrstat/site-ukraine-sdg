@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.1</h3></div>
-                    <div class="col">Забезпечення модернізації виробництв, підвищення експортного потенціалу, виведення на зовнішній ринок продукції з високою часткою доданої вартості</div>
+                    <div class="col-md-8">Забезпечення модернізації виробництв, підвищення експортного потенціалу, виведення на зовнішній ринок продукції з високою часткою доданої вартості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка валового нагромадження основного капіталу у валовому внутрішньому продукті, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка валового нагромадження основного капіталу у валовому внутрішньому продукті, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка експорту товарів з використанням у виробництві технологій високого та середньовисокого рівня в загальному обсязі експорту товарів (груп 28−38, 39−40, 84−85, 86−89, 90, 91 (крім товарної позиції 9113) згідно з УКТЗЕД), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка експорту товарів з використанням у виробництві технологій високого та середньовисокого рівня в загальному обсязі експорту товарів (груп 28−38, 39−40, 84−85, 86−89, 90, 91 (крім товарної позиції 9113) згідно з УКТЗЕД), відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.1.3
                             </h4>
                         </div>
-                        <div class="col">Місце України у рейтингу за Глобальним інноваційним індексом</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Місце України у рейтингу за Глобальним інноваційним індексом
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.1.4
                             </h4>
                         </div>
-                        <div class="col">Індекс продуктивності праці, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс продуктивності праці, відсотків
+                            </div>
+
+                            
 
 
 
@@ -578,13 +595,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,34 +629,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.2</h3></div>
-                    <div class="col">Підвищення рівня зайнятості населення</div>
+                    <div class="col-md-8">Підвищення рівня зайнятості населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.2.1
                             </h4>
                         </div>
-                        <div class="col">Рівень зайнятості населення віком 15–70 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень зайнятості населення віком 15–70 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -650,13 +669,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -683,7 +703,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -692,14 +712,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.2.2
                             </h4>
                         </div>
-                        <div class="col">Рівень безробіття населення віком 15–70 років (за методологією МОП), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень безробіття населення віком 15–70 років (за методологією МОП), відсотків
+                            </div>
+
+                            
 
 
 
@@ -711,13 +735,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -744,7 +769,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -753,14 +778,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка безробітних віком 15–70 років, які шукали роботу 12 місяців і більше, у загальній кількості безробітних, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка безробітних віком 15–70 років, які шукали роботу 12 місяців і більше, у загальній кількості безробітних, відсотків
+                            </div>
+
+                            
 
 
 
@@ -772,13 +801,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -805,7 +835,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -813,14 +843,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.2.4
                             </h4>
                         </div>
-                        <div class="col">Частка молоді, яка не працює, не навчається і не набуває професійних навичок, у загальній кількості населення відповідного віку, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка молоді, яка не працює, не навчається і не набуває професійних навичок, у загальній кількості населення відповідного віку, відсотків
+                            </div>
+
+                            
 
 
 
@@ -832,13 +866,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -865,33 +900,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.3</h3></div>
-                    <div class="col">Сприяння створенню належних, безпечних умов праці для працюючого населення</div>
+                    <div class="col-md-8">Сприяння створенню належних, безпечних умов праці для працюючого населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.3.1
                             </h4>
                         </div>
-                        <div class="col">Кількість осіб, що постраждали внаслідок нещасних випадків на роботі (без урахування нещасних випадків, що сталися внаслідок збройної агресії Російської Федерації проти України), на 100 000 працюючих осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість осіб, що постраждали внаслідок нещасних випадків на роботі (без урахування нещасних випадків, що сталися внаслідок збройної агресії Російської Федерації проти України), на 100 000 працюючих осіб
+                            </div>
+
+                            
 
 
 
@@ -903,13 +939,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -936,7 +973,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -945,14 +982,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка працівників, зайнятих на роботах із шкідливими умовами праці, у загальній кількості штатних працівників, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка працівників, зайнятих на роботах із шкідливими умовами праці, у загальній кількості штатних працівників, відсотків
+                            </div>
+
+                            
 
 
 
@@ -964,13 +1005,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -997,33 +1039,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.4</h3></div>
-                    <div class="col">Створення інституційних та фінансових можливостей для самореалізації потенціалу економічно активної частини населення</div>
+                    <div class="col-md-8">Створення інституційних та фінансових можливостей для самореалізації потенціалу економічно активної частини населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка зайнятих працівників у суб’єктів середнього та малого підприємництва, у загальній кількості зайнятих працівників у суб’єктів господарювання, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зайнятих працівників у суб’єктів середнього та малого підприємництва, у загальній кількості зайнятих працівників у суб’єктів господарювання, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1035,13 +1078,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1068,7 +1112,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1077,14 +1121,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 8.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва суб’єктів середнього та малого підприємництва у загальній доданій вартості за витратами виробництва суб’єктів господарювання, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка доданої вартості за витратами виробництва суб’єктів середнього та малого підприємництва у загальній доданій вартості за витратами виробництва суб’єктів господарювання, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1096,13 +1144,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1129,7 +1178,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1155,16 +1204,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити стійке зростання ВВП на основі модернізації виробництва, розвитку інновацій, підвищення експортного потенціалу, виводу на зовнішні ринки продукції з високою часткою доданої вартості
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1177,7 +1222,7 @@ layout-goal
                                 8.1.1
                             </h4>
                         </div>
-                        <div class="col">Індекс фізичного обсягу ВВП, %</div>
+                        <div class="col-md-8">Індекс фізичного обсягу ВВП, %</div>
                         
 
 
@@ -1190,7 +1235,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1239,7 +1284,7 @@ layout-goal
                                 8.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка валового нагромадження основного капіталу у ВВП, %</div>
+                        <div class="col-md-8">Частка валового нагромадження основного капіталу у ВВП, %</div>
                         
 
 
@@ -1252,7 +1297,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1301,7 +1346,7 @@ layout-goal
                                 8.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка експорту товарів з використанням у виробництві технологій високого та середньовисокого рівня в загальному обсязі експорту товарів, % (групи ‘Продукція хімічної та пов’язаних з нею галузей промисловості’, ‘Полімерні матеріали, пластмаси та вироби з них’, ‘Машини, обладнання та механізми; електротехнічне обладнання’, ‘Засоби наземного транспорту, літальні апарати, плавучі засоби’, 90-та підгрупа групи ‘Прилади та апарати оптичні, фотографічні’ (згідно з УКТЗЕД))</div>
+                        <div class="col-md-8">Частка експорту товарів з використанням у виробництві технологій високого та середньовисокого рівня в загальному обсязі експорту товарів, % (групи ‘Продукція хімічної та пов’язаних з нею галузей промисловості’, ‘Полімерні матеріали, пластмаси та вироби з них’, ‘Машини, обладнання та механізми; електротехнічне обладнання’, ‘Засоби наземного транспорту, літальні апарати, плавучі засоби’, 90-та підгрупа групи ‘Прилади та апарати оптичні, фотографічні’ (згідно з УКТЗЕД))</div>
                         
 
 
@@ -1314,7 +1359,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1363,7 +1408,7 @@ layout-goal
                                 8.1.4
                             </h4>
                         </div>
-                        <div class="col">Місце України у рейтингу за Глобальним інноваційним індексом</div>
+                        <div class="col-md-8">Місце України у рейтингу за Глобальним інноваційним індексом</div>
                         
 
 
@@ -1376,7 +1421,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1417,18 +1462,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищувати ефективність виробництва на засадах сталого розвитку та розвитку високотехнологічних конкурентних виробництв
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1441,7 +1482,7 @@ layout-goal
                                 8.2.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт віддачі основних засобів</div>
+                        <div class="col-md-8">Коефіцієнт віддачі основних засобів</div>
                         
 
 
@@ -1454,7 +1495,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1503,7 +1544,7 @@ layout-goal
                                 8.2.2
                             </h4>
                         </div>
-                        <div class="col">Індекс продуктивності праці, %</div>
+                        <div class="col-md-8">Індекс продуктивності праці, %</div>
                         
 
 
@@ -1516,7 +1557,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1559,18 +1600,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищити рівень зайнятості населення
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1583,7 +1620,7 @@ layout-goal
                                 8.3.1
                             </h4>
                         </div>
-                        <div class="col">Рівень зайнятості населення віком 20-64 роки, %</div>
+                        <div class="col-md-8">Рівень зайнятості населення віком 20-64 роки, %</div>
                         
 
 
@@ -1596,7 +1633,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1638,18 +1675,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Скоротити частку молоді, яка не працює, не навчається і не набуває професійних навичок
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1662,7 +1695,7 @@ layout-goal
                                 8.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка молоді, яка не працює, не навчається і не набуває професійних навичок, у загальній чисельності осіб віком 15-24 роки, %</div>
+                        <div class="col-md-8">Частка молоді, яка не працює, не навчається і не набуває професійних навичок, у загальній чисельності осіб віком 15-24 роки, %</div>
                         
 
 
@@ -1675,7 +1708,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1716,18 +1749,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Сприяти забезпеченню надійних та безпечних умов праці для всіх працюючих, зокрема шляхом застосовування інноваційних технологій у сфері охорони праці та промислової безпеки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1740,7 +1769,7 @@ layout-goal
                                 8.5.1
                             </h4>
                         </div>
-                        <div class="col">Кількість потерпілих від нещасних випадків на виробництві, які призвели до втрати працездатності на 1 робочий день чи більше, % до рівня 2015 року</div>
+                        <div class="col-md-8">Кількість потерпілих від нещасних випадків на виробництві, які призвели до втрати працездатності на 1 робочий день чи більше, % до рівня 2015 року</div>
                         
 
 
@@ -1753,7 +1782,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1801,7 +1830,7 @@ layout-goal
                                 8.5.2
                             </h4>
                         </div>
-                        <div class="col">Кількість загиблих від нещасних випадків на виробництві, % до рівня 2015 року</div>
+                        <div class="col-md-8">Кількість загиблих від нещасних випадків на виробництві, % до рівня 2015 року</div>
                         
 
 
@@ -1814,7 +1843,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1862,7 +1891,7 @@ layout-goal
                                 8.5.3
                             </h4>
                         </div>
-                        <div class="col">Частка працівників, зайнятих на роботах зі шкідливими умовами праці, у загальнообліковій кількості штатних працівників, %</div>
+                        <div class="col-md-8">Частка працівників, зайнятих на роботах зі шкідливими умовами праці, у загальнообліковій кількості штатних працівників, %</div>
                         
 
 
@@ -1875,7 +1904,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1915,18 +1944,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>8.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Створити інституційні та фінансові можливості для самореалізації потенціалу економічно активної частини населення та розвитку креативної економіки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1939,7 +1964,7 @@ layout-goal
                                 8.6.1
                             </h4>
                         </div>
-                        <div class="col">Кількість зайнятих працівників у суб’єктів середнього та малого підприємництва, млн. осіб</div>
+                        <div class="col-md-8">Кількість зайнятих працівників у суб’єктів середнього та малого підприємництва, млн. осіб</div>
                         
 
 
@@ -1952,7 +1977,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2000,7 +2025,7 @@ layout-goal
                                 8.6.2
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва суб’єктів середнього та малого підприємництва, у % до загальної суми доданої вартості за витратами виробництва</div>
+                        <div class="col-md-8">Частка доданої вартості за витратами виробництва суб’єктів середнього та малого підприємництва, у % до загальної суми доданої вартості за витратами виробництва</div>
                         
 
 
@@ -2013,7 +2038,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2061,7 +2086,7 @@ layout-goal
                                 8.6.3
                             </h4>
                         </div>
-                        <div class="col">Місце України у рейтингу легкості ведення бізнесу Doing Business</div>
+                        <div class="col-md-8">Місце України у рейтингу легкості ведення бізнесу Doing Business</div>
                         
 
 
@@ -2074,7 +2099,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2112,7 +2137,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -2181,12 +2206,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

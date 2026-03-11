@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.1</h3></div>
-                    <div class="col">Забезпечити доступність якісної шкільної освіти для всіх дітей та підлітків</div>
+                    <div class="col-md-8">Забезпечити доступність якісної шкільної освіти для всіх дітей та підлітків</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка дітей віком 5 років, які відвідують заклади дошкільної освіти та структурні підрозділи юридичних осіб публічного та приватного права, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей віком 5 років, які відвідують заклади дошкільної освіти та структурні підрозділи юридичних осіб публічного та приватного права, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,35 +431,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.2</h3></div>
-                    <div class="col">Забезпечити доступність якісного дошкільного розвитку для всіх дітей</div>
+                    <div class="col-md-8">Забезпечити доступність якісного дошкільного розвитку для всіх дітей</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка дітей віком 6–17 років, які відвідують заклади загальної середньої освіти, відсотків 1</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей віком 6–17 років, які відвідують заклади загальної середньої освіти, відсотків 1
+                            </div>
+
+                            
 
 
 
@@ -468,13 +472,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -501,7 +506,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -510,14 +515,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка здобувачів загальної середньої освіти віком 15 років, які досягли рівня 2 і вище у ключових галузях (читання, математика, природничо-наукові дисципліни) за шкалою PISA, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка здобувачів загальної середньої освіти віком 15 років, які досягли рівня 2 і вище у ключових галузях (читання, математика, природничо-наукові дисципліни) за шкалою PISA, відсотків
+                            </div>
+
+                            
 
 
 
@@ -529,13 +538,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -562,7 +572,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -570,14 +580,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.2.3
                             </h4>
                         </div>
-                        <div class="col">Кількість здобувачів загальної середньої, професійної (професійно-технічної) освіти з вразливих категорій населення, які забезпечені комп’ютерним обладнанням, тис. осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість здобувачів загальної середньої, професійної (професійно-технічної) освіти з вразливих категорій населення, які забезпечені комп’ютерним обладнанням, тис. осіб
+                            </div>
+
+                            
 
 
 
@@ -589,13 +603,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -622,33 +637,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.3</h3></div>
-                    <div class="col">Забезпечити доступність професійної освіти</div>
+                    <div class="col-md-8">Забезпечити доступність професійної освіти</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка випускників початкової школи, які досягли базового і вищих рівнів сформованості компетентностей (читацької, математичної, природничо–наукової) за шкалою загальнодержавного зовнішнього моніторингу якості початкової освіти, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка випускників початкової школи, які досягли базового і вищих рівнів сформованості компетентностей (читацької, математичної, природничо–наукової) за шкалою загальнодержавного зовнішнього моніторингу якості початкової освіти, відсотків
+                            </div>
+
+                            
 
 
 
@@ -660,13 +676,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -693,7 +710,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -702,14 +719,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка здобувачів загальної середньої освіти 6-х та 8-х класів, які досягли достатнього та високого рівня знань з української мови та математики (алгебри та геометрії) за підсумками загальнодержавного моніторингового дослідження якості освіти в умовах воєнного стану, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка здобувачів загальної середньої освіти 6-х та 8-х класів, які досягли достатнього та високого рівня знань з української мови та математики (алгебри та геометрії) за підсумками загальнодержавного моніторингового дослідження якості освіти в умовах воєнного стану, відсотків
+                            </div>
+
+                            
 
 
 
@@ -721,13 +742,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -754,33 +776,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.4</h3></div>
-                    <div class="col">Підвищити якість вищої освіти та забезпечити її тісний зв’язок з наукою, сприяти формуванню в країні міст освіти та науки</div>
+                    <div class="col-md-8">Підвищити якість вищої освіти та забезпечити її тісний зв’язок з наукою, сприяти формуванню в країні міст освіти та науки</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка здобувачів фахової передвищої освіти віком старше 24 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка здобувачів фахової передвищої освіти віком старше 24 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -792,13 +815,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -825,7 +849,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -834,14 +858,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка здобувачів вищої освіти віком старше 24 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка здобувачів вищої освіти віком старше 24 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -853,13 +881,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -886,7 +915,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -895,14 +924,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.3
                             </h4>
                         </div>
-                        <div class="col">Обсяг витрат держави, фізичних та юридичних осіб на вищу освіту відносно валового внутрішнього продукту, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг витрат держави, фізичних та юридичних осіб на вищу освіту відносно валового внутрішнього продукту, відсотків
+                            </div>
+
+                            
 
 
 
@@ -914,13 +947,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -947,7 +981,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -956,14 +990,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.4
                             </h4>
                         </div>
-                        <div class="col">Кількість здобувачів професійної (професійно-технічної) освіти за рівнем освіти 1, тис. осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість здобувачів професійної (професійно-технічної) освіти за рівнем освіти 1, тис. осіб
+                            </div>
+
+                            
 
 
 
@@ -975,13 +1013,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1008,7 +1047,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1017,14 +1056,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.5
                             </h4>
                         </div>
-                        <div class="col">Рівень участі населення у формальних та неформальних видах навчання та професійної підготовки фахівців, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень участі населення у формальних та неформальних видах навчання та професійної підготовки фахівців, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1036,13 +1079,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1069,7 +1113,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1077,14 +1121,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.6
                             </h4>
                         </div>
-                        <div class="col">Індекс задоволеності учасників освітнього процесу закладів фахової передвищої, вищої освіти якістю освіти (в розрізі учасників освітнього процесу)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс задоволеності учасників освітнього процесу закладів фахової передвищої, вищої освіти якістю освіти (в розрізі учасників освітнього процесу)
+                            </div>
+
+                            
 
 
 
@@ -1096,13 +1144,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1129,7 +1178,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1137,14 +1186,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.7
                             </h4>
                         </div>
-                        <div class="col">Частка жінок серед здобувачів фахової передвищої та вищої освіти за спеціальностями галузей знань 10-20, 25-27, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка жінок серед здобувачів фахової передвищої та вищої освіти за спеціальностями галузей знань 10-20, 25-27, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1156,13 +1209,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1189,7 +1243,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1197,14 +1251,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.4.8
                             </h4>
                         </div>
-                        <div class="col">Частка вступників до закладів професійної (професійно-технічної) освіти у загальній кількості місць для вступників у закладах професійної (професійно-технічної) освіти, що фінансуються з державного та місцевих бюджетів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка вступників до закладів професійної (професійно-технічної) освіти у загальній кількості місць для вступників у закладах професійної (професійно-технічної) освіти, що фінансуються з державного та місцевих бюджетів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1216,13 +1274,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1249,33 +1308,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.5</h3></div>
-                    <div class="col">Збільшити поширеність серед населення знань і навичок, необхідних для отримання гідної роботи та підприємницької діяльності</div>
+                    <div class="col-md-8">Збільшити поширеність серед населення знань і навичок, необхідних для отримання гідної роботи та підприємницької діяльності</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.5.1
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які володіють базовими цифровими навичками, у загальній кількості населення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які володіють базовими цифровими навичками, у загальній кількості населення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1287,13 +1347,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1320,35 +1381,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.6</h3></div>
-                    <div class="col">Ліквідувати гендерну нерівність серед шкільних учителів</div>
+                    <div class="col-md-8">Ліквідувати гендерну нерівність серед шкільних учителів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка закладів дошкільної, загальної середньої та позашкільної освіти, які мають доступ до високошвидкісного Інтернету, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка закладів дошкільної, загальної середньої та позашкільної освіти, які мають доступ до високошвидкісного Інтернету, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1360,13 +1422,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1393,7 +1456,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1402,14 +1465,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.6.2
                             </h4>
                         </div>
-                        <div class="col">Частка денних закладів загальної середньої освіти, у яких організовано інклюзивне навчання, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка денних закладів загальної середньої освіти, у яких організовано інклюзивне навчання, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1421,13 +1488,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1454,33 +1522,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.7</h3></div>
-                    <div class="col">Створити у школах сучасні умови навчання, включаючи інклюзивне, на основі інноваційних підходів</div>
+                    <div class="col-md-8">Створити у школах сучасні умови навчання, включаючи інклюзивне, на основі інноваційних підходів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.7.1
                             </h4>
                         </div>
-                        <div class="col">Частка дітей, які відвідують заклади позашкільної освіти та структурні підрозділи юридичних осіб публічного та приватного права, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей, які відвідують заклади позашкільної освіти та структурні підрозділи юридичних осіб публічного та приватного права, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1492,13 +1561,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1525,7 +1595,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1534,14 +1604,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.7.2
                             </h4>
                         </div>
-                        <div class="col">Частка дітей, які відвідують заклади спеціалізованої мистецької освіти, які надають початкову мистецьку освіту, та структурні підрозділи юридичних осіб публічного та приватного права, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей, які відвідують заклади спеціалізованої мистецької освіти, які надають початкову мистецьку освіту, та структурні підрозділи юридичних осіб публічного та приватного права, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1553,13 +1627,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1586,7 +1661,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1595,14 +1670,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.7.3
                             </h4>
                         </div>
-                        <div class="col">Частка дітей, які відвідують заклади спеціалізованої позашкільної освіти спортивного профілю та структурні підрозділи юридичних осіб публічного та приватного права, у загальній кількості населення у віці 6–18 років, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей, які відвідують заклади спеціалізованої позашкільної освіти спортивного профілю та структурні підрозділи юридичних осіб публічного та приватного права, у загальній кількості населення у віці 6–18 років, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1614,13 +1693,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1647,11 +1727,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
-                
-
                 
 
                 
@@ -1659,22 +1737,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.8</h3></div>
-                    <div class="col">Сприяння утвердженню української національної та громадянської ідентичності, зокрема шляхом впровадження програм громадянської освіти</div>
+                    <div class="col-md-8">Сприяння утвердженню української національної та громадянської ідентичності, зокрема шляхом впровадження програм громадянської освіти</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 4.8.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке, за даними соціологічних досліджень, стверджує, що пишається своїм українським походженням або громадянством, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке, за даними соціологічних досліджень, стверджує, що пишається своїм українським походженням або громадянством, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1686,13 +1767,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1739,16 +1821,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність якісної шкільної освіти для всіх дітей та підлітків
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1761,7 +1839,7 @@ layout-goal
                                 4.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка випускників закладів загальної середньої освіти поточного року, які досягли визначених рівнів навчальних досягнень з української мови</div>
+                        <div class="col-md-8">Частка випускників закладів загальної середньої освіти поточного року, які досягли визначених рівнів навчальних досягнень з української мови</div>
                         
 
 
@@ -1774,7 +1852,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1822,7 +1900,7 @@ layout-goal
                                 4.1.2
                             </h4>
                         </div>
-                        <div class="col">Кількість учнів денних закладів загальної середньої освіти у розрахунку на одного вчителя, на початок навчального року</div>
+                        <div class="col-md-8">Кількість учнів денних закладів загальної середньої освіти у розрахунку на одного вчителя, на початок навчального року</div>
                         
 
 
@@ -1835,7 +1913,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1876,18 +1954,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність якісного дошкільного розвитку для всіх дітей
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1900,7 +1974,7 @@ layout-goal
                                 4.2.1
                             </h4>
                         </div>
-                        <div class="col">Показник охоплення дітей віком 5 років закладами дошкільної освіти та структурними підрозділами юридичних осіб публічного та приватного права, %</div>
+                        <div class="col-md-8">Показник охоплення дітей віком 5 років закладами дошкільної освіти та структурними підрозділами юридичних осіб публічного та приватного права, %</div>
                         
 
 
@@ -1913,7 +1987,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1956,18 +2030,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність професійної освіти
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1980,7 +2050,7 @@ layout-goal
                                 4.3.1
                             </h4>
                         </div>
-                        <div class="col">Відношення кількості вступників до закладів професійної (професійно-технічної) освіти до загальної кількості місць у закладах професійної (професійно-технічної) освіти, що фінансуються з державних та місцевих бюджетів</div>
+                        <div class="col-md-8">Відношення кількості вступників до закладів професійної (професійно-технічної) освіти до загальної кількості місць у закладах професійної (професійно-технічної) освіти, що фінансуються з державних та місцевих бюджетів</div>
                         
 
 
@@ -1993,7 +2063,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2035,18 +2105,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищити якість вищої освіти та забезпечити її тісний зв'язок з наукою, сприяти формуванню в країні міст освіти та науки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2059,7 +2125,7 @@ layout-goal
                                 4.4.1
                             </h4>
                         </div>
-                        <div class="col">Кількість українських міст, що є членами Глобальної мережі міст ЮНЕСКО, що навчаються</div>
+                        <div class="col-md-8">Кількість українських міст, що є членами Глобальної мережі міст ЮНЕСКО, що навчаються</div>
                         
 
 
@@ -2072,7 +2138,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2121,7 +2187,7 @@ layout-goal
                                 4.4.2
                             </h4>
                         </div>
-                        <div class="col">Населення за рівнем освіти та статтю, %</div>
+                        <div class="col-md-8">Населення за рівнем освіти та статтю, %</div>
                         
 
 
@@ -2134,7 +2200,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2183,7 +2249,7 @@ layout-goal
                                 4.4.3
                             </h4>
                         </div>
-                        <div class="col">Витрати на підготовку фахівця</div>
+                        <div class="col-md-8">Витрати на підготовку фахівця</div>
                         
 
 
@@ -2196,7 +2262,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2245,7 +2311,7 @@ layout-goal
                                 4.4.4
                             </h4>
                         </div>
-                        <div class="col">Витрати закладів вищої освіти на провадження наукової діяльності</div>
+                        <div class="col-md-8">Витрати закладів вищої освіти на провадження наукової діяльності</div>
                         
 
 
@@ -2258,7 +2324,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2303,18 +2369,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Збільшити поширеність серед населення знань і навичок, необхідних для отримання гідної роботи та підприємницької діяльності
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2327,7 +2389,7 @@ layout-goal
                                 4.5.1
                             </h4>
                         </div>
-                        <div class="col">Рівень участі населення у формальних та неформальних видах навчання та професійної підготовки, %</div>
+                        <div class="col-md-8">Рівень участі населення у формальних та неформальних видах навчання та професійної підготовки, %</div>
                         
 
 
@@ -2340,7 +2402,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2388,7 +2450,7 @@ layout-goal
                                 4.5.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке повідомило, що за останні 12 місяців користувалось послугами Інтернету, %</div>
+                        <div class="col-md-8">Частка населення, яке повідомило, що за останні 12 місяців користувалось послугами Інтернету, %</div>
                         
 
 
@@ -2401,7 +2463,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2442,18 +2504,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ліквідувати гендерну нерівність серед шкільних учителів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2466,7 +2524,7 @@ layout-goal
                                 4.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка чоловіків серед педагогічних працівників, %</div>
+                        <div class="col-md-8">Частка чоловіків серед педагогічних працівників, %</div>
                         
 
 
@@ -2479,7 +2537,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2521,18 +2579,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>4.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Створити у школах сучасні умови навчання, включаючи інклюзивне, на основі інноваційних підходів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2545,7 +2599,7 @@ layout-goal
                                 4.7.1
                             </h4>
                         </div>
-                        <div class="col">Частка закладів загальної середньої освіти у сільській місцевості, що мають доступ до мережі Інтернет, %</div>
+                        <div class="col-md-8">Частка закладів загальної середньої освіти у сільській місцевості, що мають доступ до мережі Інтернет, %</div>
                         
 
 
@@ -2558,7 +2612,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2607,7 +2661,7 @@ layout-goal
                                 4.7.2
                             </h4>
                         </div>
-                        <div class="col">Частка закладів загальної середньої освіти у сільській місцевості, в яких комп’ютери використовуються в освітньому процесі, %</div>
+                        <div class="col-md-8">Частка закладів загальної середньої освіти у сільській місцевості, в яких комп’ютери використовуються в освітньому процесі, %</div>
                         
 
 
@@ -2620,7 +2674,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2669,7 +2723,7 @@ layout-goal
                                 4.7.3
                             </h4>
                         </div>
-                        <div class="col">Частка денних закладів загальної середньої освіти, у яких організовано інклюзивне навчання, %</div>
+                        <div class="col-md-8">Частка денних закладів загальної середньої освіти, у яких організовано інклюзивне навчання, %</div>
                         
 
 
@@ -2682,7 +2736,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2721,7 +2775,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -2790,12 +2844,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

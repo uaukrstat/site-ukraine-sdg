@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>17.1</h3></div>
-                    <div class="col">Залучення додаткових фінансових ресурсів для відновлення від наслідків збройної агресії Російської Федерації проти України та модернізації держави</div>
+                    <div class="col-md-8">Залучення додаткових фінансових ресурсів для відновлення від наслідків збройної агресії Російської Федерації проти України та модернізації держави</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 17.1.1
                             </h4>
                         </div>
-                        <div class="col">Обсяг приватних грошових переказів в Україну, відсотків валового внутрішнього продукту</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг приватних грошових переказів в Україну, відсотків валового внутрішнього продукту
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 17.1.2
                             </h4>
                         </div>
-                        <div class="col">Обсяг прямих іноземних інвестицій (за даними платіжного балансу), відсотків валового внутрішнього продукту</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг прямих іноземних інвестицій (за даними платіжного балансу), відсотків валового внутрішнього продукту
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 17.1.3
                             </h4>
                         </div>
-                        <div class="col">Обсяг зареєстрованих випусків облігацій внутрішньої місцевої позики, млрд. гривень на рік (співвідношення обсягу випусків облігацій до валового внутрішнього продукту, відсотків)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг зареєстрованих випусків облігацій внутрішньої місцевої позики, млрд. гривень на рік (співвідношення обсягу випусків облігацій до валового внутрішнього продукту, відсотків)
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -558,14 +571,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 17.1.4
                             </h4>
                         </div>
-                        <div class="col">Обсяг зареєстрованого випуску акцій, корпоративних облігацій, млрд. гривень на рік (співвідношення залученого приватного капіталу до валового внутрішнього продукту, відсотків)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг зареєстрованого випуску акцій, корпоративних облігацій, млрд. гривень на рік (співвідношення залученого приватного капіталу до валового внутрішнього продукту, відсотків)
+                            </div>
+
+                            
 
 
 
@@ -577,13 +594,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -610,33 +628,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>17.2</h3></div>
-                    <div class="col">Забезпечення розвитку партнерських відносин влади і бізнесу для досягнення Цілей сталого розвитку</div>
+                    <div class="col-md-8">Забезпечення розвитку партнерських відносин влади і бізнесу для досягнення Цілей сталого розвитку</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 17.2.1
                             </h4>
                         </div>
-                        <div class="col">Кількість проектів державно-приватного партнерства, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість проектів державно-приватного партнерства, одиниць
+                            </div>
+
+                            
 
 
 
@@ -648,13 +667,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -681,7 +701,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -703,16 +723,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>17.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Мобілізувати додаткові фінансові ресурси на основі заохочення інвестицій іноземних та вітчизняних інвесторів
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -725,7 +741,7 @@ layout-goal
                                 17.1.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення обсягу приватних грошових переказів із-за кордону із ВВП, %</div>
+                        <div class="col-md-8">Співвідношення обсягу приватних грошових переказів із-за кордону із ВВП, %</div>
                         
 
 
@@ -738,7 +754,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -787,7 +803,7 @@ layout-goal
                                 17.1.2
                             </h4>
                         </div>
-                        <div class="col">Чистий притік прямих іноземних інвестицій (за даними платіжного балансу), млн. дол. США</div>
+                        <div class="col-md-8">Чистий притік прямих іноземних інвестицій (за даними платіжного балансу), млн. дол. США</div>
                         
 
 
@@ -800,7 +816,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -843,18 +859,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>17.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Послідовно знижувати боргове навантаження на економіку
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -867,7 +879,7 @@ layout-goal
                                 17.2.1
                             </h4>
                         </div>
-                        <div class="col">Відношення валового зовнішнього боргу до експорту товарів та послуг у річному вимірі, %</div>
+                        <div class="col-md-8">Відношення валового зовнішнього боргу до експорту товарів та послуг у річному вимірі, %</div>
                         
 
 
@@ -880,7 +892,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -922,16 +934,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>17.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Розвивати партнерські відносини влади і бізнесу для досягнення цілей сталого розвитку
                     </div>
                 </div>
-
-                
 
                 
                 
@@ -944,7 +952,7 @@ layout-goal
                                 17.3.1
                             </h4>
                         </div>
-                        <div class="col">Кількість проектів публічно-приватного партнерства</div>
+                        <div class="col-md-8">Кількість проектів публічно-приватного партнерства</div>
                         
 
 
@@ -957,7 +965,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -995,7 +1003,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -1064,12 +1072,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

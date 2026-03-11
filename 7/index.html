@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.1</h3></div>
-                    <div class="col">Ensuring security of supply of energy resources and reducing dependence on their imports</div>
+                    <div class="col-md-8">Ensuring security of supply of energy resources and reducing dependence on their imports</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.1.1
                             </h4>
                         </div>
-                        <div class="col">Coverage ratio of electricity consumption by own production</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Coverage ratio of electricity consumption by own production
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.1.2
                             </h4>
                         </div>
-                        <div class="col">Coverage ratio of natural gas consumption by own production</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Coverage ratio of natural gas consumption by own production
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.1.3
                             </h4>
                         </div>
-                        <div class="col">Maximum share of imports of energy resources from one country in the total volume of their imports in quantitative terms by type of energy resources, percent: anthracite coal (code according to UCGFEA 2701 11 00 00); motor gasolines (codes according to UCGFEA 2710 12 41 11–2710 12 49 99); diesel fuels (codes according to UCGFEA 2710 19 43 00–2710 19 48 00); liquefied petroleum gases (LPG) (codes according to UCGFEA 2711 12–2711 19 00 00); natural gas (code according to UCGFEA 2711 21 00 00); non-irradiated fuel elements (fuel rods) for nuclear reactors (code according to UCGFEA 8401 30 00 00)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Maximum share of imports of energy resources from one country in the total volume of their imports in quantitative terms by type of energy resources, percent: anthracite coal (code according to UCGFEA 2701 11 00 00); motor gasolines (codes according to UCGFEA 2710 12 41 11–2710 12 49 99); diesel fuels (codes according to UCGFEA 2710 19 43 00–2710 19 48 00); liquefied petroleum gases (LPG) (codes according to UCGFEA 2711 12–2711 19 00 00); natural gas (code according to UCGFEA 2711 21 00 00); non-irradiated fuel elements (fuel rods) for nuclear reactors (code according to UCGFEA 8401 30 00 00)
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,34 +563,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.2</h3></div>
-                    <div class="col">Ensuring the creation of a decentralized energy supply system</div>
+                    <div class="col-md-8">Ensuring the creation of a decentralized energy supply system</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of territorial communities covered by microgrid distribution systems based on "smart grids" in the total number of territorial communities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of territorial communities covered by microgrid distribution systems based on "smart grids" in the total number of territorial communities, percent
+                            </div>
+
+                            
 
 
 
@@ -596,6 +610,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -622,35 +637,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.3</h3></div>
-                    <div class="col">Improving the quality of energy supply</div>
+                    <div class="col-md-8">Improving the quality of energy supply</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.3.1
                             </h4>
                         </div>
-                        <div class="col">System average interruption duration index (SAIDI) in electricity supply due to the fault of companies (planned without warning interruptions and interruptions associated with technological disruptions in electricity supply) by type of area at voltage levels of 0.4–20 kilovolts, minutes: urban, rural</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                System average interruption duration index (SAIDI) in electricity supply due to the fault of companies (planned without warning interruptions and interruptions associated with technological disruptions in electricity supply) by type of area at voltage levels of 0.4–20 kilovolts, minutes: urban, rural
+                            </div>
+
+                            
 
 
 
@@ -669,6 +685,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -695,7 +712,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -704,14 +721,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.3.2
                             </h4>
                         </div>
-                        <div class="col">Indicators of technological costs in power grids: share of technological costs of electricity in power grids (from the selection volume), percent; share of technological costs of electricity in distribution power grids (from the selection volume), percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Indicators of technological costs in power grids: share of technological costs of electricity in power grids (from the selection volume), percent; share of technological costs of electricity in distribution power grids (from the selection volume), percent
+                            </div>
+
+                            
 
 
 
@@ -730,6 +751,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -756,7 +778,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -764,14 +786,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.3.3
                             </h4>
                         </div>
-                        <div class="col">Share of losses during district heating transportation, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of losses during district heating transportation, percent
+                            </div>
+
+                            
 
 
 
@@ -790,6 +816,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -816,7 +843,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -824,14 +851,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.3.4
                             </h4>
                         </div>
-                        <div class="col">Share of the length of pre-insulated pipelines in trunk and local (distribution) heating grids, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the length of pre-insulated pipelines in trunk and local (distribution) heating grids, percent
+                            </div>
+
+                            
 
 
 
@@ -850,6 +881,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -876,7 +908,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -884,14 +916,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.3.5
                             </h4>
                         </div>
-                        <div class="col">Indicators of production and technological costs in natural gas supply grids: production and technological costs during natural gas transportation, million cubic metres, production and technological costs during natural gas distribution, million cubic metres</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Indicators of production and technological costs in natural gas supply grids: production and technological costs during natural gas transportation, million cubic metres, production and technological costs during natural gas distribution, million cubic metres
+                            </div>
+
+                            
 
 
 
@@ -910,6 +946,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -936,33 +973,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.4</h3></div>
-                    <div class="col">Promoting the decarbonization of the fuel and energy complex and the development of renewable energy</div>
+                    <div class="col-md-8">Promoting the decarbonization of the fuel and energy complex and the development of renewable energy</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of greenhouse gas emissions at enterprises producing electricity and heat compared to 1990, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of greenhouse gas emissions at enterprises producing electricity and heat compared to 1990, percent
+                            </div>
+
+                            
 
 
 
@@ -981,6 +1019,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1007,7 +1046,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1016,14 +1055,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of energy produced from renewable sources in total final energy consumption by sectors, percent: electricity, heating and cooling, transport</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of energy produced from renewable sources in total final energy consumption by sectors, percent: electricity, heating and cooling, transport
+                            </div>
+
+                            
 
 
 
@@ -1042,6 +1085,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1068,7 +1112,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1076,14 +1120,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.4.3
                             </h4>
                         </div>
-                        <div class="col">Share of electricity from renewable sources that was not released to the Unified Energy System of Ukraine as a result of the execution of the transmission system operator's commands, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of electricity from renewable sources that was not released to the Unified Energy System of Ukraine as a result of the execution of the transmission system operator's commands, percent
+                            </div>
+
+                            
 
 
 
@@ -1102,6 +1150,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1128,7 +1177,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1136,14 +1185,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.4.4
                             </h4>
                         </div>
-                        <div class="col">Share of renewable electricity facilities in the installed generating capacity of the Unified Energy System of Ukraine, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of renewable electricity facilities in the installed generating capacity of the Unified Energy System of Ukraine, percent
+                            </div>
+
+                            
 
 
 
@@ -1162,6 +1215,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1188,33 +1242,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.5</h3></div>
-                    <div class="col">Promoting the rationalization of energy consumption, stimulating energy efficiency and raising the level of consumer awareness of the functioning of the fuel and energy complex</div>
+                    <div class="col-md-8">Promoting the rationalization of energy consumption, stimulating energy efficiency and raising the level of consumer awareness of the functioning of the fuel and energy complex</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.1
                             </h4>
                         </div>
-                        <div class="col">Energy intensity of the gross domestic product (primary energy expenditures per unit of the gross domestic product) at the purchasing power parity of the base year, tons of oil equivalent/thousand international dollars</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Energy intensity of the gross domestic product (primary energy expenditures per unit of the gross domestic product) at the purchasing power parity of the base year, tons of oil equivalent/thousand international dollars
+                            </div>
+
+                            
 
 
 
@@ -1233,6 +1288,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1259,7 +1315,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1267,14 +1323,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.2
                             </h4>
                         </div>
-                        <div class="col">Indicators of energy consumption by households: share of energy consumption by the household sector in total final energy consumption, percent; specific energy consumption of residential buildings, kilowatt-hours per square metre</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Indicators of energy consumption by households: share of energy consumption by the household sector in total final energy consumption, percent; specific energy consumption of residential buildings, kilowatt-hours per square metre
+                            </div>
+
+                            
 
 
 
@@ -1293,6 +1353,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1319,7 +1380,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1327,14 +1388,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.3
                             </h4>
                         </div>
-                        <div class="col">Average monthly electricity consumption per household consumer, kilowatt–hours: without electric heating, with electric heating </div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average monthly electricity consumption per household consumer, kilowatt–hours: without electric heating, with electric heating 
+                            </div>
+
+                            
 
 
 
@@ -1353,6 +1418,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1379,7 +1445,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1387,14 +1453,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.4
                             </h4>
                         </div>
-                        <div class="col">Level of equipping consumers with smart electricity meters, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of equipping consumers with smart electricity meters, percent
+                            </div>
+
+                            
 
 
 
@@ -1413,6 +1483,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1439,7 +1510,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1447,14 +1518,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.5
                             </h4>
                         </div>
-                        <div class="col">Specific natural gas consumption by household consumers for comprehensive use, including for heating, cubic meters/square meter</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Specific natural gas consumption by household consumers for comprehensive use, including for heating, cubic meters/square meter
+                            </div>
+
+                            
 
 
 
@@ -1473,6 +1548,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1499,7 +1575,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1507,14 +1583,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.6
                             </h4>
                         </div>
-                        <div class="col">Average monthly natural gas consumption per household consumers for comprehensive use, including for heating, cubic meters</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average monthly natural gas consumption per household consumers for comprehensive use, including for heating, cubic meters
+                            </div>
+
+                            
 
 
 
@@ -1533,6 +1613,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1559,7 +1640,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1567,14 +1648,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.7
                             </h4>
                         </div>
-                        <div class="col">Level of equipping consumers with commercial natural gas metering units equipped with remote data transmission capabilities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of equipping consumers with commercial natural gas metering units equipped with remote data transmission capabilities, percent
+                            </div>
+
+                            
 
 
 
@@ -1593,6 +1678,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1619,7 +1705,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1627,14 +1713,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.8
                             </h4>
                         </div>
-                        <div class="col">Specific consumption of equivalent fuel per unit of heat energy supplied (from collectors of sources) in district heating systems, kilograms of equivalent fuel per giga-calorie</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Specific consumption of equivalent fuel per unit of heat energy supplied (from collectors of sources) in district heating systems, kilograms of equivalent fuel per giga-calorie
+                            </div>
+
+                            
 
 
 
@@ -1653,6 +1743,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1679,7 +1770,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1687,14 +1778,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.9
                             </h4>
                         </div>
-                        <div class="col">Level of equipping buildings with commercial metering units by types, percent: heat energy (in residential buildings; in non-residential buildings); hot water (in residential buildings; in non-residential buildings); drinking water (in residential buildings; in non-residential buildings) </div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of equipping buildings with commercial metering units by types, percent: heat energy (in residential buildings; in non-residential buildings); hot water (in residential buildings; in non-residential buildings); drinking water (in residential buildings; in non-residential buildings) 
+                            </div>
+
+                            
 
 
 
@@ -1713,6 +1808,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1739,7 +1835,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1747,14 +1843,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.5.10
                             </h4>
                         </div>
-                        <div class="col">Energy transparency index, points</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Energy transparency index, points
+                            </div>
+
+                            
 
 
 
@@ -1773,6 +1873,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1799,33 +1900,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.6</h3></div>
-                    <div class="col">Promoting to reducing the level of energy poverty of the population</div>
+                    <div class="col-md-8">Promoting to reducing the level of energy poverty of the population</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.6.1
                             </h4>
                         </div>
-                        <div class="col">Share of persons living in households and suffering from insufficient funds for timely and full payment of housing and communal services and for the purchase of liquefied gas, solid and liquid domestic heating fuel, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons living in households and suffering from insufficient funds for timely and full payment of housing and communal services and for the purchase of liquefied gas, solid and liquid domestic heating fuel, percent
+                            </div>
+
+                            
 
 
 
@@ -1844,6 +1946,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1870,7 +1973,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1878,14 +1981,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.6.2
                             </h4>
                         </div>
-                        <div class="col">Share of persons living in households and suffering from insufficient funds to maintain a sufficiently warm temperature in their homes (for the purchase of fuel, heater, etc.) during the heating season, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons living in households and suffering from insufficient funds to maintain a sufficiently warm temperature in their homes (for the purchase of fuel, heater, etc.) during the heating season, percent
+                            </div>
+
+                            
 
 
 
@@ -1904,6 +2011,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1930,7 +2038,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1938,14 +2046,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.6.3
                             </h4>
                         </div>
-                        <div class="col">Average monthly share of the total expenditures of an average household for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), given the amount of non-cash benefits and subsidies, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average monthly share of the total expenditures of an average household for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), given the amount of non-cash benefits and subsidies, percent
+                            </div>
+
+                            
 
 
 
@@ -1964,6 +2076,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1990,7 +2103,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1998,14 +2111,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.6.4
                             </h4>
                         </div>
-                        <div class="col">Average monthly share of the total expenditures of an average household for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), which is covered by benefits and subsidies, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average monthly share of the total expenditures of an average household for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), which is covered by benefits and subsidies, percent
+                            </div>
+
+                            
 
 
 
@@ -2024,6 +2141,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2050,33 +2168,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.7</h3></div>
-                    <div class="col">Ensuring the protection of vulnerable consumers of energy resources</div>
+                    <div class="col-md-8">Ensuring the protection of vulnerable consumers of energy resources</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.7.1
                             </h4>
                         </div>
-                        <div class="col">Share of households receiving subsidies for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households receiving subsidies for housing and communal services (apartment building management service, natural gas supply and distribution services, electricity supply and distribution services, heat supply, hot water supply, centralized water supply, centralized water drainage, household waste management), percent
+                            </div>
+
+                            
 
 
 
@@ -2095,6 +2214,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2121,7 +2241,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2129,14 +2249,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 7.7.2
                             </h4>
                         </div>
-                        <div class="col">Share of households receiving subsidies for the purchase of liquefied gas, solid and liquid domestic heating fuel, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households receiving subsidies for the purchase of liquefied gas, solid and liquid domestic heating fuel, percent
+                            </div>
+
+                            
 
 
 
@@ -2155,6 +2279,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2201,16 +2326,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Expand the infrastructure and modernize networks for reliable and sustainable energy supply through the introduction of innovative technologies
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2223,7 +2344,7 @@ layout-goal
                                 7.1.1
                             </h4>
                         </div>
-                        <div class="col">Generation of power, billions of KWh</div>
+                        <div class="col-md-8">Generation of power, billions of KWh</div>
                         
 
 
@@ -2285,7 +2406,7 @@ layout-goal
                                 7.1.2
                             </h4>
                         </div>
-                        <div class="col">Electric power distribution losses, %</div>
+                        <div class="col-md-8">Electric power distribution losses, %</div>
                         
 
 
@@ -2347,7 +2468,7 @@ layout-goal
                                 7.1.3
                             </h4>
                         </div>
-                        <div class="col">Heat losses in heat networks, %</div>
+                        <div class="col-md-8">Heat losses in heat networks, %</div>
                         
 
 
@@ -2401,18 +2522,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure diversification of the supply of primary energy resources
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2425,7 +2542,7 @@ layout-goal
                                 7.2.1
                             </h4>
                         </div>
-                        <div class="col">Maximum share of imported primary energy (excluding nuclear fuel) from one country (company) in the total supply (imports), %</div>
+                        <div class="col-md-8">Maximum share of imported primary energy (excluding nuclear fuel) from one country (company) in the total supply (imports), %</div>
                         
 
 
@@ -2486,7 +2603,7 @@ layout-goal
                                 7.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of one supplier of the nuclear fuel market, %</div>
+                        <div class="col-md-8">Share of one supplier of the nuclear fuel market, %</div>
                         
 
 
@@ -2540,18 +2657,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the share of renewable energy in the national energy balance, in particular through the introduction of additional capacities at facilities that produce energy from renewable sources
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2564,7 +2677,7 @@ layout-goal
                                 7.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of energy produced from renewable sources in total final energy consumption, %</div>
+                        <div class="col-md-8">Share of energy produced from renewable sources in total final energy consumption, %</div>
                         
 
 
@@ -2622,18 +2735,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>7.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the energy efficiency of the economy
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2646,7 +2755,7 @@ layout-goal
                                 7.4.1
                             </h4>
                         </div>
-                        <div class="col">Energy intensity of GDP (primary energy consumption per unit of GDP), kg of oil equivalent per USD 1 by PPP 2011</div>
+                        <div class="col-md-8">Energy intensity of GDP (primary energy consumption per unit of GDP), kg of oil equivalent per USD 1 by PPP 2011</div>
                         
 
 
@@ -2785,12 +2894,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.1</h3></div>
-                    <div class="col">Сприяння можливості реалізації власного наукового та інноваційного потенціалу науковцями (дослідниками) та підприємцями</div>
+                    <div class="col-md-8">Сприяння можливості реалізації власного наукового та інноваційного потенціалу науковцями (дослідниками) та підприємцями</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка витрат на наукові дослідження і розробки у валовому внутрішньому продукті, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка витрат на наукові дослідження і розробки у валовому внутрішньому продукті, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка обсягу реалізованої інноваційної продукції (товарів, послуг) у загальному обсязі реалізованої продукції (товарів, послуг) підприємств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка обсягу реалізованої інноваційної продукції (товарів, послуг) у загальному обсязі реалізованої продукції (товарів, послуг) підприємств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка обсягу реалізованої інноваційної промислової продукції (товарів, послуг) у загальному обсязі реалізованої продукції (товарів, послуг) промислових підприємств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка обсягу реалізованої інноваційної промислової продукції (товарів, послуг) у загальному обсязі реалізованої продукції (товарів, послуг) промислових підприємств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.4
                             </h4>
                         </div>
-                        <div class="col">Кількість працівників, задіяних у виконанні наукових досліджень і розробок, на 1000 зайнятих (віком 15 років і старше), осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість працівників, задіяних у виконанні наукових досліджень і розробок, на 1000 зайнятих (віком 15 років і старше), осіб
+                            </div>
+
+                            
 
 
 
@@ -578,13 +595,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,7 +629,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -620,14 +638,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.5
                             </h4>
                         </div>
-                        <div class="col">Частка коштів, залучених закладами вищої освіти на наукову діяльність із інших джерел, не заборонених законодавством, у загальній кількості коштів, виділених на наукову діяльність, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка коштів, залучених закладами вищої освіти на наукову діяльність із інших джерел, не заборонених законодавством, у загальній кількості коштів, виділених на наукову діяльність, відсотків
+                            </div>
+
+                            
 
 
 
@@ -639,13 +661,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -672,7 +695,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -680,14 +703,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.6
                             </h4>
                         </div>
-                        <div class="col">Кількість укладених договорів про трансфер технологій, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість укладених договорів про трансфер технологій, одиниць
+                            </div>
+
+                            
 
 
 
@@ -699,13 +726,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -732,7 +760,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -740,14 +768,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.7
                             </h4>
                         </div>
-                        <div class="col">Обсяг коштів, отриманих у результаті виконання договорів про трансфер технологій, млн. гривень</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг коштів, отриманих у результаті виконання договорів про трансфер технологій, млн. гривень
+                            </div>
+
+                            
 
 
 
@@ -759,13 +791,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -792,7 +825,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -800,14 +833,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.8
                             </h4>
                         </div>
-                        <div class="col">Частка інноваційно активних підприємств у загальній кількості підприємств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка інноваційно активних підприємств у загальній кількості підприємств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -826,6 +863,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -852,7 +890,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -860,14 +898,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.1.9
                             </h4>
                         </div>
-                        <div class="col">Кількість дослідників, задіяних у виконанні наукових досліджень і розробок, на 1 млн. осіб наявного населення, осіб</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість дослідників, задіяних у виконанні наукових досліджень і розробок, на 1 млн. осіб наявного населення, осіб
+                            </div>
+
+                            
 
 
 
@@ -879,13 +921,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -912,33 +955,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.2</h3></div>
-                    <div class="col">Сприяння інклюзивній і стійкій індустріалізації та збільшенню частки працівників, зайнятих у промисловості</div>
+                    <div class="col-md-8">Сприяння інклюзивній і стійкій індустріалізації та збільшенню частки працівників, зайнятих у промисловості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка обсягу реалізованої продукції (товарів, послуг) підприємств, які належать до виробництва з використанням технологій високого, середньовисокого, середньонизького та низького рівня, у загальному обсязі реалізованої продукції (товарів, послуг) підприємств промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка обсягу реалізованої продукції (товарів, послуг) підприємств, які належать до виробництва з використанням технологій високого, середньовисокого, середньонизького та низького рівня, у загальному обсязі реалізованої продукції (товарів, послуг) підприємств промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -950,13 +994,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -983,7 +1028,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -992,14 +1037,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка зайнятих працівників на підприємствах, які належать до виробництва з використанням технологій високого, середньовисокого, середньонизького та низького рівня, у загальній кількості зайнятих працівників на підприємствах промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зайнятих працівників на підприємствах, які належать до виробництва з використанням технологій високого, середньовисокого, середньонизького та низького рівня, у загальній кількості зайнятих працівників на підприємствах промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1011,13 +1060,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1044,7 +1094,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1052,14 +1102,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній доданій вартості за витратами виробництва підприємств промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка доданої вартості за витратами виробництва підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній доданій вартості за витратами виробництва підприємств промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1071,13 +1125,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1104,7 +1159,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1112,14 +1167,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.4
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до виробництва з використанням технологій високого та середньовисокого рівня, у загальній доданій вартості за витратами виробництва підприємств промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка доданої вартості за витратами виробництва підприємств, які належать до виробництва з використанням технологій високого та середньовисокого рівня, у загальній доданій вартості за витратами виробництва підприємств промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1131,13 +1190,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1164,7 +1224,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1172,14 +1232,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.5
                             </h4>
                         </div>
-                        <div class="col">Частка зайнятих працівників на підприємствах, які належать до виробництва з використанням технологій високого та середньовисокого рівня, у загальній кількості зайнятих працівників на підприємствах промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зайнятих працівників на підприємствах, які належать до виробництва з використанням технологій високого та середньовисокого рівня, у загальній кількості зайнятих працівників на підприємствах промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1191,13 +1255,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1224,7 +1289,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1232,14 +1297,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.6
                             </h4>
                         </div>
-                        <div class="col">Частка діючих підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній кількості діючих підприємств переробної промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка діючих підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній кількості діючих підприємств переробної промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1251,13 +1320,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1284,7 +1354,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1292,14 +1362,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.7
                             </h4>
                         </div>
-                        <div class="col">Частка діючих підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній кількості діючих підприємств переробної промисловості, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка діючих підприємств, які належать до виробництва з використанням технологій високого рівня, у загальній кількості діючих підприємств переробної промисловості, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1311,13 +1385,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1344,7 +1419,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1352,14 +1427,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.2.8
                             </h4>
                         </div>
-                        <div class="col">Частка зайнятих працівників у суб’єктів господарювання переробної промисловості у загальній кількості зайнятих працівників у суб’єктів господарювання, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зайнятих працівників у суб’єктів господарювання переробної промисловості у загальній кількості зайнятих працівників у суб’єктів господарювання, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1371,13 +1450,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1404,33 +1484,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.3</h3></div>
-                    <div class="col">Забезпечення розвитку якісної, стійкої, сталої та доступної транспортної системи</div>
+                    <div class="col-md-8">Забезпечення розвитку якісної, стійкої, сталої та доступної транспортної системи</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.1
                             </h4>
                         </div>
-                        <div class="col">Обсяг вантажів, перевезених усіма видами транспорту, млн. тонн за рік</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг вантажів, перевезених усіма видами транспорту, млн. тонн за рік
+                            </div>
+
+                            
 
 
 
@@ -1442,13 +1523,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1475,7 +1557,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1484,14 +1566,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.2
                             </h4>
                         </div>
-                        <div class="col">Кількість пасажирів, перевезених усіма видами транспорту, млн. осіб за рік</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість пасажирів, перевезених усіма видами транспорту, млн. осіб за рік
+                            </div>
+
+                            
 
 
 
@@ -1503,13 +1589,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1536,7 +1623,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1545,14 +1632,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.3
                             </h4>
                         </div>
-                        <div class="col">Рівень задоволеності споживачів транспортних послуг на 100 осіб, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень задоволеності споживачів транспортних послуг на 100 осіб, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1571,6 +1662,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1597,7 +1689,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1605,14 +1697,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.4
                             </h4>
                         </div>
-                        <div class="col">Частка сільського населення, яке проживає на відстані понад 3 кілометри від автомобільної дороги з твердим покриттям, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сільського населення, яке проживає на відстані понад 3 кілометри від автомобільної дороги з твердим покриттям, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1631,6 +1727,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1657,7 +1754,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1665,14 +1762,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.5
                             </h4>
                         </div>
-                        <div class="col">Частка автомобільного транспорту в загальному обсязі єдиної транспортної системи, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка автомобільного транспорту в загальному обсязі єдиної транспортної системи, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1691,6 +1792,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1717,7 +1819,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1725,14 +1827,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.6
                             </h4>
                         </div>
-                        <div class="col">Частка залізничного транспорту в загальному обсязі єдиної транспортної системи, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка залізничного транспорту в загальному обсязі єдиної транспортної системи, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1751,6 +1857,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1777,7 +1884,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1785,14 +1892,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.7
                             </h4>
                         </div>
-                        <div class="col">Частка водного транспорту в загальному обсязі єдиної транспортної системи, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка водного транспорту в загальному обсязі єдиної транспортної системи, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1811,6 +1922,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1837,7 +1949,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1845,14 +1957,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.8
                             </h4>
                         </div>
-                        <div class="col">Частка авіаційного транспорту в загальному обсязі єдиної транспортної системи, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка авіаційного транспорту в загальному обсязі єдиної транспортної системи, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1871,6 +1987,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1897,7 +2014,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1905,14 +2022,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.3.9
                             </h4>
                         </div>
-                        <div class="col">Частка трубопровідного транспорту в загальному обсязі єдиної транспортної системи, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка трубопровідного транспорту в загальному обсязі єдиної транспортної системи, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1931,6 +2052,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1957,33 +2079,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.4</h3></div>
-                    <div class="col">Забезпечення доступу користувачів до дорожньо-транспортної інфраструктури належної якості</div>
+                    <div class="col-md-8">Забезпечення доступу користувачів до дорожньо-транспортної інфраструктури належної якості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка автомобільних доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка автомобільних доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1995,13 +2118,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2028,7 +2152,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2037,14 +2161,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка населених пунктів, в яких ділянки вулиць і доріг, що суміщаються з автомобільними дорогами державного значення, мають тверде покриття, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населених пунктів, в яких ділянки вулиць і доріг, що суміщаються з автомобільними дорогами державного значення, мають тверде покриття, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2056,13 +2184,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2089,34 +2218,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.5</h3></div>
-                    <div class="col">Забезпечення підвищення рівня використання електротранспорту та розвитку відповідної інфраструктури</div>
+                    <div class="col-md-8">Забезпечення підвищення рівня використання електротранспорту та розвитку відповідної інфраструктури</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.5.1
                             </h4>
                         </div>
-                        <div class="col">Частка електрифікованих ділянок залізничних шляхів внутрішнього сполучення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка електрифікованих ділянок залізничних шляхів внутрішнього сполучення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2135,6 +2265,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2161,7 +2292,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2170,14 +2301,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.5.2
                             </h4>
                         </div>
-                        <div class="col">Показник покриття зарядними станціями для електромобілів (кількість зарядних станцій на 200 кілометрів міжнародних та національних автомобільних доріг загального користування державного значення), одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Показник покриття зарядними станціями для електромобілів (кількість зарядних станцій на 200 кілометрів міжнародних та національних автомобільних доріг загального користування державного значення), одиниць
+                            </div>
+
+                            
 
 
 
@@ -2189,13 +2324,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2222,34 +2358,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.6</h3></div>
-                    <div class="col">Забезпечення доступу населення до Інтернету, зокрема у сільській місцевості</div>
+                    <div class="col-md-8">Забезпечення доступу населення до Інтернету, зокрема у сільській місцевості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.6.1
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, які мають покриття мережами швидкісного широкосмугового доступу до Інтернету, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, які мають покриття мережами швидкісного широкосмугового доступу до Інтернету, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2261,13 +2398,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2294,7 +2432,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2303,14 +2441,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.6.2
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, які мають фіксований широкосмуговий доступ до Інтернету із швидкістю не менше 100 Мбіт/с, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, які мають фіксований широкосмуговий доступ до Інтернету із швидкістю не менше 100 Мбіт/с, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2329,6 +2471,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2355,7 +2498,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2363,14 +2506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.6.3
                             </h4>
                         </div>
-                        <div class="col">Частка домогосподарств, які мають фіксований широкосмуговий доступ до Інтернету із швидкістю не менше 1 Гбіт/с, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка домогосподарств, які мають фіксований широкосмуговий доступ до Інтернету із швидкістю не менше 1 Гбіт/с, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2382,13 +2529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2415,7 +2563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2423,14 +2571,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.6.4
                             </h4>
                         </div>
-                        <div class="col">Частка населення віком від 16 до 74 років, яке користувалося послугами Інтернету протягом останніх трьох місяців, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення віком від 16 до 74 років, яке користувалося послугами Інтернету протягом останніх трьох місяців, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2442,13 +2594,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2475,33 +2628,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.7</h3></div>
-                    <div class="col">Сприяння відновленню та відбудові інфраструктури, зруйнованої та пошкодженої внаслідок збройної агресії Російської Федерації проти України</div>
+                    <div class="col-md-8">Сприяння відновленню та відбудові інфраструктури, зруйнованої та пошкодженої внаслідок збройної агресії Російської Федерації проти України</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.7.1
                             </h4>
                         </div>
-                        <div class="col">Частка профінансованих проектів відновлення та розвитку, що внесені до Єдиної цифрової інтегрованої інформаційно-аналітичної системи управління процесом відбудови об’єктів нерухомого майна, будівництва та інфраструктури (екосистеми DREAM), у загальній кількості внесених проектів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка профінансованих проектів відновлення та розвитку, що внесені до Єдиної цифрової інтегрованої інформаційно-аналітичної системи управління процесом відбудови об’єктів нерухомого майна, будівництва та інфраструктури (екосистеми DREAM), у загальній кількості внесених проектів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2520,6 +2674,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2546,7 +2701,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2555,14 +2710,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 9.7.2
                             </h4>
                         </div>
-                        <div class="col">Частка реалізованих проектів відновлення та розвитку, що внесені до Єдиної цифрової інтегрованої інформаційно-аналітичної системи управління процесом відбудови об'єктів нерухомого майна, будівництва та інфраструктури (екосистеми DREAM), у загальній кількості внесених проектів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка реалізованих проектів відновлення та розвитку, що внесені до Єдиної цифрової інтегрованої інформаційно-аналітичної системи управління процесом відбудови об'єктів нерухомого майна, будівництва та інфраструктури (екосистеми DREAM), у загальній кількості внесених проектів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2581,6 +2740,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2627,16 +2787,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Розвивати якісну, надійну, сталу та доступну інфраструктуру, яка базується на використанні інноваційних технологій, у т. ч. екологічно чистих видів транспорту
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2649,7 +2805,7 @@ layout-goal
                                 9.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка сільського населення, яке проживає на відстані понад 3 км від дороги з твердим покриттям, %</div>
+                        <div class="col-md-8">Частка сільського населення, яке проживає на відстані понад 3 км від дороги з твердим покриттям, %</div>
                         
 
 
@@ -2662,7 +2818,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2711,7 +2867,7 @@ layout-goal
                                 9.1.2
                             </h4>
                         </div>
-                        <div class="col">Обсяг перевезених вантажів, млн. тонн</div>
+                        <div class="col-md-8">Обсяг перевезених вантажів, млн. тонн</div>
                         
 
 
@@ -2724,7 +2880,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2773,7 +2929,7 @@ layout-goal
                                 9.1.3
                             </h4>
                         </div>
-                        <div class="col">Кількість перевезених пасажирів, млн. осіб</div>
+                        <div class="col-md-8">Кількість перевезених пасажирів, млн. осіб</div>
                         
 
 
@@ -2786,7 +2942,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2835,7 +2991,7 @@ layout-goal
                                 9.1.4
                             </h4>
                         </div>
-                        <div class="col">Ступінь зносу основних засобів за ВЕД ‘Транспорт, складське господарство, поштова та кур’єрська діяльність’, %</div>
+                        <div class="col-md-8">Ступінь зносу основних засобів за ВЕД ‘Транспорт, складське господарство, поштова та кур’єрська діяльність’, %</div>
                         
 
 
@@ -2848,7 +3004,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2894,18 +3050,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити розширення використання електротранспорту та відповідної мережі інфраструктури
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2918,7 +3070,7 @@ layout-goal
                                 9.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка електротранспорту у внутрішньому сполученні, %</div>
+                        <div class="col-md-8">Частка електротранспорту у внутрішньому сполученні, %</div>
                         
 
 
@@ -2931,7 +3083,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2979,18 +3131,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність дорожньо-транспортної інфраструктури, яка базується на використанні інноваційних технологій, зокрема через розширення форм участі держави у різних інфраструктурних проектах
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3003,7 +3151,7 @@ layout-goal
                                 9.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, %</div>
+                        <div class="col-md-8">Частка доріг загального користування державного значення з твердим покриттям, що відповідають нормативним вимогам, %</div>
                         
 
 
@@ -3016,7 +3164,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3065,7 +3213,7 @@ layout-goal
                                 9.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка об’єктів громадського та цивільного призначення, благоустрою, облаштованих з урахуванням потреб осіб з інвалідністю, %</div>
+                        <div class="col-md-8">Частка об’єктів громадського та цивільного призначення, благоустрою, облаштованих з урахуванням потреб осіб з інвалідністю, %</div>
                         
 
 
@@ -3078,7 +3226,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3126,18 +3274,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Сприяти прискореному розвитку високо- та середньовисокотехнологічних секторів переробної промисловості, які формуються на основі використання ланцюгів 'освіта-наука-виробництво' та кластерному підході за напрямами — розвиток інноваційної екосистеми; розвиток інформаційно-телекомунікаційних технологій (ІКТ); застосування ІКТ в АПК, енергетиці, транспорті та промисловості; високотехнологічне машинобудування; створення нових матеріалів; розвиток фармацевтичної та біоінженерної галузей
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3150,7 +3294,7 @@ layout-goal
                                 9.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до високотехнологічного сектору переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній доданій вартості за витратами виробництва, %</div>
+                        <div class="col-md-8">Частка доданої вартості за витратами виробництва підприємств, які належать до високотехнологічного сектору переробної промисловості (зокрема, з виробництва фармацевтичних продуктів і препаратів; комп’ютерів, електронної та оптичної продукції; повітряних і космічних літальних апаратів, супутнього устаткування відповідно до КВЕД), у загальній доданій вартості за витратами виробництва, %</div>
                         
 
 
@@ -3163,7 +3307,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3212,7 +3356,7 @@ layout-goal
                                 9.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка доданої вартості за витратами виробництва підприємств, які належать до середньовисокотехнологічного сектору переробної промисловості (зокрема, виробництва хімічної продукції; електричного устаткування; машин та устаткування; автотранспортних засобів, причепів і напівпричепів; інших транспортних засобів відповідно до КВЕД) у загальній доданій вартості за витратами виробництва, %</div>
+                        <div class="col-md-8">Частка доданої вартості за витратами виробництва підприємств, які належать до середньовисокотехнологічного сектору переробної промисловості (зокрема, виробництва хімічної продукції; електричного устаткування; машин та устаткування; автотранспортних засобів, причепів і напівпричепів; інших транспортних засобів відповідно до КВЕД) у загальній доданій вартості за витратами виробництва, %</div>
                         
 
 
@@ -3225,7 +3369,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3266,18 +3410,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Створити фінансову та інституційну системи (інноваційну інфраструктуру), що забезпечуватимуть розвиток наукових досліджень, та науково-технічних (експериментальних) розробок
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3290,7 +3430,7 @@ layout-goal
                                 9.5.1
                             </h4>
                         </div>
-                        <div class="col">Частка витрат на виконання наукових досліджень і розробок у ВВП, %</div>
+                        <div class="col-md-8">Частка витрат на виконання наукових досліджень і розробок у ВВП, %</div>
                         
 
 
@@ -3352,7 +3492,7 @@ layout-goal
                                 9.5.2
                             </h4>
                         </div>
-                        <div class="col">Частка реалізованої інноваційної продукції в обсязі промислової, %</div>
+                        <div class="col-md-8">Частка реалізованої інноваційної продукції в обсязі промислової, %</div>
                         
 
 
@@ -3365,7 +3505,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3406,18 +3546,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність Інтернету, особливо у сільській місцевості
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3430,7 +3566,7 @@ layout-goal
                                 9.6.1
                             </h4>
                         </div>
-                        <div class="col">Рівень охоплення населення інтернет-послугами, абонентів на 100 жителів</div>
+                        <div class="col-md-8">Рівень охоплення населення інтернет-послугами, абонентів на 100 жителів</div>
                         
 
 
@@ -3443,7 +3579,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3487,18 +3623,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>9.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити збільшення участі молоді у наукових дослідженнях
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3511,7 +3643,7 @@ layout-goal
                                 9.7.1
                             </h4>
                         </div>
-                        <div class="col">Питома вага дослідників віком до 40 років у загальній кількості дослідників</div>
+                        <div class="col-md-8">Питома вага дослідників віком до 40 років у загальній кількості дослідників</div>
                         
 
 
@@ -3563,7 +3695,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -3632,12 +3764,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

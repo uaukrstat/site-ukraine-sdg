@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.1</h3></div>
-                    <div class="col">Зменшення частки сімей, які живуть в умовах бідності (мають ризик опинитися за межею бідності)</div>
+                    <div class="col-md-8">Зменшення частки сімей, які живуть в умовах бідності (мають ризик опинитися за межею бідності)</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за фактичний (розрахунковий) прожитковий мінімум, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за фактичний (розрахунковий) прожитковий мінімум, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за прожитковий мінімум, встановлений законом про Державний бюджет України на відповідний рік, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, середньодушові еквівалентні сукупні витрати якого є нижчими за прожитковий мінімум, встановлений законом про Державний бюджет України на відповідний рік, відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, добове споживання яких є нижчим за 6,85 долара США за паритетом купівельної спроможності, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, добове споживання яких є нижчим за 6,85 долара США за паритетом купівельної спроможності, відсотків
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,33 +563,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.2</h3></div>
-                    <div class="col">Збільшення частки охоплення бідного населення адресними програмами соціальної підтримки</div>
+                    <div class="col-md-8">Збільшення частки охоплення бідного населення адресними програмами соціальної підтримки</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка бідного населення, яке охоплене державною соціальною підтримкою, в загальній чисельності бідного населення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка бідного населення, яке охоплене державною соціальною підтримкою, в загальній чисельності бідного населення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -588,13 +602,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -621,7 +636,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -630,14 +645,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка дітей з числа пільгових категорій, які забезпечені в закладах загальної середньої освіти безоплатним гарячим харчуванням, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка дітей з числа пільгових категорій, які забезпечені в закладах загальної середньої освіти безоплатним гарячим харчуванням, відсотків
+                            </div>
+
+                            
 
 
 
@@ -656,6 +675,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -682,33 +702,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.3</h3></div>
-                    <div class="col">Підвищення рівня життєстійкості соціально вразливих верств населення</div>
+                    <div class="col-md-8">Підвищення рівня життєстійкості соціально вразливих верств населення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.3.1
                             </h4>
                         </div>
-                        <div class="col">Рівень глибокої матеріальної та соціальної депривації, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Рівень глибокої матеріальної та соціальної депривації, відсотків
+                            </div>
+
+                            
 
 
 
@@ -727,6 +748,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -753,7 +775,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -762,14 +784,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, які користуються базовими соціальними послугами, у загальній кількості осіб, які потребують надання соціальних послуг, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб, які користуються базовими соціальними послугами, у загальній кількості осіб, які потребують надання соціальних послуг, відсотків
+                            </div>
+
+                            
 
 
 
@@ -788,6 +814,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -814,7 +841,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -823,14 +850,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.3.3
                             </h4>
                         </div>
-                        <div class="col">Частка витрат на харчування в сукупних витратах домогосподарств, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка витрат на харчування в сукупних витратах домогосподарств, відсотків
+                            </div>
+
+                            
 
 
 
@@ -842,13 +873,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -875,7 +907,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -883,14 +915,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 1.3.4
                             </h4>
                         </div>
-                        <div class="col">Частка осіб з інвалідністю, охоплених програмами підтримки, у загальній кількості осіб з інвалідністю за даними інформаційних систем Мінсоцполітики, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка осіб з інвалідністю, охоплених програмами підтримки, у загальній кількості осіб з інвалідністю за даними інформаційних систем Мінсоцполітики, відсотків
+                            </div>
+
+                            
 
 
 
@@ -902,13 +938,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -955,16 +992,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Скоротити в 4 рази рівень бідності, зокрема шляхом ліквідації її крайніх форм
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -977,7 +1010,7 @@ layout-goal
                                 1.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, чиї середньодушові еквівалентні сукупні витрати є нижчими за фактичний (розрахунковий) прожитковий мінімум, %</div>
+                        <div class="col-md-8">Частка населення, чиї середньодушові еквівалентні сукупні витрати є нижчими за фактичний (розрахунковий) прожитковий мінімум, %</div>
                         
 
 
@@ -990,7 +1023,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1039,7 +1072,7 @@ layout-goal
                                 1.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка осіб, добове споживання яких є нижчим за 5,05 долара США за ПКС, %</div>
+                        <div class="col-md-8">Частка осіб, добове споживання яких є нижчим за 5,05 долара США за ПКС, %</div>
                         
 
 
@@ -1052,7 +1085,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1094,18 +1127,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Збільшити охоплення бідного населення адресними програмами соціальної підтримки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1118,7 +1147,7 @@ layout-goal
                                 1.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка бідних, які охоплені державною соціальною підтримкою, в загальній чисельності бідного населення, %</div>
+                        <div class="col-md-8">Частка бідних, які охоплені державною соціальною підтримкою, в загальній чисельності бідного населення, %</div>
                         
 
 
@@ -1131,7 +1160,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1173,18 +1202,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>1.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищити життєстійкість соціально вразливих верств населення
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1197,7 +1222,7 @@ layout-goal
                                 1.3.1
                             </h4>
                         </div>
-                        <div class="col">Співвідношення рівнів бідності домогосподарств із дітьми та домогосподарств без дітей, рази</div>
+                        <div class="col-md-8">Співвідношення рівнів бідності домогосподарств із дітьми та домогосподарств без дітей, рази</div>
                         
 
 
@@ -1210,7 +1235,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1259,7 +1284,7 @@ layout-goal
                                 1.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка витрат на харчування в сукупних витратах домогосподарств, %</div>
+                        <div class="col-md-8">Частка витрат на харчування в сукупних витратах домогосподарств, %</div>
                         
 
 
@@ -1272,7 +1297,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1312,7 +1337,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -1381,12 +1406,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

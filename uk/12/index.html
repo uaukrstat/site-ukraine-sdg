@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.1</h3></div>
-                    <div class="col">Сприяння сталому управлінню відходами</div>
+                    <div class="col-md-8">Сприяння сталому управлінню відходами</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.1.1
                             </h4>
                         </div>
-                        <div class="col">Обсяг утворених відходів на одну особу, кілограмів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяг утворених відходів на одну особу, кілограмів
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка відновлених відходів в обсязі утворених відходів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка відновлених відходів в обсязі утворених відходів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка роздільно зібраних відходів, що передані на біологічний розклад, у загальній кількості роздільно зібраних відходів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка роздільно зібраних відходів, що передані на біологічний розклад, у загальній кількості роздільно зібраних відходів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -516,13 +528,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,33 +562,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.2</h3></div>
-                    <div class="col">Зменшення втрат продовольства у виробничо-збутових ланцюжках</div>
+                    <div class="col-md-8">Зменшення втрат продовольства у виробничо-збутових ланцюжках</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.2.1
                             </h4>
                         </div>
-                        <div class="col">Індекс втрат продовольства, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Індекс втрат продовольства, відсотків
+                            </div>
+
+                            
 
 
 
@@ -587,13 +601,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -620,35 +635,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.3</h3></div>
-                    <div class="col">Сприяння сталому управлінню та ефективному використанню природних ресурсів</div>
+                    <div class="col-md-8">Сприяння сталому управлінню та ефективному використанню природних ресурсів</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.3.1
                             </h4>
                         </div>
-                        <div class="col">Ресурсоємність валового внутрішнього продукту (співвідношення спожитих фізичних обсягів природних ресурсів, утворених відходів і викидів забруднюючих речовин до обсягу валового внутрішнього продукту) порівняно з 2015 роком, відсотків: енергоємність валового внутрішнього продукту; матеріалоємність валового внутрішнього продукту; вуглецевоємність валового внутрішнього продукту; водоємність валового внутрішнього продукту; відходоємність валового внутрішнього продукту</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Ресурсоємність валового внутрішнього продукту (співвідношення спожитих фізичних обсягів природних ресурсів, утворених відходів і викидів забруднюючих речовин до обсягу валового внутрішнього продукту) порівняно з 2015 роком, відсотків: енергоємність валового внутрішнього продукту; матеріалоємність валового внутрішнього продукту; вуглецевоємність валового внутрішнього продукту; водоємність валового внутрішнього продукту; відходоємність валового внутрішнього продукту
+                            </div>
+
+                            
 
 
 
@@ -660,13 +676,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -693,34 +710,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.4</h3></div>
-                    <div class="col">Сприяння безпечному та сталому використанню хімічних речовин</div>
+                    <div class="col-md-8">Сприяння безпечному та сталому використанню хімічних речовин</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка підприємств, на яких запроваджено системи управління хімічними речовинами згідно з міжнародними стандартами, у загальній кількості підприємств, що використовують небезпечні хімічні речовини, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка підприємств, на яких запроваджено системи управління хімічними речовинами згідно з міжнародними стандартами, у загальній кількості підприємств, що використовують небезпечні хімічні речовини, відсотків
+                            </div>
+
+                            
 
 
 
@@ -732,13 +750,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -765,34 +784,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.5</h3></div>
-                    <div class="col">Сприяння підвищенню рівня обізнаності населення про відповідальне споживання та виробництво</div>
+                    <div class="col-md-8">Сприяння підвищенню рівня обізнаності населення про відповідальне споживання та виробництво</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.5.1
                             </h4>
                         </div>
-                        <div class="col">Кількість освітніх програм для закладів загальної середньої освіти, в які інтегровані питання відповідального споживання та виробництва, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість освітніх програм для закладів загальної середньої освіти, в які інтегровані питання відповідального споживання та виробництва, одиниць
+                            </div>
+
+                            
 
 
 
@@ -804,13 +824,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -837,7 +858,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -845,14 +866,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 12.5.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке поінформоване про важливість відповідального споживання, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке поінформоване про важливість відповідального споживання, відсотків
+                            </div>
+
+                            
 
 
 
@@ -871,6 +896,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -917,16 +943,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Знизити ресурсоємність економіки
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -939,7 +961,7 @@ layout-goal
                                 12.1.1
                             </h4>
                         </div>
-                        <div class="col">Ресурсоємність ВВП (співвідношення спожитих фізичних обсягів природних ресурсів, утворених відходів та викидів забруднюючих речовин до обсягу ВВП), % до рівня 2015 року</div>
+                        <div class="col-md-8">Ресурсоємність ВВП (співвідношення спожитих фізичних обсягів природних ресурсів, утворених відходів та викидів забруднюючих речовин до обсягу ВВП), % до рівня 2015 року</div>
                         
 
 
@@ -952,7 +974,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -995,18 +1017,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Зменшити втрати продовольства у виробничо-збутових ланцюжках
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1019,7 +1037,7 @@ layout-goal
                                 12.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка післязбиральних втрат у загальному виробництві зернових культур, %</div>
+                        <div class="col-md-8">Частка післязбиральних втрат у загальному виробництві зернових культур, %</div>
                         
 
 
@@ -1032,7 +1050,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1080,7 +1098,7 @@ layout-goal
                                 12.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка післязбиральних втрат у загальному виробництві овочів та баштанних культур, %</div>
+                        <div class="col-md-8">Частка післязбиральних втрат у загальному виробництві овочів та баштанних культур, %</div>
                         
 
 
@@ -1093,7 +1111,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1134,18 +1152,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити стале використання хімічних речовин на основі інноваційних технологій та виробництв
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1158,7 +1172,7 @@ layout-goal
                                 12.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка підприємств, у яких запроваджено системи управління хімічними речовинами згідно з міжнародними стандартами, у загальній сукупності підприємств, що використовують небезпечні хімічні речовини, %</div>
+                        <div class="col-md-8">Частка підприємств, у яких запроваджено системи управління хімічними речовинами згідно з міжнародними стандартами, у загальній сукупності підприємств, що використовують небезпечні хімічні речовини, %</div>
                         
 
 
@@ -1171,7 +1185,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1212,18 +1226,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>12.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Зменшити обсяг утворення відходів і збільшити обсяг їх переробки та повторного використання на основі інноваційних технологій та виробництв
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1236,7 +1246,7 @@ layout-goal
                                 12.4.1
                             </h4>
                         </div>
-                        <div class="col">Обсяг утворених відходів усіх видів економічної діяльності на одиницю ВВП, кг на 1000 дол. США за ПКС 2011 року</div>
+                        <div class="col-md-8">Обсяг утворених відходів усіх видів економічної діяльності на одиницю ВВП, кг на 1000 дол. США за ПКС 2011 року</div>
                         
 
 
@@ -1249,7 +1259,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1289,7 +1299,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -1358,12 +1368,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

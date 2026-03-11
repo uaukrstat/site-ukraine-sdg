@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.1</h3></div>
-                    <div class="col">Ensuring access of citizens to quality medical services</div>
+                    <div class="col-md-8">Ensuring access of citizens to quality medical services</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of persons unable to obtain medical care, purchase medicines and medical products when needed during the last 12 months, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons unable to obtain medical care, purchase medicines and medical products when needed during the last 12 months, percent
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of contracted providers of mental health services at the primary health care level, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of contracted providers of mental health services at the primary health care level, percent
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -497,14 +505,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of health care expenditures in total household expenditures, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of health care expenditures in total household expenditures, percent
+                            </div>
+
+                            
 
 
 
@@ -523,6 +535,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -549,7 +562,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -557,14 +570,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.1.4
                             </h4>
                         </div>
-                        <div class="col">Share of persons signed a declaration on the choice of a doctor who provides primary medical care, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons signed a declaration on the choice of a doctor who provides primary medical care, percent
+                            </div>
+
+                            
 
 
 
@@ -583,6 +600,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -609,7 +627,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -617,14 +635,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.1.5
                             </h4>
                         </div>
-                        <div class="col">Share of persons signed a declaration on the choice of a doctor providing primary medical care and underwent a preventive examination during the year, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons signed a declaration on the choice of a doctor providing primary medical care and underwent a preventive examination during the year, percent
+                            </div>
+
+                            
 
 
 
@@ -643,6 +665,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -669,33 +692,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.2</h3></div>
-                    <div class="col">Reducing maternal mortality rates</div>
+                    <div class="col-md-8">Reducing maternal mortality rates</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.2.1
                             </h4>
                         </div>
-                        <div class="col">Maternal mortality rate, per 100,000 live-births</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Maternal mortality rate, per 100,000 live-births
+                            </div>
+
+                            
 
 
 
@@ -714,6 +738,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -740,34 +765,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.3</h3></div>
-                    <div class="col">Minimizing preventable mortality among children under 5 years of age</div>
+                    <div class="col-md-8">Minimizing preventable mortality among children under 5 years of age</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.3.1
                             </h4>
                         </div>
-                        <div class="col">Mortality rate of children under 5 years of age, per 1,000 live-births</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate of children under 5 years of age, per 1,000 live-births
+                            </div>
+
+                            
 
 
 
@@ -786,6 +812,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -812,7 +839,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -821,14 +848,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.3.2
                             </h4>
                         </div>
-                        <div class="col">Neonatal mortality rate, per 1,000 live-births</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Neonatal mortality rate, per 1,000 live-births
+                            </div>
+
+                            
 
 
 
@@ -847,6 +878,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -873,34 +905,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.4</h3></div>
-                    <div class="col">Ending the HIV/AIDS and tuberculosis epidemics, including through the use of innovative practices and treatments</div>
+                    <div class="col-md-8">Ending the HIV/AIDS and tuberculosis epidemics, including through the use of innovative practices and treatments</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.4.1
                             </h4>
                         </div>
-                        <div class="col">Number of patients diagnosed with HIV/AIDS for the first time, per 100,000 population</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of patients diagnosed with HIV/AIDS for the first time, per 100,000 population
+                            </div>
+
+                            
 
 
 
@@ -919,6 +952,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -945,7 +979,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -954,14 +988,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.4.2
                             </h4>
                         </div>
-                        <div class="col">Number of persons receiving antiretroviral therapy among those diagnosed with HIV/AIDS</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of persons receiving antiretroviral therapy among those diagnosed with HIV/AIDS
+                            </div>
+
+                            
 
 
 
@@ -980,6 +1018,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1006,7 +1045,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1015,14 +1054,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.4.3
                             </h4>
                         </div>
-                        <div class="col">Number of patients diagnosed with active tuberculosis for the first time, per 100,000 population</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of patients diagnosed with active tuberculosis for the first time, per 100,000 population
+                            </div>
+
+                            
 
 
 
@@ -1041,6 +1084,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1067,35 +1111,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.5</h3></div>
-                    <div class="col">Reducing premature mortality from non-communicable diseases</div>
+                    <div class="col-md-8">Reducing premature mortality from non-communicable diseases</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.1
                             </h4>
                         </div>
-                        <div class="col">Mortality rate for men from cerebrovascular diseases aged 30–59 years, per 100,000 men of the corresponding age</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate for men from cerebrovascular diseases aged 30–59 years, per 100,000 men of the corresponding age
+                            </div>
+
+                            
 
 
 
@@ -1114,6 +1159,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1140,7 +1186,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1149,14 +1195,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.2
                             </h4>
                         </div>
-                        <div class="col">Mortality rate for women from cerebrovascular diseases aged 30–59 years, per 100,000 women of the corresponding age</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate for women from cerebrovascular diseases aged 30–59 years, per 100,000 women of the corresponding age
+                            </div>
+
+                            
 
 
 
@@ -1175,6 +1225,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1201,7 +1252,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1210,14 +1261,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.3
                             </h4>
                         </div>
-                        <div class="col">Share of diagnosed malignant neoplasms (breast, cervical, prostate, colorectal cancer, lung) at early stages in the total number of diagnosed malignant neoplasms, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of diagnosed malignant neoplasms (breast, cervical, prostate, colorectal cancer, lung) at early stages in the total number of diagnosed malignant neoplasms, percent
+                            </div>
+
+                            
 
 
 
@@ -1236,6 +1291,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1262,7 +1318,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1270,14 +1326,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.4
                             </h4>
                         </div>
-                        <div class="col">Mortality rate for women from malignant breast neoplasms aged 30–59 years, per 100,000 women of the corresponding age</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate for women from malignant breast neoplasms aged 30–59 years, per 100,000 women of the corresponding age
+                            </div>
+
+                            
 
 
 
@@ -1296,6 +1356,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1322,7 +1383,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1330,14 +1391,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.5
                             </h4>
                         </div>
-                        <div class="col">Mortality rate for women from malignant cervical neoplasms aged 30–59 years, per 100,000 women of the corresponding age</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate for women from malignant cervical neoplasms aged 30–59 years, per 100,000 women of the corresponding age
+                            </div>
+
+                            
 
 
 
@@ -1356,6 +1421,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1382,7 +1448,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1390,14 +1456,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.6
                             </h4>
                         </div>
-                        <div class="col">Mortality rate from malignant neoplasms of the trachea, bronchi and lungs aged 30–59 years, per 100,000 persons of the corresponding age</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate from malignant neoplasms of the trachea, bronchi and lungs aged 30–59 years, per 100,000 persons of the corresponding age
+                            </div>
+
+                            
 
 
 
@@ -1416,6 +1486,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1442,7 +1513,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1450,14 +1521,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.5.7
                             </h4>
                         </div>
-                        <div class="col">Mortality rate from intentional self-harm, per 100,000 persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate from intentional self-harm, per 100,000 persons
+                            </div>
+
+                            
 
 
 
@@ -1476,6 +1551,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1502,33 +1578,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.6</h3></div>
-                    <div class="col">Ensuring high-quality and accessible rehabilitation in the health care sector</div>
+                    <div class="col-md-8">Ensuring high-quality and accessible rehabilitation in the health care sector</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.6.1
                             </h4>
                         </div>
-                        <div class="col">Share of multi-profile health care institutions of a capable network that have concluded an agreement with the National Health Service of Ukraine on the provision of rehabilitation care, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of multi-profile health care institutions of a capable network that have concluded an agreement with the National Health Service of Ukraine on the provision of rehabilitation care, percent
+                            </div>
+
+                            
 
 
 
@@ -1547,6 +1624,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1573,35 +1651,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.7</h3></div>
-                    <div class="col">Reducing mortality rate from transport accidents by using innovative practices in organizing resuscitation, treatment and rehabilitation of victims of such accidents</div>
+                    <div class="col-md-8">Reducing mortality rate from transport accidents by using innovative practices in organizing resuscitation, treatment and rehabilitation of victims of such accidents</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.7.1
                             </h4>
                         </div>
-                        <div class="col">Mortality rate due to transport accidents, per 100,000 persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Mortality rate due to transport accidents, per 100,000 persons
+                            </div>
+
+                            
 
 
 
@@ -1620,6 +1699,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1646,34 +1726,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.8</h3></div>
-                    <div class="col">Ensuring universal immunization of the population</div>
+                    <div class="col-md-8">Ensuring universal immunization of the population</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.8.1
                             </h4>
                         </div>
-                        <div class="col">Level of immunization of the population according to the Calendar of preventive vaccinations by age groups during the prevention of ten infectious diseases, percent 1</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of immunization of the population according to the Calendar of preventive vaccinations by age groups during the prevention of ten infectious diseases, percent 1
+                            </div>
+
+                            
 
 
 
@@ -1692,6 +1773,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1718,35 +1800,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.9</h3></div>
-                    <div class="col">Reducing the prevalence of tobacco and/or nicotine product use among the population</div>
+                    <div class="col-md-8">Reducing the prevalence of tobacco and/or nicotine product use among the population</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.9.1
                             </h4>
                         </div>
-                        <div class="col">Share of persons using tobacco and/or nicotine products among the population aged 15 and older, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons using tobacco and/or nicotine products among the population aged 15 and older, percent
+                            </div>
+
+                            
 
 
 
@@ -1765,6 +1848,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1791,11 +1875,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
-                
-
                 
 
                 
@@ -1803,22 +1885,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.10</h3></div>
-                    <div class="col">Reducing the prevalence of alcohol consumption among the populatio</div>
+                    <div class="col-md-8">Reducing the prevalence of alcohol consumption among the populatio</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 3.10.1
                             </h4>
                         </div>
-                        <div class="col">Share of persons who drink alcoholic beverages, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons who drink alcoholic beverages, percent
+                            </div>
+
+                            
 
 
 
@@ -1837,6 +1922,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1883,16 +1969,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce maternal mortality
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1905,7 +1987,7 @@ layout-goal
                                 3.1.1
                             </h4>
                         </div>
-                        <div class="col">Number of cases of maternal mortality, per 100,000 live births</div>
+                        <div class="col-md-8">Number of cases of maternal mortality, per 100,000 live births</div>
                         
 
 
@@ -1963,18 +2045,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Minimize preventable mortality among children under 5
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1987,7 +2065,7 @@ layout-goal
                                 3.2.1
                             </h4>
                         </div>
-                        <div class="col">Mortality of children under 5, cases per 1,000 live births</div>
+                        <div class="col-md-8">Mortality of children under 5, cases per 1,000 live births</div>
                         
 
 
@@ -2041,18 +2119,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         End the epidemics of HIV/AIDS and tuberculosis, including through innovative practices and treatments
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2065,7 +2139,7 @@ layout-goal
                                 3.3.1
                             </h4>
                         </div>
-                        <div class="col">Number of patients diagnosted with HIV for the first time, per 100,000 persons</div>
+                        <div class="col-md-8">Number of patients diagnosted with HIV for the first time, per 100,000 persons</div>
                         
 
 
@@ -2127,7 +2201,7 @@ layout-goal
                                 3.3.2
                             </h4>
                         </div>
-                        <div class="col">Number of patients diagnosted with active tuberculosis for the first time, per 100,000 persons</div>
+                        <div class="col-md-8">Number of patients diagnosted with active tuberculosis for the first time, per 100,000 persons</div>
                         
 
 
@@ -2181,18 +2255,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce premature mortality from noncommunicable diseases
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2205,7 +2275,7 @@ layout-goal
                                 3.4.1
                             </h4>
                         </div>
-                        <div class="col">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 men of corresponding age</div>
+                        <div class="col-md-8">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 men of corresponding age</div>
                         
 
 
@@ -2267,7 +2337,7 @@ layout-goal
                                 3.4.2
                             </h4>
                         </div>
-                        <div class="col">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 women of corresponding age</div>
+                        <div class="col-md-8">Number of deaths from cerebrovascular disease at the age of 30-59, per 100,000 women of corresponding age</div>
                         
 
 
@@ -2329,7 +2399,7 @@ layout-goal
                                 3.4.3
                             </h4>
                         </div>
-                        <div class="col">Number of deaths from malignant breast tumours at the age of 30-59, per 100,000 women of appropriate age</div>
+                        <div class="col-md-8">Number of deaths from malignant breast tumours at the age of 30-59, per 100,000 women of appropriate age</div>
                         
 
 
@@ -2390,7 +2460,7 @@ layout-goal
                                 3.4.4
                             </h4>
                         </div>
-                        <div class="col">Number of deaths from malignant cervical tumours at the age of 30-59, per 100,000 women of appropriate age</div>
+                        <div class="col-md-8">Number of deaths from malignant cervical tumours at the age of 30-59, per 100,000 women of appropriate age</div>
                         
 
 
@@ -2444,18 +2514,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce by a quarter premature mortality, including through the introduction of innovative approaches to diagnosing diseases
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2468,7 +2534,7 @@ layout-goal
                                 3.5.1
                             </h4>
                         </div>
-                        <div class="col">Probability of dying at the age of 20-64, men</div>
+                        <div class="col-md-8">Probability of dying at the age of 20-64, men</div>
                         
 
 
@@ -2530,7 +2596,7 @@ layout-goal
                                 3.5.2
                             </h4>
                         </div>
-                        <div class="col">Probability of dying at the age of 20-64, women</div>
+                        <div class="col-md-8">Probability of dying at the age of 20-64, women</div>
                         
 
 
@@ -2589,18 +2655,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce serious injuries and deaths from road traffic accidents, including through innovative practices of resuscitation, treatment and rehabilitation after road traffic accidents
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2613,7 +2675,7 @@ layout-goal
                                 3.6.1
                             </h4>
                         </div>
-                        <div class="col">Number of deaths from road traffic accidents, per 100,000 persons</div>
+                        <div class="col-md-8">Number of deaths from road traffic accidents, per 100,000 persons</div>
                         
 
 
@@ -2674,7 +2736,7 @@ layout-goal
                                 3.6.2
                             </h4>
                         </div>
-                        <div class="col">Number of persons injured in road accidents, per 100,000 persons</div>
+                        <div class="col-md-8">Number of persons injured in road accidents, per 100,000 persons</div>
                         
 
 
@@ -2728,18 +2790,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure universal, quality immunization with innovative vaccines
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2752,7 +2810,7 @@ layout-goal
                                 3.7.1
                             </h4>
                         </div>
-                        <div class="col">Immunization rate of population according to the Preventive Vaccination Calendar by designated six age groups for prevention of ten infectious diseases, %</div>
+                        <div class="col-md-8">Immunization rate of population according to the Preventive Vaccination Calendar by designated six age groups for prevention of ten infectious diseases, %</div>
                         
 
 
@@ -2806,18 +2864,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.8</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the prevalence of smoking among the population through innovative media to inform about negative effects of smoking
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2830,7 +2884,7 @@ layout-goal
                                 3.8.1
                             </h4>
                         </div>
-                        <div class="col">Share of women who smoke at the age of 16-29, %</div>
+                        <div class="col-md-8">Share of women who smoke at the age of 16-29, %</div>
                         
 
 
@@ -2891,7 +2945,7 @@ layout-goal
                                 3.8.2
                             </h4>
                         </div>
-                        <div class="col">Share of men who smoke at the age of 16-29, %</div>
+                        <div class="col-md-8">Share of men who smoke at the age of 16-29, %</div>
                         
 
 
@@ -2945,18 +2999,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>3.9</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reform health care financing
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2969,7 +3019,7 @@ layout-goal
                                 3.9.1
                             </h4>
                         </div>
-                        <div class="col">Share of expenditures of the population in general spending on health, %</div>
+                        <div class="col-md-8">Share of expenditures of the population in general spending on health, %</div>
                         
 
 
@@ -3090,12 +3140,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

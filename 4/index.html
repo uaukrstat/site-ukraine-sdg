@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.1</h3></div>
-                    <div class="col">Ensure access to quality school education for all children and adolescents</div>
+                    <div class="col-md-8">Ensure access to quality school education for all children and adolescents</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of children aged 5 years attending pre-school educational institutions and structural divisions of legal entities under public and private law, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children aged 5 years attending pre-school educational institutions and structural divisions of legal entities under public and private law, percent
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,35 +431,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.2</h3></div>
-                    <div class="col">Ensure access to quality pre–primary development for all children</div>
+                    <div class="col-md-8">Ensure access to quality pre–primary development for all children</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of children aged 6–17 attending general secondary educational institutions, percent 1</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children aged 6–17 attending general secondary educational institutions, percent 1
+                            </div>
+
+                            
 
 
 
@@ -475,6 +479,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -501,7 +506,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -510,14 +515,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of general secondary education seekers aged 15 who achieved level 2 and above in key fields (reading, mathematics, natural sciences) according to the PISA scale, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of general secondary education seekers aged 15 who achieved level 2 and above in key fields (reading, mathematics, natural sciences) according to the PISA scale, percent
+                            </div>
+
+                            
 
 
 
@@ -536,6 +545,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -562,7 +572,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -570,14 +580,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.2.3
                             </h4>
                         </div>
-                        <div class="col">Number of seekers for general secondary, professional (vocational and technical) education from vulnerable categories of the population who are provided with computer equipment, thousand persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of seekers for general secondary, professional (vocational and technical) education from vulnerable categories of the population who are provided with computer equipment, thousand persons
+                            </div>
+
+                            
 
 
 
@@ -596,6 +610,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -622,33 +637,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.3</h3></div>
-                    <div class="col">Ensure access to vocational education</div>
+                    <div class="col-md-8">Ensure access to vocational education</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of primary school graduates who have achieved basic and higher levels of competence (reading, mathematics, natural sciences) according to the scale of nationwide external monitoring of the quality of primary education, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of primary school graduates who have achieved basic and higher levels of competence (reading, mathematics, natural sciences) according to the scale of nationwide external monitoring of the quality of primary education, percent
+                            </div>
+
+                            
 
 
 
@@ -667,6 +683,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -693,7 +710,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -702,14 +719,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of seekers of general secondary education in grades 6 and 8 who have achieved a sufficient and high level of knowledge in the Ukrainian language and mathematics (algebra and geometry) according to the results of the nationwide monitoring study of the quality of education under martial law, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of seekers of general secondary education in grades 6 and 8 who have achieved a sufficient and high level of knowledge in the Ukrainian language and mathematics (algebra and geometry) according to the results of the nationwide monitoring study of the quality of education under martial law, percent
+                            </div>
+
+                            
 
 
 
@@ -728,6 +749,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -754,33 +776,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.4</h3></div>
-                    <div class="col">Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country</div>
+                    <div class="col-md-8">Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of seekers for professional pre-tertiary education over 24 years old, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of seekers for professional pre-tertiary education over 24 years old, percent
+                            </div>
+
+                            
 
 
 
@@ -799,6 +822,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -825,7 +849,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -834,14 +858,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of seekers for tertiary education over 24 years old, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of seekers for tertiary education over 24 years old, percent
+                            </div>
+
+                            
 
 
 
@@ -860,6 +888,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -886,7 +915,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -895,14 +924,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.3
                             </h4>
                         </div>
-                        <div class="col">Volume of expenditures of the state, individuals and legal entities on tertiary education to gross domestic product, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of expenditures of the state, individuals and legal entities on tertiary education to gross domestic product, percent
+                            </div>
+
+                            
 
 
 
@@ -921,6 +954,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -947,7 +981,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -956,14 +990,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.4
                             </h4>
                         </div>
-                        <div class="col">Number of seekers for professional (vocational and technical) education by level of education 1, thousand persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of seekers for professional (vocational and technical) education by level of education 1, thousand persons
+                            </div>
+
+                            
 
 
 
@@ -982,6 +1020,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1008,7 +1047,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1017,14 +1056,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.5
                             </h4>
                         </div>
-                        <div class="col">Level of participation of the population in formal and informal types of education and professional training of specialists, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of participation of the population in formal and informal types of education and professional training of specialists, percent
+                            </div>
+
+                            
 
 
 
@@ -1043,6 +1086,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1069,7 +1113,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1077,14 +1121,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.6
                             </h4>
                         </div>
-                        <div class="col">Satisfaction index of participants in the educational process of institutions for professional pre-tertiary and tertiary education with the quality of education (by type of participants in the educational process)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Satisfaction index of participants in the educational process of institutions for professional pre-tertiary and tertiary education with the quality of education (by type of participants in the educational process)
+                            </div>
+
+                            
 
 
 
@@ -1103,6 +1151,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1129,7 +1178,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1137,14 +1186,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.7
                             </h4>
                         </div>
-                        <div class="col">Share of women among seekers for professional pre-tertiary and tertiary education by specialties of fields of knowledge 10-20, 25-27, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of women among seekers for professional pre-tertiary and tertiary education by specialties of fields of knowledge 10-20, 25-27, percent
+                            </div>
+
+                            
 
 
 
@@ -1163,6 +1216,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1189,7 +1243,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1197,14 +1251,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.4.8
                             </h4>
                         </div>
-                        <div class="col">Share of entrants to professional (vocational and technical) educational institutions in the total number of places for entrants to professional (vocational and technical) educational institutions financed from the state and local budgets, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of entrants to professional (vocational and technical) educational institutions in the total number of places for entrants to professional (vocational and technical) educational institutions financed from the state and local budgets, percent
+                            </div>
+
+                            
 
 
 
@@ -1223,6 +1281,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1249,33 +1308,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.5</h3></div>
-                    <div class="col">Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population</div>
+                    <div class="col-md-8">Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.5.1
                             </h4>
                         </div>
-                        <div class="col">Share of persons with basic digital skills in the total population, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons with basic digital skills in the total population, percent
+                            </div>
+
+                            
 
 
 
@@ -1294,6 +1354,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1320,35 +1381,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.6</h3></div>
-                    <div class="col">Eliminate gender disparities among school teachers</div>
+                    <div class="col-md-8">Eliminate gender disparities among school teachers</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.6.1
                             </h4>
                         </div>
-                        <div class="col">Share of pre-school, general secondary and extracurricular educational institutions with access to high-speed Internet, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of pre-school, general secondary and extracurricular educational institutions with access to high-speed Internet, percent
+                            </div>
+
+                            
 
 
 
@@ -1367,6 +1429,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1393,7 +1456,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1402,14 +1465,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.6.2
                             </h4>
                         </div>
-                        <div class="col">Share of full-time general secondary educational institutions where inclusive education is organized, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of full-time general secondary educational institutions where inclusive education is organized, percent
+                            </div>
+
+                            
 
 
 
@@ -1428,6 +1495,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1454,33 +1522,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.7</h3></div>
-                    <div class="col">Create a modern learning environment in schools, including inclusive education, through innovative approaches</div>
+                    <div class="col-md-8">Create a modern learning environment in schools, including inclusive education, through innovative approaches</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.7.1
                             </h4>
                         </div>
-                        <div class="col">Share of children attending extracurricular educational institutions and structural divisions of legal entities under public and private law, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children attending extracurricular educational institutions and structural divisions of legal entities under public and private law, percent
+                            </div>
+
+                            
 
 
 
@@ -1499,6 +1568,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1525,7 +1595,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1534,14 +1604,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.7.2
                             </h4>
                         </div>
-                        <div class="col">Share of children attending specialized art educational institutions that provide primary art education and structural divisions of legal entities under public and private law, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children attending specialized art educational institutions that provide primary art education and structural divisions of legal entities under public and private law, percent
+                            </div>
+
+                            
 
 
 
@@ -1560,6 +1634,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1586,7 +1661,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1595,14 +1670,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.7.3
                             </h4>
                         </div>
-                        <div class="col">Share of children attending specialized extracurricular sports educational institutions and structural divisions of legal entities under public and private law in the total population aged 6–18, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children attending specialized extracurricular sports educational institutions and structural divisions of legal entities under public and private law in the total population aged 6–18, percent
+                            </div>
+
+                            
 
 
 
@@ -1621,6 +1700,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1647,11 +1727,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
-                
-
                 
 
                 
@@ -1659,22 +1737,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.8</h3></div>
-                    <div class="col">Promoting the affirmation of Ukrainian national and civic identity, in particular through the implementation of civic education programs</div>
+                    <div class="col-md-8">Promoting the affirmation of Ukrainian national and civic identity, in particular through the implementation of civic education programs</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 4.8.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population who claim to be proud of their Ukrainian origin or citizenship according to sociological research, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population who claim to be proud of their Ukrainian origin or citizenship according to sociological research, percent
+                            </div>
+
+                            
 
 
 
@@ -1693,6 +1774,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1739,16 +1821,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure access to quality school education for all children and adolescents
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1761,7 +1839,7 @@ layout-goal
                                 4.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of graduates of general secondary education institutions in the current year who have target level of academic achievement in the Ukrainian language</div>
+                        <div class="col-md-8">Share of graduates of general secondary education institutions in the current year who have target level of academic achievement in the Ukrainian language</div>
                         
 
 
@@ -1822,7 +1900,7 @@ layout-goal
                                 4.1.2
                             </h4>
                         </div>
-                        <div class="col">Number of full-time secondary school students per teacher, at the beginning of the school year</div>
+                        <div class="col-md-8">Number of full-time secondary school students per teacher, at the beginning of the school year</div>
                         
 
 
@@ -1876,18 +1954,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure access to quality pre-primary development for all children
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1900,7 +1974,7 @@ layout-goal
                                 4.2.1
                             </h4>
                         </div>
-                        <div class="col">Coverage of children aged 5 years by pre-school education institutions and structural units of public and private legal entities, %</div>
+                        <div class="col-md-8">Coverage of children aged 5 years by pre-school education institutions and structural units of public and private legal entities, %</div>
                         
 
 
@@ -1956,18 +2030,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure access to vocational education
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1980,7 +2050,7 @@ layout-goal
                                 4.3.1
                             </h4>
                         </div>
-                        <div class="col">Ratio of the number of entrants to vocational technical establishments to the total number of places in vocational technical establishments funded from the state and local budgets</div>
+                        <div class="col-md-8">Ratio of the number of entrants to vocational technical establishments to the total number of places in vocational technical establishments funded from the state and local budgets</div>
                         
 
 
@@ -2035,18 +2105,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Improve the quality of tertiary education and ensure its close relationship with science, and promote the establishment of towns of education and science in the country
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2059,7 +2125,7 @@ layout-goal
                                 4.4.1
                             </h4>
                         </div>
-                        <div class="col">Number of Ukrainian cities — members of the UNESCO Global Network of Learning Cities</div>
+                        <div class="col-md-8">Number of Ukrainian cities — members of the UNESCO Global Network of Learning Cities</div>
                         
 
 
@@ -2121,7 +2187,7 @@ layout-goal
                                 4.4.2
                             </h4>
                         </div>
-                        <div class="col">Population by the level of education and sex, %</div>
+                        <div class="col-md-8">Population by the level of education and sex, %</div>
                         
 
 
@@ -2183,7 +2249,7 @@ layout-goal
                                 4.4.3
                             </h4>
                         </div>
-                        <div class="col">Cost of training a specialist</div>
+                        <div class="col-md-8">Cost of training a specialist</div>
                         
 
 
@@ -2245,7 +2311,7 @@ layout-goal
                                 4.4.4
                             </h4>
                         </div>
-                        <div class="col">Expenditures of higher education institutions on scientific research activities</div>
+                        <div class="col-md-8">Expenditures of higher education institutions on scientific research activities</div>
                         
 
 
@@ -2303,18 +2369,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the prevalence of knowledge and skills required for decent jobs and entrepreneurship among the population
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2327,7 +2389,7 @@ layout-goal
                                 4.5.1
                             </h4>
                         </div>
-                        <div class="col">Level of participation of the population in formal and informal forms of education and vocational training, %</div>
+                        <div class="col-md-8">Level of participation of the population in formal and informal forms of education and vocational training, %</div>
                         
 
 
@@ -2388,7 +2450,7 @@ layout-goal
                                 4.5.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population who reported using the Internet over the past 12 months, %</div>
+                        <div class="col-md-8">Share of the population who reported using the Internet over the past 12 months, %</div>
                         
 
 
@@ -2442,18 +2504,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Eliminate gender disparities among school teachers
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2466,7 +2524,7 @@ layout-goal
                                 4.6.1
                             </h4>
                         </div>
-                        <div class="col">Share of men among pedagogical staff, %</div>
+                        <div class="col-md-8">Share of men among pedagogical staff, %</div>
                         
 
 
@@ -2521,18 +2579,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>4.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Create a modern learning environment in schools, including inclusive education, through innovative approaches
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2545,7 +2599,7 @@ layout-goal
                                 4.7.1
                             </h4>
                         </div>
-                        <div class="col">Share of rural full-time secondary schools with Internet access, %</div>
+                        <div class="col-md-8">Share of rural full-time secondary schools with Internet access, %</div>
                         
 
 
@@ -2607,7 +2661,7 @@ layout-goal
                                 4.7.2
                             </h4>
                         </div>
-                        <div class="col">Share of rural full-time secondary schools, where computers are used in the educational process, %</div>
+                        <div class="col-md-8">Share of rural full-time secondary schools, where computers are used in the educational process, %</div>
                         
 
 
@@ -2669,7 +2723,7 @@ layout-goal
                                 4.7.3
                             </h4>
                         </div>
-                        <div class="col">Share of full-time secondary schools with inclusive education, %</div>
+                        <div class="col-md-8">Share of full-time secondary schools with inclusive education, %</div>
                         
 
 
@@ -2790,12 +2844,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

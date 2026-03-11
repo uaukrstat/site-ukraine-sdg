@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.1</h3></div>
-                    <div class="col">Ensuring access to balanced nutrition for all population groups</div>
+                    <div class="col-md-8">Ensuring access to balanced nutrition for all population groups</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.1.1
                             </h4>
                         </div>
-                        <div class="col">Average daily energy value per person, kilocalories</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Average daily energy value per person, kilocalories
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population undernourished, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population undernourished, percent
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of persons with severe food insecurity, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons with severe food insecurity, percent
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.1.4
                             </h4>
                         </div>
-                        <div class="col">Share of households that were unable to secure sufficient food, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households that were unable to secure sufficient food, percent
+                            </div>
+
+                            
 
 
 
@@ -585,6 +602,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,7 +629,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -620,14 +638,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.1.5
                             </h4>
                         </div>
-                        <div class="col">Consumer price index for food products, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Consumer price index for food products, percent
+                            </div>
+
+                            
 
 
 
@@ -646,6 +668,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -672,34 +695,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.2</h3></div>
-                    <div class="col">Increasing agricultural productivity</div>
+                    <div class="col-md-8">Increasing agricultural productivity</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.2.1
                             </h4>
                         </div>
-                        <div class="col">Labour productivity in agriculture, thousand USD per employed person</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Labour productivity in agriculture, thousand USD per employed person
+                            </div>
+
+                            
 
 
 
@@ -718,6 +742,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -744,7 +769,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -753,14 +778,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.2.2
                             </h4>
                         </div>
-                        <div class="col">Agricultural production index, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Agricultural production index, percent
+                            </div>
+
+                            
 
 
 
@@ -779,6 +808,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -805,7 +835,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -814,14 +844,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.2.3
                             </h4>
                         </div>
-                        <div class="col">Share of capital investments in intangible assets in the production of food products, beverages and tobacco products in the total volume of capital investments in the relevant type of economic activity, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of capital investments in intangible assets in the production of food products, beverages and tobacco products in the total volume of capital investments in the relevant type of economic activity, percent
+                            </div>
+
+                            
 
 
 
@@ -840,6 +874,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -866,33 +901,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.3</h3></div>
-                    <div class="col">Ensuring the creation of sustainable food production systems that contribute to the preservation of ecosystems and improve the quality of lands and soils</div>
+                    <div class="col-md-8">Ensuring the creation of sustainable food production systems that contribute to the preservation of ecosystems and improve the quality of lands and soils</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of agricultural land on which agrochemical certification has been carried out in the total area of agricultural land, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of agricultural land on which agrochemical certification has been carried out in the total area of agricultural land, percent
+                            </div>
+
+                            
 
 
 
@@ -911,6 +947,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -937,7 +974,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -946,14 +983,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of agricultural land under organic production in the total area of agricultural land, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of agricultural land under organic production in the total area of agricultural land, percent
+                            </div>
+
+                            
 
 
 
@@ -972,6 +1013,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -998,35 +1040,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.4</h3></div>
-                    <div class="col">Promoting global food security</div>
+                    <div class="col-md-8">Promoting global food security</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.4.1
                             </h4>
                         </div>
-                        <div class="col">Ukraine’s share in the volume of world exports of the main food groups for the following goods, percent:  sugar, sunflower oil, corn, barley, wheat</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Ukraine’s share in the volume of world exports of the main food groups for the following goods, percent:  sugar, sunflower oil, corn, barley, wheat
+                            </div>
+
+                            
 
 
 
@@ -1045,6 +1088,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1071,7 +1115,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1080,14 +1124,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of food industry products and agricultural raw material processing in the total volume of exports (groups 1–24 according to the Ukrainian Classification of Goods for Foreign Economic Activity), percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of food industry products and agricultural raw material processing in the total volume of exports (groups 1–24 according to the Ukrainian Classification of Goods for Foreign Economic Activity), percent
+                            </div>
+
+                            
 
 
 
@@ -1106,6 +1154,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1132,10 +1181,8 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
-                
-
                 
 
                 
@@ -1143,22 +1190,25 @@ layout-goal
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.5</h3></div>
-                    <div class="col">Promoting safe agricultural conditions</div>
+                    <div class="col-md-8">Promoting safe agricultural conditions</div>
                 </div>
-                
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 2.5.1
                             </h4>
                         </div>
-                        <div class="col">Share of land returned to cultivation in the total area of land unavailable as of June 2024, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of land returned to cultivation in the total area of land unavailable as of June 2024, percent
+                            </div>
+
+                            
 
 
 
@@ -1177,6 +1227,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1223,16 +1274,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure food security and improved nutrition
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1245,7 +1292,7 @@ layout-goal
                                 2.1.1
                             </h4>
                         </div>
-                        <div class="col">Consumption of meat per capita, kg/year</div>
+                        <div class="col-md-8">Consumption of meat per capita, kg/year</div>
                         
 
 
@@ -1307,7 +1354,7 @@ layout-goal
                                 2.1.2
                             </h4>
                         </div>
-                        <div class="col">Consumption of milk and dairy products per capita, kg/year</div>
+                        <div class="col-md-8">Consumption of milk and dairy products per capita, kg/year</div>
                         
 
 
@@ -1369,7 +1416,7 @@ layout-goal
                                 2.1.3
                             </h4>
                         </div>
-                        <div class="col">Consumption of fish per capita, kg/year</div>
+                        <div class="col-md-8">Consumption of fish per capita, kg/year</div>
                         
 
 
@@ -1431,7 +1478,7 @@ layout-goal
                                 2.1.4
                             </h4>
                         </div>
-                        <div class="col">Consumption of vegetables per capita, kg/year</div>
+                        <div class="col-md-8">Consumption of vegetables per capita, kg/year</div>
                         
 
 
@@ -1493,7 +1540,7 @@ layout-goal
                                 2.1.5
                             </h4>
                         </div>
-                        <div class="col">Consumption of fruit per capita, kg/year</div>
+                        <div class="col-md-8">Consumption of fruit per capita, kg/year</div>
                         
 
 
@@ -1547,18 +1594,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         End all forms of malnutrition
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1571,7 +1614,7 @@ layout-goal
                                 2.2.1
                             </h4>
                         </div>
-                        <div class="col">Labour productivity in agriculture, USD 1,000s per employee</div>
+                        <div class="col-md-8">Labour productivity in agriculture, USD 1,000s per employee</div>
                         
 
 
@@ -1633,7 +1676,7 @@ layout-goal
                                 2.2.2
                             </h4>
                         </div>
-                        <div class="col">The index of agricultural production, %</div>
+                        <div class="col-md-8">The index of agricultural production, %</div>
                         
 
 
@@ -1688,18 +1731,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Double the agricultural productivity and incomes of small-scale food producers
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1712,7 +1751,7 @@ layout-goal
                                 2.3.1
                             </h4>
                         </div>
-                        <div class="col">The index of food production, %</div>
+                        <div class="col-md-8">The index of food production, %</div>
                         
 
 
@@ -1774,7 +1813,7 @@ layout-goal
                                 2.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of food industry and agricultural raw materials processing production in exports of Ukrainian Classifier of Goods for Foreign Economic Activity groups 1-24, %</div>
+                        <div class="col-md-8">Share of food industry and agricultural raw materials processing production in exports of Ukrainian Classifier of Goods for Foreign Economic Activity groups 1-24, %</div>
                         
 
 
@@ -1835,7 +1874,7 @@ layout-goal
                                 2.3.3
                             </h4>
                         </div>
-                        <div class="col">Share of agricultural land under organic production in the total area of agricultural land, %</div>
+                        <div class="col-md-8">Share of agricultural land under organic production in the total area of agricultural land, %</div>
                         
 
 
@@ -1889,18 +1928,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>2.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce food price volatility
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1913,7 +1948,7 @@ layout-goal
                                 2.4.1
                             </h4>
                         </div>
-                        <div class="col">The consumer price index for food, %</div>
+                        <div class="col-md-8">The consumer price index for food, %</div>
                         
 
 
@@ -2035,12 +2070,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

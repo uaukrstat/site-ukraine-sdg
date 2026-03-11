@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.1</h3></div>
-                    <div class="col">Забезпечення доступу населення до житла належної якості, передусім для тих, хто втратив житло внаслідок збройної агресії Російської Федерації проти України</div>
+                    <div class="col-md-8">Забезпечення доступу населення до житла належної якості, передусім для тих, хто втратив житло внаслідок збройної агресії Російської Федерації проти України</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.1
                             </h4>
                         </div>
-                        <div class="col">Частка сімей/громадян (сумарно усі члени сім’ї), які скористалися житловими програмами, у загальній кількості сімей/громадян, які потребують житла, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сімей/громадян (сумарно усі члени сім’ї), які скористалися житловими програмами, у загальній кількості сімей/громадян, які потребують житла, відсотків
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка сімей/громадян (сумарно усі члени сім’ї), які проживають у соціальному житлі, у загальній кількості сімей/громадян, які потребують житла, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сімей/громадян (сумарно усі члени сім’ї), які проживають у соціальному житлі, у загальній кількості сімей/громадян, які потребують житла, відсотків
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка сімей/громадян (сумарно усі члени сім’ї), які проживають у житловому фонді для тимчасового проживання, у загальній кількості сімей/громадян, які потребують житла, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка сімей/громадян (сумарно усі члени сім’ї), які проживають у житловому фонді для тимчасового проживання, у загальній кількості сімей/громадян, які потребують житла, відсотків
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -558,14 +571,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка заявників, які отримали компенсацію за житло, пошкоджене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, які подали заяву про компенсацію за пошкоджене житло з використанням електронної публічної послуги "єВідновлення", відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка заявників, які отримали компенсацію за житло, пошкоджене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, які подали заяву про компенсацію за пошкоджене житло з використанням електронної публічної послуги "єВідновлення", відсотків
+                            </div>
+
+                            
 
 
 
@@ -584,6 +601,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -610,7 +628,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -618,14 +636,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.5
                             </h4>
                         </div>
-                        <div class="col">Частка заявників, щодо яких прийнято позитивне рішення щодо надання компенсації за житло, знищене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, які подали заяву про компенсацію за знищене житло з використанням електронної публічної послуги "єВідновлення", відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка заявників, щодо яких прийнято позитивне рішення щодо надання компенсації за житло, знищене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, які подали заяву про компенсацію за знищене житло з використанням електронної публічної послуги "єВідновлення", відсотків
+                            </div>
+
+                            
 
 
 
@@ -644,6 +666,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -670,7 +693,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -678,14 +701,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.1.6
                             </h4>
                         </div>
-                        <div class="col">Частка заявників, які використали отриману компенсацію за житло, знищене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, щодо яких прийнято позитивне рішення щодо надання компенсації за знищене житло з використанням електронної публічної послуги "єВідновлення", відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка заявників, які використали отриману компенсацію за житло, знищене внаслідок збройної агресії Російської Федерації проти України, у загальній кількості заявників, щодо яких прийнято позитивне рішення щодо надання компенсації за знищене житло з використанням електронної публічної послуги "єВідновлення", відсотків
+                            </div>
+
+                            
 
 
 
@@ -704,6 +731,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -730,33 +758,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.2</h3></div>
-                    <div class="col">Забезпечення сталої, надійної, швидкої, безпечної та інклюзивної міської мобільності</div>
+                    <div class="col-md-8">Забезпечення сталої, надійної, швидкої, безпечної та інклюзивної міської мобільності</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.1
                             </h4>
                         </div>
-                        <div class="col">Показник середньої швидкості руху громадського транспорту в обласних центрах, кілометрів на годину</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Показник середньої швидкості руху громадського транспорту в обласних центрах, кілометрів на годину
+                            </div>
+
+                            
 
 
 
@@ -775,6 +804,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -801,7 +831,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -810,14 +840,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.2
                             </h4>
                         </div>
-                        <div class="col">Зменшення кількості осіб, що загинули або були травмовані внаслідок дорожньо-транспортних пригод на автотранспорті загального користування, порівняно з показниками 2024 року, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Зменшення кількості осіб, що загинули або були травмовані внаслідок дорожньо-транспортних пригод на автотранспорті загального користування, порівняно з показниками 2024 року, відсотків
+                            </div>
+
+                            
 
 
 
@@ -836,6 +870,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -862,7 +897,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -870,14 +905,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.3
                             </h4>
                         </div>
-                        <div class="col">Частка електробусів та автобусів, оснащених двигунами внутрішнього згоряння з іскровим запалюванням, що працюють виключно на стисненому природному газі метані, зрідженому природному газі метані або біогазі, та/або автобусів з водневим паливним елементом (коміркою) у загальній кількості автобусів на міських автобусних маршрутах загального користування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка електробусів та автобусів, оснащених двигунами внутрішнього згоряння з іскровим запалюванням, що працюють виключно на стисненому природному газі метані, зрідженому природному газі метані або біогазі, та/або автобусів з водневим паливним елементом (коміркою) у загальній кількості автобусів на міських автобусних маршрутах загального користування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -896,6 +935,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -922,7 +962,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -930,14 +970,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.4
                             </h4>
                         </div>
-                        <div class="col">Частка майданчиків, відведених для платного паркування у містах із населенням понад 250 тис. мешканців, у загальній кількості майданчиків для паркування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка майданчиків, відведених для платного паркування у містах із населенням понад 250 тис. мешканців, у загальній кількості майданчиків для паркування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -956,6 +1000,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -982,7 +1027,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -990,14 +1035,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.5
                             </h4>
                         </div>
-                        <div class="col">Частка облаштованих місць для паркування автомобілів доставки у містах із населенням понад 250 тис. мешканців у загальній кількості місць, організованих для паркування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка облаштованих місць для паркування автомобілів доставки у містах із населенням понад 250 тис. мешканців у загальній кількості місць, організованих для паркування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1016,6 +1065,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1042,7 +1092,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1050,14 +1100,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.6
                             </h4>
                         </div>
-                        <div class="col">Вартість послуги з паркування автомобілів у містах з населенням понад 250 тис. мешканців, гривень за годину (за місяць)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Вартість послуги з паркування автомобілів у містах з населенням понад 250 тис. мешканців, гривень за годину (за місяць)
+                            </div>
+
+                            
 
 
 
@@ -1076,6 +1130,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1102,7 +1157,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1110,14 +1165,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.7
                             </h4>
                         </div>
-                        <div class="col">Частка поїздок на міському електричному транспорті та електробусах в загальній кількості міських маршрутів загального користування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка поїздок на міському електричному транспорті та електробусах в загальній кількості міських маршрутів загального користування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1136,6 +1195,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1162,7 +1222,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1170,14 +1230,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.8
                             </h4>
                         </div>
-                        <div class="col">Частка велосипедних шляхів (доріжок, велосмуг тощо, пішохідних зон та вулиць з обмеженням швидкості до 30 кілометрів на годину) у загальній кількості автомобільних доріг у населених пунктах чи на території територіальної громади, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка велосипедних шляхів (доріжок, велосмуг тощо, пішохідних зон та вулиць з обмеженням швидкості до 30 кілометрів на годину) у загальній кількості автомобільних доріг у населених пунктах чи на території територіальної громади, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1196,6 +1260,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1222,7 +1287,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1230,14 +1295,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.9
                             </h4>
                         </div>
-                        <div class="col">Частка громадського транспорту, що доступний для осіб з інвалідністю та забезпечений пандусами, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка громадського транспорту, що доступний для осіб з інвалідністю та забезпечений пандусами, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1256,6 +1325,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1282,7 +1352,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1290,14 +1360,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.2.10
                             </h4>
                         </div>
-                        <div class="col">Кількість об’єктів туристичної інфраструктури, що є доступними для осіб з інвалідністю, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість об’єктів туристичної інфраструктури, що є доступними для осіб з інвалідністю, одиниць
+                            </div>
+
+                            
 
 
 
@@ -1309,13 +1383,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1342,33 +1417,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.3</h3></div>
-                    <div class="col">Забезпечення доступу мешканців міст до водних об’єктів та лісо-паркових зон</div>
+                    <div class="col-md-8">Забезпечення доступу мешканців міст до водних об’єктів та лісо-паркових зон</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.3.1
                             </h4>
                         </div>
-                        <div class="col">Частка забудованої території міст, яка є відкритим простором для загального користування, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка забудованої території міст, яка є відкритим простором для загального користування, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1387,6 +1463,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1413,7 +1490,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1422,14 +1499,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка міст, де створено/розроблено транспортну модель у межах пішохідної доступності, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка міст, де створено/розроблено транспортну модель у межах пішохідної доступності, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1448,6 +1529,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1474,7 +1556,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1483,14 +1565,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.3.3
                             </h4>
                         </div>
-                        <div class="col">Частка мешканців міст, які мають доступ до водних об’єктів у межах пішохідної доступності, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка мешканців міст, які мають доступ до водних об’єктів у межах пішохідної доступності, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1509,6 +1595,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1535,7 +1622,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1544,14 +1631,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.3.4
                             </h4>
                         </div>
-                        <div class="col">Частка кількості загальнодоступних місць, які відповідають критерію інклюзивності, у загальній кількості загальнодоступних місць у територіальних громадах і містах, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка кількості загальнодоступних місць, які відповідають критерію інклюзивності, у загальній кількості загальнодоступних місць у територіальних громадах і містах, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1570,6 +1661,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1596,33 +1688,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.4</h3></div>
-                    <div class="col">Підвищення стійкості населених пунктів і територіальних громад до наслідків збройної агресії Російської Федерації проти України, стихійних лих, надзвичайних ситуацій та змін клімату</div>
+                    <div class="col-md-8">Підвищення стійкості населених пунктів і територіальних громад до наслідків збройної агресії Російської Федерації проти України, стихійних лих, надзвичайних ситуацій та змін клімату</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, що обізнане з правилами поведінки в умовах надзвичайних ситуацій, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, що обізнане з правилами поведінки в умовах надзвичайних ситуацій, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1634,13 +1727,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1667,7 +1761,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1676,14 +1770,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке забезпечене укриттями в об’єктах фонду захисних споруд цивільного захисту, у загальній кількості населення відповідної території, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке забезпечене укриттями в об’єктах фонду захисних споруд цивільного захисту, у загальній кількості населення відповідної території, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1695,13 +1793,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1728,7 +1827,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1736,14 +1835,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.3
                             </h4>
                         </div>
-                        <div class="col">Частка містобудівних документів регіонального та місцевого рівня (крім детальних планів) з розробленими інженерно-технічними заходами цивільного захисту у загальній кількості таких документів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка містобудівних документів регіонального та місцевого рівня (крім детальних планів) з розробленими інженерно-технічними заходами цивільного захисту у загальній кількості таких документів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1762,6 +1865,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1788,7 +1892,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1796,14 +1900,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.4
                             </h4>
                         </div>
-                        <div class="col">Придатність до використання фонду захисних споруд цивільного захисту (придатних/ непридатних), відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Придатність до використання фонду захисних споруд цивільного захисту (придатних/ непридатних), відсотків
+                            </div>
+
+                            
 
 
 
@@ -1815,13 +1923,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1848,7 +1957,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1856,14 +1965,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.5
                             </h4>
                         </div>
-                        <div class="col">Частка територіальних громад, що мають розроблені в установленому порядку плани реагування на надзвичайні ситуації, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка територіальних громад, що мають розроблені в установленому порядку плани реагування на надзвичайні ситуації, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1875,13 +1988,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1908,7 +2022,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1916,14 +2030,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.6
                             </h4>
                         </div>
-                        <div class="col">Частка від необхідної кількості підрозділів для забезпечення добровільної та місцевої пожежної охорони у сільській місцевості з урахуванням часу прибуття до місця виклику не більше 20 хвилин, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка від необхідної кількості підрозділів для забезпечення добровільної та місцевої пожежної охорони у сільській місцевості з урахуванням часу прибуття до місця виклику не більше 20 хвилин, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1935,13 +2053,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1968,7 +2087,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1976,14 +2095,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.4.7
                             </h4>
                         </div>
-                        <div class="col">Частка автоматизованих систем централізованого оповіщення, в яких проведено технічну модернізацію, у загальній кількості автоматизованих систем централізованого оповіщення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка автоматизованих систем централізованого оповіщення, в яких проведено технічну модернізацію, у загальній кількості автоматизованих систем централізованого оповіщення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1995,13 +2118,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2028,33 +2152,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.5</h3></div>
-                    <div class="col">Зменшення негативного впливу територіальних громад на навколишнє природне середовище</div>
+                    <div class="col-md-8">Зменшення негативного впливу територіальних громад на навколишнє природне середовище</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.5.1
                             </h4>
                         </div>
-                        <div class="col">Маса побутових відходів, млн. тонн</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Маса побутових відходів, млн. тонн
+                            </div>
+
+                            
 
 
 
@@ -2066,13 +2191,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2099,7 +2225,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2108,14 +2234,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.5.2
                             </h4>
                         </div>
-                        <div class="col">Частка відновлених побутових відходів у загальному обсязі утворених побутових відходів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка відновлених побутових відходів у загальному обсязі утворених побутових відходів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2127,13 +2257,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2160,7 +2291,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2169,14 +2300,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.5.3
                             </h4>
                         </div>
-                        <div class="col">Частка стічних вод, які пройшли повне біологічне очищення, у загальній кількості стічних вод, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка стічних вод, які пройшли повне біологічне очищення, у загальній кількості стічних вод, відсотків
+                            </div>
+
+                            
 
 
 
@@ -2195,6 +2330,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2221,33 +2357,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.6</h3></div>
-                    <div class="col">Забезпечення збереження та сталого використання культурної та природної спадщини</div>
+                    <div class="col-md-8">Забезпечення збереження та сталого використання культурної та природної спадщини</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.6.1
                             </h4>
                         </div>
-                        <div class="col">Кількість об’єктів культурної та природної спадщини, які включені до Списку всесвітньої спадщини ЮНЕСКО, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість об’єктів культурної та природної спадщини, які включені до Списку всесвітньої спадщини ЮНЕСКО, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2259,13 +2396,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2292,7 +2430,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2301,14 +2439,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.6.2
                             </h4>
                         </div>
-                        <div class="col">Кількість пам’яток культурної спадщини національного значення, внесених до Державного реєстру нерухомих пам’яток України, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість пам’яток культурної спадщини національного значення, внесених до Державного реєстру нерухомих пам’яток України, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2320,13 +2462,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2353,7 +2496,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2361,14 +2504,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.6.3
                             </h4>
                         </div>
-                        <div class="col">Площа природно-заповідного фонду загальнодержавного значення та місцевого значення, відсотків території України</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Площа природно-заповідного фонду загальнодержавного значення та місцевого значення, відсотків території України
+                            </div>
+
+                            
 
 
 
@@ -2380,13 +2527,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2413,7 +2561,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2421,14 +2569,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.6.4
                             </h4>
                         </div>
-                        <div class="col">Кількість пам’яток культурної спадщини національного значення, на які укладені охоронні договори, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість пам’яток культурної спадщини національного значення, на які укладені охоронні договори, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2440,13 +2592,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2473,7 +2626,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2481,14 +2634,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.6.5
                             </h4>
                         </div>
-                        <div class="col">Кількість дестинацій, сертифікованих за міжнародними стандартами сталого розвитку, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість дестинацій, сертифікованих за міжнародними стандартами сталого розвитку, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2500,13 +2657,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2533,33 +2691,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.7</h3></div>
-                    <div class="col">Підвищення рівня енергетичної ефективності будівель</div>
+                    <div class="col-md-8">Підвищення рівня енергетичної ефективності будівель</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.7.1
                             </h4>
                         </div>
-                        <div class="col">Енергоспоживання будівель, кіловат-годин на кв. метр</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Енергоспоживання будівель, кіловат-годин на кв. метр
+                            </div>
+
+                            
 
 
 
@@ -2578,6 +2737,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2604,7 +2764,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2612,14 +2772,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 11.7.2
                             </h4>
                         </div>
-                        <div class="col">Кількість будівель із класом енергетичної ефективності В та вище, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість будівель із класом енергетичної ефективності В та вище, одиниць
+                            </div>
+
+                            
 
 
 
@@ -2631,13 +2795,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2684,16 +2849,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність житла
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2706,7 +2867,7 @@ layout-goal
                                 11.1.1
                             </h4>
                         </div>
-                        <div class="col">Коефіцієнт платоспроможності позичальника, РТІ (співвідношення щомісячних витрат позичальника та членів його родини на обслуговування боргу за пільговим іпотечним кредитом, отриманим за рахунок коштів державного або місцевого бюджету та сукупного обсягу щомісячних доходів)</div>
+                        <div class="col-md-8">Коефіцієнт платоспроможності позичальника, РТІ (співвідношення щомісячних витрат позичальника та членів його родини на обслуговування боргу за пільговим іпотечним кредитом, отриманим за рахунок коштів державного або місцевого бюджету та сукупного обсягу щомісячних доходів)</div>
                         
 
 
@@ -2719,7 +2880,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2768,7 +2929,7 @@ layout-goal
                                 11.1.2
                             </h4>
                         </div>
-                        <div class="col">Охоплення територіальних одиниць України (регіонів), програмами з забезпечення доступним житлом різних категорій громадян, %</div>
+                        <div class="col-md-8">Охоплення територіальних одиниць України (регіонів), програмами з забезпечення доступним житлом різних категорій громадян, %</div>
                         
 
 
@@ -2826,18 +2987,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити розвиток поселень і територій виключно на засадах комплексного планування та управління за участю громадськості
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2850,7 +3007,7 @@ layout-goal
                                 11.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка регіонів, що затвердили і впроваджують регіональні стратегії розвитку та плани заходів з їх реалізації, розроблені за участю громадськості, %</div>
+                        <div class="col-md-8">Частка регіонів, що затвердили і впроваджують регіональні стратегії розвитку та плани заходів з їх реалізації, розроблені за участю громадськості, %</div>
                         
 
 
@@ -2913,18 +3070,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити збереження культурної і природної спадщини із залученням приватного сектору
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2937,7 +3090,7 @@ layout-goal
                                 11.3.1
                             </h4>
                         </div>
-                        <div class="col">Кількість об’єктів культурної та природної спадщини, які включені до Списку всесвітньої спадщини ЮНЕСКО, одиниць</div>
+                        <div class="col-md-8">Кількість об’єктів культурної та природної спадщини, які включені до Списку всесвітньої спадщини ЮНЕСКО, одиниць</div>
                         
 
 
@@ -2999,7 +3152,7 @@ layout-goal
                                 11.3.2
                             </h4>
                         </div>
-                        <div class="col">Кількість пам’яток національного значення, включених до Державного реєстру нерухомих пам’яток України, одиниць</div>
+                        <div class="col-md-8">Кількість пам’яток національного значення, включених до Державного реєстру нерухомих пам’яток України, одиниць</div>
                         
 
 
@@ -3061,7 +3214,7 @@ layout-goal
                                 11.3.3
                             </h4>
                         </div>
-                        <div class="col">Площа природно-заповідного фонду загальнодержавного значення, % території країни</div>
+                        <div class="col-md-8">Площа природно-заповідного фонду загальнодержавного значення, % території країни</div>
                         
 
 
@@ -3116,18 +3269,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити своєчасне оповіщення населення про надзвичайні ситуації з використанням інноваційних технологій
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3140,7 +3289,7 @@ layout-goal
                                 11.4.1
                             </h4>
                         </div>
-                        <div class="col">Рівень впровадження (створення, модернізації, вдосконалення) місцевих автоматизованих систем централізованого оповіщення населення, %</div>
+                        <div class="col-md-8">Рівень впровадження (створення, модернізації, вдосконалення) місцевих автоматизованих систем централізованого оповіщення населення, %</div>
                         
 
 
@@ -3153,7 +3302,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3200,18 +3349,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Зменшити негативний вплив забруднюючих речовин, у т.ч. на довкілля міст, зокрема шляхом використання інноваційних технологій
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3224,7 +3369,7 @@ layout-goal
                                 11.5.1
                             </h4>
                         </div>
-                        <div class="col">Обсяг викидів у атмосферне повітря забруднюючих речовин стаціонарними джерелами викидів, % до рівня 2015 року</div>
+                        <div class="col-md-8">Обсяг викидів у атмосферне повітря забруднюючих речовин стаціонарними джерелами викидів, % до рівня 2015 року</div>
                         
 
 
@@ -3237,7 +3382,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3286,7 +3431,7 @@ layout-goal
                                 11.5.2
                             </h4>
                         </div>
-                        <div class="col">Кількість міст, у яких середньорічні концентрації основних забруднюючих речовин в атмосферному повітрі перевищують середньодобові гранично допустимі концентрації, одиниць</div>
+                        <div class="col-md-8">Кількість міст, у яких середньорічні концентрації основних забруднюючих речовин в атмосферному повітрі перевищують середньодобові гранично допустимі концентрації, одиниць</div>
                         
 
 
@@ -3299,7 +3444,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3341,18 +3486,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>11.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити розробку і реалізацію стратегій місцевого розвитку, спрямованих на економічне зростання, створення робочих місць, розвиток туризму, рекреації, місцевої культури і виробництво місцевої продукції
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3365,7 +3506,7 @@ layout-goal
                                 11.6.1
                             </h4>
                         </div>
-                        <div class="col">Кількість зайнятих працівників у суб'єктів господарювання туристичної діяльності (код за КВЕД-2010 – 55.1, 55.2, 55.3, 79.11, 79.12), осіб</div>
+                        <div class="col-md-8">Кількість зайнятих працівників у суб'єктів господарювання туристичної діяльності (код за КВЕД-2010 – 55.1, 55.2, 55.3, 79.11, 79.12), осіб</div>
                         
 
 
@@ -3378,7 +3519,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -3422,7 +3563,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -3491,12 +3632,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

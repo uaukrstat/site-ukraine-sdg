@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.1</h3></div>
-                    <div class="col">Reducing the share of families living in poverty (at risk of falling below the poverty line)</div>
+                    <div class="col-md-8">Reducing the share of families living in poverty (at risk of falling below the poverty line)</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population whose average per capita equivalent total expenditure is lower than the actual (estimated) subsistence minimum, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population whose average per capita equivalent total expenditure is lower than the actual (estimated) subsistence minimum, percent
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population whose average per capita equivalent total expenditure is lower than the subsistence minimum established by the Law on the State Budget of Ukraine for the relevant year, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population whose average per capita equivalent total expenditure is lower than the subsistence minimum established by the Law on the State Budget of Ukraine for the relevant year, percent
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of persons with daily consumption below 6.85 USD at purchasing power parity, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons with daily consumption below 6.85 USD at purchasing power parity, percent
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,33 +563,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.2</h3></div>
-                    <div class="col">Increasing the share of coverage of the poor population by targeted social support programs</div>
+                    <div class="col-md-8">Increasing the share of coverage of the poor population by targeted social support programs</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of the poor population covered by state social support in the total number of the poor population, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the poor population covered by state social support in the total number of the poor population, percent
+                            </div>
+
+                            
 
 
 
@@ -595,6 +609,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -621,7 +636,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -630,14 +645,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of children from among privileged categories provided with free hot meals in general secondary educational institutions, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of children from among privileged categories provided with free hot meals in general secondary educational institutions, percent
+                            </div>
+
+                            
 
 
 
@@ -656,6 +675,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -682,33 +702,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.3</h3></div>
-                    <div class="col">Increasing the level of resilience of socially vulnerable groups of the population</div>
+                    <div class="col-md-8">Increasing the level of resilience of socially vulnerable groups of the population</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.3.1
                             </h4>
                         </div>
-                        <div class="col">Level of deep material and social deprivation, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of deep material and social deprivation, percent
+                            </div>
+
+                            
 
 
 
@@ -727,6 +748,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -753,7 +775,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -762,14 +784,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of persons using basic social services in the total number of persons in need of social services, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons using basic social services in the total number of persons in need of social services, percent
+                            </div>
+
+                            
 
 
 
@@ -788,6 +814,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -814,7 +841,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -823,14 +850,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.3.3
                             </h4>
                         </div>
-                        <div class="col">Share of food expenditures in total household expenditures, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of food expenditures in total household expenditures, percent
+                            </div>
+
+                            
 
 
 
@@ -849,6 +880,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -875,7 +907,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -883,14 +915,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 1.3.4
                             </h4>
                         </div>
-                        <div class="col">Share of persons with disabilities covered by support programs in the total number of persons with disabilities according to data from the information systems of the Ministry of Social Policy, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons with disabilities covered by support programs in the total number of persons with disabilities according to data from the information systems of the Ministry of Social Policy, percent
+                            </div>
+
+                            
 
 
 
@@ -909,6 +945,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -955,16 +992,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce poverty by 4 times, including by eliminating extreme poverty
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -977,7 +1010,7 @@ layout-goal
                                 1.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population whose average per capita equivalent total expenditure is lower than the actual (estimated) subsistence minimum, %</div>
+                        <div class="col-md-8">Share of the population whose average per capita equivalent total expenditure is lower than the actual (estimated) subsistence minimum, %</div>
                         
 
 
@@ -1039,7 +1072,7 @@ layout-goal
                                 1.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of individuals whose daily consumption is below USD 5.05 PPP, %</div>
+                        <div class="col-md-8">Share of individuals whose daily consumption is below USD 5.05 PPP, %</div>
                         
 
 
@@ -1094,18 +1127,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the coverage of poor people with targeted social assistance programmes
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1118,7 +1147,7 @@ layout-goal
                                 1.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of the poor population covered by state social support in the total number of poor people, %</div>
+                        <div class="col-md-8">Share of the poor population covered by state social support in the total number of poor people, %</div>
                         
 
 
@@ -1173,18 +1202,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>1.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the resilience of socially vulnerable groups of the population
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1197,7 +1222,7 @@ layout-goal
                                 1.3.1
                             </h4>
                         </div>
-                        <div class="col">Ratio of poverty levels of households with children and households without children, times</div>
+                        <div class="col-md-8">Ratio of poverty levels of households with children and households without children, times</div>
                         
 
 
@@ -1259,7 +1284,7 @@ layout-goal
                                 1.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of food expenditure in total household spending, %</div>
+                        <div class="col-md-8">Share of food expenditure in total household spending, %</div>
                         
 
 
@@ -1381,12 +1406,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

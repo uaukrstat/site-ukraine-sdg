@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.1</h3></div>
-                    <div class="col">Promoting opportunities for scientists (researchers) and entrepreneurs to realize their scientific and innovative potential</div>
+                    <div class="col-md-8">Promoting opportunities for scientists (researchers) and entrepreneurs to realize their scientific and innovative potential</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of expenditures on research and development (R&D) in the gross domestic product, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of expenditures on research and development (R&D) in the gross domestic product, percent
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.2
                             </h4>
                         </div>
-                        <div class="col">Share of the volume of sold innovative products (goods, services) in the total volume of sold products (goods, services) of enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the volume of sold innovative products (goods, services) in the total volume of sold products (goods, services) of enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.3
                             </h4>
                         </div>
-                        <div class="col">Share of the volume of sold innovative industrial products (goods, services) in the total volume of sold products (goods, services) of industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the volume of sold innovative industrial products (goods, services) in the total volume of sold products (goods, services) of industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.4
                             </h4>
                         </div>
-                        <div class="col">R&D personnel per 1,000 employees (aged 15 and over), persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                R&D personnel per 1,000 employees (aged 15 and over), persons
+                            </div>
+
+                            
 
 
 
@@ -585,6 +602,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,7 +629,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -620,14 +638,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.5
                             </h4>
                         </div>
-                        <div class="col">Share of funds attracted by tertiary educational institutions for scientific activities from other sources not prohibited by law in the total amount of funds allocated for scientific activities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of funds attracted by tertiary educational institutions for scientific activities from other sources not prohibited by law in the total amount of funds allocated for scientific activities, percent
+                            </div>
+
+                            
 
 
 
@@ -646,6 +668,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -672,7 +695,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -680,14 +703,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.6
                             </h4>
                         </div>
-                        <div class="col">Number of concluded agreements on technology transfer, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of concluded agreements on technology transfer, units
+                            </div>
+
+                            
 
 
 
@@ -706,6 +733,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -732,7 +760,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -740,14 +768,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.7
                             </h4>
                         </div>
-                        <div class="col">Amount of funds received as a result of the implementation of technology transfer agreements, million UAH</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Amount of funds received as a result of the implementation of technology transfer agreements, million UAH
+                            </div>
+
+                            
 
 
 
@@ -766,6 +798,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -792,7 +825,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -800,14 +833,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.8
                             </h4>
                         </div>
-                        <div class="col">Share of innovatively active enterprises in the total number of enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of innovatively active enterprises in the total number of enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -826,6 +863,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -852,7 +890,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -860,14 +898,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.1.9
                             </h4>
                         </div>
-                        <div class="col">R&D personnel per million persons of the present population, persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                R&D personnel per million persons of the present population, persons
+                            </div>
+
+                            
 
 
 
@@ -886,6 +928,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -912,33 +955,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.2</h3></div>
-                    <div class="col">Promoting inclusive and sustainable industrialization and increasing the share of workers employed in industry</div>
+                    <div class="col-md-8">Promoting inclusive and sustainable industrialization and increasing the share of workers employed in industry</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of the volume of sold products (goods, services) of enterprises that belong to production using technologies of high, medium-high, medium-low and low level in the total volume of sold products (goods, services) of industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the volume of sold products (goods, services) of enterprises that belong to production using technologies of high, medium-high, medium-low and low level in the total volume of sold products (goods, services) of industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -957,6 +1001,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -983,7 +1028,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -992,14 +1037,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.2
                             </h4>
                         </div>
-                        <div class="col">Share of persons employed at enterprises that belong to production using technologies of high, medium-high, medium-low and low level in the total number of persons employed at industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons employed at enterprises that belong to production using technologies of high, medium-high, medium-low and low level in the total number of persons employed at industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -1018,6 +1067,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1044,7 +1094,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1052,14 +1102,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.3
                             </h4>
                         </div>
-                        <div class="col">Share of value added by production costs of enterprises belonging to production using high level technologies in the total value added by production costs of industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of value added by production costs of enterprises belonging to production using high level technologies in the total value added by production costs of industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -1078,6 +1132,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1104,7 +1159,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1112,14 +1167,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.4
                             </h4>
                         </div>
-                        <div class="col">Share of value added by production costs of enterprises belonging to production using high level and medium-high level technologies in the total value added by production costs of industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of value added by production costs of enterprises belonging to production using high level and medium-high level technologies in the total value added by production costs of industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -1138,6 +1197,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1164,7 +1224,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1172,14 +1232,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.5
                             </h4>
                         </div>
-                        <div class="col">Share of persons employed at enterprises that belong to production using technologies of high and medium-high level in the total number of persons employed at industrial enterprises, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons employed at enterprises that belong to production using technologies of high and medium-high level in the total number of persons employed at industrial enterprises, percent
+                            </div>
+
+                            
 
 
 
@@ -1198,6 +1262,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1224,7 +1289,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1232,14 +1297,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.6
                             </h4>
                         </div>
-                        <div class="col">Share of operating enterprises that belong to production using technologies of high level in the total number of operating enterprises of the processing industry, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of operating enterprises that belong to production using technologies of high level in the total number of operating enterprises of the processing industry, percent
+                            </div>
+
+                            
 
 
 
@@ -1258,6 +1327,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1284,7 +1354,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1292,14 +1362,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.7
                             </h4>
                         </div>
-                        <div class="col">Share of operating enterprises that belong to production using technologies of high level in the total number of operating enterprises of the processing industry, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of operating enterprises that belong to production using technologies of high level in the total number of operating enterprises of the processing industry, percent
+                            </div>
+
+                            
 
 
 
@@ -1318,6 +1392,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1344,7 +1419,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1352,14 +1427,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.2.8
                             </h4>
                         </div>
-                        <div class="col">Share of persons employed at business entities of the processing industry in the total number of persons employed at business entities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons employed at business entities of the processing industry in the total number of persons employed at business entities, percent
+                            </div>
+
+                            
 
 
 
@@ -1378,6 +1457,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1404,33 +1484,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.3</h3></div>
-                    <div class="col">Ensuring the development of a qualitative, persistent, sustainable and affordable transport system</div>
+                    <div class="col-md-8">Ensuring the development of a qualitative, persistent, sustainable and affordable transport system</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.1
                             </h4>
                         </div>
-                        <div class="col">Volume of goods transported by all modes of transport, million tons per year</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of goods transported by all modes of transport, million tons per year
+                            </div>
+
+                            
 
 
 
@@ -1449,6 +1530,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1475,7 +1557,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1484,14 +1566,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.2
                             </h4>
                         </div>
-                        <div class="col">Number of passengers transported by all modes of transport, million persons per year</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of passengers transported by all modes of transport, million persons per year
+                            </div>
+
+                            
 
 
 
@@ -1510,6 +1596,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1536,7 +1623,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1545,14 +1632,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.3
                             </h4>
                         </div>
-                        <div class="col">Level of satisfaction of consumers of transport services per 100 persons, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of satisfaction of consumers of transport services per 100 persons, percent
+                            </div>
+
+                            
 
 
 
@@ -1571,6 +1662,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1597,7 +1689,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1605,14 +1697,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.4
                             </h4>
                         </div>
-                        <div class="col">Share of the rural population living at a distance of more than 3 kilometers from a paved road, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the rural population living at a distance of more than 3 kilometers from a paved road, percent
+                            </div>
+
+                            
 
 
 
@@ -1631,6 +1727,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1657,7 +1754,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1665,14 +1762,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.5
                             </h4>
                         </div>
-                        <div class="col">Share of motor transport in the total volume of the unified transport system, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of motor transport in the total volume of the unified transport system, percent
+                            </div>
+
+                            
 
 
 
@@ -1691,6 +1792,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1717,7 +1819,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1725,14 +1827,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.6
                             </h4>
                         </div>
-                        <div class="col">Share of railway transport in the total volume of the unified transport system, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of railway transport in the total volume of the unified transport system, percent
+                            </div>
+
+                            
 
 
 
@@ -1751,6 +1857,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1777,7 +1884,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1785,14 +1892,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.7
                             </h4>
                         </div>
-                        <div class="col">Share of water transport in the total volume of the unified transport system, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of water transport in the total volume of the unified transport system, percent
+                            </div>
+
+                            
 
 
 
@@ -1811,6 +1922,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1837,7 +1949,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1845,14 +1957,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.8
                             </h4>
                         </div>
-                        <div class="col">Share of air transport in the total volume of the unified transport system, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of air transport in the total volume of the unified transport system, percent
+                            </div>
+
+                            
 
 
 
@@ -1871,6 +1987,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1897,7 +2014,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1905,14 +2022,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.3.9
                             </h4>
                         </div>
-                        <div class="col">Share of pipeline transport in the total volume of the unified transport system, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of pipeline transport in the total volume of the unified transport system, percent
+                            </div>
+
+                            
 
 
 
@@ -1931,6 +2052,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1957,33 +2079,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.4</h3></div>
-                    <div class="col">Ensuring user access to road transport infrastructure of adequate quality</div>
+                    <div class="col-md-8">Ensuring user access to road transport infrastructure of adequate quality</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of public roads of state importance with a hard surface that meet regulatory requirements, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of public roads of state importance with a hard surface that meet regulatory requirements, percent
+                            </div>
+
+                            
 
 
 
@@ -2002,6 +2125,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2028,7 +2152,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2037,14 +2161,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of settlements in which sections of streets and roads that are combined with highways of national importance have a hard surface, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of settlements in which sections of streets and roads that are combined with highways of national importance have a hard surface, percent
+                            </div>
+
+                            
 
 
 
@@ -2063,6 +2191,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2089,34 +2218,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.5</h3></div>
-                    <div class="col">Ensuring an increase in the level of use of electric transport and the development of appropriate infrastructure</div>
+                    <div class="col-md-8">Ensuring an increase in the level of use of electric transport and the development of appropriate infrastructure</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.5.1
                             </h4>
                         </div>
-                        <div class="col">Share of electrified sections of internal railways, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of electrified sections of internal railways, percent
+                            </div>
+
+                            
 
 
 
@@ -2135,6 +2265,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2161,7 +2292,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2170,14 +2301,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.5.2
                             </h4>
                         </div>
-                        <div class="col">Indicator of charging stations for electric vehicles (number of charging stations per 200 kilometers of international and national roads of public importance), units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Indicator of charging stations for electric vehicles (number of charging stations per 200 kilometers of international and national roads of public importance), units
+                            </div>
+
+                            
 
 
 
@@ -2196,6 +2331,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2222,34 +2358,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.6</h3></div>
-                    <div class="col">Ensuring access to the Internet for the population, particularly in rural area</div>
+                    <div class="col-md-8">Ensuring access to the Internet for the population, particularly in rural area</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.6.1
                             </h4>
                         </div>
-                        <div class="col">Share of households covered by high-speed broadband Internet access networks, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households covered by high-speed broadband Internet access networks, percent
+                            </div>
+
+                            
 
 
 
@@ -2268,6 +2405,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2294,7 +2432,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2303,14 +2441,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.6.2
                             </h4>
                         </div>
-                        <div class="col">Share of households with fixed broadband Internet access at a speed of at least 100 Mbps, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households with fixed broadband Internet access at a speed of at least 100 Mbps, percent
+                            </div>
+
+                            
 
 
 
@@ -2329,6 +2471,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2355,7 +2498,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2363,14 +2506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.6.3
                             </h4>
                         </div>
-                        <div class="col">Share of households with fixed broadband Internet access at a speed of at least 1 Gbps, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of households with fixed broadband Internet access at a speed of at least 1 Gbps, percent
+                            </div>
+
+                            
 
 
 
@@ -2389,6 +2536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2415,7 +2563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2423,14 +2571,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.6.4
                             </h4>
                         </div>
-                        <div class="col">Share of the population aged 16 to 74 who used Internet services during the last three months, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population aged 16 to 74 who used Internet services during the last three months, percent
+                            </div>
+
+                            
 
 
 
@@ -2449,6 +2601,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2475,33 +2628,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.7</h3></div>
-                    <div class="col">Promoting the restoration and reconstruction of infrastructure destroyed and damaged as a result of the armed aggression of the Russian Federation against Ukraine</div>
+                    <div class="col-md-8">Promoting the restoration and reconstruction of infrastructure destroyed and damaged as a result of the armed aggression of the Russian Federation against Ukraine</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.7.1
                             </h4>
                         </div>
-                        <div class="col">Share of financed restoration and development projects included in the Unified Digital Integrated Information and Analytical System for Management of the Process of Reconstruction of Real Estate, Construction and Infrastructure (DREAM Ecosystem) in the total number of submitted projects, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of financed restoration and development projects included in the Unified Digital Integrated Information and Analytical System for Management of the Process of Reconstruction of Real Estate, Construction and Infrastructure (DREAM Ecosystem) in the total number of submitted projects, percent
+                            </div>
+
+                            
 
 
 
@@ -2520,6 +2674,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2546,7 +2701,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -2555,14 +2710,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 9.7.2
                             </h4>
                         </div>
-                        <div class="col">Share of implemented restoration and development projects included in the Unified Digital Integrated Information and Analytical System for Management of the Process of Reconstruction of Real Estate, Construction and Infrastructure (DREAM Ecosystem) in the total number of submitted projects, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of implemented restoration and development projects included in the Unified Digital Integrated Information and Analytical System for Management of the Process of Reconstruction of Real Estate, Construction and Infrastructure (DREAM Ecosystem) in the total number of submitted projects, percent
+                            </div>
+
+                            
 
 
 
@@ -2581,6 +2740,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2627,16 +2787,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Develop quality, reliable, sustainable and accessible infrastructure based on the use of innovation technologies, including ecologically clean means of transport
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2649,7 +2805,7 @@ layout-goal
                                 9.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of the rural population living further than 3 km from paved roads, %</div>
+                        <div class="col-md-8">Share of the rural population living further than 3 km from paved roads, %</div>
                         
 
 
@@ -2711,7 +2867,7 @@ layout-goal
                                 9.1.2
                             </h4>
                         </div>
-                        <div class="col">Volume of transported goods, million tonnes</div>
+                        <div class="col-md-8">Volume of transported goods, million tonnes</div>
                         
 
 
@@ -2773,7 +2929,7 @@ layout-goal
                                 9.1.3
                             </h4>
                         </div>
-                        <div class="col">Number of passengers, million persons</div>
+                        <div class="col-md-8">Number of passengers, million persons</div>
                         
 
 
@@ -2835,7 +2991,7 @@ layout-goal
                                 9.1.4
                             </h4>
                         </div>
-                        <div class="col">Degree of depreciation of assets by TEA ‘Transport, storage, post and courier services’, %</div>
+                        <div class="col-md-8">Degree of depreciation of assets by TEA ‘Transport, storage, post and courier services’, %</div>
                         
 
 
@@ -2894,18 +3050,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure increased use of electric transport and related network infrastructure
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2918,7 +3070,7 @@ layout-goal
                                 9.2.1
                             </h4>
                         </div>
-                        <div class="col">Share of electric transport in domestic traffic, %</div>
+                        <div class="col-md-8">Share of electric transport in domestic traffic, %</div>
                         
 
 
@@ -2979,18 +3131,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure access to road infrastructure based on the use of innovative technologies, in particular by expanding state participation in various infrastructure projects
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3003,7 +3151,7 @@ layout-goal
                                 9.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of hard-surface principal public roads that meet the regulatory requirements, %</div>
+                        <div class="col-md-8">Share of hard-surface principal public roads that meet the regulatory requirements, %</div>
                         
 
 
@@ -3065,7 +3213,7 @@ layout-goal
                                 9.3.2
                             </h4>
                         </div>
-                        <div class="col">Share of facilities of public and civil use, improvement equipped to the needs of people with disabilities, %</div>
+                        <div class="col-md-8">Share of facilities of public and civil use, improvement equipped to the needs of people with disabilities, %</div>
                         
 
 
@@ -3126,18 +3274,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Promote accelerated development of high- and medium-technological sectors and manufacturing industries which are formed based on the use of ‘education–science–production’ chains and a cluster approach by areas — development of an innovation ecosystem; development of ICT; use of ICT in agriculture, energy, transport and industry; high-technology mechanical engineering; creation of new materials; development of pharmaceutical and bioengineering industry
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3150,7 +3294,7 @@ layout-goal
                                 9.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of value added against production costs of enterprises that belong to the high-tech sector of processing industry (in particular, manufacture of pharmaceutical products and preparations; computers, electronic and optical products; aircraft and spacecraft; related equipment according to CTEA) in the total value added against production cost, %</div>
+                        <div class="col-md-8">Share of value added against production costs of enterprises that belong to the high-tech sector of processing industry (in particular, manufacture of pharmaceutical products and preparations; computers, electronic and optical products; aircraft and spacecraft; related equipment according to CTEA) in the total value added against production cost, %</div>
                         
 
 
@@ -3212,7 +3356,7 @@ layout-goal
                                 9.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of value added against production costs of enterprises that belong to the medium high-tech sector of processing industry (including production of chemical products; electrical equipment; machinery and equipment; motor vehicles, trailers and semi-trailers; other vehicles according to CTEA) in total value added against production cost, %</div>
+                        <div class="col-md-8">Share of value added against production costs of enterprises that belong to the medium high-tech sector of processing industry (including production of chemical products; electrical equipment; machinery and equipment; motor vehicles, trailers and semi-trailers; other vehicles according to CTEA) in total value added against production cost, %</div>
                         
 
 
@@ -3266,18 +3410,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Create financial and institutional systems (innovative infrastructure) that will ensure the development of scientific research and scientific and technical (experimental) development
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3290,7 +3430,7 @@ layout-goal
                                 9.5.1
                             </h4>
                         </div>
-                        <div class="col">Share of expenditure on scientific research and development in GDP, %</div>
+                        <div class="col-md-8">Share of expenditure on scientific research and development in GDP, %</div>
                         
 
 
@@ -3352,7 +3492,7 @@ layout-goal
                                 9.5.2
                             </h4>
                         </div>
-                        <div class="col">Share of sales of innovative products in total sales of industrial products, %</div>
+                        <div class="col-md-8">Share of sales of innovative products in total sales of industrial products, %</div>
                         
 
 
@@ -3406,18 +3546,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure access to the Internet, especially in rural areas
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3430,7 +3566,7 @@ layout-goal
                                 9.6.1
                             </h4>
                         </div>
-                        <div class="col">Population coverage with Internet services, subscribers per 100 persons</div>
+                        <div class="col-md-8">Population coverage with Internet services, subscribers per 100 persons</div>
                         
 
 
@@ -3487,18 +3623,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>9.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Ensure increased youth participation in research
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3511,7 +3643,7 @@ layout-goal
                                 9.7.1
                             </h4>
                         </div>
-                        <div class="col">Share of researchers under 40 in the total number of researchers</div>
+                        <div class="col-md-8">Share of researchers under 40 in the total number of researchers</div>
                         
 
 
@@ -3632,12 +3764,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

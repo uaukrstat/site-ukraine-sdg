@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/uk/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Пошук</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Пошук">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Пошук</label>
+            <input class="form-control" name="q" id="indicator_search" title="Пошук">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Пошук по сайту" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 29 листопада 2024 р. № 1190-р
+                                Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р
                             </span>
                             <span class="badge-edition badge-current">
                                  Чинна
@@ -341,7 +342,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Редакція розпорядження Кабінету Міністрів України від 21 серпня 2019 р. № 686-р
+                                Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р
                             </span>
                             <span class="badge-edition badge-archive">
                                 Попередня
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.1</h3></div>
-                    <div class="col">Забезпечення доступу населення до послуг з централізованого питного водопостачання належної якості</div>
+                    <div class="col-md-8">Забезпечення доступу населення до послуг з централізованого питного водопостачання належної якості</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.1.1
                             </h4>
                         </div>
-                        <div class="col">Питна вода, яка відповідає державним санітарним нормам і правилам за типами показників, відсотків нестандартних проб: для мікробіологічних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання; для санітарно–хімічних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання; для радіаційних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Питна вода, яка відповідає державним санітарним нормам і правилам за типами показників, відсотків нестандартних проб: для мікробіологічних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання; для санітарно–хімічних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання; для радіаційних показників: міські водопроводи, сільські водопроводи, нецентралізоване водопостачання
+                            </div>
+
+                            
 
 
 
@@ -395,13 +397,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.1.2
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке має доступ до централізованого водопостачання, відсотків: міське населення, сільське населення</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке має доступ до централізованого водопостачання, відсотків: міське населення, сільське населення
+                            </div>
+
+                            
 
 
 
@@ -456,13 +463,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.1.3
                             </h4>
                         </div>
-                        <div class="col">Частка зношених водопровідних мереж у загальній протяжності водопровідних мереж, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зношених водопровідних мереж у загальній протяжності водопровідних мереж, відсотків
+                            </div>
+
+                            
 
 
 
@@ -517,13 +529,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -559,14 +572,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.1.4
                             </h4>
                         </div>
-                        <div class="col">Структура споживання питної води серед населення за способами постачання, відсотків: централізоване водопостачання, нецентралізоване водопостачання</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Структура споживання питної води серед населення за способами постачання, відсотків: централізоване водопостачання, нецентралізоване водопостачання
+                            </div>
+
+                            
 
 
 
@@ -578,13 +595,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -611,35 +629,36 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.2</h3></div>
-                    <div class="col">Забезпечення доступу населення до сучасних систем водовідведення</div>
+                    <div class="col-md-8">Забезпечення доступу населення до сучасних систем водовідведення</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка населення, яке має доступ до централізованих систем водовідведення, відсотків: міське населення, сільське населення</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка населення, яке має доступ до централізованих систем водовідведення, відсотків: міське населення, сільське населення
+                            </div>
+
+                            
 
 
 
@@ -651,13 +670,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -684,7 +704,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -693,14 +713,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка зношених мереж водовідведення у загальній протяжності мереж водовідведення, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка зношених мереж водовідведення у загальній протяжності мереж водовідведення, відсотків
+                            </div>
+
+                            
 
 
 
@@ -712,13 +736,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -745,34 +770,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.3</h3></div>
-                    <div class="col">Забезпечення покращення якості води водних об’єктів шляхом зменшення обсягів скидання неочищених стічних вод</div>
+                    <div class="col-md-8">Забезпечення покращення якості води водних об’єктів шляхом зменшення обсягів скидання неочищених стічних вод</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.3.1
                             </h4>
                         </div>
-                        <div class="col">Обсяги скидів забруднених (забруднених без очищення та недостатньо очищених) стічних вод у водні об’єкти, млн. куб. метрів</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Обсяги скидів забруднених (забруднених без очищення та недостатньо очищених) стічних вод у водні об’єкти, млн. куб. метрів
+                            </div>
+
+                            
 
 
 
@@ -784,13 +810,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -817,7 +844,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -826,14 +853,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка скидів забруднених (забруднених без очищення та недостатньо очищених) стічних вод у водні об’єкти в загальному обсязі скидів, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка скидів забруднених (забруднених без очищення та недостатньо очищених) стічних вод у водні об’єкти в загальному обсязі скидів, відсотків
+                            </div>
+
+                            
 
 
 
@@ -845,13 +876,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -878,7 +910,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -887,14 +919,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.3.3
                             </h4>
                         </div>
-                        <div class="col">Частка масивів поверхневих вод з "добрим" екологічним та хімічним станом, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка масивів поверхневих вод з "добрим" екологічним та хімічним станом, відсотків
+                            </div>
+
+                            
 
 
 
@@ -913,6 +949,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -939,33 +976,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.4</h3></div>
-                    <div class="col">Забезпечення сталого водокористування</div>
+                    <div class="col-md-8">Забезпечення сталого водокористування</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.4.1
                             </h4>
                         </div>
-                        <div class="col">Водоємність валового внутрішнього продукту, куб. метрів використаної води на 1000 гривень валового внутрішнього продукту (у фактичних цінах)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Водоємність валового внутрішнього продукту, куб. метрів використаної води на 1000 гривень валового внутрішнього продукту (у фактичних цінах)
+                            </div>
+
+                            
 
 
 
@@ -977,13 +1015,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1010,7 +1049,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1019,14 +1058,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.4.2
                             </h4>
                         </div>
-                        <div class="col">Поточна водоємність валового внутрішнього продукту порівняно з 2015 роком, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Поточна водоємність валового внутрішнього продукту порівняно з 2015 роком, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1038,13 +1081,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1071,34 +1115,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.5</h3></div>
-                    <div class="col">Забезпечення впровадження інтегрованого управління водними ресурсами</div>
+                    <div class="col-md-8">Забезпечення впровадження інтегрованого управління водними ресурсами</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.5.1
                             </h4>
                         </div>
-                        <div class="col">Кількість річкових басейнів, для яких затверджено плани управління, одиниць</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Кількість річкових басейнів, для яких затверджено плани управління, одиниць
+                            </div>
+
+                            
 
 
 
@@ -1110,13 +1155,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1143,7 +1189,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1152,14 +1198,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Індикатор</span>
                                 6.5.2
                             </h4>
                         </div>
-                        <div class="col">Частка транскордонних басейнів річок, щодо яких укладено угоди про спільне управління водними ресурсами, відсотків</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Частка транскордонних басейнів річок, щодо яких укладено угоди про спільне управління водними ресурсами, відсотків
+                            </div>
+
+                            
 
 
 
@@ -1171,13 +1221,14 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1224,16 +1275,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність якісних послуг з постачання безпечної питної води, будівництво та реконструкцію систем централізованого питного водопостачання із застосуванням новітніх технологій та обладнання
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1246,7 +1293,7 @@ layout-goal
                                 6.1.1
                             </h4>
                         </div>
-                        <div class="col">Безпечність та якість питної води за мікробіологічними показниками (по % нестандартних проб)</div>
+                        <div class="col-md-8">Безпечність та якість питної води за мікробіологічними показниками (по % нестандартних проб)</div>
                         
 
 
@@ -1259,7 +1306,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1308,7 +1355,7 @@ layout-goal
                                 6.1.2
                             </h4>
                         </div>
-                        <div class="col">Безпечність та якість питної води за радіаційними показниками (по % нестандартних проб)</div>
+                        <div class="col-md-8">Безпечність та якість питної води за радіаційними показниками (по % нестандартних проб)</div>
                         
 
 
@@ -1321,7 +1368,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1370,7 +1417,7 @@ layout-goal
                                 6.1.3
                             </h4>
                         </div>
-                        <div class="col">Безпечність та якість питної води за органолептичними, фізико-хімічними та санітарно-токсикологічними показниками (по % нестандартних проб)</div>
+                        <div class="col-md-8">Безпечність та якість питної води за органолептичними, фізико-хімічними та санітарно-токсикологічними показниками (по % нестандартних проб)</div>
                         
 
 
@@ -1383,7 +1430,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1432,7 +1479,7 @@ layout-goal
                                 6.1.4
                             </h4>
                         </div>
-                        <div class="col">Частка сільського населення, яке має доступ до централізованого водопостачання, %</div>
+                        <div class="col-md-8">Частка сільського населення, яке має доступ до централізованого водопостачання, %</div>
                         
 
 
@@ -1445,7 +1492,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1493,7 +1540,7 @@ layout-goal
                                 6.1.5
                             </h4>
                         </div>
-                        <div class="col">Частка міського населення, яке має доступ до централізованого водопостачання, %</div>
+                        <div class="col-md-8">Частка міського населення, яке має доступ до централізованого водопостачання, %</div>
                         
 
 
@@ -1506,7 +1553,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1547,18 +1594,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити доступність сучасних систем водовідведення, будівництво та реконструкцію водозабірних та каналізаційних очисних споруд із застосуванням новітніх технологій та обладнання
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1571,7 +1614,7 @@ layout-goal
                                 6.2.1
                             </h4>
                         </div>
-                        <div class="col">Частка сільського населення, яке має доступ до централізованих систем водовідведення, %</div>
+                        <div class="col-md-8">Частка сільського населення, яке має доступ до централізованих систем водовідведення, %</div>
                         
 
 
@@ -1584,7 +1627,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1633,7 +1676,7 @@ layout-goal
                                 6.2.2
                             </h4>
                         </div>
-                        <div class="col">Частка міського населення, яке має доступ до централізованих систем водовідведення, %</div>
+                        <div class="col-md-8">Частка міського населення, яке має доступ до централізованих систем водовідведення, %</div>
                         
 
 
@@ -1646,7 +1689,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1687,18 +1730,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Зменшити обсяги скидання неочищених стічних вод, насамперед з використанням інноваційних технологій водоочищення на державному та індивідуальному рівнях
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1711,7 +1750,7 @@ layout-goal
                                 6.3.1
                             </h4>
                         </div>
-                        <div class="col">Обсяги скидів забруднених (забруднених без очистки та недостатньо очищених) стічних вод у водні об’єкти, млн. куб. м</div>
+                        <div class="col-md-8">Обсяги скидів забруднених (забруднених без очистки та недостатньо очищених) стічних вод у водні об’єкти, млн. куб. м</div>
                         
 
 
@@ -1724,7 +1763,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1773,7 +1812,7 @@ layout-goal
                                 6.3.2
                             </h4>
                         </div>
-                        <div class="col">Частка скидів забруднених (забруднених без очистки та недостатньо очищених) стічних вод у водні об’єкти у загальному обсязі скидів, %</div>
+                        <div class="col-md-8">Частка скидів забруднених (забруднених без очистки та недостатньо очищених) стічних вод у водні об’єкти у загальному обсязі скидів, %</div>
                         
 
 
@@ -1786,7 +1825,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1828,18 +1867,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Підвищити ефективність водокористування
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1852,7 +1887,7 @@ layout-goal
                                 6.4.1
                             </h4>
                         </div>
-                        <div class="col">Водоємність ВВП, куб. м використаної води на 1000 грн ВВП (у фактичних цінах)</div>
+                        <div class="col-md-8">Водоємність ВВП, куб. м використаної води на 1000 грн ВВП (у фактичних цінах)</div>
                         
 
 
@@ -1865,7 +1900,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1914,7 +1949,7 @@ layout-goal
                                 6.4.2
                             </h4>
                         </div>
-                        <div class="col">Поточна водоємність ВВП, % до рівня 2015 року</div>
+                        <div class="col-md-8">Поточна водоємність ВВП, % до рівня 2015 року</div>
                         
 
 
@@ -1927,7 +1962,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -1968,18 +2003,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Завдання</span>6.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Забезпечити впровадження інтегрованого управління водними ресурсами
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -1992,7 +2023,7 @@ layout-goal
                                 6.5.1
                             </h4>
                         </div>
-                        <div class="col">Кількість річкових басейнів, для яких затверджено плани управління, одиниць</div>
+                        <div class="col-md-8">Кількість річкових басейнів, для яких затверджено плани управління, одиниць</div>
                         
 
 
@@ -2005,7 +2036,7 @@ layout-goal
 
 
 <span class="status complete">
-    <span class="status-inner">Опубліковано</span>
+    <span class="status-inner">Повідомили</span>
 </span>
 
 
@@ -2044,7 +2075,7 @@ layout-goal
         </div>
 
     </div>
-    <a href="#top">На початок</a>
+    <a href="#top">Повернутись наверх</a>
 </div>
 
 <footer>
@@ -2113,12 +2144,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>17.1</h3></div>
-                    <div class="col">Attracting additional financial resources for recovery from the consequences of the armed aggression of the Russian Federation against Ukraine and modernization of the state</div>
+                    <div class="col-md-8">Attracting additional financial resources for recovery from the consequences of the armed aggression of the Russian Federation against Ukraine and modernization of the state</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 17.1.1
                             </h4>
                         </div>
-                        <div class="col">Volume of private remittances to Ukraine, percent of the gross domestic product</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of private remittances to Ukraine, percent of the gross domestic product
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -437,14 +440,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 17.1.2
                             </h4>
                         </div>
-                        <div class="col">Volume of foreign direct investment (according to the balance of payments), percent of the gross domestic product</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of foreign direct investment (according to the balance of payments), percent of the gross domestic product
+                            </div>
+
+                            
 
 
 
@@ -463,6 +470,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -489,7 +497,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -498,14 +506,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 17.1.3
                             </h4>
                         </div>
-                        <div class="col">Volume of registered issues of domestic local loan bonds, billion UAH per year (ratio of bond issues to the gross domestic product, percent)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of registered issues of domestic local loan bonds, billion UAH per year (ratio of bond issues to the gross domestic product, percent)
+                            </div>
+
+                            
 
 
 
@@ -524,6 +536,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -550,7 +563,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -558,14 +571,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 17.1.4
                             </h4>
                         </div>
-                        <div class="col">Volume of registered issues of shares, corporate bonds, billion UAH per year (ratio of attracted private capital to the gross domestic product, percent)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Volume of registered issues of shares, corporate bonds, billion UAH per year (ratio of attracted private capital to the gross domestic product, percent)
+                            </div>
+
+                            
 
 
 
@@ -584,6 +601,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -610,33 +628,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>17.2</h3></div>
-                    <div class="col">Ensuring the development of partnerships between government and business to achieve the Sustainable Development Goals</div>
+                    <div class="col-md-8">Ensuring the development of partnerships between government and business to achieve the Sustainable Development Goals</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 17.2.1
                             </h4>
                         </div>
-                        <div class="col">Number of public-private partnership projects, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of public-private partnership projects, units
+                            </div>
+
+                            
 
 
 
@@ -655,6 +674,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -681,7 +701,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -703,16 +723,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>17.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Mobilize additional financial resources by promoting foreign and domestic investment
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -725,7 +741,7 @@ layout-goal
                                 17.1.1
                             </h4>
                         </div>
-                        <div class="col">Ratio of private remittances from abroad to GDP, %</div>
+                        <div class="col-md-8">Ratio of private remittances from abroad to GDP, %</div>
                         
 
 
@@ -787,7 +803,7 @@ layout-goal
                                 17.1.2
                             </h4>
                         </div>
-                        <div class="col">Net foreign direct investment (according to the balance of payments), million USD</div>
+                        <div class="col-md-8">Net foreign direct investment (according to the balance of payments), million USD</div>
                         
 
 
@@ -843,18 +859,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>17.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Consistently reduce the debt burden on the economy
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -867,7 +879,7 @@ layout-goal
                                 17.2.1
                             </h4>
                         </div>
-                        <div class="col">Ratio of gross external debt to exports of goods and services in annual terms, %</div>
+                        <div class="col-md-8">Ratio of gross external debt to exports of goods and services in annual terms, %</div>
                         
 
 
@@ -922,16 +934,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>17.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Develop a partnership between government and business to achieve the SDGs
                     </div>
                 </div>
-
-                
 
                 
                 
@@ -944,7 +952,7 @@ layout-goal
                                 17.3.1
                             </h4>
                         </div>
-                        <div class="col">Number of projects of public-private partnership</div>
+                        <div class="col-md-8">Number of projects of public-private partnership</div>
                         
 
 
@@ -1064,12 +1072,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

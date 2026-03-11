@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260310091253">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -208,8 +208,10 @@ layout-goal
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
         <span class="input-group-append">
             <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
@@ -317,7 +319,6 @@ layout-goal
             </div>
             
         </div>
-        <hr class="goal-page-column-header-rule">
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
@@ -326,7 +327,7 @@ layout-goal
                         <span class="radio-dot"></span>
                         <div class="text-group">
                             <span class="tab-title">
-                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2025 No. 1190-r
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
                             </span>
                             <span class="badge-edition badge-current">
                                  Current
@@ -364,26 +365,27 @@ layout-goal
                 
 
                 
-
-                
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.1</h3></div>
-                    <div class="col">Restoring full territorial integrity and sovereignty of the state</div>
+                    <div class="col-md-8">Restoring full territorial integrity and sovereignty of the state</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.1.1
                             </h4>
                         </div>
-                        <div class="col">Share of the territory of Ukraine where state authorities exercise their powers in full, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the territory of Ukraine where state authorities exercise their powers in full, percent
+                            </div>
+
+                            
 
 
 
@@ -402,6 +404,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -428,7 +431,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -436,28 +439,29 @@ layout-goal
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.2</h3></div>
-                    <div class="col">Clearing the territory of explosive objects that appeared as a result of the armed aggression of the Russian Federation against Ukraine through demining (humanitarian demining)</div>
+                    <div class="col-md-8">Clearing the territory of explosive objects that appeared as a result of the armed aggression of the Russian Federation against Ukraine through demining (humanitarian demining)</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.2.1
                             </h4>
                         </div>
-                        <div class="col">Area of the allegedly contaminated area identified by the results of a non-technical survey, square kilometers (hectares)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Area of the allegedly contaminated area identified by the results of a non-technical survey, square kilometers (hectares)
+                            </div>
+
+                            
 
 
 
@@ -476,6 +480,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -502,7 +507,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -511,14 +516,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.2.2
                             </h4>
                         </div>
-                        <div class="col">Area of demined territories according to the results of external control of the quality of demining, square kilometers (hectares)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Area of demined territories according to the results of external control of the quality of demining, square kilometers (hectares)
+                            </div>
+
+                            
 
 
 
@@ -537,6 +546,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -563,7 +573,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -572,14 +582,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.2.3
                             </h4>
                         </div>
-                        <div class="col">Area of territories cleared of explosive objects according to the results of prompt response, square kilometers (hectares)</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Area of territories cleared of explosive objects according to the results of prompt response, square kilometers (hectares)
+                            </div>
+
+                            
 
 
 
@@ -598,6 +612,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -624,7 +639,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -633,14 +648,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.2.4
                             </h4>
                         </div>
-                        <div class="col">Area of agricultural land demined at the expenditures of funds provided in the state budget to compensate for the costs of humanitarian demining of agricultural land, hectares</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Area of agricultural land demined at the expenditures of funds provided in the state budget to compensate for the costs of humanitarian demining of agricultural land, hectares
+                            </div>
+
+                            
 
 
 
@@ -659,6 +678,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -685,7 +705,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -694,28 +714,29 @@ layout-goal
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.3</h3></div>
-                    <div class="col">Creating conditions for the return and integration of internally displaced persons</div>
+                    <div class="col-md-8">Creating conditions for the return and integration of internally displaced persons</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.3.1
                             </h4>
                         </div>
-                        <div class="col">Share of registered unemployed internally displaced persons employed with the assistance of the State Employment Service in the total number of registered unemployed internally displaced persons, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of registered unemployed internally displaced persons employed with the assistance of the State Employment Service in the total number of registered unemployed internally displaced persons, percent
+                            </div>
+
+                            
 
 
 
@@ -734,6 +755,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -760,7 +782,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -769,14 +791,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.3.2
                             </h4>
                         </div>
-                        <div class="col">Number of internally displaced persons living in places of temporary residence, persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of internally displaced persons living in places of temporary residence, persons
+                            </div>
+
+                            
 
 
 
@@ -795,6 +821,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -821,7 +848,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -830,14 +857,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.3.3
                             </h4>
                         </div>
-                        <div class="col">Share of families from among internally displaced persons who are recipients of state social assistance to low-income families, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of families from among internally displaced persons who are recipients of state social assistance to low-income families, percent
+                            </div>
+
+                            
 
 
 
@@ -856,6 +887,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -882,33 +914,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.4</h3></div>
-                    <div class="col">Reducing the level of physical violence</div>
+                    <div class="col-md-8">Reducing the level of physical violence</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population that is afraid of becoming a victim of physical violence by strangers, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that is afraid of becoming a victim of physical violence by strangers, percent
+                            </div>
+
+                            
 
 
 
@@ -927,6 +960,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -953,7 +987,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -962,14 +996,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.4.2
                             </h4>
                         </div>
-                        <div class="col">Share of messages received by the National Police at the emergency service telephone number 102, which reported the commission (possible commission) of violent acts (murder, bodily harm, domestic violence, sexual violence, rape, robbery, burglary, fight, illegal deprivation of liberty, hostage-taking, threat of physical violence) against the applicant or another person(s) not related to the armed aggression of the Russian Federation against Ukraine in the total number of messages received by the specified service, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of messages received by the National Police at the emergency service telephone number 102, which reported the commission (possible commission) of violent acts (murder, bodily harm, domestic violence, sexual violence, rape, robbery, burglary, fight, illegal deprivation of liberty, hostage-taking, threat of physical violence) against the applicant or another person(s) not related to the armed aggression of the Russian Federation against Ukraine in the total number of messages received by the specified service, percent
+                            </div>
+
+                            
 
 
 
@@ -988,6 +1026,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1014,33 +1053,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.5</h3></div>
-                    <div class="col">Preventing cases of human trafficking and reducing the level of such trafficking and all forms of exploitation</div>
+                    <div class="col-md-8">Preventing cases of human trafficking and reducing the level of such trafficking and all forms of exploitation</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.5.1
                             </h4>
                         </div>
-                        <div class="col">Share of criminal proceedings in which persons were notified of suspicion in the total number of criminal proceedings opened in the reporting year on trafficking in human beings or other illegal transactions on the transfer of a person, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of criminal proceedings in which persons were notified of suspicion in the total number of criminal proceedings opened in the reporting year on trafficking in human beings or other illegal transactions on the transfer of a person, percent
+                            </div>
+
+                            
 
 
 
@@ -1059,6 +1099,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1085,7 +1126,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1094,14 +1135,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.5.2
                             </h4>
                         </div>
-                        <div class="col">Share of persons who have been granted the status of a victim of trafficking in human beings in the total number of persons who applied for the establishment of such status in the past year, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons who have been granted the status of a victim of trafficking in human beings in the total number of persons who applied for the establishment of such status in the past year, percent
+                            </div>
+
+                            
 
 
 
@@ -1120,6 +1165,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1146,7 +1192,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1155,14 +1201,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.5.3
                             </h4>
                         </div>
-                        <div class="col">Share of the population that is aware of actions in case of exploitation, recruitment, transportation, transfer, concealment or detention of people by the threat or use of force or other forms of coercion, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that is aware of actions in case of exploitation, recruitment, transportation, transfer, concealment or detention of people by the threat or use of force or other forms of coercion, percent
+                            </div>
+
+                            
 
 
 
@@ -1181,6 +1231,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1207,34 +1258,35 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.6</h3></div>
-                    <div class="col">Ensuring equal access of the population to legal aid</div>
+                    <div class="col-md-8">Ensuring equal access of the population to legal aid</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.6.1
                             </h4>
                         </div>
-                        <div class="col">Number of persons applying free legal aid, persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of persons applying free legal aid, persons
+                            </div>
+
+                            
 
 
 
@@ -1253,6 +1305,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1279,7 +1332,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1288,14 +1341,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.6.2
                             </h4>
                         </div>
-                        <div class="col">Level of awareness of the possibility of receiving free legal aid, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of awareness of the possibility of receiving free legal aid, percent
+                            </div>
+
+                            
 
 
 
@@ -1314,6 +1371,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1340,7 +1398,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1348,14 +1406,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.6.3
                             </h4>
                         </div>
-                        <div class="col">Level of awareness of alternative ways of resolving conflicts (disputes), percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of awareness of alternative ways of resolving conflicts (disputes), percent
+                            </div>
+
+                            
 
 
 
@@ -1374,6 +1436,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1400,33 +1463,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.7</h3></div>
-                    <div class="col">Strengthening the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction and ensuring its compliance with the standards of the Financial Action Task Force (FATF)</div>
+                    <div class="col-md-8">Strengthening the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction and ensuring its compliance with the standards of the Financial Action Task Force (FATF)</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.7.1
                             </h4>
                         </div>
-                        <div class="col">Number of identified risks based on the results of the National Risk Assessment in the field of prevention and counteraction the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of identified risks based on the results of the National Risk Assessment in the field of prevention and counteraction the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, units
+                            </div>
+
+                            
 
 
 
@@ -1445,6 +1509,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1471,7 +1536,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1480,14 +1545,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.7.2
                             </h4>
                         </div>
-                        <div class="col">Indicator of risks of money laundering and terrorist financing in the Basel Anti-Money Laundering Index rating of the Basel Institute on Governance, points</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Indicator of risks of money laundering and terrorist financing in the Basel Anti-Money Laundering Index rating of the Basel Institute on Governance, points
+                            </div>
+
+                            
 
 
 
@@ -1506,6 +1575,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1532,33 +1602,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.8</h3></div>
-                    <div class="col">Taking measures to reduce the illicit trafficking of weapons, ammunition and explosive devices</div>
+                    <div class="col-md-8">Taking measures to reduce the illicit trafficking of weapons, ammunition and explosive devices</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.8.1
                             </h4>
                         </div>
-                        <div class="col">Share of recorded evident intentional homicide, ntentional grievous bodily harm, robbery (criminal offenses under Articles 115, 116, 118, 121, 187 of the Criminal Code of Ukraine) committed with the use of firearms and/or explosive devices in the total number of recorded evident intentional homicide, ntentional grievous bodily harm, robbery, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of recorded evident intentional homicide, ntentional grievous bodily harm, robbery (criminal offenses under Articles 115, 116, 118, 121, 187 of the Criminal Code of Ukraine) committed with the use of firearms and/or explosive devices in the total number of recorded evident intentional homicide, ntentional grievous bodily harm, robbery, percent
+                            </div>
+
+                            
 
 
 
@@ -1577,6 +1648,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1603,7 +1675,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1612,14 +1684,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.8.2
                             </h4>
                         </div>
-                        <div class="col">Number of voluntarily surrendered firearms from among the previously registered, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of voluntarily surrendered firearms from among the previously registered, units
+                            </div>
+
+                            
 
 
 
@@ -1638,6 +1714,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1664,7 +1741,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1673,28 +1750,29 @@ layout-goal
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.9</h3></div>
-                    <div class="col">Promoting the reduction of corruption</div>
+                    <div class="col-md-8">Promoting the reduction of corruption</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.9.1
                             </h4>
                         </div>
-                        <div class="col">Perception of the level of corruption according to the Corruption Perceptions Index, calculated by the international organization Transparency International, points</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Perception of the level of corruption according to the Corruption Perceptions Index, calculated by the international organization Transparency International, points
+                            </div>
+
+                            
 
 
 
@@ -1713,6 +1791,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1739,7 +1818,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
                 
@@ -1748,14 +1827,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.9.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population/business representatives who had their own corruption experience according to the results of the standard survey on corruption in Ukraine, conducted according to the methodology approved by the National Agency on Corruption Prevention, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population/business representatives who had their own corruption experience according to the results of the standard survey on corruption in Ukraine, conducted according to the methodology approved by the National Agency on Corruption Prevention, percent
+                            </div>
+
+                            
 
 
 
@@ -1774,6 +1857,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1800,33 +1884,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.10</h3></div>
-                    <div class="col">Increasing the effectiveness of state authorities and local self-government authorities</div>
+                    <div class="col-md-8">Increasing the effectiveness of state authorities and local self-government authorities</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.10.1
                             </h4>
                         </div>
-                        <div class="col">Share of citizens who trust public authorities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who trust public authorities, percent
+                            </div>
+
+                            
 
 
 
@@ -1845,6 +1930,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1871,7 +1957,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1879,14 +1965,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.10.2
                             </h4>
                         </div>
-                        <div class="col">Share of citizens who trust local self-government authorities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who trust local self-government authorities, percent
+                            </div>
+
+                            
 
 
 
@@ -1905,6 +1995,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1931,7 +2022,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1939,14 +2030,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.10.3
                             </h4>
                         </div>
-                        <div class="col">Share of citizens who positively assess the activities of state authorities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who positively assess the activities of state authorities, percent
+                            </div>
+
+                            
 
 
 
@@ -1965,6 +2060,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -1991,7 +2087,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -1999,14 +2095,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.10.4
                             </h4>
                         </div>
-                        <div class="col">Share of citizens who positively assess the activities of local self-government authorities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who positively assess the activities of local self-government authorities, percent
+                            </div>
+
+                            
 
 
 
@@ -2025,6 +2125,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2051,7 +2152,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2059,14 +2160,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.10.5
                             </h4>
                         </div>
-                        <div class="col">Level of satisfaction of the subjects of application with the quality of the provision of administrative services in centers for the provision of administrative services, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Level of satisfaction of the subjects of application with the quality of the provision of administrative services in centers for the provision of administrative services, percent
+                            </div>
+
+                            
 
 
 
@@ -2085,6 +2190,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2111,33 +2217,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.11</h3></div>
-                    <div class="col">Ensuring public access to information</div>
+                    <div class="col-md-8">Ensuring public access to information</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.11.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population that used Internet services to interact with public authorities, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that used Internet services to interact with public authorities, percent
+                            </div>
+
+                            
 
 
 
@@ -2156,6 +2263,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2182,7 +2290,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2190,14 +2298,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.11.2
                             </h4>
                         </div>
-                        <div class="col">Number of users of the Unified State Web Portal of Open Data, million persons</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of users of the Unified State Web Portal of Open Data, million persons
+                            </div>
+
+                            
 
 
 
@@ -2216,6 +2328,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2242,33 +2355,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.12</h3></div>
-                    <div class="col">Ensuring prompt, inclusive, representative decision-making at the national and local levels with the participation of all segments of society</div>
+                    <div class="col-md-8">Ensuring prompt, inclusive, representative decision-making at the national and local levels with the participation of all segments of society</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.12.1
                             </h4>
                         </div>
-                        <div class="col">Number of public consultations conducted by executive authorities, units</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Number of public consultations conducted by executive authorities, units
+                            </div>
+
+                            
 
 
 
@@ -2287,6 +2401,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2313,33 +2428,34 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
                 
-
-                <hr class="goal-page-target-rule">
 
                 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.13</h3></div>
-                    <div class="col">Promoting peaceful and inclusive communities for sustainable development</div>
+                    <div class="col-md-8">Promoting peaceful and inclusive communities for sustainable development</div>
                 </div>
-                <hr class="goal-page-target-rule">
                 
                 
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.13.1
                             </h4>
                         </div>
-                        <div class="col">National level of cooperation in territorial communities (as an indicator of social cohesion), points</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                National level of cooperation in territorial communities (as an indicator of social cohesion), points
+                            </div>
+
+                            
 
 
 
@@ -2358,6 +2474,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2384,7 +2501,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2392,14 +2509,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.13.2
                             </h4>
                         </div>
-                        <div class="col">National level of social tolerance, points</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                National level of social tolerance, points
+                            </div>
+
+                            
 
 
 
@@ -2418,6 +2539,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2444,7 +2566,7 @@ layout-goal
                         </a>
                     </div>
                 </div>
-                <hr class="goal-page-target-rule">
+                <hr class="goal-page-target-rule" aria-hidden="true">
                 
                 
 
@@ -2452,14 +2574,18 @@ layout-goal
 
                 <div class="indicator-item">
                     <div class="row align-items-start goal-indicator">
-                        <div class="col-auto">
+                        <div class="col-md-8">
                             <h4>
                                 <span class="visually-hidden">Indicator</span>
                                 16.13.3
                             </h4>
                         </div>
-                        <div class="col">Share of the population that feels safe in their area of residence, percent</div>
-                        
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that feels safe in their area of residence, percent
+                            </div>
+
+                            
 
 
 
@@ -2478,6 +2604,7 @@ layout-goal
         </li></ul>
 
 
+                        </div>
                     </div>
 
                     <button class="btn btn-toggle-collapse collapsed"
@@ -2524,16 +2651,12 @@ layout-goal
 
                 
 
-                
-
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.1</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the prevalence of violence
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2546,7 +2669,7 @@ layout-goal
                                 16.1.1
                             </h4>
                         </div>
-                        <div class="col">Number of criminal offenses under Articles 115-118, 121 of the Criminal Code of Ukraine (evident intentional homicide, intentional grievous bodily harm) reported in the past 12 months per 100,000 persons</div>
+                        <div class="col-md-8">Number of criminal offenses under Articles 115-118, 121 of the Criminal Code of Ukraine (evident intentional homicide, intentional grievous bodily harm) reported in the past 12 months per 100,000 persons</div>
                         
 
 
@@ -2607,7 +2730,7 @@ layout-goal
                                 16.1.2
                             </h4>
                         </div>
-                        <div class="col">Number of victims of crimes related to physical violence (intentional homicide (and relevant attempts), rape (and relevant attempts), grievous bodily harm), reported over the past 12 months, per 100,000 persons</div>
+                        <div class="col-md-8">Number of victims of crimes related to physical violence (intentional homicide (and relevant attempts), rape (and relevant attempts), grievous bodily harm), reported over the past 12 months, per 100,000 persons</div>
                         
 
 
@@ -2668,7 +2791,7 @@ layout-goal
                                 16.1.3
                             </h4>
                         </div>
-                        <div class="col">Number of victims of rape in the past 12 months, persons</div>
+                        <div class="col-md-8">Number of victims of rape in the past 12 months, persons</div>
                         
 
 
@@ -2722,18 +2845,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.2</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase detection of victims of human trafficking and all forms of exploitation
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -2746,7 +2865,7 @@ layout-goal
                                 16.2.1
                             </h4>
                         </div>
-                        <div class="col">Number of victims of human trafficking or other illicit transactions involving the transfer of human beings reported in the past 12 months, persons</div>
+                        <div class="col-md-8">Number of victims of human trafficking or other illicit transactions involving the transfer of human beings reported in the past 12 months, persons</div>
                         
 
 
@@ -2808,7 +2927,7 @@ layout-goal
                                 16.2.2
                             </h4>
                         </div>
-                        <div class="col">Number of specialists trained in combating human trafficking</div>
+                        <div class="col-md-8">Number of specialists trained in combating human trafficking</div>
                         
 
 
@@ -2870,7 +2989,7 @@ layout-goal
                                 16.2.3
                             </h4>
                         </div>
-                        <div class="col">Number of social services provided to meet the needs of victims of human trafficking</div>
+                        <div class="col-md-8">Number of social services provided to meet the needs of victims of human trafficking</div>
                         
 
 
@@ -2932,7 +3051,7 @@ layout-goal
                                 16.2.4
                             </h4>
                         </div>
-                        <div class="col">Number of counter-trafficking information campaigns conducted</div>
+                        <div class="col-md-8">Number of counter-trafficking information campaigns conducted</div>
                         
 
 
@@ -2993,7 +3112,7 @@ layout-goal
                                 16.2.5
                             </h4>
                         </div>
-                        <div class="col">Number of persons covered by counter-trafficking information campaigns</div>
+                        <div class="col-md-8">Number of persons covered by counter-trafficking information campaigns</div>
                         
 
 
@@ -3054,7 +3173,7 @@ layout-goal
                                 16.2.6
                             </h4>
                         </div>
-                        <div class="col">Percentage of funding of regional counter-trafficking programs from relevant local budgets</div>
+                        <div class="col-md-8">Percentage of funding of regional counter-trafficking programs from relevant local budgets</div>
                         
 
 
@@ -3115,7 +3234,7 @@ layout-goal
                                 16.2.7
                             </h4>
                         </div>
-                        <div class="col">Number of persons who obtained the victim of trafficking status, persons</div>
+                        <div class="col-md-8">Number of persons who obtained the victim of trafficking status, persons</div>
                         
 
 
@@ -3169,18 +3288,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.3</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase confidence in courts and ensure equal access to justice
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3193,7 +3308,7 @@ layout-goal
                                 16.3.1
                             </h4>
                         </div>
-                        <div class="col">Level of public confidence in the court, %</div>
+                        <div class="col-md-8">Level of public confidence in the court, %</div>
                         
 
 
@@ -3255,7 +3370,7 @@ layout-goal
                                 16.3.2
                             </h4>
                         </div>
-                        <div class="col">Number of persons seeking free legal aid, persons</div>
+                        <div class="col-md-8">Number of persons seeking free legal aid, persons</div>
                         
 
 
@@ -3310,18 +3425,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.4</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Strengthen the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3334,7 +3445,7 @@ layout-goal
                                 16.4.1
                             </h4>
                         </div>
-                        <div class="col">Share of high-level risks in the overall national aggregate of risks in the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, %</div>
+                        <div class="col-md-8">Share of high-level risks in the overall national aggregate of risks in the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, %</div>
                         
 
 
@@ -3389,18 +3500,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.5</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce illicit trafficking of weapons, ammunition and explosive materials
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3413,7 +3520,7 @@ layout-goal
                                 16.5.1
                             </h4>
                         </div>
-                        <div class="col">Number of weapons seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
+                        <div class="col-md-8">Number of weapons seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
                         
 
 
@@ -3475,7 +3582,7 @@ layout-goal
                                 16.5.2
                             </h4>
                         </div>
-                        <div class="col">Number of ammunition seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
+                        <div class="col-md-8">Number of ammunition seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
                         
 
 
@@ -3537,7 +3644,7 @@ layout-goal
                                 16.5.3
                             </h4>
                         </div>
-                        <div class="col">Number of criminal offenses related to illicit arms trafficking reported in the past 12 months, units</div>
+                        <div class="col-md-8">Number of criminal offenses related to illicit arms trafficking reported in the past 12 months, units</div>
                         
 
 
@@ -3591,18 +3698,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.6</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Reduce the scale of corruption
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3615,7 +3718,7 @@ layout-goal
                                 16.6.1
                             </h4>
                         </div>
-                        <div class="col">Index of perception of corruption in the public sector by the business community and experts</div>
+                        <div class="col-md-8">Index of perception of corruption in the public sector by the business community and experts</div>
                         
 
 
@@ -3671,18 +3774,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.7</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Increase the efficiency of government bodies and local self-government
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3695,7 +3794,7 @@ layout-goal
                                 16.7.1
                             </h4>
                         </div>
-                        <div class="col">Ukraine’s ranking in the Global Competitiveness Report by sub-index ‘Institutions (government and public institutions)’</div>
+                        <div class="col-md-8">Ukraine’s ranking in the Global Competitiveness Report by sub-index ‘Institutions (government and public institutions)’</div>
                         
 
 
@@ -3750,18 +3849,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.8</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Recovery of conflict affected areas in eastern Ukraine (Donbas)
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -3774,7 +3869,7 @@ layout-goal
                                 16.8.1
                             </h4>
                         </div>
-                        <div class="col">Share of the population satisfied with their experience of the use of infrastructure and the level of social services in key areas in Donetsk and Luhansk regions, %</div>
+                        <div class="col-md-8">Share of the population satisfied with their experience of the use of infrastructure and the level of social services in key areas in Donetsk and Luhansk regions, %</div>
                         
 
 
@@ -3836,7 +3931,7 @@ layout-goal
                                 16.8.2
                             </h4>
                         </div>
-                        <div class="col">Share of the population satisfied with the level of administrative governance services in Donetsk and Luhansk regions, %</div>
+                        <div class="col-md-8">Share of the population satisfied with the level of administrative governance services in Donetsk and Luhansk regions, %</div>
                         
 
 
@@ -3897,7 +3992,7 @@ layout-goal
                                 16.8.3
                             </h4>
                         </div>
-                        <div class="col">Number of communities in the Donetsk and Luhansk regions that implemented mine action, units</div>
+                        <div class="col-md-8">Number of communities in the Donetsk and Luhansk regions that implemented mine action, units</div>
                         
 
 
@@ -3958,7 +4053,7 @@ layout-goal
                                 16.8.4
                             </h4>
                         </div>
-                        <div class="col">Demined area in Donetsk and Luhansk regions, hectares</div>
+                        <div class="col-md-8">Demined area in Donetsk and Luhansk regions, hectares</div>
                         
 
 
@@ -4019,7 +4114,7 @@ layout-goal
                                 16.8.5
                             </h4>
                         </div>
-                        <div class="col">Number of cases of detection of explosive objects (operative component), units</div>
+                        <div class="col-md-8">Number of cases of detection of explosive objects (operative component), units</div>
                         
 
 
@@ -4073,18 +4168,14 @@ layout-goal
 
                 
 
-                <hr class="goal-page-target-rule">
-
                 
 
                 <div class="row align-items-start goal-target">
                     <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.9</h3></div>
-                    <div class="col">
+                    <div class="col-md-8">
                         Strengthen social stability, and promote peacebuilding and community security
                     </div>
                 </div>
-
-                <hr class="goal-page-target-rule">
 
                 
                 
@@ -4097,7 +4188,7 @@ layout-goal
                                 16.9.1
                             </h4>
                         </div>
-                        <div class="col">Index of social cohesion and reconciliation</div>
+                        <div class="col-md-8">Index of social cohesion and reconciliation</div>
                         
 
 
@@ -4229,12 +4320,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260310091253'></script>
+<script src='/assets/js/sdg.js?v=20260311162250'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260310091253"></script><script>
+    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
