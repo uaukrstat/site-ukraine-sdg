@@ -26,7 +26,7 @@ These pieces of information are used to improve services for you through, for ex
 - recognising that you may already have given a username and password so you don't need to do it for every web page requested
 - measuring how many people are using services, so they can be made easier to use and there's enough capacity to ensure they are fast
 
-You can manage these small files yourself and learn more about them through [internet browser cookies – what they are and how to manage them](https://www.aboutcookies.org/).
+You can manage these small files yourself and learn more about them through [internet browser cookies – what they are and how to manage them](https://www.aboutcookies.org/){:target="_blank"}.
 
 ## Our use of cookies
 Important information about this list of cookies:
@@ -54,4 +54,4 @@ ONS is not responsible for the privacy practices or the content of such websites
 This website has security measures in place to protect the loss, misuse, and alteration of the information under our control.
 
 ## Contacting the website
-If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can [contact us](https://sdg-kitsoft-stg.github.io/site-ukraine-sdg/contact-us/).
+If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can [contact us](https://sdg-kitsoft-stg.github.io/site-ukraine-sdg/contact-us/){:target="_blank"}.

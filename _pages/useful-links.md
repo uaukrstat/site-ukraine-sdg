@@ -8,18 +8,18 @@ layout: page
 page_type: useful-links
 ---
 
-[Official website (Government portal)](https://www.kmu.gov.ua/diyalnist/cili-stalogo-rozvitku-ta-ukrayina)
+[Official website (Government portal)](https://www.kmu.gov.ua/diyalnist/cili-stalogo-rozvitku-ta-ukrayina){:target="_blank"}
 
-[UN website](https://www.un.org/en)
+[UN website](https://www.un.org/en){:target="_blank"}
 
-[SDG UN website](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)
+[SDG UN website](https://www.un.org/sustainabledevelopment/sustainable-development-goals/){:target="_blank"}
 
-[UN Statistics Division](https://unstats.un.org/home/)
+[UN Statistics Division](https://unstats.un.org/home/){:target="_blank"}
 
-[UN General Assembly resolution on transformation of our world: Agenda 2030 for Sustainable Development](https://undocs.org/en/A/RES/70/1)
+[UN General Assembly resolution on transformation of our world: Agenda 2030 for Sustainable Development](https://undocs.org/en/A/RES/70/1){:target="_blank"}
 
-[UN General Assembly resolution on the work of Statistical Commission connected with activity to implement the 2030 Agenda for Sustainable Development](https://undocs.org/A/RES/71/313)
+[UN General Assembly resolution on the work of Statistical Commission connected with activity to implement the 2030 Agenda for Sustainable Development](https://undocs.org/A/RES/71/313){:target="_blank"}
 
-[Report of the 63-rd plenary meeting of the Conference of European Statisticians](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/2015/CES_89_Add.1-E.pdf)
+[Report of the 63-rd plenary meeting of the Conference of European Statisticians](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/2015/CES_89_Add.1-E.pdf){:target="_blank"}
 
-[Ukraine SDG profile on the UN Statistics Division website](https://country-profiles.unstatshub.org/ukr#)
+[Ukraine SDG profile on the UN Statistics Division website](https://country-profiles.unstatshub.org/ukr#){:target="_blank"}

@@ -12,7 +12,7 @@ reporting_status:
   disaggregation_tabs: false
   status_types:
     - value: complete
-      label: status.published
+      label: status.reported
       hide_on_goal_pages: false
     - value: inprogress
       label: status.statistics_in_progress

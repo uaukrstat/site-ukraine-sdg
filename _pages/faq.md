@@ -32,7 +32,7 @@ Besides, archived data for the SDG indicators, in the context of which data was 
 We will add data as soon as they are received according to the dates specified by the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine" and verified.
 
 ## What disaggregations are available?
-The disaggregation of indicators is presented in the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine". In order to find out more about all data breakdowns and methodology, please have a look at metadata on the official website of the State Statistics Service "Sustainable Development Goals": "Information support to the SDGs monitoring, metadata" [https://stat.gov.ua/en/node/7503](https://stat.gov.ua/en/node/7503)
+The disaggregation of indicators is presented in the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r "Some issues of ensuring the achievement of the Sustainable Development Goals in Ukraine". In order to find out more about all data breakdowns and methodology, please have a look at metadata on the official website of the State Statistics Service "Sustainable Development Goals": "Information support to the SDGs monitoring, metadata" [https://stat.gov.ua/en/node/7503](https://stat.gov.ua/en/node/7503){:target="_blank"}
 
 ## What browsers can I use to check out this website?
 Our website works with the most commonly used latest browsers versions. There could be some problems when using the website with old browsers versions.

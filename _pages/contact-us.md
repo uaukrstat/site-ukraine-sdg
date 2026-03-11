@@ -9,4 +9,4 @@ page_type: contact-us
 ---
 
 If you have any questions about the content of this site or the data sources, 
-please [contact us](https://stat.gov.ua/en/contact-us)
+please [contact us](https://stat.gov.ua/en/contact-us){:target="_blank"}
