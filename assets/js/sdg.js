@@ -4609,7 +4609,7 @@ function setDataTableWidth(table) {
                 if (!def.width) {
                     $(this).css('white-space', 'nowrap');
                 } else {
-                    $(this).css('width', def.width + 'px');
+                    // $(this).css('width', def.width + 'px');
                     $(this).data('width', def.width);
                 }
                 break;
@@ -5073,8 +5073,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
         $(OPTIONS.rootElement).find('.selected').css('width', '0');
     });
 
-    let fieldsChildrenCount = 0;
-
     MODEL.onSelectionUpdate.attach(function (sender, args) {
 
         if (args.selectedFields.length) {
@@ -5094,10 +5092,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
         $('.variable-selector').each(function (index, element) {
             var currentField = $(element).data('field');
             var element = $(OPTIONS.rootElement).find('.variable-selector[data-field="' + currentField + '"]');
-
-            if (element) {
-                fieldsChildrenCount++;
-            }
             // is this an allowed field:
             if (args.allowedFields.includes(currentField)) {
                 $(element).removeClass('disallowed');
@@ -5109,15 +5103,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
             }
         });
     });
-
-    if (fieldsChildrenCount === 0) {
-        const sidebar = document.getElementById('indicator-sidebar');
-        const indicatorMain = document.querySelector('.indicator-main');
-
-        sidebar.style.display = 'none';
-        indicatorMain.classList.remove('col-md-8');
-        indicatorMain.classList.add('col-md-12');
-    }
 
     MODEL.onFieldsStatusUpdated.attach(function (sender, args) {
 
@@ -5283,6 +5268,18 @@ var indicatorInit = function () {
                     });
                     var controller = new indicatorController(model, view);
                     controller.initialise();
+
+                    const fieldsContainerLength = document.querySelectorAll('.variable-selector').length;
+
+                    if (fieldsContainerLength === 0) {
+                        const sidebar = document.getElementById('indicator-sidebar');
+                        const indicatorMain = document.querySelector('.indicator-main');
+
+                        sidebar.style.display = 'none';
+                        indicatorMain.classList.remove('col-md-8');
+                        indicatorMain.classList.add('col-md-12');
+                    }
+
                 }
             });
         }

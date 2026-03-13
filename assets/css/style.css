@@ -2149,6 +2149,8 @@ footer {
   margin-top: 0; }
 .layout-goal .goal-indicator {
   margin-top: 20px; }
+  .layout-goal .goal-indicator h4 {
+    font-weight: 600; }
 .layout-goal .goal-page-target-rule, .layout-goal .goal-page-column-header-rule {
   border: 0;
   border-top: 0.1px solid #ccc;
