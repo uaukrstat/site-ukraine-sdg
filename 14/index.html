@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260311162250">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260313130516">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1146,6 +1146,89 @@ layout-goal
     <a href="#top">Back to top</a>
 </div>
 
+
+<script>
+    function loadChart(url, slug) {
+        const targetDiv = document.getElementById('chart-target-' + slug);
+        const loader = document.getElementById('loader-' + slug);
+
+        if (targetDiv.innerHTML.trim() !== "") return;
+
+        const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.width = "100%";
+        iframe.height = "500px";
+        iframe.style.border = "none";
+        iframe.style.visibility = "hidden";
+        iframe.title = `${indicatorTitle} ${slug}`;
+
+        iframe.onload = function() {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const chart = iframeDoc.getElementById('selectionsChart');
+
+                if (chart) {
+                    Array.from(iframeDoc.body.children).forEach(child => {
+                        child.style.display = 'none';
+                    });
+
+                    let current = chart;
+                    while (current && current !== iframeDoc.body) {
+                        current.style.display = 'block';
+                        current = current.parentElement;
+                    }
+
+                    const style = iframeDoc.createElement('style');
+                    style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+                    iframeDoc.head.appendChild(style);
+
+                    const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+                    toHideInside.forEach(el => el.style.display = 'none');
+
+                    iframeDoc.body.style.overflow = 'hidden';
+                    loader.style.display = 'none';
+                    iframe.style.visibility = "visible";
+                } else {
+                    loader.style.display = 'none';
+                    targetDiv.innerHTML = '';
+                }
+
+            } catch (e) {
+                console.warn("CORS error: iframe", e);
+                loader.innerHTML = "Помилка доступу до графіка";
+            }
+        };
+
+        targetDiv.appendChild(iframe);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const collapses = document.querySelectorAll('.collapse');
+
+        collapses.forEach(collapseEl => {
+            const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+            if (!button) return;
+
+            collapseEl.addEventListener('show.bs.collapse', function () {
+                button.textContent = button.getAttribute('data-text-hide');
+            });
+
+            collapseEl.addEventListener('hide.bs.collapse', function () {
+                button.textContent = button.getAttribute('data-text-show');
+            });
+        });
+    });
+</script>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -1212,12 +1295,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260311162250'></script>
+<script src='/assets/js/sdg.js?v=20260313130516'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260311162250"></script><script>
+    <script src="/assets/js/custom.js?v=20260313130516"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1226,85 +1309,3 @@ layout-goal
 </body>
 </html>
 
-
-<script>
-  function loadChart(url, slug) {
-    const targetDiv = document.getElementById('chart-target-' + slug);
-    const loader = document.getElementById('loader-' + slug);
-
-    if (targetDiv.innerHTML.trim() !== "") return;
-
-    const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
-    const iframe = document.createElement('iframe');
-    iframe.src = url;
-    iframe.width = "100%";
-    iframe.height = "500px";
-    iframe.style.border = "none";
-    iframe.style.visibility = "hidden";
-    iframe.title = `${indicatorTitle} ${slug}`;
-
-    iframe.onload = function() {
-      try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const chart = iframeDoc.getElementById('selectionsChart');
-
-        if (chart) {
-          Array.from(iframeDoc.body.children).forEach(child => {
-            child.style.display = 'none';
-          });
-
-          let current = chart;
-          while (current && current !== iframeDoc.body) {
-            current.style.display = 'block';
-            current = current.parentElement;
-          }
-
-          const style = iframeDoc.createElement('style');
-          style.textContent = `
-            .plot-container { padding: 0 !important; }
-            #chart-canvas { margin-top: 0 !important; }
-            #main-content { margin: 0 !important; }
-            #main-content #indicatorData { margin-top: 0 !important; }
-            #legend { margin-bottom: 0 !important; }
-            #selectionsChart figure { margin-bottom: 0 !important; }
-            .tab-content.data-view { border: none !important; padding: 0 !important; }
-        `;
-          iframeDoc.head.appendChild(style);
-
-          const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
-          toHideInside.forEach(el => el.style.display = 'none');
-
-          iframeDoc.body.style.overflow = 'hidden';
-          loader.style.display = 'none';
-          iframe.style.visibility = "visible";
-        } else {
-          loader.style.display = 'none';
-          targetDiv.innerHTML = '';
-        }
-
-      } catch (e) {
-        console.warn("CORS error: iframe", e);
-        loader.innerHTML = "Помилка доступу до графіка";
-      }
-    };
-
-    targetDiv.appendChild(iframe);
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const collapses = document.querySelectorAll('.collapse');
-
-    collapses.forEach(collapseEl => {
-      const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
-      if (!button) return;
-
-      collapseEl.addEventListener('show.bs.collapse', function () {
-        button.textContent = button.getAttribute('data-text-hide');
-      });
-
-      collapseEl.addEventListener('hide.bs.collapse', function () {
-        button.textContent = button.getAttribute('data-text-show');
-      });
-    });
-  });
-</script>
