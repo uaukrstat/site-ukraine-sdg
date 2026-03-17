@@ -43,11 +43,11 @@ jobs:
         run: |
           JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml
 
-      - name: Deploy to GitHub Pages (STAGE FOLDER)
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: _site
-          TARGET_FOLDER: stage
-          CLEAN: true
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
