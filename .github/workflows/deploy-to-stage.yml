@@ -41,7 +41,21 @@ jobs:
 
       - name: Build the site
         run: |
-          JEKYLL_ENV=staging bundle exec jekyll build --config _config_stage.yml
+          JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml --baseurl="/stage"
+
+      - name: Debug - What is inside the built site?
+        run: |
+          echo "=== 1. Checking remoteDataBaseUrl in JS ==="
+          grep -r "remoteDataBaseUrl" _site/stage/ | head -n 5 || echo "Not found"
+          
+          echo "=== 2. Checking if site_config_staging.yml was used ==="
+          grep -r "data-ukraine-sdg/stage" _site/stage/ | head -n 3 || echo "Stage prefix NOT found in _site"
+          
+          echo "=== 3. Checking the existence of config files before build ==="
+          ls -l _data/site_config_staging.yml || echo "File _data/site_config_staging.yml MISSING!"
+          
+          echo "=== 4. Print the first few lines of the data config ==="
+          head -n 10 _data/site_config_staging.yml
 
       - name: Prepare stage folder
         run: |
