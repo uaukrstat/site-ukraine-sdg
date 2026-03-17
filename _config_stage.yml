@@ -1,0 +1,4 @@
+remote_data_prefix: "https://uaukrstat.github.io/data-ukraine-sdg/stage/"
+baseurl: "/stage"
+url: "https://uaukrstat.github.io"
+environment: staging

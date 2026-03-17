@@ -9,7 +9,7 @@ repository_url_data: "https://github.com/uaukrstat/data-ukraine-sdg"
 title: general.site_title
 baseurl: ""
 url: "https://uaukrstat.github.io"
-environment: staging
+environment: production
 
 # Pages
 collections:

@@ -86,3 +86,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: _site
           CLEAN: true
+          CLEAN_EXCLUDE: '["stage"]'
