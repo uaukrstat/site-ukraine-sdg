@@ -7,16 +7,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout site repository
         uses: actions/checkout@v4
@@ -48,11 +43,17 @@ jobs:
         run: |
           JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
+      - name: Prepare stage folder
+        run: |
+          rm -rf temp_dist
+          mkdir -p temp_dist/stage
+          cp -r _site/* temp_dist/stage/
+          touch temp_dist/.nojekyll
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: temp_dist
+          CLEAN: false
