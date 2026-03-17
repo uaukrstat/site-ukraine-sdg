@@ -1,0 +1,39 @@
+# This refers to a set of data that indicates progress (or lack of progress) towards one of the Sustainable Development Goals
+indicator: 'Індикатор'
+# This is the plural version of the indicator key
+indicators: 'Індикатори'
+# This is a 'goal' in the sense of the 'Sustainable Development Goals' - some achievement for a community to aspire to
+goal: 'Ціль'
+# This is the plural version of the goal key
+goals: 'Цілі'
+sdg: 'Цілі сталого розвитку'
+# This refers to the 'home page' of a website
+home: 'Головна'
+loading: 'Завантаження результатів пошуку'
+opens_new_window: 'Відкрити у новому вікні'
+hide: 'приховати'
+target: 'Завдання'
+targets: 'Завдання'
+twitter: 'Twitter'
+facebook: 'Facebook'
+built_using_open_sdg: 'Побудовано з використанням відкритої платформи SDG'
+page: 'Сторінка'
+pages: 'Сторінки'
+targets_and_indicators: 'Завдання та індикатори'
+# A label of "Warning" to place before some other text.
+label_warning: "Попередження:"
+# A phrase to use as a site-wide page title.
+site_title: 'Індикатори цілей сталого розвитку'
+back_to_top: 'Повернутись наверх'
+show_chart: 'Показати'
+hide_chart: 'Сховати'
+tab_title: 'Редакція розпорядження Кабінету Міністрів України від 29.11.2024 № 1190-р'
+archive_tab_title: 'Редакція розпорядження Кабінету Міністрів України від 21.08.2019 № 686-р'
+badge_current_short: 'Чинна'
+badge_previous_short: 'Попередня'
+badge_current: 'Чинна редакція'
+badge_previous: 'Попередня редакція'
+view_indicator_details: 'Переглянути деталі індикатора'
+loading_chart: 'Завантаження графіка...'
+breadcrumbs: 'Хлібні крихти'
+country_name: 'Україна'

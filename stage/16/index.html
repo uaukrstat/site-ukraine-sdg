@@ -1,0 +1,4463 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://uaukrstat.github.io/data-ukraine-sdg/en',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'en',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    
+    <title>Goal 16 - Peace, justice and strong institutions - Indicators For The Sustainable Development Goals</title>
+    <meta property="og:title" content="Goal 16 - Peace, justice and strong institutions - Indicators For The Sustainable Development Goals"/>
+    
+
+
+<meta property="og:url" content="/"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
+
+
+        
+
+        <!--[if IE 9]>
+        <script src="/stage/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/stage/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/stage/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/stage/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/stage/assets/img/favicons/favicon.ico" />
+
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/stage/assets/css/style.css?v=20260317151122">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/stage/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-en
+layout-goal
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"skip_link":"Skip to main content","alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","tag_line":"17 Goals to Transform our World","high_contrast":"High contrast","default_contrast":"Default contrast","enable_high_contrast":"Enable high contrast","disable_high_contrast":"Disable high contrast","toggle_search":"Search toggle. Click to expand or collapse the search bar.","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","hide_menu":"Hide navigation menu","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu"};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="body-logo"></div>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
+</div>
+
+<header class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/stage/" id="home" title="Go to homepage">
+    <img src="/stage/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between navbar-container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/stage/goals">Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/stage/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/stage/about">About platform</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/stage/faq">FAQ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/stage/useful-links">Useful Links</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/stage/search/">
+    <div class="input-group">
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="indicator_search">Search</label>
+            <input class="form-control" name="q" id="indicator_search" title="Search">
+        </div>
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/stage/uk/16/">
+              Українська
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+                    <div class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-uk list-inline-item">
+            <a class="language-toggle-link" href="/stage/uk/16/">
+                Українська
+            </a>
+        </li></ul>
+</div>
+</div></div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
+
+
+<div class="container">
+    <nav aria-label="Breadcrumbs">
+        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '›';">
+            <li class="breadcrumb-item">
+                <a href="/stage/en/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                
+                    <a href="/stage/goals/">Goals</a>
+                
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Peace, justice and strong institutions
+            </li>
+        </ol>
+    </nav>
+    
+</div>
+
+<div class="heading goal-banner goal-16">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-1 goal-icon goal-tiles">
+                
+
+                <img src="/assets/img/goals/en/16.svg" data-default=""
+                     data-hover="" alt="Peace, justice and strong institutions - Goal 16" id="goal-16" class="goal-icon-image goal-icon-image-svg" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 goal-details">
+                <h1>
+                    
+                        Peace, justice and strong institutions
+                    
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="main-content" class="container indicators-container" role="main">
+
+    
+
+
+
+    <div class="container g-0 ">
+
+        <div class="row align-items-end">
+            <div class="col">
+                <h2 class="goal-page-heading">Targets and indicators</h2>
+            </div>
+            
+        </div>
+
+        <ul class="nav nav-tabs edition-tabs" role="tablist">
+            <li role="presentation">
+                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 29.11.2024 No. 1190-r
+                            </span>
+                            <span class="badge-edition badge-current">
+                                 Current
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                    <div class="tab-content-wrapper">
+                        <span class="radio-dot"></span>
+                        <div class="text-group">
+                            <span class="tab-title">
+                                Redaction of the Order of the Cabinet of Ministers of Ukraine dated 21.08.2019 No. 686-r
+                            </span>
+                            <span class="badge-edition badge-archive">
+                                Previous
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content edition-tabs-content border-0 p-0">
+            <div class="tab-pane active" id="current-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.1</h3></div>
+                    <div class="col-md-8">Restoring full territorial integrity and sovereignty of the state</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.1.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the territory of Ukraine where state authorities exercise their powers in full, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-1-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-1-1"
+                            onclick="loadChart('/stage/16-1-1/', '16-1-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-1-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-1-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-1-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-1-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.2</h3></div>
+                    <div class="col-md-8">Clearing the territory of explosive objects that appeared as a result of the armed aggression of the Russian Federation against Ukraine through demining (humanitarian demining)</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Area of the allegedly contaminated area identified by the results of a non-technical survey, square kilometers (hectares)
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-1"
+                            onclick="loadChart('/stage/16-2-1/', '16-2-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Area of demined territories according to the results of external control of the quality of demining, square kilometers (hectares)
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-2"
+                            onclick="loadChart('/stage/16-2-2/', '16-2-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Area of territories cleared of explosive objects according to the results of prompt response, square kilometers (hectares)
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-3"
+                            onclick="loadChart('/stage/16-2-3/', '16-2-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.4
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Area of agricultural land demined at the expenditures of funds provided in the state budget to compensate for the costs of humanitarian demining of agricultural land, hectares
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-4"
+                            onclick="loadChart('/stage/16-2-4/', '16-2-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.3</h3></div>
+                    <div class="col-md-8">Creating conditions for the return and integration of internally displaced persons</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.3.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of registered unemployed internally displaced persons employed with the assistance of the State Employment Service in the total number of registered unemployed internally displaced persons, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-3-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-3-1"
+                            onclick="loadChart('/stage/16-3-1/', '16-3-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-3-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-3-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-3-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-3-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.3.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of internally displaced persons living in places of temporary residence, persons
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-3-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-3-2"
+                            onclick="loadChart('/stage/16-3-2/', '16-3-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-3-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-3-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-3-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-3-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.3.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of families from among internally displaced persons who are recipients of state social assistance to low-income families, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-3-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-3-3"
+                            onclick="loadChart('/stage/16-3-3/', '16-3-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-3-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-3-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-3-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-3-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.4</h3></div>
+                    <div class="col-md-8">Reducing the level of physical violence</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.4.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that is afraid of becoming a victim of physical violence by strangers, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-4-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-4-1"
+                            onclick="loadChart('/stage/16-4-1/', '16-4-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-4-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-4-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-4-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-4-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.4.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of messages received by the National Police at the emergency service telephone number 102, which reported the commission (possible commission) of violent acts (murder, bodily harm, domestic violence, sexual violence, rape, robbery, burglary, fight, illegal deprivation of liberty, hostage-taking, threat of physical violence) against the applicant or another person(s) not related to the armed aggression of the Russian Federation against Ukraine in the total number of messages received by the specified service, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-4-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-4-2"
+                            onclick="loadChart('/stage/16-4-2/', '16-4-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-4-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-4-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-4-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-4-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.5</h3></div>
+                    <div class="col-md-8">Preventing cases of human trafficking and reducing the level of such trafficking and all forms of exploitation</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of criminal proceedings in which persons were notified of suspicion in the total number of criminal proceedings opened in the reporting year on trafficking in human beings or other illegal transactions on the transfer of a person, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-1"
+                            onclick="loadChart('/stage/16-5-1/', '16-5-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of persons who have been granted the status of a victim of trafficking in human beings in the total number of persons who applied for the establishment of such status in the past year, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-2"
+                            onclick="loadChart('/stage/16-5-2/', '16-5-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that is aware of actions in case of exploitation, recruitment, transportation, transfer, concealment or detention of people by the threat or use of force or other forms of coercion, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-3"
+                            onclick="loadChart('/stage/16-5-3/', '16-5-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.6</h3></div>
+                    <div class="col-md-8">Ensuring equal access of the population to legal aid</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.6.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of persons applying free legal aid, persons
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-6-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-6-1"
+                            onclick="loadChart('/stage/16-6-1/', '16-6-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-6-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-6-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-6-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-6-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.6.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Level of awareness of the possibility of receiving free legal aid, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-6-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-6-2"
+                            onclick="loadChart('/stage/16-6-2/', '16-6-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-6-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-6-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-6-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-6-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.6.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Level of awareness of alternative ways of resolving conflicts (disputes), percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-6-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-6-3"
+                            onclick="loadChart('/stage/16-6-3/', '16-6-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-6-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-6-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-6-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-6-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.7</h3></div>
+                    <div class="col-md-8">Strengthening the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction and ensuring its compliance with the standards of the Financial Action Task Force (FATF)</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.7.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of identified risks based on the results of the National Risk Assessment in the field of prevention and counteraction the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, units
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-7-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-7-1"
+                            onclick="loadChart('/stage/16-7-1/', '16-7-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-7-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-7-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-7-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-7-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.7.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Indicator of risks of money laundering and terrorist financing in the Basel Anti-Money Laundering Index rating of the Basel Institute on Governance, points
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-7-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-7-2"
+                            onclick="loadChart('/stage/16-7-2/', '16-7-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-7-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-7-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-7-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-7-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.8</h3></div>
+                    <div class="col-md-8">Taking measures to reduce the illicit trafficking of weapons, ammunition and explosive devices</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of recorded evident intentional homicide, ntentional grievous bodily harm, robbery (criminal offenses under Articles 115, 116, 118, 121, 187 of the Criminal Code of Ukraine) committed with the use of firearms and/or explosive devices in the total number of recorded evident intentional homicide, ntentional grievous bodily harm, robbery, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-1"
+                            onclick="loadChart('/stage/16-8-1/', '16-8-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of voluntarily surrendered firearms from among the previously registered, units
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-2"
+                            onclick="loadChart('/stage/16-8-2/', '16-8-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+                
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.9</h3></div>
+                    <div class="col-md-8">Promoting the reduction of corruption</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.9.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Perception of the level of corruption according to the Corruption Perceptions Index, calculated by the international organization Transparency International, points
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-9-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-9-1"
+                            onclick="loadChart('/stage/16-9-1/', '16-9-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-9-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-9-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-9-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-9-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.9.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population/business representatives who had their own corruption experience according to the results of the standard survey on corruption in Ukraine, conducted according to the methodology approved by the National Agency on Corruption Prevention, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-9-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-9-2"
+                            onclick="loadChart('/stage/16-9-2/', '16-9-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-9-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-9-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-9-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-9-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.10</h3></div>
+                    <div class="col-md-8">Increasing the effectiveness of state authorities and local self-government authorities</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.10.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who trust public authorities, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-10-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-10-1"
+                            onclick="loadChart('/stage/16-10-1/', '16-10-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-10-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-10-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-10-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-10-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.10.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who trust local self-government authorities, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-10-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-10-2"
+                            onclick="loadChart('/stage/16-10-2/', '16-10-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-10-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-10-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-10-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-10-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.10.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who positively assess the activities of state authorities, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-10-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-10-3"
+                            onclick="loadChart('/stage/16-10-3/', '16-10-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-10-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-10-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-10-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-10-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.10.4
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of citizens who positively assess the activities of local self-government authorities, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-10-4"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-10-4"
+                            onclick="loadChart('/stage/16-10-4/', '16-10-4')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-10-4">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-10-4" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-10-4"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-10-4/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.10.5
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Level of satisfaction of the subjects of application with the quality of the provision of administrative services in centers for the provision of administrative services, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-10-5"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-10-5"
+                            onclick="loadChart('/stage/16-10-5/', '16-10-5')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-10-5">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-10-5" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-10-5"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-10-5/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.11</h3></div>
+                    <div class="col-md-8">Ensuring public access to information</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.11.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that used Internet services to interact with public authorities, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-11-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-11-1"
+                            onclick="loadChart('/stage/16-11-1/', '16-11-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-11-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-11-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-11-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-11-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.11.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of users of the Unified State Web Portal of Open Data, million persons
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-11-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-11-2"
+                            onclick="loadChart('/stage/16-11-2/', '16-11-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-11-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-11-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-11-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-11-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.12</h3></div>
+                    <div class="col-md-8">Ensuring prompt, inclusive, representative decision-making at the national and local levels with the participation of all segments of society</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.12.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Number of public consultations conducted by executive authorities, units
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-12-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-12-1"
+                            onclick="loadChart('/stage/16-12-1/', '16-12-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-12-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-12-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-12-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-12-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <hr class="goal-page-target-rule">
+
+                
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.13</h3></div>
+                    <div class="col-md-8">Promoting peaceful and inclusive communities for sustainable development</div>
+                </div>
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.13.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                National level of cooperation in territorial communities (as an indicator of social cohesion), points
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-13-1"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-13-1"
+                            onclick="loadChart('/stage/16-13-1/', '16-13-1')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-13-1">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-13-1" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-13-1"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-13-1/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.13.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                National level of social tolerance, points
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-13-2"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-13-2"
+                            onclick="loadChart('/stage/16-13-2/', '16-13-2')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-13-2">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-13-2" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-13-2"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-13-2/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule" aria-hidden="true">
+                
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-md-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.13.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">
+                            <div>
+                                Share of the population that feels safe in their area of residence, percent
+                            </div>
+
+                            
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Exploring data sources</span>
+</span>
+
+
+        </li></ul>
+
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-13-3"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-13-3"
+                            onclick="loadChart('/stage/16-13-3/', '16-13-3')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-13-3">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-13-3" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-13-3"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-13-3/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="archive-edition" role="tabpanel">
+                <div style="margin-top: 20px;"></div>
+
+                
+                
+
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.1</h3></div>
+                    <div class="col-md-8">
+                        Reduce the prevalence of violence
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.1.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of criminal offenses under Articles 115-118, 121 of the Criminal Code of Ukraine (evident intentional homicide, intentional grievous bodily harm) reported in the past 12 months per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-1-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-1-1-a"
+                            onclick="loadChart('/stage/16-1-1-a/', '16-1-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-1-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-1-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-1-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-1-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.1.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of victims of crimes related to physical violence (intentional homicide (and relevant attempts), rape (and relevant attempts), grievous bodily harm), reported over the past 12 months, per 100,000 persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-1-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-1-2-a"
+                            onclick="loadChart('/stage/16-1-2-a/', '16-1-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-1-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-1-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-1-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-1-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.1.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of victims of rape in the past 12 months, persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-1-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-1-3-a"
+                            onclick="loadChart('/stage/16-1-3-a/', '16-1-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-1-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-1-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-1-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-1-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.2</h3></div>
+                    <div class="col-md-8">
+                        Increase detection of victims of human trafficking and all forms of exploitation
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of victims of human trafficking or other illicit transactions involving the transfer of human beings reported in the past 12 months, persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-1-a"
+                            onclick="loadChart('/stage/16-2-1-a/', '16-2-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of specialists trained in combating human trafficking</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-2-a"
+                            onclick="loadChart('/stage/16-2-2-a/', '16-2-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of social services provided to meet the needs of victims of human trafficking</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-3-a"
+                            onclick="loadChart('/stage/16-2-3-a/', '16-2-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.4
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of counter-trafficking information campaigns conducted</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-4-a"
+                            onclick="loadChart('/stage/16-2-4-a/', '16-2-4-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-4-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.5
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of persons covered by counter-trafficking information campaigns</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-5-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-5-a"
+                            onclick="loadChart('/stage/16-2-5-a/', '16-2-5-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-5-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-5-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-5-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-5-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.6
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Percentage of funding of regional counter-trafficking programs from relevant local budgets</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-6-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-6-a"
+                            onclick="loadChart('/stage/16-2-6-a/', '16-2-6-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-6-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-6-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-6-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-6-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.2.7
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of persons who obtained the victim of trafficking status, persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-2-7-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-2-7-a"
+                            onclick="loadChart('/stage/16-2-7-a/', '16-2-7-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-2-7-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-2-7-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-2-7-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-2-7-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.3</h3></div>
+                    <div class="col-md-8">
+                        Increase confidence in courts and ensure equal access to justice
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.3.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Level of public confidence in the court, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-3-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-3-1-a"
+                            onclick="loadChart('/stage/16-3-1-a/', '16-3-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-3-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-3-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-3-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-3-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.3.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of persons seeking free legal aid, persons</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-3-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-3-2-a"
+                            onclick="loadChart('/stage/16-3-2-a/', '16-3-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-3-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-3-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-3-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-3-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.4</h3></div>
+                    <div class="col-md-8">
+                        Strengthen the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.4.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Share of high-level risks in the overall national aggregate of risks in the system for preventing and counteracting the legalization of illegal incomes, the financing of terrorism and the proliferation of weapons of mass destruction, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-4-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-4-1-a"
+                            onclick="loadChart('/stage/16-4-1-a/', '16-4-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-4-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-4-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-4-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-4-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.5</h3></div>
+                    <div class="col-md-8">
+                        Reduce illicit trafficking of weapons, ammunition and explosive materials
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of weapons seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-1-a"
+                            onclick="loadChart('/stage/16-5-1-a/', '16-5-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of ammunition seized (criminal proceedings with completed pre-trial investigation for the past 12 months, units)</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-2-a"
+                            onclick="loadChart('/stage/16-5-2-a/', '16-5-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.5.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of criminal offenses related to illicit arms trafficking reported in the past 12 months, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-5-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-5-3-a"
+                            onclick="loadChart('/stage/16-5-3-a/', '16-5-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-5-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-5-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-5-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-5-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.6</h3></div>
+                    <div class="col-md-8">
+                        Reduce the scale of corruption
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.6.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Index of perception of corruption in the public sector by the business community and experts</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-6-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-6-1-a"
+                            onclick="loadChart('/stage/16-6-1-a/', '16-6-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-6-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-6-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-6-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-6-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.7</h3></div>
+                    <div class="col-md-8">
+                        Increase the efficiency of government bodies and local self-government
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.7.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Ukraine’s ranking in the Global Competitiveness Report by sub-index ‘Institutions (government and public institutions)’</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-7-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-7-1-a"
+                            onclick="loadChart('/stage/16-7-1-a/', '16-7-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-7-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-7-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-7-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-7-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.8</h3></div>
+                    <div class="col-md-8">
+                        Recovery of conflict affected areas in eastern Ukraine (Donbas)
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Share of the population satisfied with their experience of the use of infrastructure and the level of social services in key areas in Donetsk and Luhansk regions, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-1-a"
+                            onclick="loadChart('/stage/16-8-1-a/', '16-8-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.2
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Share of the population satisfied with the level of administrative governance services in Donetsk and Luhansk regions, %</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-2-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-2-a"
+                            onclick="loadChart('/stage/16-8-2-a/', '16-8-2-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-2-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-2-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-2-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-2-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.3
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of communities in the Donetsk and Luhansk regions that implemented mine action, units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-3-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-3-a"
+                            onclick="loadChart('/stage/16-8-3-a/', '16-8-3-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-3-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-3-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-3-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-3-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.4
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Demined area in Donetsk and Luhansk regions, hectares</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-4-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-4-a"
+                            onclick="loadChart('/stage/16-8-4-a/', '16-8-4-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-4-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-4-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-4-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-4-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+
+                
+
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.8.5
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Number of cases of detection of explosive objects (operative component), units</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-8-5-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-8-5-a"
+                            onclick="loadChart('/stage/16-8-5-a/', '16-8-5-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-8-5-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-8-5-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-8-5-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-8-5-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                <div class="row align-items-start goal-target">
+                    <div class="col-auto"><h3><span class="visually-hidden">Target</span>16.9</h3></div>
+                    <div class="col-md-8">
+                        Strengthen social stability, and promote peacebuilding and community security
+                    </div>
+                </div>
+
+                <hr class="goal-page-target-rule">
+
+                
+                
+
+                <div class="indicator-item">
+                    <div class="row align-items-start goal-indicator">
+                        <div class="col-auto">
+                            <h4>
+                                <span class="visually-hidden">Indicator</span>
+                                16.9.1
+                            </h4>
+                        </div>
+                        <div class="col-md-8">Index of social cohesion and reconciliation</div>
+                        
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+
+                    </div>
+                    <button class="btn btn-toggle-collapse collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-16-9-1-a"
+                            aria-expanded="false"
+                            aria-controls="collapse-16-9-1-a"
+                            onclick="loadChart('/stage/16-9-1-a/', '16-9-1-a')"
+                            data-text-show="Show"
+                            data-text-hide="Hide">
+                        Show
+                    </button>
+
+                    <div class="collapse" id="collapse-16-9-1-a">
+                        <div class="card card-body mt-2">
+                            <div id="loader-16-9-1-a" class="text-center">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <p>Loading chart...</p>
+                            </div>
+                            <div id="chart-target-16-9-1-a"></div>
+                        </div>
+                        <a class="view-indicator-details" href="/stage/16-9-1-a/">
+                            View indicator details
+                        </a>
+                    </div>
+                </div>
+                <hr class="goal-page-target-rule">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+
+    </div>
+    <a href="#top">Back to top</a>
+</div>
+
+
+<script>
+    function loadChart(url, slug) {
+        const targetDiv = document.getElementById('chart-target-' + slug);
+        const loader = document.getElementById('loader-' + slug);
+
+        if (targetDiv.innerHTML.trim() !== "") return;
+
+        const indicatorTitle = window.location.pathname.includes('/uk') ? 'Індикатор' : 'Indicator';
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.width = "100%";
+        iframe.height = "500px";
+        iframe.style.border = "none";
+        iframe.style.visibility = "hidden";
+        iframe.title = `${indicatorTitle} ${slug}`;
+
+        iframe.onload = function() {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const chart = iframeDoc.getElementById('selectionsChart');
+
+                if (chart) {
+                    Array.from(iframeDoc.body.children).forEach(child => {
+                        child.style.display = 'none';
+                    });
+
+                    let current = chart;
+                    while (current && current !== iframeDoc.body) {
+                        current.style.display = 'block';
+                        current = current.parentElement;
+                    }
+
+                    const style = iframeDoc.createElement('style');
+                    style.textContent = `
+            .plot-container { padding: 0 !important; }
+            #chart-canvas { margin-top: 0 !important; }
+            #main-content { margin: 0 !important; }
+            #main-content #indicatorData { margin-top: 0 !important; }
+            #legend { margin-bottom: 0 !important; }
+            #selectionsChart figure { margin-bottom: 0 !important; }
+            .tab-content.data-view { border: none !important; padding: 0 !important; }
+        `;
+                    iframeDoc.head.appendChild(style);
+
+                    const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"]');
+                    toHideInside.forEach(el => el.style.display = 'none');
+
+                    iframeDoc.body.style.overflow = 'hidden';
+                    loader.style.display = 'none';
+                    iframe.style.visibility = "visible";
+                } else {
+                    loader.style.display = 'none';
+                    targetDiv.innerHTML = '';
+                }
+
+            } catch (e) {
+                console.warn("CORS error: iframe", e);
+                loader.innerHTML = "Помилка доступу до графіка";
+            }
+        };
+
+        targetDiv.appendChild(iframe);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const collapses = document.querySelectorAll('.collapse');
+
+        collapses.forEach(collapseEl => {
+            const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
+            if (!button) return;
+
+            collapseEl.addEventListener('show.bs.collapse', function () {
+                button.textContent = button.getAttribute('data-text-hide');
+            });
+
+            collapseEl.addEventListener('hide.bs.collapse', function () {
+                button.textContent = button.getAttribute('data-text-show');
+            });
+        });
+    });
+</script>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/stage/contact-us">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://x.com/Ukrstat" target="_blank">Twitter</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.facebook.com/Ukrstat/" target="_blank">Facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/stage/cookies-and-privacy/">Cookies</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<div class="site_version" style="display:none;">
+    Site version:
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'hide';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Search';</script>
+
+<script src='/stage/assets/js/sdg.js?v=20260317151122'></script>
+
+
+    
+    
+    <script src="/stage/assets/js/custom.js?v=20260317151122"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>
+

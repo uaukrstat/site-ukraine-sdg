@@ -1,0 +1,27 @@
+reporting_status: Reporting status
+overall_reporting_status: Overall reporting status
+reported_online: Reported online
+statistics_in_progress: Statistics in progress
+exploring_data_sources: Exploring data sources
+not_applicable: Not applicable
+# Describing a section where the status is reported for each goal
+status_by_goal: Status by Goal
+status_by_field: Status by %field
+disaggregation_status: Disaggregation status
+disaggregation_status_overall: Overall disaggregation status
+disaggregation_status_complete: Fully disaggregated
+disaggregation_status_inprogress: Partially disaggregated
+disaggregation_status_notstarted: Not disaggregated
+disaggregation_status_notapplicable: Out of scope
+disaggregation_status_by_field: Disaggregation by %field
+not_specified: Not specified
+reported: Reported
+published: Reported
+description: 'Reporting status provides an overview of the indicators that Ukraine publishes on the Sustainable Development Goals
+    If data for indicators are available, they are marked as Reported.
+    For some indicators, authorities and institutions are exploring data sources, developing methodology and metadata. Data for some indicators will be available after the end or lifting martial law in Ukraine. Some indicators require research with the participation of development partners. Data for them will be provided additionally. Such indicators are marked as Exploring data sources.'
+progress_status: Progress status
+progress_not_available: Not available
+progress_challenges_remain: Challenges remain
+progress_approaching_target: Approaching target
+progress_target_achieved: Target achieved
