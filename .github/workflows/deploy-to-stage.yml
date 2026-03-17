@@ -60,6 +60,18 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
 
+      - name: Hotfix - Force replace URL in built files
+        run: |
+          echo "Replacing main with stage in all HTML files..."
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/en|data-ukraine-sdg/stage/en|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/uk|data-ukraine-sdg/stage/uk|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/"|data-ukraine-sdg/stage/"|g' {} +
+
+      - name: Debug - Real check
+        run: |
+          echo "=== Search for the URL after Hotfix ==="
+          grep -r "remoteDataBaseUrl" _site/ | head -n 5
+
       - name: Debug - Real check
         run: |
           echo "=== Where are the files? ==="
