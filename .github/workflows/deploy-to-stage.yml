@@ -60,11 +60,12 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
 
-      - name: Hotfix - Universal URL replace
+      - name: Ultimate Hotfix - Correct Data Paths
         run: |
-          echo "Replacing data repo URL with stage path..."
+          echo "Fixing data paths without forcing /en/..."
           find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/|data-ukraine-sdg/stage/|g' {} +
-          find _site -type f -name "*.html" -exec sed -i 's|stage/stage/|stage/|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/stage/en/|data-ukraine-sdg/stage/|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|stage//|stage/|g' {} +
 
       - name: Debug - Real check
         run: |
