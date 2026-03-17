@@ -60,12 +60,11 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
 
-      - name: Hotfix - Force replace URL in built files
+      - name: Hotfix - Universal URL replace
         run: |
-          echo "Replacing main with stage in all HTML files..."
-          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/en|data-ukraine-sdg/stage/en|g' {} +
-          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/uk|data-ukraine-sdg/stage/uk|g' {} +
-          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/"|data-ukraine-sdg/stage/"|g' {} +
+          echo "Replacing data repo URL with stage path..."
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/|data-ukraine-sdg/stage/|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|stage/stage/|stage/|g' {} +
 
       - name: Debug - Real check
         run: |
