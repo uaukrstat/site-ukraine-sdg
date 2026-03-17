@@ -1,0 +1,53 @@
+name: Deploy to stage
+
+on:
+  push:
+    branches:
+      - stage
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site repository
+        uses: actions/checkout@v4
+
+      - name: Checkout translations repository
+        uses: actions/checkout@v4
+        with:
+          repository: uaukrstat/sdg-translations
+          ref: stage
+          path: translations-repo
+          persist-credentials: false
+
+      - name: Copy translations
+        run: |
+          rm -rf translations
+          mkdir -p translations
+          cp -R translations-repo/translations/* translations/
+          rm -rf _data/translations
+          mkdir -p _data/translations
+          cp -R translations-repo/translations/* _data/translations/
+
+      - name: Set up Ruby 3.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+
+      - name: Build the site
+        run: |
+          JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml
+
+      - name: Deploy to GitHub Pages (STAGE FOLDER)
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _site
+          TARGET_FOLDER: stage
+          CLEAN: true

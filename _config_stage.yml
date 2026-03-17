@@ -2,14 +2,14 @@
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
 remote_theme: uaukrstat/open-sdg@main
-remote_data_prefix: "https://uaukrstat.github.io/data-ukraine-sdg/"
+remote_data_prefix: "https://uaukrstat.github.io/data-ukraine-sdg/stage/"
 repository_url_data: "https://github.com/uaukrstat/data-ukraine-sdg"
 
 # Replace this title as needed.
 title: general.site_title
-baseurl: ""
+baseurl: "/stage"
 url: "https://uaukrstat.github.io"
-environment: production
+environment: staging
 
 # Pages
 collections:
