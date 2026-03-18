@@ -55,6 +55,11 @@ jobs:
 #          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/uk|data-ukraine-sdg/stage/uk|g' {} +
 #          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/"|data-ukraine-sdg/stage/"|g' {} +
 
+      - name: Debug - Check Metadata in HTML
+        run: |
+          echo "=== Checking if STAGE TEST is inside HTML table ==="
+          grep -i "STAGE TEST" _site/1-1-1/index.html || echo "No STAGE TEST in HTML!"
+
       - name: Prepare stage folder
         run: |
           rm -rf temp_dist
