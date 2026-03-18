@@ -49,6 +49,12 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
 
+      - name: Force replace URL
+        run: |
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/en|data-ukraine-sdg/stage/en|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/uk|data-ukraine-sdg/stage/uk|g' {} +
+          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/"|data-ukraine-sdg/stage/"|g' {} +
+
       - name: Prepare stage folder
         run: |
           rm -rf temp_dist
