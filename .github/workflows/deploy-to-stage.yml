@@ -45,39 +45,9 @@ jobs:
           ruby-version: "3.2.2"
           bundler-cache: true
 
-      - name: Ultimate Debug - What does Jekyll see?
-        run: |
-          echo "=== 1. Checking the content of _config.yml after copy ==="
-          grep "remote_data_prefix" _config.yml
-          
-          echo "=== 2. Checking the content of _data/site_config.yml after copy ==="
-          grep "remote_data_prefix" _data/site_config.yml
-          
-          echo "=== 3. List all files in _data to see if there are hidden configs ==="
-          ls -F _data/
-
       - name: Build the site
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
-
-      - name: Ultimate Hotfix - Correct Data Paths
-        run: |
-          echo "Fixing data paths without forcing /en/..."
-          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/|data-ukraine-sdg/stage/|g' {} +
-          find _site -type f -name "*.html" -exec sed -i 's|data-ukraine-sdg/stage/en/|data-ukraine-sdg/stage/|g' {} +
-          find _site -type f -name "*.html" -exec sed -i 's|stage//|stage/|g' {} +
-
-      - name: Debug - Real check
-        run: |
-          echo "=== Search for the URL after Hotfix ==="
-          grep -r "remoteDataBaseUrl" _site/ | head -n 5
-
-      - name: Debug - Real check
-        run: |
-          echo "=== Where are the files? ==="
-          ls -F _site/
-          echo "=== Search for the URL in the whole build ==="
-          grep -r "remoteDataBaseUrl" _site/ | head -n 5
 
       - name: Prepare stage folder
         run: |
