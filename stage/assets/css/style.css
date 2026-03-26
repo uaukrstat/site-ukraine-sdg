@@ -1989,6 +1989,9 @@ ul > li > p {
       margin-right: 0;
       text-decoration: underline;
       color: #0b0c0c; }
+      @media screen and (max-width: 350px) {
+        #main-content .nav-tabs .nav-item button {
+          width: 100%; } }
     #main-content .nav-tabs .nav-item.active {
       background-color: white;
       border: 1px solid #888;
@@ -2146,9 +2149,9 @@ footer {
     font-size: 16px;
     margin-bottom: 0; }
 .layout-goal .goal-target {
-  margin-top: 0; }
+  margin-top: 40px; }
 .layout-goal .goal-indicator {
-  margin-top: 20px; }
+  margin-top: 40px; }
   .layout-goal .goal-indicator h4 {
     font-weight: 600; }
 .layout-goal .goal-page-target-rule, .layout-goal .goal-page-column-header-rule {
@@ -2283,7 +2286,8 @@ body.contrast-high .indicator.goal-banner .goal-tiles img {
   color: #0B0C0C;
   font-size: 24px;
   font-weight: 700;
-  line-height: 32px; }
+  line-height: 32px;
+  margin-bottom: 32px; }
   .indicators-container .goal-target .col-auto h3 {
     margin: 0; }
 .indicators-container .goal-page-target-rule {
@@ -2393,6 +2397,8 @@ body.contrast-high .indicator.goal-banner .goal-tiles img {
 .layout-reportingstatus #main-content .divider {
   height: 15px; }
 .layout-reportingstatus #main-content .goal {
+  display: flex;
+  align-items: center;
   clear: left;
   margin-bottom: 4px;
   padding-bottom: 4px; }
@@ -2522,9 +2528,9 @@ body.contrast-high .indicator.goal-banner .goal-tiles img {
   margin-bottom: 0px; }
 .layout-goals #main-content .goal-tiles .global-goals-extra-icon img {
   box-shadow: none; }
-.layout-goals .goals-page-description {
-  font-size: 18px;
-  line-height: 27px;
+.layout-goals .goals-page-description p {
+  font-size: 18px !important;
+  line-height: 27px !important;
   margin-bottom: 48px; }
 .layout-goals .goal-tiles {
   padding-bottom: 64px; }
@@ -3347,7 +3353,9 @@ body.contrast-high.layout-data-editor .ag-root-wrapper, body.contrast-high.layou
         font-style: normal;
         font-weight: 700;
         line-height: 27px;
-        text-decoration: underline; }
+        text-decoration: underline;
+        margin-bottom: 16px;
+        margin-top: 0; }
   #search-results .no-results-text {
     font-size: 19px;
     line-height: 27px;
@@ -3374,6 +3382,9 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 #indicator_search-bar-on-page:focus {
   background: white !important;
   box-shadow: none !important; }
+
+.goal-page-heading {
+  margin-bottom: 32px; }
 
 /**
  * custom.scss

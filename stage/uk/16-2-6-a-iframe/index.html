@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/stage/assets/css/style.css?v=20260326083503">
+        <link rel="stylesheet" href="/stage/assets/css/style.css?v=20260326090856">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -391,19 +391,17 @@ layout-indicator-iframe
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
       <caption>Відсоток фінансової забезпеченості регіональних програм щодо протидії торгівлі, за рахунок відповідних місцевих бюджетів</caption>
       <thead>
-        
         <tr>
+        
         
         <th scope="col">Year</th>
         
-        </tr>
         
-        <tr>
         
         <th scope="col" class="table-value">Value</th>
         
-        </tr>
         
+        </tr>
       </thead>
       <tbody>
         
@@ -784,7 +782,7 @@ data-event-label="Change to Table tab"
   
   
   <div class="mt-4" id="metadataTabs">
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs indicator-metadata-tabs" role="tablist">
     
         <li role="presentation" class="nav-item">
     <button type="button" class="nav-link active" data-bs-toggle="tab" id="tab-national" data-bs-target="#national" aria-controls="national" role="tab" data-on="click"
@@ -812,6 +810,137 @@ data-event-label="Change to Sources tab"
   
     
 </ul>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tablists = document.querySelectorAll('.indicator-metadata-tabs[role="tablist"]');
+        if (!tablists.length) return;
+
+        tablists.forEach(function (tablist) {
+            var tabs = Array.prototype.slice.call(
+                tablist.querySelectorAll('[role="tab"]')
+            );
+
+            if (!tabs.length) return;
+
+            function activateTab(tab) {
+                if (!tab) return;
+
+                tabs.forEach(function (item) {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-selected', 'false');
+                    item.setAttribute('tabindex', '-1');
+
+                    var parentLi = item.closest('li');
+                    if (parentLi) parentLi.classList.remove('active');
+
+                    var targetSelector =
+                        item.getAttribute('data-bs-target') ||
+                        item.getAttribute('data-target') ||
+                        item.getAttribute('href');
+
+                    if (targetSelector && targetSelector.charAt(0) === '#') {
+                        var pane = document.querySelector(targetSelector);
+                        if (pane) {
+                            pane.classList.remove('active', 'show', 'in');
+                        }
+                    }
+                });
+
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                tab.setAttribute('tabindex', '0');
+
+                var parentLi = tab.closest('li');
+                if (parentLi) parentLi.classList.add('active');
+
+                var activeTarget =
+                    tab.getAttribute('data-bs-target') ||
+                    tab.getAttribute('data-target') ||
+                    tab.getAttribute('href');
+
+                if (activeTarget && activeTarget.charAt(0) === '#') {
+                    var activePane = document.querySelector(activeTarget);
+                    if (activePane) {
+                        activePane.classList.add('active');
+                        activePane.classList.add('show');
+                        activePane.classList.add('in');
+                    }
+                }
+
+                if (window.bootstrap && window.bootstrap.Tab) {
+                    var instance = window.bootstrap.Tab.getOrCreateInstance(tab);
+                    instance.show();
+                } else if (window.jQuery && typeof window.jQuery(tab).tab === 'function') {
+                    window.jQuery(tab).tab('show');
+                }
+
+                tab.focus();
+            }
+
+            function moveTab(currentIndex, direction) {
+                var newIndex = currentIndex;
+
+                if (direction === 'next') {
+                    newIndex = (currentIndex + 1) % tabs.length;
+                } else if (direction === 'prev') {
+                    newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+                } else if (direction === 'first') {
+                    newIndex = 0;
+                } else if (direction === 'last') {
+                    newIndex = tabs.length - 1;
+                }
+
+                activateTab(tabs[newIndex]);
+            }
+
+            tabs.forEach(function (tab, index) {
+                tab.addEventListener('keydown', function (e) {
+                    switch (e.key) {
+                        case 'ArrowRight':
+                        case 'Right':
+                        case 'ArrowDown':
+                        case 'Down':
+                            e.preventDefault();
+                            e.stopPropagation();
+                            moveTab(index, 'next');
+                            break;
+
+                        case 'ArrowLeft':
+                        case 'Left':
+                        case 'ArrowUp':
+                        case 'Up':
+                            e.preventDefault();
+                            e.stopPropagation();
+                            moveTab(index, 'prev');
+                            break;
+
+                        case 'Home':
+                            e.preventDefault();
+                            e.stopPropagation();
+                            moveTab(index, 'first');
+                            break;
+
+                        case 'End':
+                            e.preventDefault();
+                            e.stopPropagation();
+                            moveTab(index, 'last');
+                            break;
+                    }
+                });
+
+                tab.addEventListener('click', function () {
+                    tabs.forEach(function (item) {
+                        item.setAttribute('aria-selected', 'false');
+                        item.setAttribute('tabindex', '-1');
+                    });
+
+                    tab.setAttribute('aria-selected', 'true');
+                    tab.setAttribute('tabindex', '0');
+                });
+            });
+        });
+    });
+</script>
 
 <div class="tab-content">
     
@@ -819,7 +948,7 @@ data-event-label="Change to Sources tab"
     <!-- National Metadata -->
     <div>
         <article>
-            <h2 class="visually-hidden"></h2>
+            <h2 class="visually-hidden">Національні метадані</h2>
             
             <table class="table metadata-content">
   <tbody>
@@ -1373,12 +1502,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/stage/assets/js/sdg.js?v=20260326083503'></script>
+<script src='/stage/assets/js/sdg.js?v=20260326090856'></script>
 
 
     
     
-    <script src="/stage/assets/js/custom.js?v=20260326083503"></script><script>
+    <script src="/stage/assets/js/custom.js?v=20260326090856"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
