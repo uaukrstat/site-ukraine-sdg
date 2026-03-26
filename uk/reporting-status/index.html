@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260317164139">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260326093257">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -301,499 +301,761 @@ layout-reportingstatus
   <div class="goal goal-overall">
     <div class="details">
         <h2 class="status-goal">Загальний стан звітності</h2>
-        <span class="total"><span>309</span> індикатори</span>
 
-        
-        <div class="summary">
-            <div class="statuses"><div><span class="status notstarted"><span class="status-inner">309</span></span><strong></strong><span class="value">100%</span></div></div>
+        <span class="total">
+            <span id="js-overall-total">...</span>
+            <span id="js-overall-label">
+                індикаторів
+            </span>
+        </span>
+
+        <div class="summary" id="js-overall-summary" style="display: none;">
+            <div class="statuses" id="js-overall-statuses"></div>
         </div>
-        <div class=status-goal-divider"></div>
-        
+
+        <div class="status-goal-divider"></div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentLang = "uk";
+        const dataUrl = `https://sdg-kitsoft-stg.github.io/data-ukraine-sdg/${currentLang}/meta/all.json`;
+
+        const indicatorLabels = {
+            uk: {
+                one: "індикатор",
+                few: "індикатори",
+                many: "індикаторів"
+            },
+            en: {
+                one: "indicator",
+                other: "indicators"
+            }
+        };
+
+        function getPluralKey(count, lang = 'uk') {
+            if (lang === 'uk') {
+                const mod10 = count % 10;
+                const mod100 = count % 100;
+
+                if (mod10 === 1 && mod100 !== 11) return 'one';
+                if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return 'few';
+                return 'many';
+            }
+
+            return count === 1 ? 'one' : 'other';
+        }
+
+        function getIndicatorLabel(count, lang = 'uk') {
+            const pluralKey = getPluralKey(count, lang);
+            const langLabels = indicatorLabels[lang] || indicatorLabels.en;
+
+            return langLabels[pluralKey] || langLabels.other || '';
+        }
+
+        fetch(dataUrl)
+            .then(response => response.json())
+            .then(data => {
+                let allIndicators = [];
+
+                if (Array.isArray(data)) {
+                    allIndicators = data;
+                } else {
+                    allIndicators = Object.keys(data).map(key => {
+                        const item = data[key];
+                        item._originalKey = key;
+                        return item;
+                    });
+                }
+
+                const cleanIndicators = allIndicators.filter(ind => {
+                    const id = ind._originalKey || ind.indicator_number || '';
+                    return !id.endsWith('-a');
+                });
+
+                let total = 0;
+                let complete = 0;
+                let inprogress = 0;
+                let notstarted = 0;
+
+                cleanIndicators.forEach(ind => {
+                    total += 1;
+
+                    if (ind.reporting_status === 'complete') {
+                        complete += 1;
+                    } else if (ind.reporting_status === 'inprogress') {
+                        inprogress += 1;
+                    } else {
+                        notstarted += 1;
+                    }
+                });
+
+                const totalEl = document.getElementById('js-overall-total');
+                const labelEl = document.getElementById('js-overall-label');
+                const summaryEl = document.getElementById('js-overall-summary');
+                const statusesEl = document.getElementById('js-overall-statuses');
+
+                if (totalEl) {
+                    totalEl.innerText = total;
+                }
+
+                if (labelEl) {
+                    labelEl.innerText = getIndicatorLabel(total, currentLang);
+                }
+
+                if (summaryEl && total > 0) {
+                    summaryEl.style.display = 'block';
+                }
+
+                if (statusesEl && total > 0) {
+                    const tComplete = "Опубліковано";
+                    const tInprogress = "В процесі";
+                    const tNotstarted = "Не розпочато";
+
+                    const pComp = complete > 0 ? Math.round((complete / total) * 100) : 0;
+                    const pInp = inprogress > 0 ? Math.round((inprogress / total) * 100) : 0;
+                    const pNot = Math.max(0, 100 - pComp - pInp);
+
+                    let html = '';
+
+                    if (complete > 0) {
+                        html += `<div><span class="status complete"><span class="status-inner">${complete}</span></span><strong>${tComplete}</strong><span class="value">${pComp}%</span></div>`;
+                    }
+
+                    if (inprogress > 0) {
+                        html += `<div><span class="status inprogress"><span class="status-inner">${inprogress}</span></span><strong>${tInprogress}</strong><span class="value">${pInp}%</span></div>`;
+                    }
+
+                    if (notstarted > 0) {
+                        html += `<div><span class="status notstarted"><span class="status-inner">${notstarted}</span></span><strong>${tNotstarted}</strong><span class="value">${pNot}%</span></div>`;
+                    }
+
+                    statusesEl.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                console.error('Помилка завантаження all.json:', error);
+            });
+    });
+</script>
 
   <h2 class="mb-4">Статус за ціллю</h2>
 
 <div class="col-md-8"><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/1.svg" alt="Подолання бідності - Ціль 1" width="80" height="80" class="goal-icon-1 goal-icon-image goal-icon-image-svg"/>
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/1.svg" alt="Подолання бідності - Ціль 1"
+                     width="80" height="80"
+                     class="goal-icon-1 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/1/">Подолання бідності</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/1/">Подолання бідності</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-1-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-1-total">...</span>
+                <span id="js-goal-1-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-1-summary" style="display: none;">
-            <div class="statuses" id="js-goal-1-statuses"></div>
+            <div class="summary" id="js-goal-1-summary" style="display: none;">
+                <div class="statuses" id="js-goal-1-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-1-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-1-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/2.svg" alt="Подолання голоду - Ціль 2" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/2.svg" alt="Подолання голоду - Ціль 2"
+                     width="80" height="80"
+                     class="goal-icon-2 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/2/">Подолання голоду</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/2/">Подолання голоду</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-2-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-2-total">...</span>
+                <span id="js-goal-2-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-2-summary" style="display: none;">
-            <div class="statuses" id="js-goal-2-statuses"></div>
+            <div class="summary" id="js-goal-2-summary" style="display: none;">
+                <div class="statuses" id="js-goal-2-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-2-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-2-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/3.svg" alt="Міцне здоров’я і благополуччя - Ціль 3" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/3.svg" alt="Міцне здоров’я і благополуччя - Ціль 3"
+                     width="80" height="80"
+                     class="goal-icon-3 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/3/">Міцне здоров’я і благополуччя</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/3/">Міцне здоров’я і благополуччя</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-3-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-3-total">...</span>
+                <span id="js-goal-3-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-3-summary" style="display: none;">
-            <div class="statuses" id="js-goal-3-statuses"></div>
+            <div class="summary" id="js-goal-3-summary" style="display: none;">
+                <div class="statuses" id="js-goal-3-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-3-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-3-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/4.svg" alt="Якісна освіта - Ціль 4" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/4.svg" alt="Якісна освіта - Ціль 4"
+                     width="80" height="80"
+                     class="goal-icon-4 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/4/">Якісна освіта</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/4/">Якісна освіта</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-4-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-4-total">...</span>
+                <span id="js-goal-4-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-4-summary" style="display: none;">
-            <div class="statuses" id="js-goal-4-statuses"></div>
+            <div class="summary" id="js-goal-4-summary" style="display: none;">
+                <div class="statuses" id="js-goal-4-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-4-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-4-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/5.svg" alt="Гендерна рівність - Ціль 5" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/5.svg" alt="Гендерна рівність - Ціль 5"
+                     width="80" height="80"
+                     class="goal-icon-5 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/5/">Гендерна рівність</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/5/">Гендерна рівність</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-5-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-5-total">...</span>
+                <span id="js-goal-5-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-5-summary" style="display: none;">
-            <div class="statuses" id="js-goal-5-statuses"></div>
+            <div class="summary" id="js-goal-5-summary" style="display: none;">
+                <div class="statuses" id="js-goal-5-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-5-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-5-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/6.svg" alt="Чиста вода та належні санітарні умови - Ціль 6" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/6.svg" alt="Чиста вода та належні санітарні умови - Ціль 6"
+                     width="80" height="80"
+                     class="goal-icon-6 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/6/">Чиста вода та належні санітарні умови</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/6/">Чиста вода та належні санітарні умови</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-6-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-6-total">...</span>
+                <span id="js-goal-6-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-6-summary" style="display: none;">
-            <div class="statuses" id="js-goal-6-statuses"></div>
+            <div class="summary" id="js-goal-6-summary" style="display: none;">
+                <div class="statuses" id="js-goal-6-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-6-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-6-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/7.svg" alt="Доступна та чиста енергія - Ціль 7" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/7.svg" alt="Доступна та чиста енергія - Ціль 7"
+                     width="80" height="80"
+                     class="goal-icon-7 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/7/">Доступна та чиста енергія</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/7/">Доступна та чиста енергія</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-7-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-7-total">...</span>
+                <span id="js-goal-7-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-7-summary" style="display: none;">
-            <div class="statuses" id="js-goal-7-statuses"></div>
+            <div class="summary" id="js-goal-7-summary" style="display: none;">
+                <div class="statuses" id="js-goal-7-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-7-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-7-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/8.svg" alt="Гідна праця та економічне зростання - Ціль 8" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/8.svg" alt="Гідна праця та економічне зростання - Ціль 8"
+                     width="80" height="80"
+                     class="goal-icon-8 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/8/">Гідна праця та економічне зростання</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/8/">Гідна праця та економічне зростання</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-8-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-8-total">...</span>
+                <span id="js-goal-8-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-8-summary" style="display: none;">
-            <div class="statuses" id="js-goal-8-statuses"></div>
+            <div class="summary" id="js-goal-8-summary" style="display: none;">
+                <div class="statuses" id="js-goal-8-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-8-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-8-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/9.svg" alt="Промисловість, інновації та інфраструктура - Ціль 9" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/9.svg" alt="Промисловість, інновації та інфраструктура - Ціль 9"
+                     width="80" height="80"
+                     class="goal-icon-9 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/9/">Промисловість, інновації та інфраструктура</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/9/">Промисловість, інновації та інфраструктура</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-9-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-9-total">...</span>
+                <span id="js-goal-9-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-9-summary" style="display: none;">
-            <div class="statuses" id="js-goal-9-statuses"></div>
+            <div class="summary" id="js-goal-9-summary" style="display: none;">
+                <div class="statuses" id="js-goal-9-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-9-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-9-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/10.svg" alt="Скорочення нерівності - Ціль 10" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/10.svg" alt="Скорочення нерівності - Ціль 10"
+                     width="80" height="80"
+                     class="goal-icon-10 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/10/">Скорочення нерівності</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/10/">Скорочення нерівності</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-10-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-10-total">...</span>
+                <span id="js-goal-10-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-10-summary" style="display: none;">
-            <div class="statuses" id="js-goal-10-statuses"></div>
+            <div class="summary" id="js-goal-10-summary" style="display: none;">
+                <div class="statuses" id="js-goal-10-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-10-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-10-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/11.svg" alt="Сталий розвиток міст та спільнот - Ціль 11" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/11.svg" alt="Сталий розвиток міст та спільнот - Ціль 11"
+                     width="80" height="80"
+                     class="goal-icon-11 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/11/">Сталий розвиток міст та спільнот</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/11/">Сталий розвиток міст та спільнот</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-11-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-11-total">...</span>
+                <span id="js-goal-11-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-11-summary" style="display: none;">
-            <div class="statuses" id="js-goal-11-statuses"></div>
+            <div class="summary" id="js-goal-11-summary" style="display: none;">
+                <div class="statuses" id="js-goal-11-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-11-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-11-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/12.svg" alt="Відповідальне споживання та виробництво - Ціль 12" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/12.svg" alt="Відповідальне споживання та виробництво - Ціль 12"
+                     width="80" height="80"
+                     class="goal-icon-12 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/12/">Відповідальне споживання та виробництво</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/12/">Відповідальне споживання та виробництво</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-12-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-12-total">...</span>
+                <span id="js-goal-12-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-12-summary" style="display: none;">
-            <div class="statuses" id="js-goal-12-statuses"></div>
+            <div class="summary" id="js-goal-12-summary" style="display: none;">
+                <div class="statuses" id="js-goal-12-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-12-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-12-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/13.svg" alt="Пом’якшення наслідків зміни клімату - Ціль 13" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/13.svg" alt="Пом’якшення наслідків зміни клімату - Ціль 13"
+                     width="80" height="80"
+                     class="goal-icon-13 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/13/">Пом’якшення наслідків зміни клімату</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/13/">Пом’якшення наслідків зміни клімату</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-13-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-13-total">...</span>
+                <span id="js-goal-13-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-13-summary" style="display: none;">
-            <div class="statuses" id="js-goal-13-statuses"></div>
+            <div class="summary" id="js-goal-13-summary" style="display: none;">
+                <div class="statuses" id="js-goal-13-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-13-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-13-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/14.svg" alt="Збереження морських ресурсів - Ціль 14" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/14.svg" alt="Збереження морських ресурсів - Ціль 14"
+                     width="80" height="80"
+                     class="goal-icon-14 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/14/">Збереження морських ресурсів</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/14/">Збереження морських ресурсів</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-14-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-14-total">...</span>
+                <span id="js-goal-14-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-14-summary" style="display: none;">
-            <div class="statuses" id="js-goal-14-statuses"></div>
+            <div class="summary" id="js-goal-14-summary" style="display: none;">
+                <div class="statuses" id="js-goal-14-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-14-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-14-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/15.svg" alt="Захист екосистем суші - Ціль 15" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/15.svg" alt="Захист екосистем суші - Ціль 15"
+                     width="80" height="80"
+                     class="goal-icon-15 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/15/">Захист екосистем суші</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/15/">Захист екосистем суші</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-15-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-15-total">...</span>
+                <span id="js-goal-15-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-15-summary" style="display: none;">
-            <div class="statuses" id="js-goal-15-statuses"></div>
+            <div class="summary" id="js-goal-15-summary" style="display: none;">
+                <div class="statuses" id="js-goal-15-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-15-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-15-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/16.svg" alt="Мир, справедливість та сильні інститути - Ціль 16" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/16.svg" alt="Мир, справедливість та сильні інститути - Ціль 16"
+                     width="80" height="80"
+                     class="goal-icon-16 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/16/">Мир, справедливість та сильні інститути</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/16/">Мир, справедливість та сильні інститути</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-16-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-16-total">...</span>
+                <span id="js-goal-16-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-16-summary" style="display: none;">
-            <div class="statuses" id="js-goal-16-statuses"></div>
+            <div class="summary" id="js-goal-16-summary" style="display: none;">
+                <div class="statuses" id="js-goal-16-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-16-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-16-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div><div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
-        <div>
-            <img src="/assets/img/goals/uk/17.svg" alt="Партнерство заради стійкого розвитку - Ціль 17" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-svg"/>
+        <br style="clear:both;">
+    </div><div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+            <div>
+                <img src="/assets/img/goals/uk/17.svg" alt="Партнерство заради стійкого розвитку - Ціль 17"
+                     width="80" height="80"
+                     class="goal-icon-17 goal-icon-image goal-icon-image-svg"/>
+            </div>
         </div>
-    </div>
-    <div class="details">
-        <h3 class="status-goal mt-0">
-            <a href="/uk/17/">Партнерство заради стійкого розвитку</a>
-        </h3>
+        <div class="details">
+            <h3 class="status-goal mt-0">
+                <a href="/uk/17/">Партнерство заради стійкого розвитку</a>
+            </h3>
 
-        <span class="total">
-            <span id="js-goal-17-total">...</span> індикатори
-        </span>
+            <span class="total">
+                <span id="js-goal-17-total">...</span>
+                <span id="js-goal-17-label">
+                    індикаторів
+                </span>
+            </span>
 
-        <div class="summary" id="js-goal-17-summary" style="display: none;">
-            <div class="statuses" id="js-goal-17-statuses"></div>
+            <div class="summary" id="js-goal-17-summary" style="display: none;">
+                <div class="statuses" id="js-goal-17-statuses"></div>
+            </div>
+            <div class="goal-stats" id="js-goal-17-bars"></div>
+
+            <div class="status-goal-divider"></div>
         </div>
-        <div class="goal-stats" id="js-goal-17-bars"></div>
-
-        <div class="status-goal-divider"></div>
-    </div>
-    <br style="clear:both;">
-</div></div>
-
+        <br style="clear:both;">
+    </div></div>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const currentLang = "uk";
-    const dataUrl = `https://sdg-kitsoft-stg.github.io/data-ukraine-sdg/${currentLang}/meta/all.json`;
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentLang = "uk";
+        const dataUrl = `https://sdg-kitsoft-stg.github.io/data-ukraine-sdg/${currentLang}/meta/all.json`;
 
-    fetch(dataUrl)
-        .then(response => response.json())
-        .then(data => {
-          let allIndicators = [];
+        const indicatorLabels = {
+            uk: {
+                one: "індикатор",
+                few: "індикатори",
+                many: "індикаторів"
+            },
+            en: {
+                one: "indicator",
+                other: "indicators"
+            }
+        };
 
-          if (Array.isArray(data)) {
-            allIndicators = data;
-          } else {
-            allIndicators = Object.keys(data).map(key => {
-              let item = data[key];
-              item._originalKey = key;
-              return item;
-            });
-          }
+        function getPluralKey(count, lang = 'uk') {
+            if (lang === 'uk') {
+                const mod10 = count % 10;
+                const mod100 = count % 100;
 
-          let cleanIndicators = allIndicators.filter(ind => {
-            let id = ind._originalKey || ind.indicator || "";
-            return !id.includes('-a');
-          });
-
-          let statsByGoal = {};
-
-          cleanIndicators.forEach(ind => {
-            let id = ind._originalKey || ind.indicator || "";
-            let goalNum = id.split('-')[0];
-
-            let status = ind.reporting_status || 'notstarted';
-
-            if (!statsByGoal[goalNum]) {
-              statsByGoal[goalNum] = { total: 0, complete: 0, inprogress: 0, notstarted: 0 };
+                if (mod10 === 1 && mod100 !== 11) return 'one';
+                if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return 'few';
+                return 'many';
             }
 
-            statsByGoal[goalNum].total += 1;
+            return count === 1 ? 'one' : 'other';
+        }
 
-            if (status === 'complete') {
-              statsByGoal[goalNum].complete += 1;
-            } else if (status === 'inprogress') {
-              statsByGoal[goalNum].inprogress += 1;
-            } else {
-              statsByGoal[goalNum].notstarted += 1;
-            }
-          });
+        function getIndicatorLabel(count, lang = 'uk') {
+            const pluralKey = getPluralKey(count, lang);
+            const langLabels = indicatorLabels[lang] || indicatorLabels.en;
 
-          Object.keys(statsByGoal).forEach(goalNum => {
-            let stats = statsByGoal[goalNum];
+            return langLabels[pluralKey] || langLabels.other || '';
+        }
 
-            let totalEl = document.getElementById(`js-goal-${goalNum}-total`);
-            if (totalEl) totalEl.innerText = stats.total;
+        fetch(dataUrl)
+            .then(response => response.json())
+            .then(data => {
+                let allIndicators = [];
 
-            if (stats.total > 0) {
-              let summaryEl = document.getElementById(`js-goal-${goalNum}-summary`);
-              let statusesEl = document.getElementById(`js-goal-${goalNum}-statuses`);
-
-              if (summaryEl) summaryEl.style.display = 'block';
-
-              if (statusesEl) {
-                const tComplete = "Повідомили";
-                const tInprogress = "В процесі";
-                const tNotstarted = "Не розпочато";
-
-                let htmlStr = '';
-
-                if (stats.complete > 0) {
-                  let pComp = Math.round((stats.complete / stats.total) * 100);
-                  htmlStr += `<div><span class="status complete"><span class="status-inner">${stats.complete}</span></span><strong>${tComplete}</strong><span class="value">${pComp}%</span></div>`;
-                }
-                if (stats.inprogress > 0) {
-                  let pInp = Math.round((stats.inprogress / stats.total) * 100);
-                  htmlStr += `<div><span class="status inprogress"><span class="status-inner">${stats.inprogress}</span></span><strong>${tInprogress}</strong><span class="value">${pInp}%</span></div>`;
-                }
-                if (stats.notstarted > 0) {
-                  let pNot = Math.round((stats.notstarted / stats.total) * 100);
-                  htmlStr += `<div><span class="status notstarted"><span class="status-inner">${stats.notstarted}</span></span><strong>${tNotstarted}</strong><span class="value">${pNot}%</span></div>`;
+                if (Array.isArray(data)) {
+                    allIndicators = data;
+                } else {
+                    allIndicators = Object.keys(data).map(key => {
+                        let item = data[key];
+                        item._originalKey = key;
+                        return item;
+                    });
                 }
 
-                statusesEl.innerHTML = htmlStr;
-              }
-            }
-          });
-        })
-        .catch(error => console.error('Ошибка загрузки JSON:', error));
-  });
+                let cleanIndicators = allIndicators.filter(ind => {
+                    let id = ind._originalKey || ind.indicator || "";
+                    return !id.includes('-a');
+                });
+
+                let statsByGoal = {};
+
+                cleanIndicators.forEach(ind => {
+                    let id = ind._originalKey || ind.indicator || "";
+                    let goalNum = id.split('-')[0];
+                    let status = ind.reporting_status || 'notstarted';
+
+                    if (!statsByGoal[goalNum]) {
+                        statsByGoal[goalNum] = {
+                            total: 0,
+                            complete: 0,
+                            inprogress: 0,
+                            notstarted: 0
+                        };
+                    }
+
+                    statsByGoal[goalNum].total += 1;
+
+                    if (status === 'complete') {
+                        statsByGoal[goalNum].complete += 1;
+                    } else if (status === 'inprogress') {
+                        statsByGoal[goalNum].inprogress += 1;
+                    } else {
+                        statsByGoal[goalNum].notstarted += 1;
+                    }
+                });
+
+                Object.keys(statsByGoal).forEach(goalNum => {
+                    let stats = statsByGoal[goalNum];
+
+                    let totalEl = document.getElementById(`js-goal-${goalNum}-total`);
+                    if (totalEl) totalEl.innerText = stats.total;
+
+                    let labelEl = document.getElementById(`js-goal-${goalNum}-label`);
+                    if (labelEl) {
+                        labelEl.innerText = getIndicatorLabel(stats.total, currentLang);
+                    }
+
+                    if (stats.total > 0) {
+                        let summaryEl = document.getElementById(`js-goal-${goalNum}-summary`);
+                        let statusesEl = document.getElementById(`js-goal-${goalNum}-statuses`);
+
+                        if (summaryEl) summaryEl.style.display = 'block';
+
+                        if (statusesEl) {
+                            const tComplete = "Опубліковано";
+                            const tInprogress = "В процесі";
+                            const tNotstarted = "Не розпочато";
+
+                            let htmlStr = '';
+
+                            const pComp = stats.complete > 0
+                                ? Math.round((stats.complete / stats.total) * 100)
+                                : 0;
+
+                            const pInp = stats.inprogress > 0
+                                ? Math.round((stats.inprogress / stats.total) * 100)
+                                : 0;
+
+                            const pNot = Math.max(0, 100 - pComp - pInp);
+
+                            if (stats.complete > 0) {
+                                htmlStr += `<div><span class="status complete"><span class="status-inner">${stats.complete}</span></span><strong>${tComplete}</strong><span class="value">${pComp}%</span></div>`;
+                            }
+
+                            if (stats.inprogress > 0) {
+                                htmlStr += `<div><span class="status inprogress"><span class="status-inner">${stats.inprogress}</span></span><strong>${tInprogress}</strong><span class="value">${pInp}%</span></div>`;
+                            }
+
+                            if (stats.notstarted > 0) {
+                                htmlStr += `<div><span class="status notstarted"><span class="status-inner">${stats.notstarted}</span></span><strong>${tNotstarted}</strong><span class="value">${pNot}%</span></div>`;
+                            }
+
+                            statusesEl.innerHTML = htmlStr;
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Ошибка загрузки JSON:', error));
+    });
 </script>
 
   
@@ -873,12 +1135,12 @@ layout-reportingstatus
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/assets/js/sdg.js?v=20260317164139'></script>
+<script src='/assets/js/sdg.js?v=20260326093257'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20260317164139"></script><script>
+    <script src="/assets/js/custom.js?v=20260326093257"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
