@@ -1,7 +1,10 @@
 # This refers to a set of data that indicates progress (or lack of progress) towards one of the Sustainable Development Goals
 indicator: 'Індикатор'
 # This is the plural version of the indicator key
-indicators: 'Індикатори'
+indicators: 'індикатори'
+indicator_one: 'індикатор'
+indicator_few: 'індикатори'
+indicator_many: 'індикаторів'
 # This is a 'goal' in the sense of the 'Sustainable Development Goals' - some achievement for a community to aspire to
 goal: 'Ціль'
 # This is the plural version of the goal key
