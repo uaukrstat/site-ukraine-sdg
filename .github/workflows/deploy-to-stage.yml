@@ -33,6 +33,12 @@ jobs:
           mkdir -p _data/translations
           cp -R translations-repo/translations/* _data/translations/
 
+      - name: Force Staging Config
+        run: |
+          echo "Force overwriting site_config for staging..."
+          cp _data/site_config_staging.yml _data/site_config.yml
+          cp _config_stage.yml _config.yml
+
       - name: Set up Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
@@ -41,13 +47,19 @@ jobs:
 
       - name: Build the site
         run: |
-          JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml
+          JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_stage.yml --baseurl="/stage"
 
-      - name: Deploy to GitHub Pages (STAGE FOLDER)
+      - name: Prepare stage folder
+        run: |
+          rm -rf temp_dist
+          mkdir -p temp_dist/stage
+          cp -r _site/* temp_dist/stage/
+          touch temp_dist/.nojekyll
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: _site
-          TARGET_FOLDER: stage
-          CLEAN: true
+          FOLDER: temp_dist
+          CLEAN: false
