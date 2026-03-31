@@ -1989,7 +1989,7 @@ ul > li > p {
       margin-right: 0;
       text-decoration: underline;
       color: #0b0c0c; }
-      @media screen and (max-width: 350px) {
+      @media screen and (max-width: 600px) {
         #main-content .nav-tabs .nav-item button {
           width: 100%; } }
     #main-content .nav-tabs .nav-item.active {
