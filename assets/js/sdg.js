@@ -4349,7 +4349,9 @@ function alterTableConfig(config, info) {
  */
 function toCsv(tableData, selectedSeries, selectedUnit) {
     var lines = [],
-        dataHeadings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; }),
+        dataHeadings = _.map(tableData.headings, function (heading) {
+            return '"' + translations.t(heading) + '"';
+        }),
         metaHeadings = [];
 
     if (selectedSeries) {
@@ -4410,8 +4412,7 @@ function initialiseDataTable(el, info) {
                         var cellDataInt = Number(cellData);
                         if (cellDataInt === 1) {
                             cellData = translations.indicator.affirmative;
-                        }
-                        else if (cellDataInt === 0 || cellDataInt === -1) {
+                        } else if (cellDataInt === 0 || cellDataInt === -1) {
                             cellData = translations.indicator.negative;
                         }
                     }
@@ -4448,7 +4449,9 @@ function createSelectionsTable(chartInfo) {
  * @return null
  */
 function createTableTargetLines(graphAnnotations) {
-    var targetLines = graphAnnotations.filter(function (a) { return a.preset === 'target_line'; });
+    var targetLines = graphAnnotations.filter(function (a) {
+        return a.preset === 'target_line';
+    });
     var $targetLines = $('#tableTargetLines');
     $targetLines.empty();
     targetLines.forEach(function (targetLine) {
@@ -4460,8 +4463,7 @@ function createTableTargetLines(graphAnnotations) {
     });
     if (targetLines.length === 0) {
         $targetLines.hide();
-    }
-    else {
+    } else {
         $targetLines.show();
     }
 }
@@ -4515,24 +4517,36 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
             return button + arrows;
         };
 
-      table.headings.forEach(function (heading, index) {
-        let translatedHeading = translations.t(heading);
+        table.headings.forEach(function (heading, index) {
+            let translatedHeading = translations.t(heading);
 
-        if (table.headings.length && index === 1) {
-          const genericTerms = ['Value', 'Значення', 'Value', 'undefined'];
+            if (table.headings.length && index === 1) {
+                const genericTerms = ['Value', 'Значення', 'Value', 'undefined'];
 
-          if (!translatedHeading || genericTerms.includes(translatedHeading) || genericTerms.includes(heading)) {
-            translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Україна' : 'Ukraine';
-          }
-        }
+                if (!translatedHeading || genericTerms.includes(translatedHeading) || genericTerms.includes(heading)) {
+                    translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Україна' : 'Ukraine';
+                }
 
-        const finalTitleText = translatedHeading || heading;
-        const title = getHeading(finalTitleText);
+                if (window.location.pathname.includes('6-1-1')) {
+                    const [firstHeading, ...restHeadings] = translatedHeading.split(',');
+                    if (firstHeading && (firstHeading === 'Ukraine' || firstHeading === 'Україна')) {
+                        translatedHeading = `${restHeadings.join(', ')}, ${firstHeading}`;
+                    }
+                }
 
-        if (title) {
-          table_head += '<th' + (!index ? '' : ' class="table-value"') + ' scope="col">' + title + '</th>';
-        }
-      });
+                if (window.location.pathname.includes('6-2-1')) {
+                    translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'вікові групи' : 'age groups';
+                }
+
+            }
+
+            const finalTitleText = translatedHeading || heading;
+            const title = getHeading(finalTitleText);
+
+            if (title) {
+                table_head += '<th' + (!index ? '' : ' class="table-value"') + ' scope="col">' + title + '</th>';
+            }
+        });
 
         table_head += '</tr></thead>';
         currentTable.append(table_head);
@@ -4574,17 +4588,15 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
 
         let tableWrapper = document.querySelector('.dataTables_wrapper');
         if (tableWrapper) {
-            tableWrapper.addEventListener('scroll', function(e) {
+            tableWrapper.addEventListener('scroll', function (e) {
                 if (tableWrapper.scrollLeft > 0) {
                     tableWrapper.classList.add('scrolled-x');
-                }
-                else {
+                } else {
                     tableWrapper.classList.remove('scrolled-x');
                 }
                 if (tableWrapper.scrollTop > 0) {
                     tableWrapper.classList.add('scrolled-y');
-                }
-                else {
+                } else {
                     tableWrapper.classList.remove('scrolled-y');
                 }
             });
@@ -4656,8 +4668,7 @@ function updateChartDownloadButton(table, selectedSeries, selectedUnit) {
             VIEW._chartDownloadButton.on('click.openSdgDownload', function (event) {
                 window.navigator.msSaveBlob(blob, fileName);
             });
-        }
-        else {
+        } else {
             VIEW._chartDownloadButton
                 .attr('href', URL.createObjectURL(blob))
                 .data('csvdata', tableCsv);
