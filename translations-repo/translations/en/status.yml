@@ -17,7 +17,7 @@ disaggregation_status_by_field: Disaggregation by %field
 not_specified: Not specified
 reported: Reported
 published: Reported
-description: 'Reporting status provides an overview of the indicators that Ukraine publishes on the Sustainable Development Goals <br> 
+description: 'Reporting status provides an overview of the indicators that Ukraine publishes on the Sustainable Development Goals. <br> 
     If data for indicators are available, they are marked as Reported. <br> 
     For some indicators, authorities and institutions are exploring data sources, developing methodology and metadata. Data for some indicators will be available after the end or lifting martial law in Ukraine. Some indicators require research with the participation of development partners. Data for them will be provided additionally. Such indicators are marked as Exploring data sources.'
 progress_status: Progress status
