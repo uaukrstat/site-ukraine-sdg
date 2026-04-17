@@ -17,6 +17,7 @@ download_chart_image: Download Chart Image
 download_chart_image_title: Download chart as image
 download_geojson: Download GeoJSON
 download_geojson_title: Download as GeoJSON
+reference_title: For reference
 # A label describing information - where some data originally came from
 source: Source
 # A button that displays information about where some data originally came from
