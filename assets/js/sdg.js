@@ -4194,13 +4194,67 @@ opensdg.chartTypes.base = function(info) {
 
   opensdg.chartTypes.line = function(info) {
     var config = opensdg.chartTypes.base(info);
+
+    function getPageLocale() {
+        var lang = document.documentElement.lang || 'en';
+        return lang.toLowerCase().startsWith('uk') ? 'uk-UA' : lang;
+    }
+
+    function formatChartNumber(value) {
+        if (value === null || value === undefined || value === '') {
+            return '';
+        }
+
+        var num = typeof value === 'number'
+            ? value
+            : Number(String(value).replace(',', '.'));
+
+        if (!Number.isFinite(num)) {
+            return value;
+        }
+
+        if (Number.isInteger(num)) {
+            return new Intl.NumberFormat('fr-FR', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 20
+            }).format(num).replace(/\s/g, ' ');
+        }
+
+        if (opensdg.language === 'uk') {
+            return new Intl.NumberFormat('uk-UA', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 20
+            }).format(num).replace(/\s/g, ' ');
+        }
+
+        return new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 20
+        }).format(num);
+    }
+
     var overrides = {
         type: 'line',
         options: {
+            scales: {
+                y: {
+                    ticks: {
+                        callback: function(value) {
+                            return formatChartNumber(value);
+                        }
+                    }
+                }
+            },
             plugins: {
                 tooltip: {
                     mode: 'index',
                     intersect: false,
+                    callbacks: {
+                        label: function(context) {
+                            var label = context.dataset.label ? context.dataset.label + ': ' : '';
+                            return label + formatChartNumber(context.parsed.y);
+                        }
+                    }
                 },
             },
         },
@@ -4213,7 +4267,6 @@ opensdg.chartTypes.base = function(info) {
                         topY = chart.scales.y.top,
                         bottomY = chart.scales.y.bottom;
 
-                    // draw line
                     ctx.save();
                     ctx.beginPath();
                     ctx.moveTo(x, topY);
@@ -4226,10 +4279,11 @@ opensdg.chartTypes.base = function(info) {
             }
         }],
     };
-    // Add these overrides onto the normal config, and return it.
+
     _.merge(config, overrides);
     return config;
 }
+
   opensdg.chartTypes.bar = function (info) {
     var config = opensdg.chartTypes.base(info);
     var overrides = {
@@ -4528,17 +4582,25 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                     translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Україна' : 'Ukraine';
                 }
 
-                if (window.location.pathname.includes('6-1-1')) {
+                if (window.location.pathname.includes('6-1-1') && !window.location.pathname.includes('16-1-1')) {
                     const [firstHeading, ...restHeadings] = translatedHeading.split(',');
                     if (firstHeading && (firstHeading === 'Ukraine' || firstHeading === 'Україна')) {
                         translatedHeading = `${restHeadings.join(', ')}, ${firstHeading}`;
                     }
                 }
 
-                if (window.location.pathname.includes('6-2-1')) {
+                if (window.location.pathname.includes('6-2-1') && !window.location.pathname.includes('16-2-1')) {
                     translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'вікові групи' : 'age groups';
                 }
 
+                if (window.location.pathname.includes('16-2-1')) {
+                    const badgeType = document.querySelector('.badge-edition');
+                    const isArchive = badgeType && badgeType.classList.contains('badge-archive');
+
+                    if (isArchive) {
+                        translatedHeading = (window.location.pathname.indexOf('/uk/') !== -1) ? 'Потерпіло від кримінальних правопорушень (рівень на 100 тис. населення)' : 'Victims of criminal offenses (per 100 thousand population)';
+                    }
+                }
             }
 
             const finalTitleText = translatedHeading || heading;
@@ -4703,6 +4765,7 @@ function alterDataDisplay(value, info, context, additionalInfo) {
     opensdg.dataDisplayAlterations.forEach(function (callback) {
         altered = callback(altered, info, context);
     });
+    
     // If the returned value is not a number, use the legacy logic for
     // precision and decimal separator.
     if (typeof altered !== 'number') {
@@ -4718,11 +4781,21 @@ function alterDataDisplay(value, info, context, additionalInfo) {
     // Otherwise if we have a number, use toLocaleString instead.
     else {
         var localeOpts = {};
+
         if (VIEW._precision || VIEW._precision === 0) {
             localeOpts.minimumFractionDigits = VIEW._precision;
             localeOpts.maximumFractionDigits = VIEW._precision;
         }
-        altered = altered.toLocaleString(opensdg.language, localeOpts);
+
+        if (Number.isInteger(altered)) {
+            altered = altered.toLocaleString('fr-FR').replace(/\s/g, ' ');
+        } else {
+            if (opensdg.language === 'uk') {
+                altered = altered.toString().replace('.', ',');
+            } else {
+                altered = altered.toString();
+            }
+        }
     }
     // Now let's add any footnotes from observation attributes.
     var obsAttributes = [];
