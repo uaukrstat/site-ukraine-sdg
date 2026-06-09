@@ -18,9 +18,9 @@ The [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/su
 
 The 17 Goals were adopted by all UN Member States in 2015, as part of the [2030 Agenda for Sustainable Development](https://sustainabledevelopment.un.org/post2015/transformingourworld/){:target="_blank"}.
 
-This site is based on the open source [Open SDG](https://open-sdg.org/){:target="_blank"} platform.
+This website is based on the open-source [Open SDG](https://open-sdg.org/){:target="_blank"} platform.
 
-Open SDG platform in Ukraine was developed by the State Statistics Service of Ukraine in partnership with UNDP Ukraine within  the UN programme  "Promoting Strategic Planning and Financing for Sustainable Development on National and Regional Level in Ukraine" funded by the Joint SDG Fund.
+Ukraine’s Open SDG Platform was developed by the State Statistics Service of Ukraine in partnership with UNDP in Ukraine as part of the UN’s “Promoting Strategic Planning and Financing of Sustainable Development of Ukraine at both the National and Regional Level” programme, which is funded by the Joint SDG Fund.
 
 The platform was modernised after the updating of Ukraine’s national SDG framework and the approval by the Cabinet of Ministers of Ukraine of the list of SDG indicators in 2024.
 
