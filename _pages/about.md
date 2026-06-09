@@ -21,3 +21,9 @@ The 17 Goals were adopted by all UN Member States in 2015, as part of the [2030 
 This site is based on the open source [Open SDG](https://open-sdg.org/){:target="_blank"} platform.
 
 Open SDG platform in Ukraine was developed by the State Statistics Service of Ukraine in partnership with UNDP Ukraine within  the UN programme  "Promoting Strategic Planning and Financing for Sustainable Development on National and Regional Level in Ukraine" funded by the Joint SDG Fund.
+
+The platform was modernised after the updating of Ukraine’s national SDG framework and the approval by the Cabinet of Ministers of Ukraine of the list of SDG indicators in 2024.
+
+The modernisation of the platform was supported by the United Nations Development Programme (UNDP) in Ukraine as part of the “Supporting Inclusive Recovery for Resilient and Secure People in Ukraine” project, which is funded by the Government of Japan. Expert support was also provided through the Diia Support Project, which is implemented by UNDP in Ukraine with funding from the Government of Sweden.
+
+The modernisation of the platform was an important step towards ensuring there is transparent and user-friendly access to data on the achievement of the SDGs in Ukraine – particularly in the context of the war and the country’s recovery.
