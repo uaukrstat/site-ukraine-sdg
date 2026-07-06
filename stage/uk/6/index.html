@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/stage/assets/css/style.css?v=20260703064028">
+        <link rel="stylesheet" href="/stage/assets/css/style.css?v=20260706131343">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -177,10 +177,187 @@ layout-goal
 
 <a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти до основного вмісту</a>
 <div class="body-logo"></div>
-<div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Цей інтернет-браузер більше не підтримується</h2>
-    <p class="internet-explorer-message-body">Ми виявили, що ви використовуєте Internet Explorer для відвідування цього веб-сайту. Зараз Microsoft припиняє роботу Internet Explorer. У результаті цей веб-сайт більше не підтримує жодну версію Internet Explorer. Деякі функції на цьому сайті не працюватимуть. Ви повинні використовувати сучасний браузер, наприклад Edge, Chrome, Firefox або Safari. Якщо у вас виникли труднощі під час встановлення або доступу до іншого браузера, зверніться до служби підтримки ІТ.</p>
+<div class="browser_container internet-explorer-message">
+    <!--  HEADER  -->
+    <div class="browser_header">
+        <div class="browser_header-version">
+            <div class="browser_header-title">Outdated Browser</div>
+            <div class="browser_header-text"></div>
+        </div>
+        <div class="browser_header-version-m">
+            <div class="browser_header-title">Outdated Browser</div>
+            <div class="browser_header-text"></div>
+        </div>
+    </div>
+    <section class="browser_list">
+        <!-- BROWSER - Chrome -->
+        <div class="browser browser-chrome">
+            <div class="browser_statistic">
+                <div class="browser_statistic-big">67.15%</div>
+                <div class="browser_statistic-small"></div>
+            </div>
+            <div class="browser-center">
+                <div class="browser-logo chrome"></div>
+                <div class="browser-name">Google Chrome</div>
+                <div class="browser_load">
+                    <a href="https://www.google.com/chrome/browser/desktop" target="_blank" class="browser_load-link chrome"></a>
+                </div>
+            </div>
+            <div class="browser_available">
+                <div class="browser_available-title">
+                    
+                </div>
+                <ul class="browser_os">
+                    <li class="browser_os-item windows">
+                        <span>Windows</span>
+                    </li>
+                    <li class="browser_os-item mac">
+                        <span>Mac OS</span>
+                    </li>
+                    <li class="browser_os-item linux">
+                        <span>Linux</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- BROWSER - Firefox -->
+        <div class="browser browser-firefox">
+            <div class="browser_statistic">
+                <div class="browser_statistic-big">9.6%</div>
+                <div class="browser_statistic-small"></div>
+            </div>
+            <div class="browser-center">
+                <div class="browser-logo firefox"></div>
+                <div class="browser-name">Mozilla Firefox</div>
+                <div class="browser_load">
+                    <a href="https://www.mozilla.org/firefox/new/" target="_blank" class="browser_load-link firefox"></a>
+                </div>
+            </div>
+            <div class="browser_available">
+                <div class="browser_available-title">
+                    
+                </div>
+                <ul class="browser_os">
+                    <li class="browser_os-item windows">
+                        <span>Windows</span>
+                    </li>
+                    <li class="browser_os-item mac">
+                        <span>Mac OS</span>
+                    </li>
+                    <li class="browser_os-item linux">
+                        <span>Linux</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- BROWSER - Internet Explorer -->
+        <div class="browser browser-edge">
+            <div class="browser_statistic">
+                <div class="browser_statistic-big">4.5%</div>
+                <div class="browser_statistic-small"></div>
+            </div>
+            <div class="browser-center">
+                <div class="browser-logo edge"></div>
+                <div class="browser-name">Microsoft Edge</div>
+                <div class="browser_load">
+                    <a href="https://www.microsoft.com/edge" target="_blank" class="browser_load-link edge"></a>
+                </div>
+            </div>
+            <div class="browser_available">
+                <div class="browser_available-title">
+                    
+                </div>
+                <ul class="browser_os">
+                    <li class="browser_os-item windows">
+                        <span>Windows</span>
+                    </li>
+                    <li class="browser_os-item mac">
+                        <span>Mac OS</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {#
+        <!-- BROWSER - Safari -->
+        <div class="browser browser-safari">
+            <div class="browser_statistic">
+                <div class="browser_statistic-big">6.5%</div>
+                <div class="browser_statistic-small"></div>
+            </div>
+            <div class="browser-center">
+                <div class="browser-logo safari"></div>
+                <div class="browser-name">Apple Safari</div>
+                <div class="browser_load">
+                    <a href="https://www.apple.com/macos/how-to-upgrade/" target="_blank" class="browser_load-link safari"></a>
+                    <div class="browser_load-info"></div>
+                </div>
+            </div>
+            <div class="browser_available">
+                <div class="browser_available-title">
+                    
+                </div>
+                <ul class="browser_os">
+                    <li class="browser_os-item mac">
+                        <span>Mac OS</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        #}
+        <!-- BROWSER - Opera -->
+        <div class="browser browser-opera">
+            <div class="browser_statistic">
+                <div class="browser_statistic-big">3.15%</div>
+                <div class="browser_statistic-small"></div>
+            </div>
+            <div class="browser-center">
+                <div class="browser-logo opera"></div>
+                <div class="browser-name">Opera</div>
+                <div class="browser_load">
+                    <a href="https://www.opera.com/computer" target="_blank" class="browser_load-link opera"></a>
+                </div>
+            </div>
+            <div class="browser_available">
+                <div class="browser_available-title">
+                    
+                </div>
+                <ul class="browser_os">
+                    <li class="browser_os-item windows">
+                        <span>Windows</span>
+                    </li>
+                    <li class="browser_os-item mac">
+                        <span>Mac OS</span>
+                    </li>
+                    <li class="browser_os-item linux">
+                        <span>Linux</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div>
+<script>
+    (function() {
+        var IE10 = ( window.navigator.userAgent.indexOf('MSIE') > -1 ? true : false );
+        var IE11 = ( window.navigator.userAgent.indexOf("Trident") > -1 ? true : false );
+        if ( IE10 || IE11 ) {
+            var items = document.querySelectorAll('.browser');
+            if (items.length) {
+                for (var i = 0; i < items.length; i++) {
+                    items[i].addEventListener('mouseenter', function(e) {
+                        var target = e.target;
+                        target.className.indexOf('browser-expanded') > -1 ? '' : target.classList.add('browser-expanded');
+                    });
+                    items[i].addEventListener('mouseleave', function(e) {
+                        var target = e.target;
+                        target.className.indexOf('browser-expanded') > -1 ? target.classList.remove('browser-expanded') : '';
+                    });
+                }
+            }
+        }
+    })();
+</script>
+
 
 <header class="">
     <div class="container">
@@ -271,7 +448,7 @@ layout-goal
             </li>
             <li class="breadcrumb-item">
                 
-                    <a href="/stage/uk/goals/">Цілі</a>
+                <a href="/stage/uk/goals/">Цілі</a>
                 
             </li>
             <li class="breadcrumb-item active" aria-current="page">
@@ -324,7 +501,14 @@ layout-goal
 
         <ul class="nav nav-tabs edition-tabs" role="tablist">
             <li role="presentation">
-                <a href="#current-edition" class="active" aria-controls="current-edition" role="tab" data-bs-toggle="tab">
+                <a href="#current-edition"
+                   class="nav-link"
+                   id="current-edition-tab"
+                   data-bs-toggle="tab"
+                   role="tab"
+                   aria-controls="current-edition"
+                   aria-selected="true"
+                >
                     <div class="tab-content-wrapper">
                         <span class="radio-dot"></span>
                         <div class="text-group">
@@ -339,7 +523,14 @@ layout-goal
                 </a>
             </li>
             <li role="presentation">
-                <a href="#archive-edition" aria-controls="archive-edition" role="tab" data-bs-toggle="tab">
+                <a href="#archive-edition"
+                   class="nav-link"
+                   id="archive-edition-tab"
+                   data-bs-toggle="tab"
+                   role="tab"
+                   aria-controls="archive-edition"
+                   aria-selected="false"
+                >
                     <div class="tab-content-wrapper">
                         <span class="radio-dot"></span>
                         <div class="text-group">
@@ -356,7 +547,10 @@ layout-goal
         </ul>
 
         <div class="tab-content edition-tabs-content border-0 p-0">
-            <div class="tab-pane active" id="current-edition" role="tabpanel">
+            <div class="tab-pane fade"
+                 id="current-edition"
+                 role="tabpanel"
+                 aria-labelledby="current-edition-tab">
                 <div style="margin-top: 20px;"></div>
 
                 
@@ -435,7 +629,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -501,7 +697,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -567,7 +765,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -633,7 +833,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -710,7 +912,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -776,7 +980,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -852,7 +1058,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -918,7 +1126,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -984,7 +1194,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
 
@@ -1059,7 +1271,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -1125,7 +1339,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -1201,7 +1417,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule" aria-hidden="true">
+                
                 
                 
                 
@@ -1270,8 +1488,10 @@ layout-goal
                 
                 
             </div>
-
-            <div class="tab-pane" id="archive-edition" role="tabpanel">
+            <div class="tab-pane fade"
+                 id="archive-edition"
+                 role="tabpanel"
+                 aria-labelledby="archive-edition-tab">
                 <div style="margin-top: 20px;"></div>
 
                 
@@ -1350,7 +1570,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1412,7 +1634,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1474,7 +1698,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1536,7 +1762,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
 
@@ -1597,7 +1825,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1671,7 +1901,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1733,7 +1965,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1807,7 +2041,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1869,7 +2105,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -1944,7 +2182,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -2006,7 +2246,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
                 
@@ -2080,7 +2322,9 @@ layout-goal
                         </a>
                     </div>
                 </div>
+                
                 <hr class="goal-page-target-rule">
+                
                 
                 
             </div>
@@ -2107,7 +2351,7 @@ layout-goal
         iframe.style.visibility = "hidden";
         iframe.title = `${indicatorTitle} ${slug}`;
 
-        iframe.onload = function() {
+        iframe.onload = function () {
             try {
                 const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
                 const chart = iframeDoc.getElementById('selectionsChart');
@@ -2125,14 +2369,14 @@ layout-goal
 
                     const style = iframeDoc.createElement('style');
                     style.textContent = `
-            .plot-container { padding: 0 !important; }
-            #chart-canvas { margin-top: 0 !important; }
-            #main-content { margin: 0 !important; }
-            #main-content #indicatorData { margin-top: 0 !important; }
-            #legend { margin-bottom: 0 !important; }
-            #selectionsChart figure { margin-bottom: 0 !important; }
-            .tab-content.data-view { border: none !important; padding: 0 !important; }
-        `;
+                        .plot-container { padding: 0 !important; }
+                        #chart-canvas { margin-top: 0 !important; }
+                        #main-content { margin: 0 !important; }
+                        #main-content #indicatorData { margin-top: 0 !important; }
+                        #legend { margin-bottom: 0 !important; }
+                        #selectionsChart figure { margin-bottom: 0 !important; }
+                        .tab-content.data-view { border: none !important; padding: 0 !important; }
+                    `;
                     iframeDoc.head.appendChild(style);
 
                     const toHideInside = iframeDoc.querySelectorAll('#chart-heading, #selectionChartFooter, #chartSelectionDownload, .breadcrumb, header, footer, .nav-tabs, #indicator-sidebar, #metadataTabs, a[href="#top"], .indicator-footer-reference');
@@ -2155,21 +2399,44 @@ layout-goal
         targetDiv.appendChild(iframe);
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const collapses = document.querySelectorAll('.collapse');
+    document.addEventListener('DOMContentLoaded', function () {
+        const defaultTab = document.querySelector('#current-edition-tab');
+        const archiveTab = document.querySelector('#archive-edition-tab');
 
-        collapses.forEach(collapseEl => {
-            const button = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
-            if (!button) return;
+        const urlParams = new URLSearchParams(window.location.search);
+        const edition = urlParams.get('edition');
 
-            collapseEl.addEventListener('show.bs.collapse', function () {
-                button.textContent = button.getAttribute('data-text-hide');
+        const targetTab = edition === 'archive' ? archiveTab : defaultTab;
+
+        if (targetTab && window.bootstrap) {
+            bootstrap.Tab.getOrCreateInstance(targetTab).show();
+        }
+
+        if (edition) {
+            urlParams.delete('edition');
+
+            const cleanUrl = window.location.pathname +
+                (urlParams.toString() ? `?${urlParams.toString()}` : '') +
+                window.location.hash;
+
+            window.history.replaceState({}, '', cleanUrl);
+        }
+
+        document
+            .querySelectorAll('.language-toggle-container .dropdown-item')
+            .forEach(link => {
+                link.addEventListener('click', function () {
+                    const activeTab = document.querySelector('.edition-tabs .nav-link.active');
+                    const activeEdition = activeTab && activeTab.id === 'archive-edition-tab'
+                        ? 'archive'
+                        : 'current';
+
+                    const url = new URL(this.href, window.location.origin);
+                    url.searchParams.set('edition', activeEdition);
+
+                    this.href = url.toString();
+                });
             });
-
-            collapseEl.addEventListener('hide.bs.collapse', function () {
-                button.textContent = button.getAttribute('data-text-show');
-            });
-        });
     });
 </script>
 
@@ -2239,12 +2506,12 @@ layout-goal
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Пошук';</script>
 
-<script src='/stage/assets/js/sdg.js?v=20260703064028'></script>
+<script src='/stage/assets/js/sdg.js?v=20260706131343'></script>
 
 
     
     
-    <script src="/stage/assets/js/custom.js?v=20260703064028"></script><script>
+    <script src="/stage/assets/js/custom.js?v=20260706131343"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
