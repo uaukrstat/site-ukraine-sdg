@@ -4401,40 +4401,143 @@ function alterTableConfig(config, info) {
  * @param {Object} tableData
  * @return {String}
  */
-function toCsv(tableData, selectedSeries, selectedUnit) {
-    var lines = [],
-        dataHeadings = _.map(tableData.headings, function (heading) {
-            return '"' + translations.t(heading) + '"';
-        }),
-        metaHeadings = [];
-
-    if (selectedSeries) {
-        metaHeadings.push(translations.indicator.series);
+function formatCsvValue(value, isValueColumn, allowEmpty) {
+    if (
+        allowEmpty &&
+        (value === null ||
+            typeof value === 'undefined' ||
+            String(value).trim() === '')
+    ) {
+        return '""';
     }
-    if (selectedUnit) {
-        metaHeadings.push(translations.indicator.unit);
+
+    if (
+        value === null ||
+        typeof value === 'undefined' ||
+        String(value).trim() === ''
+    ) {
+        return '"NA"';
     }
-    var allHeadings = dataHeadings.concat(metaHeadings);
 
-    lines.push(allHeadings.join(','));
+    var str = String(value).trim();
+    var lang = document.documentElement.lang || 'uk';
 
-    _.each(tableData.data, function (dataValues) {
-        var line = [];
+    if (/^-?\d+\.\d+$/.test(str) && lang === 'uk') {
+        str = str.replace('.', ',');
+    }
 
-        _.each(dataHeadings, function (heading, index) {
-            line.push(dataValues[index]);
-        });
-        if (selectedSeries) {
-            line.push(JSON.stringify(translations.t(selectedSeries)));
+    return '"' + str.replace(/"/g, '""') + '"';
+}
+
+function getMetadataCsvRows(selector, columnCount) {
+    var rows = [];
+    var $table = $(selector);
+
+    if (!$table.length) {
+        return rows;
+    }
+
+    $table.find('tbody tr').each(function () {
+        var key = $(this).find('th').text().trim();
+        var value = $(this).find('td').text().trim().replace(/\s+/g, ' ');
+
+        if (key || value) {
+            var cells = new Array(columnCount).fill('');
+
+            cells[columnCount - 1] = key + ': ' + value;
+
+            rows.push(cells.map(function (cell, index) {
+                return formatCsvValue(
+                    cell,
+                    false,
+                    index !== columnCount - 1
+                );
+            }).join(';'));
         }
-        if (selectedUnit) {
-            line.push(JSON.stringify(translations.t(selectedUnit)));
-        }
-
-        lines.push(line.join(','));
     });
 
-    return lines.join('\n');
+    return rows;
+}
+
+function toCsv(tableData, selectedSeries, selectedUnit) {
+    var delimiter = ';';
+    var lines = [];
+    var lang = document.documentElement.lang || 'uk';
+    var $renderedTable = $('#selectionsTable table');
+
+    if ($renderedTable.length) {
+        var renderedHeadings = [];
+
+        $renderedTable.find('thead th').each(function () {
+            var headingText = $(this).find('span[role="button"]').first().text().trim();
+
+            if (!headingText) {
+                headingText = $(this).text().replace(/\s+/g, ' ').trim();
+            }
+
+            renderedHeadings.push(formatCsvValue(headingText, false));
+        });
+
+        var metaHeadings = [];
+
+        if (selectedSeries) {
+            metaHeadings.push(formatCsvValue(translations.indicator.series, false));
+        }
+
+        if (selectedUnit) {
+            metaHeadings.push(formatCsvValue(translations.indicator.unit, false));
+        }
+
+        var noteHeading = lang === 'uk' ? 'Національні метадані' : 'National Metadata';
+        var totalColumnCount = renderedHeadings.length + metaHeadings.length + 1;
+
+        lines.push(
+            renderedHeadings
+                .concat(metaHeadings)
+                .concat([formatCsvValue(noteHeading, false)])
+                .join(delimiter)
+        );
+
+        $renderedTable.find('tbody tr').each(function () {
+            var line = [];
+
+            $(this).find('th, td').each(function () {
+                var value = $(this).text().trim();
+
+                if (value === '-') {
+                    value = '';
+                }
+
+                line.push(formatCsvValue(value, false));
+            });
+
+            if (selectedSeries) {
+                line.push(formatCsvValue(translations.t(selectedSeries), false));
+            }
+
+            if (selectedUnit) {
+                line.push(formatCsvValue(translations.t(selectedUnit), false));
+            }
+
+            line.push(formatCsvValue('', false, true));
+
+            lines.push(line.join(delimiter));
+        });
+
+        var metadataRows = getMetadataCsvRows(
+            '#national .metadata-content',
+            totalColumnCount
+        );
+
+        if (metadataRows.length) {
+            lines.push('');
+            lines = lines.concat(metadataRows);
+        }
+
+        return '\ufeff' + lines.join('\n');
+    }
+
+    return '\ufeff' + lines.join('\n');
 }
 
 /**
@@ -4934,6 +5037,205 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
     }
 }
 
+function getLang() {
+    return document.documentElement.lang || 'uk';
+}
+
+function translateCsvHeading(value, index) {
+    var lang = getLang();
+    var str = String(value || '').trim();
+
+    if (index === 0 && (str === 'Year' || str === 'Рік')) {
+        return lang === 'uk' ? 'Рік' : 'Year';
+    }
+
+    if (str === 'Value' || str === 'Значення') {
+        return lang === 'uk' ? 'Значення' : 'Value';
+    }
+
+    if (str && str !== 'undefined') {
+        return translations && translations.t ? translations.t(str) : str;
+    }
+
+    return lang === 'uk' ? 'Значення' : 'Value';
+}
+
+function formatExcelCsvValue(value, allowEmpty) {
+    var lang = getLang();
+
+    if (
+        allowEmpty &&
+        (
+            value === null ||
+            typeof value === 'undefined' ||
+            String(value).trim() === ''
+        )
+    ) {
+        return '""';
+    }
+
+    if (
+        value === null ||
+        typeof value === 'undefined' ||
+        String(value).trim() === ''
+    ) {
+        return '"NA"';
+    }
+
+    var str = String(value).trim();
+
+    if (/^-?\d+\.\d+$/.test(str) && lang === 'uk') {
+        str = str.replace('.', ',');
+    }
+
+    return '"' + str.replace(/"/g, '""') + '"';
+}
+
+function parseCsvLine(line) {
+    var result = [];
+    var current = '';
+    var inQuotes = false;
+
+    for (var i = 0; i < line.length; i++) {
+        var char = line[i];
+        var nextChar = line[i + 1];
+
+        if (char === '"' && inQuotes && nextChar === '"') {
+            current += '"';
+            i++;
+        } else if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            result.push(current);
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+
+    result.push(current);
+
+    return result;
+}
+
+function getMetadataCsvRows(selector, columnCount) {
+    var rows = [];
+    var $table = $(selector);
+    var noteColumnIndex = columnCount - 1;
+
+    if (!$table.length) {
+        return rows;
+    }
+
+    $table.find('tbody tr').each(function () {
+        var key = $(this).find('th').text().trim();
+        var value = $(this).find('td').text().trim().replace(/\s+/g, ' ');
+
+        if (key || value) {
+            var cells = new Array(columnCount).fill('');
+
+            cells[columnCount - 1] = key + ': ' + value;
+
+            rows.push(
+                cells.map(function (cell, colIndex) {
+                    return formatExcelCsvValue(
+                        cell,
+                        colIndex !== noteColumnIndex
+                    );
+                }).join(';')
+            );
+        }
+    });
+
+    return rows;
+}
+
+function convertSourceCsvForExcel(sourceCsv) {
+    var lang = getLang();
+    var noteHeading = lang === 'uk' ? 'Національні метадані' : 'National Metadata';
+
+    return sourceCsv
+        .trim()
+        .split(/\r?\n/)
+        .map(function (line, rowIndex) {
+            var columns = parseCsvLine(line);
+
+            if (rowIndex === 0) {
+                columns.push(noteHeading);
+
+                return columns
+                    .map(function (value, colIndex) {
+                        return formatExcelCsvValue(
+                            translateCsvHeading(value, colIndex),
+                            false
+                        );
+                    })
+                    .join(';');
+            }
+
+            columns.push('');
+
+            var noteColumnIndex = columns.length - 1;
+
+            return columns
+                .map(function (value, colIndex) {
+                    return formatExcelCsvValue(
+                        value,
+                        colIndex === noteColumnIndex
+                    );
+                })
+                .join(';');
+        })
+        .join('\n');
+}
+
+function downloadCsvWithMetadata(indicatorId) {
+    var sourceUrl = opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv';
+
+    $.get(sourceUrl)
+        .done(function (sourceCsv) {
+            var lines = [];
+
+            var convertedCsv = convertSourceCsvForExcel(sourceCsv);
+            var columnCount = convertedCsv.split(/\r?\n/)[0].split(';').length;
+
+            lines.push(convertedCsv);
+
+            var metadataRows = getMetadataCsvRows(
+                '#national .metadata-content',
+                columnCount
+            );
+
+            if (metadataRows.length) {
+                lines.push('');
+
+                lines = lines.concat(metadataRows);
+            }
+
+            var csv = lines.join('\n');
+
+            var blob = new Blob(['\ufeff' + csv], {
+                type: 'text/csv;charset=utf-8'
+            });
+
+            if (window.navigator && window.navigator.msSaveBlob) {
+                window.navigator.msSaveBlob(blob, indicatorId + '.csv');
+                return;
+            }
+
+            var url = URL.createObjectURL(blob);
+            var link = document.createElement('a');
+
+            link.href = url;
+            link.download = indicatorId + '.csv';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            URL.revokeObjectURL(url);
+        });
+}
+
 /**
  * @param {String} indicatorId
  * @param {Element} el
@@ -4941,17 +5243,22 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
  */
 function createSourceButton(indicatorId, el) {
     var gaLabel = 'Download Source CSV: ' + indicatorId;
-    $(el).append($('<a />').text(translations.indicator.download_source)
+
+    var $button = $('<button />').text(translations.indicator.download_source)
         .attr(opensdg.autotrack('download_data_source', 'Downloads', 'Download CSV', gaLabel))
         .attr({
-            'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
-            'download': indicatorId + '.csv',
+            'type': 'button',
             'title': translations.indicator.download_source_title,
             'aria-label': translations.indicator.download_source_title,
             'class': 'btn btn-primary btn-download',
-            'tabindex': 0,
-            'role': 'button',
-        }));
+        });
+
+    $button.on('click.openSdgDownloadSource', function (e) {
+        e.preventDefault();
+        downloadCsvWithMetadata(indicatorId);
+    });
+
+    $(el).append($button);
 }
 
 /**
