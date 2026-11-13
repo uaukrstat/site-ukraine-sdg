@@ -1,0 +1,141 @@
+<div class="goal goal-overall">
+    <div class="details">
+        <h2 class="status-goal">{{ include.title }}</h2>
+
+        <span class="total">
+            <span id="js-overall-total">...</span>
+            <span id="js-overall-label">
+                {{ page.t.general.indicator_many | default: 'індикаторів' }}
+            </span>
+        </span>
+
+        <div class="summary" id="js-overall-summary" style="display: none;">
+            <div class="statuses" id="js-overall-statuses"></div>
+        </div>
+
+        <div class="status-goal-divider"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentLang = "{{ page.language | default: 'uk' }}";
+        const dataUrl = "{{ page.remote_data_prefix }}/meta/all.json";
+
+        const indicatorLabels = {
+            uk: {
+                one: "{{ page.t.general.indicator_one | default: 'індикатор' }}",
+                few: "{{ page.t.general.indicator_few | default: 'індикатори' }}",
+                many: "{{ page.t.general.indicator_many | default: 'індикаторів' }}"
+            },
+            en: {
+                one: "{{ page.t.general.indicator_one | default: 'indicator' }}",
+                other: "{{ page.t.general.indicator_other | default: 'indicators' }}"
+            }
+        };
+
+        function getPluralKey(count, lang = 'uk') {
+            if (lang === 'uk') {
+                const mod10 = count % 10;
+                const mod100 = count % 100;
+
+                if (mod10 === 1 && mod100 !== 11) return 'one';
+                if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return 'few';
+                return 'many';
+            }
+
+            return count === 1 ? 'one' : 'other';
+        }
+
+        function getIndicatorLabel(count, lang = 'uk') {
+            const pluralKey = getPluralKey(count, lang);
+            const langLabels = indicatorLabels[lang] || indicatorLabels.en;
+
+            return langLabels[pluralKey] || langLabels.other || '';
+        }
+
+        fetch(dataUrl)
+            .then(response => response.json())
+            .then(data => {
+                let allIndicators = [];
+
+                if (Array.isArray(data)) {
+                    allIndicators = data;
+                } else {
+                    allIndicators = Object.keys(data).map(key => {
+                        const item = data[key];
+                        item._originalKey = key;
+                        return item;
+                    });
+                }
+
+                const cleanIndicators = allIndicators.filter(ind => {
+                    const id = ind._originalKey || ind.indicator_number || '';
+                    return !id.endsWith('-a');
+                });
+
+                let total = 0;
+                let complete = 0;
+                let inprogress = 0;
+                let notstarted = 0;
+
+                cleanIndicators.forEach(ind => {
+                    total += 1;
+
+                    if (ind.reporting_status === 'complete') {
+                        complete += 1;
+                    } else if (ind.reporting_status === 'inprogress') {
+                        inprogress += 1;
+                    } else {
+                        notstarted += 1;
+                    }
+                });
+
+                const totalEl = document.getElementById('js-overall-total');
+                const labelEl = document.getElementById('js-overall-label');
+                const summaryEl = document.getElementById('js-overall-summary');
+                const statusesEl = document.getElementById('js-overall-statuses');
+
+                if (totalEl) {
+                    totalEl.innerText = total;
+                }
+
+                if (labelEl) {
+                    labelEl.innerText = getIndicatorLabel(total, currentLang);
+                }
+
+                if (summaryEl && total > 0) {
+                    summaryEl.style.display = 'block';
+                }
+
+                if (statusesEl && total > 0) {
+                    const tComplete = "{{ page.t.status.published | default: 'Опубліковано' }}";
+                    const tInprogress = "{{ page.t.status.in_progress | default: 'В процесі' }}";
+                    const tNotstarted = "{{ page.t.status.not_started | default: 'Не розпочато' }}";
+
+                    const pComp = complete > 0 ? Math.round((complete / total) * 100) : 0;
+                    const pInp = inprogress > 0 ? Math.round((inprogress / total) * 100) : 0;
+                    const pNot = Math.max(0, 100 - pComp - pInp);
+
+                    let html = '';
+
+                    if (complete > 0) {
+                        html += `<div><span class="status complete"><span class="status-inner">${complete}</span></span><strong>${tComplete}</strong><span class="value">${pComp}%</span></div>`;
+                    }
+
+                    if (inprogress > 0) {
+                        html += `<div><span class="status inprogress"><span class="status-inner">${inprogress}</span></span><strong>${tInprogress}</strong><span class="value">${pInp}%</span></div>`;
+                    }
+
+                    if (notstarted > 0) {
+                        html += `<div><span class="status notstarted"><span class="status-inner">${notstarted}</span></span><strong>${tNotstarted}</strong><span class="value">${pNot}%</span></div>`;
+                    }
+
+                    statusesEl.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                console.error('Помилка завантаження all.json:', error);
+            });
+    });
+</script>
